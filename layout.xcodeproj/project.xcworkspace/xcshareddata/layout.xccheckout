@@ -5,41 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>201EE7FE-A04A-43FC-87F1-9A38B510E71B</string>
+	<string>3971E627-1AC2-4B41-A17E-D6DB34FF5E11</string>
 	<key>IDESourceControlProjectName</key>
 	<string>layout</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>6DA4E52B-C5F4-44D5-8039-E13E01317BB3</key>
-		<string>https://svn.java.net/svn/snsbuy~snsbuy/mobile</string>
+		<key>8795DEE3-EE3D-4057-8B61-E47E06EC765E</key>
+		<string>https://github.com/gubaojian/Layout.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>layout/layout.xcodeproj/project.xcworkspace</string>
+	<string>layout.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>6DA4E52B-C5F4-44D5-8039-E13E01317BB3</key>
-		<string>../../..</string>
-	</dict>
-	<key>IDESourceControlProjectRepositoryRootDictionary</key>
-	<dict>
-		<key>6DA4E52B-C5F4-44D5-8039-E13E01317BB3</key>
-		<string>https://svn.java.net/svn/snsbuy~snsbuy</string>
+		<key>8795DEE3-EE3D-4057-8B61-E47E06EC765E</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://svn.java.net/svn/snsbuy~snsbuy/mobile/layout/layout.xcodeproj</string>
+	<string>https://github.com/gubaojian/Layout.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>6DA4E52B-C5F4-44D5-8039-E13E01317BB3</string>
+	<string>8795DEE3-EE3D-4057-8B61-E47E06EC765E</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.subversion</string>
+			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>6DA4E52B-C5F4-44D5-8039-E13E01317BB3</string>
+			<string>8795DEE3-EE3D-4057-8B61-E47E06EC765E</string>
 			<key>IDESourceControlWCCName</key>
-			<string>mobile</string>
+			<string>Layout</string>
 		</dict>
 	</array>
 </dict>

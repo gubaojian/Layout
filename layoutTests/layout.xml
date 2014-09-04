@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button width="320"
+        height="40"
+        x="0"
+        y="30"
+        background="#886633">
+        <ImageView
+            width="320"
+            height="40"
+            imageUrl="http://www.baidu.com/img/baidu_jgylogo3.gif"/>
+</Button>

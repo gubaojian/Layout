@@ -28,6 +28,17 @@
 		A595DFDF199BC75300DEA300 /* RelativeLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A595DFDE199BC75300DEA300 /* RelativeLayout.m */; };
 		A595DFE5199BC83B00DEA300 /* GUView.m in Sources */ = {isa = PBXBuildFile; fileRef = A595DFE4199BC83B00DEA300 /* GUView.m */; };
 		A595DFE8199BD0B000DEA300 /* LayoutParams.m in Sources */ = {isa = PBXBuildFile; fileRef = A595DFE7199BD0B000DEA300 /* LayoutParams.m */; };
+		CE46777519B5EA0F004D1B04 /* UIView+MathLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CE46777419B5EA0F004D1B04 /* UIView+MathLayout.m */; };
+		CE50C99819B474F8000B7258 /* GUViewInfalter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE50C99719B474F8000B7258 /* GUViewInfalter.m */; };
+		CEA8701E19B8B4130051C704 /* GUViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA8701D19B8B4130051C704 /* GUViewFactory.m */; };
+		CEA8702019B8BED20051C704 /* layout.xml in Resources */ = {isa = PBXBuildFile; fileRef = CEA8701F19B8BED20051C704 /* layout.xml */; };
+		CEAD29CB19B80EC80087B151 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAD29CA19B80EC80087B151 /* UIColor+HexString.m */; };
+		CEAD29CF19B8190B0087B151 /* GUButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAD29CE19B8190B0087B151 /* GUButton.m */; };
+		CEAD29D219B833260087B151 /* GUTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAD29D119B833260087B151 /* GUTextView.m */; };
+		CEAD29D519B83BF40087B151 /* GUImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAD29D419B83BF40087B151 /* GUImageView.m */; };
+		CEAD29D919B89EA70087B151 /* note.xsd in Resources */ = {isa = PBXBuildFile; fileRef = CEAD29D819B89EA70087B151 /* note.xsd */; };
+		CEAD29DB19B89EC20087B151 /* note.xml in Resources */ = {isa = PBXBuildFile; fileRef = CEAD29DA19B89EC20087B151 /* note.xml */; };
+		CEAD29DD19B89F220087B151 /* note.dtd in Resources */ = {isa = PBXBuildFile; fileRef = CEAD29DC19B89F220087B151 /* note.dtd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +82,24 @@
 		A595DFE4199BC83B00DEA300 /* GUView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUView.m; sourceTree = "<group>"; };
 		A595DFE6199BD0B000DEA300 /* LayoutParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutParams.h; sourceTree = "<group>"; };
 		A595DFE7199BD0B000DEA300 /* LayoutParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutParams.m; sourceTree = "<group>"; };
+		CE46777319B5EA0F004D1B04 /* UIView+MathLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MathLayout.h"; sourceTree = "<group>"; };
+		CE46777419B5EA0F004D1B04 /* UIView+MathLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MathLayout.m"; sourceTree = "<group>"; };
+		CE50C99619B474F8000B7258 /* GUViewInfalter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUViewInfalter.h; sourceTree = "<group>"; };
+		CE50C99719B474F8000B7258 /* GUViewInfalter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUViewInfalter.m; sourceTree = "<group>"; };
+		CEA8701C19B8B4130051C704 /* GUViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUViewFactory.h; sourceTree = "<group>"; };
+		CEA8701D19B8B4130051C704 /* GUViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUViewFactory.m; sourceTree = "<group>"; };
+		CEA8701F19B8BED20051C704 /* layout.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = layout.xml; sourceTree = "<group>"; };
+		CEAD29C919B80EC80087B151 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
+		CEAD29CA19B80EC80087B151 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
+		CEAD29CD19B8190B0087B151 /* GUButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUButton.h; sourceTree = "<group>"; };
+		CEAD29CE19B8190B0087B151 /* GUButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUButton.m; sourceTree = "<group>"; };
+		CEAD29D019B833260087B151 /* GUTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUTextView.h; sourceTree = "<group>"; };
+		CEAD29D119B833260087B151 /* GUTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUTextView.m; sourceTree = "<group>"; };
+		CEAD29D319B83BF40087B151 /* GUImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUImageView.h; sourceTree = "<group>"; };
+		CEAD29D419B83BF40087B151 /* GUImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUImageView.m; sourceTree = "<group>"; };
+		CEAD29D819B89EA70087B151 /* note.xsd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = note.xsd; sourceTree = "<group>"; };
+		CEAD29DA19B89EC20087B151 /* note.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = note.xml; sourceTree = "<group>"; };
+		CEAD29DC19B89F220087B151 /* note.dtd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = note.dtd; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +159,9 @@
 		A595DFA1199BB97400DEA300 /* layout */ = {
 			isa = PBXGroup;
 			children = (
+				CEAD29CC19B818770087B151 /* Puti */,
+				CEAD29C919B80EC80087B151 /* UIColor+HexString.h */,
+				CEAD29CA19B80EC80087B151 /* UIColor+HexString.m */,
 				A595DFAA199BB97400DEA300 /* GUAppDelegate.h */,
 				A595DFAB199BB97400DEA300 /* GUAppDelegate.m */,
 				A595DFAD199BB97400DEA300 /* Main_iPhone.storyboard */,
@@ -153,6 +185,7 @@
 		A595DFA2199BB97400DEA300 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CEA8701F19B8BED20051C704 /* layout.xml */,
 				A595DFA3199BB97400DEA300 /* layout-Info.plist */,
 				A595DFA4199BB97400DEA300 /* InfoPlist.strings */,
 				A595DFA7199BB97400DEA300 /* main.m */,
@@ -177,8 +210,30 @@
 			children = (
 				A595DFC5199BB97400DEA300 /* layoutTests-Info.plist */,
 				A595DFC6199BB97400DEA300 /* InfoPlist.strings */,
+				CEAD29D819B89EA70087B151 /* note.xsd */,
+				CEAD29DA19B89EC20087B151 /* note.xml */,
+				CEAD29DC19B89F220087B151 /* note.dtd */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CEAD29CC19B818770087B151 /* Puti */ = {
+			isa = PBXGroup;
+			children = (
+				CE50C99619B474F8000B7258 /* GUViewInfalter.h */,
+				CE50C99719B474F8000B7258 /* GUViewInfalter.m */,
+				CE46777319B5EA0F004D1B04 /* UIView+MathLayout.h */,
+				CE46777419B5EA0F004D1B04 /* UIView+MathLayout.m */,
+				CEAD29CD19B8190B0087B151 /* GUButton.h */,
+				CEAD29CE19B8190B0087B151 /* GUButton.m */,
+				CEAD29D019B833260087B151 /* GUTextView.h */,
+				CEAD29D119B833260087B151 /* GUTextView.m */,
+				CEAD29D319B83BF40087B151 /* GUImageView.h */,
+				CEAD29D419B83BF40087B151 /* GUImageView.m */,
+				CEA8701C19B8B4130051C704 /* GUViewFactory.h */,
+				CEA8701D19B8B4130051C704 /* GUViewFactory.m */,
+			);
+			name = Puti;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +319,7 @@
 				A595DFD4199BBA8000DEA300 /* Home.xml in Resources */,
 				A595DFAF199BB97400DEA300 /* Main_iPhone.storyboard in Resources */,
 				A595DFA6199BB97400DEA300 /* InfoPlist.strings in Resources */,
+				CEA8702019B8BED20051C704 /* layout.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +328,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A595DFC8199BB97400DEA300 /* InfoPlist.strings in Resources */,
+				CEAD29DB19B89EC20087B151 /* note.xml in Resources */,
+				CEAD29DD19B89F220087B151 /* note.dtd in Resources */,
+				CEAD29D919B89EA70087B151 /* note.xsd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,13 +341,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEAD29CB19B80EC80087B151 /* UIColor+HexString.m in Sources */,
+				CEA8701E19B8B4130051C704 /* GUViewFactory.m in Sources */,
+				CEAD29CF19B8190B0087B151 /* GUButton.m in Sources */,
 				A595DFAC199BB97400DEA300 /* GUAppDelegate.m in Sources */,
+				CE46777519B5EA0F004D1B04 /* UIView+MathLayout.m in Sources */,
 				A595DFB5199BB97400DEA300 /* GUViewController.m in Sources */,
 				A595DFE5199BC83B00DEA300 /* GUView.m in Sources */,
 				A595DFDF199BC75300DEA300 /* RelativeLayout.m in Sources */,
+				CEAD29D219B833260087B151 /* GUTextView.m in Sources */,
 				A595DFA8199BB97400DEA300 /* main.m in Sources */,
+				CEAD29D519B83BF40087B151 /* GUImageView.m in Sources */,
 				A595DFE8199BD0B000DEA300 /* LayoutParams.m in Sources */,
 				A595DFD7199BBACF00DEA300 /* GUFrameLayout.m in Sources */,
+				CE50C99819B474F8000B7258 /* GUViewInfalter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +569,7 @@
 				A595DFCF199BB97400DEA300 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A595DFD0199BB97400DEA300 /* Build configuration list for PBXNativeTarget "layoutTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +578,7 @@
 				A595DFD2199BB97400DEA300 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
