@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A57CDA6919B8D0CD00D3B5C9 /* market.xml in Resources */ = {isa = PBXBuildFile; fileRef = A57CDA6819B8D0CD00D3B5C9 /* market.xml */; };
 		A595DF9C199BB97400DEA300 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A595DF9B199BB97400DEA300 /* Foundation.framework */; };
 		A595DF9E199BB97400DEA300 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A595DF9D199BB97400DEA300 /* CoreGraphics.framework */; };
 		A595DFA0199BB97400DEA300 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A595DF9F199BB97400DEA300 /* UIKit.framework */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A57CDA6819B8D0CD00D3B5C9 /* market.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = market.xml; sourceTree = "<group>"; };
 		A595DF98199BB97400DEA300 /* layout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = layout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A595DF9B199BB97400DEA300 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A595DF9D199BB97400DEA300 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -192,6 +194,7 @@
 				A595DFA9199BB97400DEA300 /* layout-Prefix.pch */,
 				A595DFD3199BBA8000DEA300 /* Home.xml */,
 				A595DFDB199BC22400DEA300 /* ReplativeLayout.xml */,
+				A57CDA6819B8D0CD00D3B5C9 /* market.xml */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				A595DFDC199BC22400DEA300 /* ReplativeLayout.xml in Resources */,
 				A595DFD4199BBA8000DEA300 /* Home.xml in Resources */,
 				A595DFAF199BB97400DEA300 /* Main_iPhone.storyboard in Resources */,
+				A57CDA6919B8D0CD00D3B5C9 /* market.xml in Resources */,
 				A595DFA6199BB97400DEA300 /* InfoPlist.strings in Resources */,
 				CEA8702019B8BED20051C704 /* layout.xml in Resources */,
 			);

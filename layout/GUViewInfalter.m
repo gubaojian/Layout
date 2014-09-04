@@ -36,6 +36,14 @@
 }
 
 
+- (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError{
+    @throw [NSException exceptionWithName:@"GUViewInfalter Parse Error" reason:[parseError description] userInfo:nil];
+}
+
+- (void)parser:(NSXMLParser *)parser validationErrorOccurred:(NSError *)validationError{
+        @throw [NSException exceptionWithName:@"GUViewInfalter validationErrorOccurred" reason:[validationError description] userInfo:nil];
+}
+
 
 
 

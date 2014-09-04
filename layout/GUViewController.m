@@ -55,19 +55,21 @@
     
     
 	// Do any additional setup after loading the view, typically from a nib.
-    NSString * path = [[NSBundle mainBundle] pathForResource:@"layout" ofType:@"xml"];
+    NSString * path = [[NSBundle mainBundle] pathForResource:@"market" ofType:@"xml"];
     NSTimeInterval start = [[NSDate date] timeIntervalSinceReferenceDate];
     
+ 
     UIView* xmlView = [[[GUViewInfalter alloc] init] toView:path];
+    /**
     UIView* firstBanner = [xmlView viewWithTag:1];
     [firstBanner setClickBlock:^(UIView *view) {
          [[[UIAlertView alloc] initWithTitle:@"Click" message:@"Click" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil] show];
     }];
-    
-    [xmlView setClickBlock:^(UIView * view) {
-        [[[UIAlertView alloc] initWithTitle:@"Click" message:@"Click" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil] show];
-    }];
-    
+    */
+    //[xmlView setClickBlock:^(UIView * view) {
+       // [[[UIAlertView alloc] initWithTitle:@"Click" message:@"Click" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil] show];
+    //}];
+   
     [self.view addSubview:xmlView];
     
     

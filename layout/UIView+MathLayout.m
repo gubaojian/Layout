@@ -29,6 +29,16 @@ static char tapGestureRecognizerKey;
 
 - (void)updateViewFromAttributes:(NSDictionary *)attrs {
     
+    NSString* enabled = [attrs objectForKey:@"enabled"];
+    if (enabled != nil) {
+        NSString* lowserCaseEnabled = [enabled lowercaseString];
+        if ([lowserCaseEnabled isEqualToString:@"yes"] || [lowserCaseEnabled isEqualToString:@"true"]) {
+            self.userInteractionEnabled = YES;
+        }else{
+            self.userInteractionEnabled = NO;
+        }
+    }
+    
     NSString *backgroundString = [attrs objectForKey:@"background"];
     if (backgroundString != nil) {
         self.backgroundColor = [UIColor colorWithHexString:backgroundString];
@@ -202,6 +212,7 @@ static char tapGestureRecognizerKey;
         UITapGestureRecognizer* tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
         [self addGestureRecognizer:tapGestureRecognizer];
         [self setTapGestureRecognizer:tapGestureRecognizer];
+        self.userInteractionEnabled = YES;
     }
 }
 
