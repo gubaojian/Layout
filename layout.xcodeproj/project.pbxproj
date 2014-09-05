@@ -31,6 +31,9 @@
 		A595DFE8199BD0B000DEA300 /* LayoutParams.m in Sources */ = {isa = PBXBuildFile; fileRef = A595DFE7199BD0B000DEA300 /* LayoutParams.m */; };
 		CE46777519B5EA0F004D1B04 /* UIView+MathLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CE46777419B5EA0F004D1B04 /* UIView+MathLayout.m */; };
 		CE50C99819B474F8000B7258 /* GUViewInfalter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE50C99719B474F8000B7258 /* GUViewInfalter.m */; };
+		CE6FCDA619B9928300D1A400 /* UIFont+Puti.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6FCDA519B9928300D1A400 /* UIFont+Puti.m */; };
+		CE6FCDA819B9A2EA00D1A400 /* Puti.xml in Resources */ = {isa = PBXBuildFile; fileRef = CE6FCDA719B9A2EA00D1A400 /* Puti.xml */; };
+		CE6FCDAB19B9A6FA00D1A400 /* GUPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6FCDAA19B9A6FA00D1A400 /* GUPerson.m */; };
 		CEA8701E19B8B4130051C704 /* GUViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA8701D19B8B4130051C704 /* GUViewFactory.m */; };
 		CEA8702019B8BED20051C704 /* layout.xml in Resources */ = {isa = PBXBuildFile; fileRef = CEA8701F19B8BED20051C704 /* layout.xml */; };
 		CEAD29CB19B80EC80087B151 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAD29CA19B80EC80087B151 /* UIColor+HexString.m */; };
@@ -88,6 +91,11 @@
 		CE46777419B5EA0F004D1B04 /* UIView+MathLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MathLayout.m"; sourceTree = "<group>"; };
 		CE50C99619B474F8000B7258 /* GUViewInfalter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUViewInfalter.h; sourceTree = "<group>"; };
 		CE50C99719B474F8000B7258 /* GUViewInfalter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUViewInfalter.m; sourceTree = "<group>"; };
+		CE6FCDA419B9928300D1A400 /* UIFont+Puti.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Puti.h"; sourceTree = "<group>"; };
+		CE6FCDA519B9928300D1A400 /* UIFont+Puti.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Puti.m"; sourceTree = "<group>"; };
+		CE6FCDA719B9A2EA00D1A400 /* Puti.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Puti.xml; sourceTree = "<group>"; };
+		CE6FCDA919B9A6FA00D1A400 /* GUPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUPerson.h; sourceTree = "<group>"; };
+		CE6FCDAA19B9A6FA00D1A400 /* GUPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUPerson.m; sourceTree = "<group>"; };
 		CEA8701C19B8B4130051C704 /* GUViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUViewFactory.h; sourceTree = "<group>"; };
 		CEA8701D19B8B4130051C704 /* GUViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUViewFactory.m; sourceTree = "<group>"; };
 		CEA8701F19B8BED20051C704 /* layout.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = layout.xml; sourceTree = "<group>"; };
@@ -176,10 +184,10 @@
 				A595DFD6199BBACF00DEA300 /* GUFrameLayout.m */,
 				A595DFDD199BC75300DEA300 /* RelativeLayout.h */,
 				A595DFDE199BC75300DEA300 /* RelativeLayout.m */,
-				A595DFE3199BC83B00DEA300 /* GUView.h */,
-				A595DFE4199BC83B00DEA300 /* GUView.m */,
 				A595DFE6199BD0B000DEA300 /* LayoutParams.h */,
 				A595DFE7199BD0B000DEA300 /* LayoutParams.m */,
+				CE6FCDA919B9A6FA00D1A400 /* GUPerson.h */,
+				CE6FCDAA19B9A6FA00D1A400 /* GUPerson.m */,
 			);
 			path = layout;
 			sourceTree = "<group>";
@@ -195,6 +203,7 @@
 				A595DFD3199BBA8000DEA300 /* Home.xml */,
 				A595DFDB199BC22400DEA300 /* ReplativeLayout.xml */,
 				A57CDA6819B8D0CD00D3B5C9 /* market.xml */,
+				CE6FCDA719B9A2EA00D1A400 /* Puti.xml */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -223,6 +232,8 @@
 		CEAD29CC19B818770087B151 /* Puti */ = {
 			isa = PBXGroup;
 			children = (
+				A595DFE3199BC83B00DEA300 /* GUView.h */,
+				A595DFE4199BC83B00DEA300 /* GUView.m */,
 				CE50C99619B474F8000B7258 /* GUViewInfalter.h */,
 				CE50C99719B474F8000B7258 /* GUViewInfalter.m */,
 				CE46777319B5EA0F004D1B04 /* UIView+MathLayout.h */,
@@ -235,6 +246,8 @@
 				CEAD29D419B83BF40087B151 /* GUImageView.m */,
 				CEA8701C19B8B4130051C704 /* GUViewFactory.h */,
 				CEA8701D19B8B4130051C704 /* GUViewFactory.m */,
+				CE6FCDA419B9928300D1A400 /* UIFont+Puti.h */,
+				CE6FCDA519B9928300D1A400 /* UIFont+Puti.m */,
 			);
 			name = Puti;
 			sourceTree = "<group>";
@@ -317,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A595DFB2199BB97400DEA300 /* Main_iPad.storyboard in Resources */,
+				CE6FCDA819B9A2EA00D1A400 /* Puti.xml in Resources */,
 				A595DFB7199BB97400DEA300 /* Images.xcassets in Resources */,
 				A595DFDC199BC22400DEA300 /* ReplativeLayout.xml in Resources */,
 				A595DFD4199BBA8000DEA300 /* Home.xml in Resources */,
@@ -349,9 +363,11 @@
 				CEA8701E19B8B4130051C704 /* GUViewFactory.m in Sources */,
 				CEAD29CF19B8190B0087B151 /* GUButton.m in Sources */,
 				A595DFAC199BB97400DEA300 /* GUAppDelegate.m in Sources */,
+				CE6FCDA619B9928300D1A400 /* UIFont+Puti.m in Sources */,
 				CE46777519B5EA0F004D1B04 /* UIView+MathLayout.m in Sources */,
 				A595DFB5199BB97400DEA300 /* GUViewController.m in Sources */,
 				A595DFE5199BC83B00DEA300 /* GUView.m in Sources */,
+				CE6FCDAB19B9A6FA00D1A400 /* GUPerson.m in Sources */,
 				A595DFDF199BC75300DEA300 /* RelativeLayout.m in Sources */,
 				CEAD29D219B833260087B151 /* GUTextView.m in Sources */,
 				A595DFA8199BB97400DEA300 /* main.m in Sources */,

@@ -21,16 +21,17 @@
 - (void)updateViewFromAttributes:(NSDictionary *)attrs {
     [super updateViewFromAttributes:attrs];
     NSString* imageUrl = [attrs objectForKey:@"imageUrl"];
-    GUImageView* __weak weakSelf = self;
+    
     if (imageUrl != nil) {
-       dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        GUImageView* __weak weakSelf = self;
+       dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
            NSURL *url = [NSURL URLWithString:imageUrl];
            NSData *imageData = [NSData dataWithContentsOfURL:url];
-           UIImage *image = [UIImage imageWithData:imageData];
+           __block UIImage *image = [UIImage imageWithData:imageData];
            if (weakSelf) {
                dispatch_async(dispatch_get_main_queue(), ^{
                    if(weakSelf){
-                       self.image = image;
+                       [weakSelf setImage:image];
                    }
                });
            }
@@ -39,14 +40,15 @@
     
     NSString* highlightedImageUrl = [attrs objectForKey:@"highlightedImageUrl"];
     if (highlightedImageUrl != nil) {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        GUImageView* __weak weakSelf = self;
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             NSURL *url = [NSURL URLWithString:highlightedImageUrl];
             NSData *imageData = [NSData dataWithContentsOfURL:url];
             UIImage *image = [UIImage imageWithData:imageData];
             if (weakSelf) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     if (weakSelf) {
-                       self.highlightedImage = image;
+                        [weakSelf setHighlightedImage:image];
                     }
                 });
             }
@@ -91,16 +93,16 @@
 
 -(void)setImageWithURL:(NSString*)imageUrl placeHolder:(UIImage*) placeHolder{
     self.image = placeHolder;
-    GUImageView* __weak weakSelf = self;
     if (imageUrl != nil) {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        GUImageView* __weak weakSelf = self;
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             NSURL *url = [NSURL URLWithString:imageUrl];
             NSData *imageData = [NSData dataWithContentsOfURL:url];
             UIImage *image = [UIImage imageWithData:imageData];
             if (weakSelf) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     if(weakSelf){
-                        self.image = image;
+                        [weakSelf setImage:image];
                     }
                 });
             }

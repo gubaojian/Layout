@@ -31,7 +31,7 @@
         [self registerClass:[GUButton class] forElement:@"Button"];
         [self registerClass:[GUTextView class] forElement:@"TextView"];
         [self registerClass:[GUImageView class] forElement:@"ImageView"];
-        [self registerClass:[UIView class] forElement:@"View"];
+        [self registerClass:[GUView class] forElement:@"View"];
     }
     return self;
 }

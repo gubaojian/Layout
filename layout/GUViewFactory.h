@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface GUViewFactory : NSObject{
-    NSMutableDictionary* _classMap;
+     NSMutableDictionary* _classMap;
 }
 
 +(GUViewFactory*) shareFactory;

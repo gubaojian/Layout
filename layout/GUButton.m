@@ -8,6 +8,8 @@
 
 #import "GUButton.h"
 #import "UIView+MathLayout.h"
+#import "UIColor+HexString.h"
+#import "UIFont+Puti.h"
 
 @implementation GUButton
 
@@ -51,6 +53,65 @@
         padding.right = [paddingRightString floatValue];
     }
      self.imageEdgeInsets = padding;
+    
+    NSString* imageUrl = [attrs objectForKey:@"imageUrl"];
+   
+    if (imageUrl != nil) {
+         GUButton* __weak weakSelf = self;
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            NSURL *url = [NSURL URLWithString:imageUrl];
+            NSData *imageData = [NSData dataWithContentsOfURL:url];
+            UIImage *image =  [UIImage imageWithData:imageData];
+            if (weakSelf) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if(weakSelf){
+                        [weakSelf setImage:image forState:UIControlStateNormal];
+                    }
+                });
+            }
+        });
+    }
+    
+    NSString* selectedImageUrl = [attrs objectForKey:@"selectedImageUrl"];
+    if (selectedImageUrl != nil) {
+        GUButton* __weak weakSelf = self;
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            NSURL *url = [NSURL URLWithString:selectedImageUrl];
+            NSData *imageData = [NSData dataWithContentsOfURL:url];
+            UIImage *image = [UIImage imageWithData:imageData];
+            if (weakSelf) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if(weakSelf){
+                        [weakSelf setImage: image forState:UIControlStateSelected];
+                        [weakSelf setImage:image forState:UIControlStateHighlighted];
+                    }
+                });
+            }
+        });
+    }
+    
+    
+
+    NSString *text = [attrs objectForKey:@"text"];
+    if (text != nil){
+        [self setTitle:text forState:UIControlStateNormal];
+    }
+    NSString *textColor = [attrs objectForKey:@"textColor"];
+    if (textColor != nil) {
+         [self setTitleColor:[UIColor colorWithHexString:textColor] forState:UIControlStateNormal];
+    }
+    
+    NSString* fontStyle = [attrs objectForKey:@"fontStyle"];
+    NSString *fontName = [attrs objectForKey:@"font"];
+    NSString *textSize = [attrs objectForKey:@"textSize"];
+    if (textSize != nil
+        ||  fontName != nil
+        || fontStyle != nil) {
+         CGFloat size = self.titleLabel.font.pointSize;
+         if (textSize != nil) size = [textSize floatValue];
+        self.titleLabel.font = [UIFont fontWithStyle:fontStyle name: fontName size:size];
+    }
+    
 }
 
 -(void)addSubview:(UIView *)view{

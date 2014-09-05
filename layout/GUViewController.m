@@ -12,6 +12,7 @@
 #import "GUButton.h"
 #import "GUImageView.h"
 #import "GUViewInfalter.h"
+#import "GUPerson.h"
 
 @interface GUViewController()
 
@@ -40,18 +41,6 @@
     
     NSLog(@"expression %@ ", value);
     
-    GUView* view = [[GUView alloc] initWithFrame:CGRectMake(20, 20, 120, 44)];
-  
-    view.backgroundImageView.backgroundColor = [UIColor blueColor];
-    
-    //UITextField*  field = [[UITextField alloc] init];
-    //[field setText:@"ok"];
-    //view.containerView = field;
-   // [self.view addSubview:view];
-    
-    UIEdgeInsets  insets  = view.padding;
-    insets.left = 10;
-    view.padding = insets;
     
     
 	// Do any additional setup after loading the view, typically from a nib.
@@ -73,10 +62,19 @@
     [self.view addSubview:xmlView];
     
     
-    NSLog(@"%@  %f", view, ( [[NSDate date] timeIntervalSinceReferenceDate] - start));
+    NSLog(@"%@  %f", xmlView, ( [[NSDate date] timeIntervalSinceReferenceDate] - start));
+
+    GUPerson* person = [[GUPerson alloc] init];
+    person.name = @"name";
+    person.skills = [[NSArray alloc] initWithObjects:@"Love", nil];
+    
+    NSLog(@"%d ", [person respondsToSelector:NSSelectorFromString(@"name")]);
 
     
-    
+    NSLog(@"%@ ", [person valueForKeyPath:@"skills[10].333"]);
+    NSLog(@"%@ ", [person valueForKeyPath:@"name.333"]);
+    // NSLog(@"%@ ", [person valueForKeyPath:@"nameLove"]);
+   
 }
 
 - (void)didReceiveMemoryWarning

@@ -8,6 +8,7 @@
 
 #import "GUTextView.h"
 #import "UIColor+HexString.h"
+#import "UIFont+Puti.h"
 
 @implementation GUTextView
 
@@ -43,11 +44,11 @@
             lineBreakMode = NSLineBreakByCharWrapping;
         }else if ([lineBreakModeString isEqualToString:@"clip"]) {
             lineBreakMode = NSLineBreakByClipping;
-        }else if ([lineBreakModeString isEqualToString:@"truncateHead"]) {
+        }else if ([lineBreakModeString isEqualToString:@"head"]) {
             lineBreakMode = NSLineBreakByTruncatingHead;
-        }else if ([lineBreakModeString isEqualToString:@"truncateTail"]) {
+        }else if ([lineBreakModeString isEqualToString:@"tail"]) {
             lineBreakMode = NSLineBreakByTruncatingTail;
-        }else if ([lineBreakModeString isEqualToString:@"truncateMiddle"]) {
+        }else if ([lineBreakModeString isEqualToString:@"middle"]) {
             lineBreakMode = NSLineBreakByTruncatingMiddle;
         }
         self.lineBreakMode = lineBreakMode;
@@ -69,15 +70,15 @@
     }
     
     
+    NSString* fontStyle = [attrs objectForKey:@"fontStyle"];
     NSString *fontName = [attrs objectForKey:@"font"];
     NSString *textSize = [attrs objectForKey:@"textSize"];
-    if (fontName != nil) {
+    if (textSize != nil
+        ||  fontName != nil
+        || fontStyle != nil) {
         CGFloat size = self.font.pointSize;
         if (textSize != nil) size = [textSize floatValue];
-        self.font = [UIFont fontWithName:fontName size:size];
-    } else if (textSize != nil) {
-        CGFloat size = [textSize floatValue];
-        self.font = [UIFont systemFontOfSize:size];
+        self.font = [UIFont fontWithStyle:fontStyle name: fontName size:size];
     }
 
     
