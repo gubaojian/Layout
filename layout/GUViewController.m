@@ -13,6 +13,7 @@
 #import "GUImageView.h"
 #import "GUViewInfalter.h"
 #import "GUPerson.h"
+#import "GUExpression.h"
 
 @interface GUViewController()
 
@@ -67,13 +68,16 @@
     GUPerson* person = [[GUPerson alloc] init];
     person.name = @"name";
     person.skills = [[NSArray alloc] initWithObjects:@"Love", nil];
+   start = [[NSDate date] timeIntervalSinceReferenceDate];
     
-    NSLog(@"%d ", [person respondsToSelector:NSSelectorFromString(@"name")]);
+    for (int i=0; i<1000; i++) {
+        [GUExpression valueForExpression:@"skills[10]" context:person];
+    }
 
-    
-    NSLog(@"%@ ", [person valueForKeyPath:@"skills[10].333"]);
-    NSLog(@"%@ ", [person valueForKeyPath:@"name.333"]);
-    // NSLog(@"%@ ", [person valueForKeyPath:@"nameLove"]);
+    NSLog(@"%@  %f", xmlView, ( [[NSDate date] timeIntervalSinceReferenceDate] - start));
+
+  //  NSLog(@"%@ ", [person valueForKeyPath:@"skills[10].333"]);
+  //  NSLog(@"%@ ", [person valueForKeyPath:@"name.333"]);
    
 }
 

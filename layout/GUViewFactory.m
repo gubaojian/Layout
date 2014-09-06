@@ -54,7 +54,7 @@
     if (viewClass == NULL) {
         viewClass = NSClassFromString(name);
         
-#ifndef PRODUCT
+#ifndef PRODUCTION
         if (viewClass == NULL) {
             @throw [NSException exceptionWithName:@"ClassNotFoundException" reason:[NSString stringWithFormat:@"Class %@ could not be found", name] userInfo:nil];
         }
