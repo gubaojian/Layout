@@ -26,13 +26,16 @@
         x="12"
         y="32"
         imageUrl="http://gtms03.alicdn.com/tps/i3/T1d4z2FrxXXXa8j.Iq-288-144.png"
-        cornerRadius="4"/>
+        cornerRadius="4"
+        background="#3322A1"/>
+        
     <ImageView width="144"
         height="72"
         x="168"
         y="32"
         imageUrl="http://gtms01.alicdn.com/tps/i1/T18c4KFzBvXXXA41.t-292-144.jpg"
-        cornerRadius="4"/>
+        cornerRadius="4"
+        background="#3322A1"/>
     <ImageView width="144"
         height="72"
         x="12"

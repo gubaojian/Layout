@@ -11,7 +11,7 @@
 #import "RelativeLayout.h"
 #import "GUButton.h"
 #import "GUImageView.h"
-#import "GUViewInfalter.h"
+#import "ViewInfalter.h"
 #import "GUPerson.h"
 #import "GUExpression.h"
 
@@ -49,7 +49,7 @@
     NSTimeInterval start = [[NSDate date] timeIntervalSinceReferenceDate];
     
  
-    UIView* xmlView = [[[GUViewInfalter alloc] init] toView:path];
+    UIView* xmlView = [[ViewInfalter shareViewInfalter] toViewBundleFile:@"market.xml"];
     /**
     UIView* firstBanner = [xmlView viewWithTag:1];
     [firstBanner setClickBlock:^(UIView *view) {
