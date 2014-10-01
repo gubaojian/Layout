@@ -14,6 +14,7 @@
 #import "ViewInfalter.h"
 #import "GUPerson.h"
 #import "GUExpression.h"
+#import "GUImageFetcher.h"
 
 @interface GUViewController()
 
@@ -38,6 +39,16 @@
     //[button layoutSubviews];
     NSExpression* expression = [NSExpression expressionWithFormat:@"3 + 2"];
     id value =  [expression expressionValueWithObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:4], @"screen_width", nil] context:nil];
+    
+    NSURL* url;
+    
+   
+    [[GUImageFetcher shareFetcher] imageFromBundleUrl:@"bundle://iddd.png"];
+    [[GUImageFetcher shareFetcher] imageFromBundleUrl:@"bundle://iddd@2x.png"];
+    [[GUImageFetcher shareFetcher] imageFromBundleUrl:@"bundle://.png"];
+    [[GUImageFetcher shareFetcher] imageFromBundleUrl:@"bundle://iddd"];
+    NSLog(@"%@", [@"bundle://ddds@2x.png" pathExtension]);
+    NSLog(@"%@", [@"bundle://ddds.png" pathExtension]);
     
     
     NSLog(@"expression %@ ", value);

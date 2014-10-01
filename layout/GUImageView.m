@@ -54,6 +54,7 @@
             }
         });
     }
+
     
     NSString *scaleType = [attrs objectForKey:@"scaleType"];
     if (scaleType != nil) {
