@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface GUDataBinder : NSObject
+@interface BinderCallback : NSObject
 
--(BOOL)doBindData:(id)data toView:(UIView*)view;
+-(BOOL)doBindValue:(id)data toView:(UIView*)view;
 
--(BOOL)doBindEvent:(id)eventData toView:(UIView*) view;
+-(BOOL)doBindEvent:(id)data toView:(UIView*) view;
 
 @end

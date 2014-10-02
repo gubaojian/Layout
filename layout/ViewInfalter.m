@@ -80,7 +80,7 @@
 }
 
 -(NSString*) documentPathForTemplate:(GUTemplate*)viewTemplate{
-    NSString* fileName =[NSString stringWithFormat:@"%@_%ld.xml", viewTemplate.name, viewTemplate.version];
+    NSString* fileName =[NSString stringWithFormat:@"%@_%d.xml", viewTemplate.name, viewTemplate.version];
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,   NSUserDomainMask, YES);
     NSString *directory = [paths objectAtIndex:0];
     NSString *filePath = [directory stringByAppendingPathComponent:fileName];

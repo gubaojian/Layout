@@ -23,34 +23,22 @@ static GUImageFetcher *shareFetcher = nil;
     shareFetcher = fetcher;
 }
 
-
--(BOOL)setImageUrl:(NSString*)imageUrl forButton:(UIButton*) button forState:(UIControlState)state{
-    UIImage* image = [self imageFromBundleUrl:imageUrl];
-    if (image != nil) {
-        [button setImage:image forState:state];
-        return YES;
+-(UIImage*) imageFromUrl:(NSString*) imageUrl{
+    if([imageUrl hasPrefix:@"http"]
+       || [imageUrl hasPrefix:@"https"]){
+        NSURL *url = [NSURL URLWithString:imageUrl];
+        NSURLResponse* response = nil;
+        NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url];
+        request.cachePolicy = NSURLRequestReturnCacheDataElseLoad;
+        NSData * imageData= [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:nil];
+        if (imageData) {
+            return [UIImage imageWithData:imageData];;
+        }
+        return nil;
     }
-    return NO;
+    return [UIImage imageNamed:imageUrl];
 }
 
--(BOOL)setBackgroundImageUrl:(NSString*)imageUrl forButton:(UIButton*) button forState:(UIControlState)state{
-    UIImage* image = [self imageFromBundleUrl:imageUrl];
-    if (image != nil) {
-        [button setBackgroundImage: image forState:state];
-        return YES;
-    }
-    return NO;
-}
-
-
--(BOOL)setImageUrl:(NSString*)imageUrl forImageView:(UIImageView*) imageView{
-    UIImage* image = [self imageFromBundleUrl:imageUrl];
-    if (image != nil) {
-        imageView.image = image;
-        return YES;
-    }
-    return NO;
-}
 
 
 -(UIImage*) imageFromBundleUrl:(NSString*) url{

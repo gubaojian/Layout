@@ -11,8 +11,5 @@
 
 @interface GUImageView : UIImageView
 
--(void)setImageWithURL:(NSString*)imageUrl;
-
--(void)setImageWithURL:(NSString*)imageUrl placeHolder:(UIImage*) placeHolder;
 
 @end

@@ -8,6 +8,7 @@
 
 #import "GUImageView.h"
 #import "UIColor+HexString.h"
+#import "GUImageFetcher.h"
 
 
 @implementation GUImageView
@@ -21,19 +22,18 @@
 - (void)updateViewFromAttributes:(NSDictionary *)attrs {
     [super updateViewFromAttributes:attrs];
     NSString* imageUrl = [attrs objectForKey:@"imageUrl"];
-    
     if (imageUrl != nil) {
         GUImageView* __weak weakSelf = self;
        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-           NSURL *url = [NSURL URLWithString:imageUrl];
-           NSData *imageData = [NSData dataWithContentsOfURL:url];
-           __block UIImage *image = [UIImage imageWithData:imageData];
            if (weakSelf) {
-               dispatch_async(dispatch_get_main_queue(), ^{
-                   if(weakSelf){
-                       [weakSelf setImage:image];
-                   }
-               });
+                __block UIImage *image = [[GUImageFetcher shareFetcher] imageFromUrl:imageUrl];
+               if (weakSelf) {
+                   dispatch_async(dispatch_get_main_queue(), ^{
+                       if(weakSelf){
+                           [weakSelf setImage:image];
+                       }
+                   });
+               }
            }
        });
     }
@@ -42,15 +42,15 @@
     if (highlightedImageUrl != nil) {
         GUImageView* __weak weakSelf = self;
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            NSURL *url = [NSURL URLWithString:highlightedImageUrl];
-            NSData *imageData = [NSData dataWithContentsOfURL:url];
-            UIImage *image = [UIImage imageWithData:imageData];
             if (weakSelf) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    if (weakSelf) {
-                        [weakSelf setHighlightedImage:image];
-                    }
-                });
+                __block UIImage *image = [[GUImageFetcher shareFetcher] imageFromUrl:highlightedImageUrl];
+                if (weakSelf) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        if (weakSelf) {
+                            [weakSelf setHighlightedImage:image];
+                        }
+                    });
+                }
             }
         });
     }
@@ -84,30 +84,6 @@
         } else if ([scaleType isEqualToString:@"bottomRight"]) {
             self.contentMode = UIViewContentModeBottomRight;
         }
-    }
-}
-
-
--(void)setImageWithURL:(NSString*)imageUrl{
-    [self setImageWithURL:imageUrl placeHolder:nil];
-}
-
--(void)setImageWithURL:(NSString*)imageUrl placeHolder:(UIImage*) placeHolder{
-    self.image = placeHolder;
-    if (imageUrl != nil) {
-        GUImageView* __weak weakSelf = self;
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            NSURL *url = [NSURL URLWithString:imageUrl];
-           NSData * imageData= [NSURLConnection sendSynchronousRequest:[NSURLRequest requestWithURL:url] returningResponse:nil error:nil];
-            UIImage *image = [UIImage imageWithData:imageData];
-            if (weakSelf) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    if(weakSelf){
-                        [weakSelf setImage:image];
-                    }
-                });
-            }
-        });
     }
 }
 

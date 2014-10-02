@@ -47,8 +47,8 @@
 		CEAD29D919B89EA70087B151 /* note.xsd in Resources */ = {isa = PBXBuildFile; fileRef = CEAD29D819B89EA70087B151 /* note.xsd */; };
 		CEAD29DB19B89EC20087B151 /* note.xml in Resources */ = {isa = PBXBuildFile; fileRef = CEAD29DA19B89EC20087B151 /* note.xml */; };
 		CEAD29DD19B89F220087B151 /* note.dtd in Resources */ = {isa = PBXBuildFile; fileRef = CEAD29DC19B89F220087B151 /* note.dtd */; };
-		CEF7633119C1C69C004714C6 /* GUViewBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF7633019C1C69C004714C6 /* GUViewBinder.m */; };
-		CEF7633419C1C6EA004714C6 /* GUDataBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF7633319C1C6EA004714C6 /* GUDataBinder.m */; };
+		CEF7633119C1C69C004714C6 /* DataBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF7633019C1C69C004714C6 /* DataBinder.m */; };
+		CEF7633419C1C6EA004714C6 /* BinderCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF7633319C1C6EA004714C6 /* BinderCallback.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,10 +124,10 @@
 		CEAD29D819B89EA70087B151 /* note.xsd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = note.xsd; sourceTree = "<group>"; };
 		CEAD29DA19B89EC20087B151 /* note.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = note.xml; sourceTree = "<group>"; };
 		CEAD29DC19B89F220087B151 /* note.dtd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = note.dtd; sourceTree = "<group>"; };
-		CEF7632F19C1C69C004714C6 /* GUViewBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUViewBinder.h; sourceTree = "<group>"; };
-		CEF7633019C1C69C004714C6 /* GUViewBinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUViewBinder.m; sourceTree = "<group>"; };
-		CEF7633219C1C6EA004714C6 /* GUDataBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUDataBinder.h; sourceTree = "<group>"; };
-		CEF7633319C1C6EA004714C6 /* GUDataBinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUDataBinder.m; sourceTree = "<group>"; };
+		CEF7632F19C1C69C004714C6 /* DataBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBinder.h; sourceTree = "<group>"; };
+		CEF7633019C1C69C004714C6 /* DataBinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBinder.m; sourceTree = "<group>"; };
+		CEF7633219C1C6EA004714C6 /* BinderCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinderCallback.h; sourceTree = "<group>"; };
+		CEF7633319C1C6EA004714C6 /* BinderCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinderCallback.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,10 +274,10 @@
 				CE526F9319C0730800FA685A /* GUTemplate.m */,
 				A5CEE73519BAC70F004E24C1 /* GUImageFetcher.h */,
 				A5CEE73619BAC70F004E24C1 /* GUImageFetcher.m */,
-				CEF7632F19C1C69C004714C6 /* GUViewBinder.h */,
-				CEF7633019C1C69C004714C6 /* GUViewBinder.m */,
-				CEF7633219C1C6EA004714C6 /* GUDataBinder.h */,
-				CEF7633319C1C6EA004714C6 /* GUDataBinder.m */,
+				CEF7632F19C1C69C004714C6 /* DataBinder.h */,
+				CEF7633019C1C69C004714C6 /* DataBinder.m */,
+				CEF7633219C1C6EA004714C6 /* BinderCallback.h */,
+				CEF7633319C1C6EA004714C6 /* BinderCallback.m */,
 			);
 			name = Puti;
 			sourceTree = "<group>";
@@ -392,7 +392,7 @@
 				CEAD29CB19B80EC80087B151 /* UIColor+HexString.m in Sources */,
 				CE526F9419C0730800FA685A /* GUTemplate.m in Sources */,
 				CEA8701E19B8B4130051C704 /* GUViewFactory.m in Sources */,
-				CEF7633419C1C6EA004714C6 /* GUDataBinder.m in Sources */,
+				CEF7633419C1C6EA004714C6 /* BinderCallback.m in Sources */,
 				CEAD29CF19B8190B0087B151 /* GUButton.m in Sources */,
 				A595DFAC199BB97400DEA300 /* GUAppDelegate.m in Sources */,
 				A5CEE73719BAC70F004E24C1 /* GUImageFetcher.m in Sources */,
@@ -407,7 +407,7 @@
 				CEAD29D219B833260087B151 /* GUTextView.m in Sources */,
 				A595DFA8199BB97400DEA300 /* main.m in Sources */,
 				CEAD29D519B83BF40087B151 /* GUImageView.m in Sources */,
-				CEF7633119C1C69C004714C6 /* GUViewBinder.m in Sources */,
+				CEF7633119C1C69C004714C6 /* DataBinder.m in Sources */,
 				A595DFE8199BD0B000DEA300 /* LayoutParams.m in Sources */,
 				A595DFD7199BBACF00DEA300 /* GUFrameLayout.m in Sources */,
 				CE50C99819B474F8000B7258 /* ViewInfalter.m in Sources */,

@@ -21,7 +21,11 @@
 @property (nonatomic, strong) NSExpression*  expressionY;
 @property (nonatomic, strong) NSExpression*  expressionWidth;
 @property (nonatomic, strong) NSExpression*  expressionHeight;
-@property (nonatomic, strong) NSMutableDictionary*  expressionObject;
+@property (nonatomic, strong) NSMutableDictionary*  expressionContext;
+
+@property (nonatomic, strong) NSString*  valueData;
+@property (nonatomic, strong) NSString*  eventData;
+
 @property (nonatomic, copy) void (^clickBlock)(UIView*);
 @property (nonatomic, strong) UITapGestureRecognizer*  tapGestureRecognizer;
 

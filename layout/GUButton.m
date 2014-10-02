@@ -10,6 +10,7 @@
 #import "UIView+MathLayout.h"
 #import "UIColor+HexString.h"
 #import "UIFont+Puti.h"
+#import "GUImageFetcher.h"
 
 @implementation GUButton
 
@@ -59,15 +60,15 @@
     if (imageUrl != nil) {
          GUButton* __weak weakSelf = self;
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            NSURL *url = [NSURL URLWithString:imageUrl];
-            NSData *imageData = [NSData dataWithContentsOfURL:url];
-            UIImage *image =  [UIImage imageWithData:imageData];
-            if (weakSelf) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    if(weakSelf){
-                        [weakSelf setImage:image forState:UIControlStateNormal];
-                    }
-                });
+            if(weakSelf){
+                UIImage *image =  [[GUImageFetcher shareFetcher] imageFromUrl:imageUrl];
+                if (weakSelf) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        if(weakSelf){
+                            [weakSelf setImage:image forState:UIControlStateNormal];
+                        }
+                    });
+                }
             }
         });
     }
@@ -76,16 +77,16 @@
     if (selectedImageUrl != nil) {
         GUButton* __weak weakSelf = self;
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            NSURL *url = [NSURL URLWithString:selectedImageUrl];
-            NSData *imageData = [NSData dataWithContentsOfURL:url];
-            UIImage *image = [UIImage imageWithData:imageData];
-            if (weakSelf) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    if(weakSelf){
-                        [weakSelf setImage: image forState:UIControlStateSelected];
-                        [weakSelf setImage:image forState:UIControlStateHighlighted];
-                    }
-                });
+            if(weakSelf){
+                UIImage *image =  [[GUImageFetcher shareFetcher] imageFromUrl:selectedImageUrl];
+                if (weakSelf) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        if(weakSelf){
+                            [weakSelf setImage: image forState:UIControlStateSelected];
+                            [weakSelf setImage:image forState:UIControlStateHighlighted];
+                        }
+                    });
+                }
             }
         });
     }
@@ -113,10 +114,6 @@
         self.titleLabel.font = [UIFont fontWithStyle:fontStyle name: fontName size:size];
     }
     
-}
-
--(void)addSubview:(UIView *)view{
-    [super addSubview:view];
 }
 
 

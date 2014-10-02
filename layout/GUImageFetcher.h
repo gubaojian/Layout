@@ -14,12 +14,7 @@
 +(GUImageFetcher*) shareFetcher;
 +(void) setShareFetcher:(GUImageFetcher*) fetcher;
 
--(BOOL)setImageUrl:(NSString*)imageUrl forButton:(UIButton*) button forState:(UIControlState)state;
--(BOOL)setBackgroundImageUrl:(NSString*)imageUrl forButton:(UIButton*) button forState:(UIControlState)state;
-
--(BOOL)setImageUrl:(NSString*)imageUrl forImageView:(UIImageView*) button;
-
--(UIImage*) imageFromBundleUrl:(NSString*) url;
+-(UIImage*) imageFromUrl:(NSString*) imageUrl;
 
 
 

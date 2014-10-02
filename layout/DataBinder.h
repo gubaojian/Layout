@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GUDataBinder.h"
+#import "BinderCallback.h"
 
-@interface GUViewBinder : NSObject
+@interface DataBinder : NSObject
 
-+(void)bindView:(UIView*)view binder:(GUDataBinder*)dataBinder withData:(id) data;
++(void)bindView:(UIView*)view binderCallback:(BinderCallback*)binderCallback withData:(id) data;
 
 @end

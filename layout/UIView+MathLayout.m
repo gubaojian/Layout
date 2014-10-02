@@ -16,6 +16,8 @@ static char expressionYKey;
 static char expressionWidthKey;
 static char expressionHeightKey;
 static char expressionObjectKey;
+static char valueDataKey;
+static char eventDataKey;
 static char clickBlockKey;
 static char tapGestureRecognizerKey;
 
@@ -28,7 +30,14 @@ static char tapGestureRecognizerKey;
 }
 
 - (void)updateViewFromAttributes:(NSDictionary *)attrs {
-    
+    NSString* valueData = [attrs objectForKey:@"valueData"];
+    if (valueData) {
+        [self setValueData:valueData];
+    }
+    NSString*  eventData = [attrs objectForKey:@"eventData"];
+    if (eventData) {
+        [self setEventData:eventData];
+    }
     NSString* enabled = [attrs objectForKey:@"enabled"];
     if (enabled != nil) {
         NSString* lowserCaseEnabled = [enabled lowercaseString];
@@ -123,13 +132,13 @@ static char tapGestureRecognizerKey;
         && [self expressionY] == nil) {
         return;
     }
-    NSMutableDictionary* expressionObject = [self expressionObject];
+    NSMutableDictionary* expressionObject = [self expressionContext];
     if (expressionObject == nil) {
         CGRect bounds = [UIScreen mainScreen].bounds;
         expressionObject = [[NSMutableDictionary alloc] init];
         [expressionObject setObject:[NSNumber numberWithFloat:bounds.size.width] forKey:@"screen_height"];
         [expressionObject setObject:[NSNumber numberWithFloat:bounds.size.height] forKey:@"screen_height"];
-        [self setExpressionObject:expressionObject];
+        [self setExpressionContext:expressionObject];
     }
     CGRect frame = [self frame];
     [expressionObject setObject:[NSNumber numberWithFloat:frame.origin.x] forKey:@"x"];
@@ -196,11 +205,11 @@ static char tapGestureRecognizerKey;
    return  objc_getAssociatedObject(self, &expressionHeightKey);
 }
 
--(void)setExpressionObject:(NSMutableDictionary *)expressionObject{
+-(void)setExpressionContext:(NSMutableDictionary *)expressionObject{
     objc_setAssociatedObject(self, &expressionObjectKey, expressionObject, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
--(NSExpression*)expressionObject{
+-(NSExpression*)expressionContext{
      return  objc_getAssociatedObject(self, &expressionObjectKey);
 }
 
@@ -226,6 +235,22 @@ static char tapGestureRecognizerKey;
 
 -(UITapGestureRecognizer*)tapGestureRecognizer{
     return objc_getAssociatedObject(self, &tapGestureRecognizerKey);
+}
+
+-(void)setValueData:(NSString *)valueData{
+    objc_setAssociatedObject(self, &valueDataKey, valueData, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+-(NSString*)valueData{
+    return objc_getAssociatedObject(self, &valueDataKey);
+}
+
+-(void)setEventData:(NSString *)eventData{
+    objc_setAssociatedObject(self, &eventDataKey, eventData, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+-(NSString*) eventData{
+    return objc_getAssociatedObject(self, &eventDataKey);
 }
 
 -(void)handleTapGesture:(UIGestureRecognizer*)sender{
