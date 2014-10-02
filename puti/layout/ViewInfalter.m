@@ -11,7 +11,7 @@
 @implementation ViewInfalter
 
 
-+ (id)shareViewInfalter{
++ (id)shareInflater{
     static ViewInfalter *viewInfalter = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -28,12 +28,23 @@
     return self;
 }
 
--(id) toViewBundleFile:(NSString*) bundleFileName{
-    return [self toViewBundleName:bundleFileName];
+-(id) viewFromFile:(NSString*) fileName{
+    if ([fileName hasPrefix:@"http://"]
+        || [fileName hasPrefix:@"https://"]) {
+        NSURL* url = [NSURL URLWithString:fileName];
+        NSData* data = [NSData dataWithContentsOfURL:url];
+        if (data == nil) {
+            NSLog(@"viewFromFile Error %@ Not Exist", fileName);
+            return nil;
+        }
+        NSInputStream* inputStream = [[NSInputStream alloc] initWithData:data];
+        return [self viewFromInputStream:inputStream];
+    }
+    return [self toViewBundleName:fileName];
 }
 
 
--(id) toViewTemplate:(GUTemplate*) viewTemplate{
+-(id) viewFromTemplate:(GUTemplate*) viewTemplate{
     if (viewTemplate == nil) {
         return nil;
     }
@@ -44,17 +55,32 @@
     }
     if (view == nil) {
         NSString* filePath = [self documentPathForTemplate:viewTemplate];
-        view = [self toViewFilePath:filePath];
+        view = [self viewFromLocalFilePath:filePath];
         if (view == nil) {
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                 NSURL *url = [NSURL URLWithString:viewTemplate.downloadUrl];
                 NSData *templateData = [NSData dataWithContentsOfURL:url];
-                [[NSFileManager defaultManager] removeItemAtPath:filePath error:nil];
-                [templateData writeToFile:filePath atomically:YES];
+                BOOL success = NO;
+                if (templateData) {
+                    [[NSFileManager defaultManager] removeItemAtPath:filePath error:nil];
+                    success = [templateData writeToFile:filePath atomically:YES];
+                }
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (success) {
+                        [[NSNotificationCenter defaultCenter] postNotificationName:TEMPLATE_DOWNLOAD_SUCCESS_NOTIFICATION object:viewTemplate];
+                    }else{
+                         [[NSNotificationCenter defaultCenter] postNotificationName:TEMPLATE_DOWNLOAD_FAILED_NOTIFICATION object:viewTemplate];
+                    }
+                });
             });
         }
     }
-    return nil;
+    if (view == nil) {
+        if (localTemplate != nil) {
+            view = [self toViewBundleName:localTemplate.name];
+        }
+    }
+    return view;
 }
 
 
@@ -95,33 +121,47 @@
         bundleName = [bundleName stringByDeletingPathExtension];
     }
     NSString* filePath = [[NSBundle mainBundle] pathForResource:bundleName ofType:@"xml"];
-    return [self toViewFilePath:filePath];
+    return [self viewFromLocalFilePath:filePath];
 }
 
 
--(id) toViewFilePath:(NSString*)filePath{
+-(id) viewFromLocalFilePath:(NSString*)filePath{
     if (xmlView != nil) {
         [NSException raise:@"Mutl Concurrent Infalter Exception" format:nil];
     }
     if (![[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
         return nil;
     }
+    return [self viewFromInputStream:[NSInputStream inputStreamWithFileAtPath:filePath]];
+}
+
+
+-(id) viewFromInputStream:(NSInputStream*) inputstream{
     NSXMLParser* xmlParser = nil;
     @try {
-        xmlParser = [[NSXMLParser alloc] initWithStream:[NSInputStream inputStreamWithFileAtPath:filePath]];
+        xmlParser = [[NSXMLParser alloc] initWithStream:inputstream];
     }
     @catch (NSException *exception) {
         NSLog(@"Create NSXMLParser Error %@", [exception description]);
+        if (inputstream != nil) {
+            [inputstream close];
+        }
+        return nil;
     }
     if (xmlParser == nil) {
         return nil;
     }
     xmlParser.delegate = self;
     [xmlParser parse];
+    if (inputstream != nil) {
+        [inputstream close];
+    }
     UIView* view = xmlView;
     xmlView = nil;
     return view;
 }
+
+
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict{
     UIView* elementView = [[GUViewFactory shareFactory] createViewWithElement:elementName attributes:attributeDict];

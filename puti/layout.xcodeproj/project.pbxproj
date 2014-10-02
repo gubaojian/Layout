@@ -47,6 +47,7 @@
 		CEAD29D919B89EA70087B151 /* note.xsd in Resources */ = {isa = PBXBuildFile; fileRef = CEAD29D819B89EA70087B151 /* note.xsd */; };
 		CEAD29DB19B89EC20087B151 /* note.xml in Resources */ = {isa = PBXBuildFile; fileRef = CEAD29DA19B89EC20087B151 /* note.xml */; };
 		CEAD29DD19B89F220087B151 /* note.dtd in Resources */ = {isa = PBXBuildFile; fileRef = CEAD29DC19B89F220087B151 /* note.dtd */; };
+		CED0047119DD466B00A25135 /* GUXmlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED0047019DD466B00A25135 /* GUXmlViewController.m */; };
 		CEF7633119C1C69C004714C6 /* DataBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF7633019C1C69C004714C6 /* DataBinder.m */; };
 		CEF7633419C1C6EA004714C6 /* BinderCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF7633319C1C6EA004714C6 /* BinderCallback.m */; };
 /* End PBXBuildFile section */
@@ -124,6 +125,8 @@
 		CEAD29D819B89EA70087B151 /* note.xsd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = note.xsd; sourceTree = "<group>"; };
 		CEAD29DA19B89EC20087B151 /* note.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = note.xml; sourceTree = "<group>"; };
 		CEAD29DC19B89F220087B151 /* note.dtd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = note.dtd; sourceTree = "<group>"; };
+		CED0046F19DD466B00A25135 /* GUXmlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUXmlViewController.h; sourceTree = "<group>"; };
+		CED0047019DD466B00A25135 /* GUXmlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUXmlViewController.m; sourceTree = "<group>"; };
 		CEF7632F19C1C69C004714C6 /* DataBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBinder.h; sourceTree = "<group>"; };
 		CEF7633019C1C69C004714C6 /* DataBinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBinder.m; sourceTree = "<group>"; };
 		CEF7633219C1C6EA004714C6 /* BinderCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinderCallback.h; sourceTree = "<group>"; };
@@ -187,9 +190,8 @@
 		A595DFA1199BB97400DEA300 /* layout */ = {
 			isa = PBXGroup;
 			children = (
+				CED0046E19DD464200A25135 /* Ext */,
 				CEAD29CC19B818770087B151 /* Puti */,
-				CEAD29C919B80EC80087B151 /* UIColor+HexString.h */,
-				CEAD29CA19B80EC80087B151 /* UIColor+HexString.m */,
 				A595DFAA199BB97400DEA300 /* GUAppDelegate.h */,
 				A595DFAB199BB97400DEA300 /* GUAppDelegate.m */,
 				A595DFAD199BB97400DEA300 /* Main_iPhone.storyboard */,
@@ -250,6 +252,8 @@
 		CEAD29CC19B818770087B151 /* Puti */ = {
 			isa = PBXGroup;
 			children = (
+				CEAD29C919B80EC80087B151 /* UIColor+HexString.h */,
+				CEAD29CA19B80EC80087B151 /* UIColor+HexString.m */,
 				A5B7494F19BABCCE00CE5661 /* NSURL+Parameters.h */,
 				A5B7495019BABCCE00CE5661 /* NSURL+Parameters.m */,
 				A595DFE3199BC83B00DEA300 /* GUView.h */,
@@ -280,6 +284,15 @@
 				CEF7633319C1C6EA004714C6 /* BinderCallback.m */,
 			);
 			name = Puti;
+			sourceTree = "<group>";
+		};
+		CED0046E19DD464200A25135 /* Ext */ = {
+			isa = PBXGroup;
+			children = (
+				CED0046F19DD466B00A25135 /* GUXmlViewController.h */,
+				CED0047019DD466B00A25135 /* GUXmlViewController.m */,
+			);
+			name = Ext;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,6 +412,7 @@
 				CE6FCDA619B9928300D1A400 /* UIFont+Puti.m in Sources */,
 				CE46777519B5EA0F004D1B04 /* UIView+MathLayout.m in Sources */,
 				A595DFB5199BB97400DEA300 /* GUViewController.m in Sources */,
+				CED0047119DD466B00A25135 /* GUXmlViewController.m in Sources */,
 				A5B7494E19BA9D5F00CE5661 /* GUExpression.m in Sources */,
 				A595DFE5199BC83B00DEA300 /* GUView.m in Sources */,
 				CE6FCDAB19B9A6FA00D1A400 /* GUPerson.m in Sources */,

@@ -35,7 +35,7 @@
 
 -(void)layoutWithMathExpression;
 
-
+-(void)removeAllViews;
 
 
 @end

@@ -24,8 +24,8 @@ static GUImageFetcher *shareFetcher = nil;
 }
 
 -(UIImage*) imageFromUrl:(NSString*) imageUrl{
-    if([imageUrl hasPrefix:@"http"]
-       || [imageUrl hasPrefix:@"https"]){
+    if([imageUrl hasPrefix:@"http://"]
+        ||[imageUrl hasPrefix:@"https://"]){
         NSURL *url = [NSURL URLWithString:imageUrl];
         NSURLResponse* response = nil;
         NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url];

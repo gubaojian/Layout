@@ -15,6 +15,7 @@
 #import "GUPerson.h"
 #import "GUExpression.h"
 #import "GUImageFetcher.h"
+#import "GUXmlViewController.h"
 
 @interface GUViewController()
 
@@ -28,6 +29,12 @@
 {
     [super viewDidLoad];
     
+    GUViewController* __weak weakSelf = self;
+    [self.view setClickBlock:^(UIView *view) {
+       GUXmlViewController* xmlViewContainner =  [[GUXmlViewController alloc] init];
+       xmlViewContainner.xmlUrl = @"http://127.0.0.1:8080/market.xml";
+       [weakSelf presentViewController:xmlViewContainner animated:YES completion:nil];
+    }];
     
     GUImageView* button = [[GUImageView alloc] initWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:@"20", @"x", @"100", @"y",
                                                              @"100", @"width", @"44", @"height", @"height * 4 ", @"expressionWidth", @"http://www.baidu.com/img/bd_logo.png", @"imageUrl", [self class], @"OK", nil]];
@@ -41,7 +48,7 @@
      NSTimeInterval start = [[NSDate date] timeIntervalSinceReferenceDate];
     
  
-    UIView* xmlView = [[ViewInfalter shareViewInfalter] toViewBundleFile:@"market.xml"];
+    UIView* xmlView = [[ViewInfalter shareInflater] viewFromFile:@"market.xml"];
     /**
     UIView* firstBanner = [xmlView viewWithTag:1];
     [firstBanner setClickBlock:^(UIView *view) {

@@ -258,4 +258,14 @@ static char tapGestureRecognizerKey;
     [self clickBlock](weakSelf);
 }
 
+-(void)removeAllViews{
+    NSArray* subviews = [self subviews];
+    if (subviews == nil || [subviews count] == 0) {
+        return;
+    }
+    for (UIView* subview in subviews) {
+        [subview removeFromSuperview];
+    }
+}
+
 @end

@@ -10,7 +10,6 @@
 
 @interface GUTemplate : NSObject
 
-
 @property(nonatomic, strong) NSString* name;
 
 @property(nonatomic) NSInteger version;
