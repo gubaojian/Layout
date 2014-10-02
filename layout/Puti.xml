@@ -1,9 +1,75 @@
+<!-- 
+ 1、不做跨平台，仅仅做一个简单的ios引擎
+ 2、目标减少外部依赖，尽量是0依赖-
+ 3、view加载和数据绑定，其它事件委托给业务方处理 -->
 <?xml version="1.0" encoding="utf-8"?>
 <View
+    x ="10"
     y ="200"
     width="320"
     height="240"
-    background="#f0f0f0">
+    expressionX="33"
+    expressionY="33"
+    expressionWidth="33"
+    expressionHeight="dd"
+    background="#f0f0f0"
+    tag="333"
+    enabled="false"
+    alpha="dd"
+    borderWidth="3"
+    borderColor="#ff2222"
+    cornerRadius="dd">
     
+    <ImageView
+        x ="10"
+        y ="200"
+        width="320"
+        height="240"
+        expressionX="33"
+        expressionY="33"
+        expressionWidth="33"
+        expressionHeight="dd"
+        background="#f0f0f0"
+        tag="333"
+        enabled="dd"
+        alpha="dd"
+        borderWidth="3"
+        borderColor="#ff2222"
+        cornerRadius="dd"
+        imageUrl="ff"
+        scaleType="cc"
+        highlightedImageUrl="33">
+        
+        
+    </ImageView>
+    
+    
+    <TextView
+        x ="10"
+        y ="200"
+        width="320"
+        height="240"
+        expressionX="33"
+        expressionY="33"
+        expressionWidth="33"
+        expressionHeight="dd"
+        background="#f0f0f0"
+        tag="333"
+        enabled="dd"
+        alpha="dd"
+        borderWidth="3"
+        borderColor="#ff2222"
+        cornerRadius="dd"
+        TextView="ff"
+        textAlignment="cc"
+        lineBreakMode="33"
+        numberOfLines="33"
+        textColor="33"
+        fontStyle="dd"
+        font="dd"
+        textSize="32">
+        
+        
+    </TextView>
     
 </View>

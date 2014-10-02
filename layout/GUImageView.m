@@ -98,7 +98,7 @@
         GUImageView* __weak weakSelf = self;
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             NSURL *url = [NSURL URLWithString:imageUrl];
-            NSData *imageData = [NSData dataWithContentsOfURL:url];
+           NSData * imageData= [NSURLConnection sendSynchronousRequest:[NSURLRequest requestWithURL:url] returningResponse:nil error:nil];
             UIImage *image = [UIImage imageWithData:imageData];
             if (weakSelf) {
                 dispatch_async(dispatch_get_main_queue(), ^{
