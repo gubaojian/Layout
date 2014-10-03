@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <View
-    y ="20"
+    y ="200"
     width="320"
     height="240"
     background="#f0f0f0">
-
+    
     <View
         height="0.5"
         width="288"
@@ -19,8 +19,9 @@
         y="7"
         x = "112"
         background="#f0f0f0"
-        textAlignment="center"/>
-
+        textAlignment="center"
+        valueData="${name}"/>
+        
     <ImageView width="144"
         height="72"
         x="12"
@@ -28,7 +29,7 @@
         imageUrl="http://gtms03.alicdn.com/tps/i3/T1d4z2FrxXXXa8j.Iq-288-144.png"
         cornerRadius="4"
         background="#3322A1"/>
-
+        
     <ImageView width="144"
         height="72"
         x="168"
@@ -42,15 +43,15 @@
         y="118"
         imageUrl="http://gtms04.alicdn.com/tps/i4/T1n.uYFX4aXXcc6K.t-292-144.png"
         cornerRadius="4"/>
-
-   <ImageView width="144"
+        
+        <ImageView width="144"
         height="72"
         x="168"
         y="118"
         imageUrl="http://gtms04.alicdn.com/tps/i4/T1w32kFf0dXXcc6K.t-292-144.png"
         cornerRadius="4"/>
-
-
+        
+        
    <TextView width="72"
         height="30"
         fontSize="18"
@@ -71,7 +72,7 @@
         borderWidth="0.5"
         borderColor="#ff6644"
         textAlignment="center"/>
-
+    
     <TextView width="72"
     height="30"
     fontSize="18"
@@ -82,7 +83,7 @@
     borderWidth="0.5"
     borderColor="#ff6644"
     textAlignment="center"/>
-
+    
     <TextView width="72"
     height="30"
     fontSize="18"
@@ -93,11 +94,5 @@
     borderWidth="0.5"
     borderColor="#ff6644"
     textAlignment="center"/>
-
-    <ImageView width="320"
-         height="64"
-         x="0"
-         y="250"
-         imageUrl="http://gtms04.alicdn.com/tps/i4/TB1LaNeGpXXXXXKXFXXXK5zTVXX-520-280.png"/>
 
 </View>

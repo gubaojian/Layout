@@ -1,0 +1,786 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A57CDA6919B8D0CD00D3B5C9 /* market.xml in Resources */ = {isa = PBXBuildFile; fileRef = A57CDA6819B8D0CD00D3B5C9 /* market.xml */; };
+		A595DF9C199BB97400DEA300 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A595DF9B199BB97400DEA300 /* Foundation.framework */; };
+		A595DF9E199BB97400DEA300 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A595DF9D199BB97400DEA300 /* CoreGraphics.framework */; };
+		A595DFA0199BB97400DEA300 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A595DF9F199BB97400DEA300 /* UIKit.framework */; };
+		A595DFA6199BB97400DEA300 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A595DFA4199BB97400DEA300 /* InfoPlist.strings */; };
+		A595DFA8199BB97400DEA300 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A595DFA7199BB97400DEA300 /* main.m */; };
+		A595DFAC199BB97400DEA300 /* GUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A595DFAB199BB97400DEA300 /* GUAppDelegate.m */; };
+		A595DFB5199BB97400DEA300 /* GUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A595DFB4199BB97400DEA300 /* GUViewController.m */; };
+		A595DFB7199BB97400DEA300 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A595DFB6199BB97400DEA300 /* Images.xcassets */; };
+		A595DFBE199BB97400DEA300 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A595DFBD199BB97400DEA300 /* XCTest.framework */; };
+		A595DFBF199BB97400DEA300 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A595DF9B199BB97400DEA300 /* Foundation.framework */; };
+		A595DFC0199BB97400DEA300 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A595DF9F199BB97400DEA300 /* UIKit.framework */; };
+		A595DFC8199BB97400DEA300 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A595DFC6199BB97400DEA300 /* InfoPlist.strings */; };
+		A595DFCA199BB97400DEA300 /* layoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A595DFC9199BB97400DEA300 /* layoutTests.m */; };
+		A595DFD4199BBA8000DEA300 /* Home.xml in Resources */ = {isa = PBXBuildFile; fileRef = A595DFD3199BBA8000DEA300 /* Home.xml */; };
+		A595DFE5199BC83B00DEA300 /* GUView.m in Sources */ = {isa = PBXBuildFile; fileRef = A595DFE4199BC83B00DEA300 /* GUView.m */; };
+		A5B7494E19BA9D5F00CE5661 /* GUExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B7494D19BA9D5F00CE5661 /* GUExpression.m */; };
+		A5B7495119BABCCE00CE5661 /* NSURL+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B7495019BABCCE00CE5661 /* NSURL+Parameters.m */; };
+		A5CEE73719BAC70F004E24C1 /* GUImageFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CEE73619BAC70F004E24C1 /* GUImageFetcher.m */; };
+		CE46777519B5EA0F004D1B04 /* UIView+MathLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CE46777419B5EA0F004D1B04 /* UIView+MathLayout.m */; };
+		CE50C99819B474F8000B7258 /* ViewInfalter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE50C99719B474F8000B7258 /* ViewInfalter.m */; };
+		CE526F9419C0730800FA685A /* GUTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE526F9319C0730800FA685A /* GUTemplate.m */; };
+		CE6390C719DE498900E93915 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A595DF9B199BB97400DEA300 /* Foundation.framework */; };
+		CE6390CC19DE498900E93915 /* library-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = CE6390CB19DE498900E93915 /* library-Prefix.pch */; };
+		CE6390CE19DE498900E93915 /* library-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE6390CD19DE498900E93915 /* library-Info.plist */; };
+		CE6FCDA619B9928300D1A400 /* UIFont+Puti.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6FCDA519B9928300D1A400 /* UIFont+Puti.m */; };
+		CE6FCDA819B9A2EA00D1A400 /* Puti.xml in Resources */ = {isa = PBXBuildFile; fileRef = CE6FCDA719B9A2EA00D1A400 /* Puti.xml */; };
+		CE6FCDAB19B9A6FA00D1A400 /* GUPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6FCDAA19B9A6FA00D1A400 /* GUPerson.m */; };
+		CEA8701E19B8B4130051C704 /* GUViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA8701D19B8B4130051C704 /* GUViewFactory.m */; };
+		CEAD29CB19B80EC80087B151 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAD29CA19B80EC80087B151 /* UIColor+HexString.m */; };
+		CEAD29CF19B8190B0087B151 /* GUButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAD29CE19B8190B0087B151 /* GUButton.m */; };
+		CEAD29D219B833260087B151 /* GUTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAD29D119B833260087B151 /* GUTextView.m */; };
+		CEAD29D519B83BF40087B151 /* GUImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAD29D419B83BF40087B151 /* GUImageView.m */; };
+		CEAD29D919B89EA70087B151 /* note.xsd in Resources */ = {isa = PBXBuildFile; fileRef = CEAD29D819B89EA70087B151 /* note.xsd */; };
+		CEAD29DB19B89EC20087B151 /* note.xml in Resources */ = {isa = PBXBuildFile; fileRef = CEAD29DA19B89EC20087B151 /* note.xml */; };
+		CEAD29DD19B89F220087B151 /* note.dtd in Resources */ = {isa = PBXBuildFile; fileRef = CEAD29DC19B89F220087B151 /* note.dtd */; };
+		CED0047119DD466B00A25135 /* GUXmlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED0047019DD466B00A25135 /* GUXmlViewController.m */; };
+		CEF7633119C1C69C004714C6 /* DataBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF7633019C1C69C004714C6 /* DataBinder.m */; };
+		CEF7633419C1C6EA004714C6 /* BinderCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF7633319C1C6EA004714C6 /* BinderCallback.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A595DFC1199BB97400DEA300 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A595DF90199BB97400DEA300 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A595DF97199BB97400DEA300;
+			remoteInfo = layout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A57CDA6819B8D0CD00D3B5C9 /* market.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = market.xml; sourceTree = "<group>"; };
+		A595DF98199BB97400DEA300 /* kingfisher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kingfisher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A595DF9B199BB97400DEA300 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A595DF9D199BB97400DEA300 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A595DF9F199BB97400DEA300 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A595DFA3199BB97400DEA300 /* kingfisher-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "kingfisher-Info.plist"; sourceTree = "<group>"; };
+		A595DFA5199BB97400DEA300 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A595DFA7199BB97400DEA300 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A595DFA9199BB97400DEA300 /* kingfisher-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "kingfisher-Prefix.pch"; sourceTree = "<group>"; };
+		A595DFAA199BB97400DEA300 /* GUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GUAppDelegate.h; sourceTree = "<group>"; };
+		A595DFAB199BB97400DEA300 /* GUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GUAppDelegate.m; sourceTree = "<group>"; };
+		A595DFB3199BB97400DEA300 /* GUViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GUViewController.h; sourceTree = "<group>"; };
+		A595DFB4199BB97400DEA300 /* GUViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GUViewController.m; sourceTree = "<group>"; };
+		A595DFB6199BB97400DEA300 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A595DFBC199BB97400DEA300 /* kingfisherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kingfisherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A595DFBD199BB97400DEA300 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A595DFC5199BB97400DEA300 /* kingfisherTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "kingfisherTests-Info.plist"; sourceTree = "<group>"; };
+		A595DFC7199BB97400DEA300 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A595DFC9199BB97400DEA300 /* layoutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = layoutTests.m; sourceTree = "<group>"; };
+		A595DFD3199BBA8000DEA300 /* Home.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Home.xml; sourceTree = "<group>"; };
+		A595DFE3199BC83B00DEA300 /* GUView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUView.h; path = ../layout/GUView.h; sourceTree = "<group>"; };
+		A595DFE4199BC83B00DEA300 /* GUView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GUView.m; path = ../layout/GUView.m; sourceTree = "<group>"; };
+		A5B7494C19BA9D5F00CE5661 /* GUExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUExpression.h; path = ../layout/GUExpression.h; sourceTree = "<group>"; };
+		A5B7494D19BA9D5F00CE5661 /* GUExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GUExpression.m; path = ../layout/GUExpression.m; sourceTree = "<group>"; };
+		A5B7494F19BABCCE00CE5661 /* NSURL+Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURL+Parameters.h"; path = "../layout/NSURL+Parameters.h"; sourceTree = "<group>"; };
+		A5B7495019BABCCE00CE5661 /* NSURL+Parameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+Parameters.m"; path = "../layout/NSURL+Parameters.m"; sourceTree = "<group>"; };
+		A5CEE73519BAC70F004E24C1 /* GUImageFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUImageFetcher.h; path = ../layout/GUImageFetcher.h; sourceTree = "<group>"; };
+		A5CEE73619BAC70F004E24C1 /* GUImageFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GUImageFetcher.m; path = ../layout/GUImageFetcher.m; sourceTree = "<group>"; };
+		CE46777319B5EA0F004D1B04 /* UIView+MathLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+MathLayout.h"; path = "../layout/UIView+MathLayout.h"; sourceTree = "<group>"; };
+		CE46777419B5EA0F004D1B04 /* UIView+MathLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+MathLayout.m"; path = "../layout/UIView+MathLayout.m"; sourceTree = "<group>"; };
+		CE50C99619B474F8000B7258 /* ViewInfalter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewInfalter.h; path = ../layout/ViewInfalter.h; sourceTree = "<group>"; };
+		CE50C99719B474F8000B7258 /* ViewInfalter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewInfalter.m; path = ../layout/ViewInfalter.m; sourceTree = "<group>"; };
+		CE526F9219C0730800FA685A /* GUTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUTemplate.h; path = ../layout/GUTemplate.h; sourceTree = "<group>"; };
+		CE526F9319C0730800FA685A /* GUTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GUTemplate.m; path = ../layout/GUTemplate.m; sourceTree = "<group>"; };
+		CE6390C619DE498900E93915 /* love.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework.static; includeInIndex = 0; path = love.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE6390CA19DE498900E93915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE6390CB19DE498900E93915 /* library-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "library-Prefix.pch"; sourceTree = "<group>"; };
+		CE6390CD19DE498900E93915 /* library-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "library-Info.plist"; sourceTree = "<group>"; };
+		CE6FCDA419B9928300D1A400 /* UIFont+Puti.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+Puti.h"; path = "../layout/UIFont+Puti.h"; sourceTree = "<group>"; };
+		CE6FCDA519B9928300D1A400 /* UIFont+Puti.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+Puti.m"; path = "../layout/UIFont+Puti.m"; sourceTree = "<group>"; };
+		CE6FCDA719B9A2EA00D1A400 /* Puti.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Puti.xml; sourceTree = "<group>"; };
+		CE6FCDA919B9A6FA00D1A400 /* GUPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUPerson.h; sourceTree = "<group>"; };
+		CE6FCDAA19B9A6FA00D1A400 /* GUPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUPerson.m; sourceTree = "<group>"; };
+		CEA8701C19B8B4130051C704 /* GUViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUViewFactory.h; path = ../layout/GUViewFactory.h; sourceTree = "<group>"; };
+		CEA8701D19B8B4130051C704 /* GUViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GUViewFactory.m; path = ../layout/GUViewFactory.m; sourceTree = "<group>"; };
+		CEAD29C919B80EC80087B151 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+HexString.h"; path = "../layout/UIColor+HexString.h"; sourceTree = "<group>"; };
+		CEAD29CA19B80EC80087B151 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+HexString.m"; path = "../layout/UIColor+HexString.m"; sourceTree = "<group>"; };
+		CEAD29CD19B8190B0087B151 /* GUButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUButton.h; path = ../layout/GUButton.h; sourceTree = "<group>"; };
+		CEAD29CE19B8190B0087B151 /* GUButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GUButton.m; path = ../layout/GUButton.m; sourceTree = "<group>"; };
+		CEAD29D019B833260087B151 /* GUTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUTextView.h; path = ../layout/GUTextView.h; sourceTree = "<group>"; };
+		CEAD29D119B833260087B151 /* GUTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GUTextView.m; path = ../layout/GUTextView.m; sourceTree = "<group>"; };
+		CEAD29D319B83BF40087B151 /* GUImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUImageView.h; path = ../layout/GUImageView.h; sourceTree = "<group>"; };
+		CEAD29D419B83BF40087B151 /* GUImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GUImageView.m; path = ../layout/GUImageView.m; sourceTree = "<group>"; };
+		CEAD29D819B89EA70087B151 /* note.xsd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = note.xsd; sourceTree = "<group>"; };
+		CEAD29DA19B89EC20087B151 /* note.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = note.xml; sourceTree = "<group>"; };
+		CEAD29DC19B89F220087B151 /* note.dtd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = note.dtd; sourceTree = "<group>"; };
+		CED0046F19DD466B00A25135 /* GUXmlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUXmlViewController.h; sourceTree = "<group>"; };
+		CED0047019DD466B00A25135 /* GUXmlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUXmlViewController.m; sourceTree = "<group>"; };
+		CEF7632F19C1C69C004714C6 /* DataBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataBinder.h; path = ../layout/DataBinder.h; sourceTree = "<group>"; };
+		CEF7633019C1C69C004714C6 /* DataBinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataBinder.m; path = ../layout/DataBinder.m; sourceTree = "<group>"; };
+		CEF7633219C1C6EA004714C6 /* BinderCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BinderCallback.h; path = ../layout/BinderCallback.h; sourceTree = "<group>"; };
+		CEF7633319C1C6EA004714C6 /* BinderCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BinderCallback.m; path = ../layout/BinderCallback.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A595DF95199BB97400DEA300 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A595DF9E199BB97400DEA300 /* CoreGraphics.framework in Frameworks */,
+				A595DFA0199BB97400DEA300 /* UIKit.framework in Frameworks */,
+				A595DF9C199BB97400DEA300 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A595DFB9199BB97400DEA300 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A595DFBE199BB97400DEA300 /* XCTest.framework in Frameworks */,
+				A595DFC0199BB97400DEA300 /* UIKit.framework in Frameworks */,
+				A595DFBF199BB97400DEA300 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE6390C019DE498900E93915 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE6390C719DE498900E93915 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A595DF8F199BB97400DEA300 = {
+			isa = PBXGroup;
+			children = (
+				A595DFA1199BB97400DEA300 /* demo */,
+				A595DFC3199BB97400DEA300 /* demoTests */,
+				CE6390C819DE498900E93915 /* library */,
+				A595DF9A199BB97400DEA300 /* Frameworks */,
+				A595DF99199BB97400DEA300 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A595DF99199BB97400DEA300 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A595DF98199BB97400DEA300 /* kingfisher.app */,
+				A595DFBC199BB97400DEA300 /* kingfisherTests.xctest */,
+				CE6390C619DE498900E93915 /* love.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A595DF9A199BB97400DEA300 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A595DF9B199BB97400DEA300 /* Foundation.framework */,
+				A595DF9D199BB97400DEA300 /* CoreGraphics.framework */,
+				A595DF9F199BB97400DEA300 /* UIKit.framework */,
+				A595DFBD199BB97400DEA300 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A595DFA1199BB97400DEA300 /* demo */ = {
+			isa = PBXGroup;
+			children = (
+				CED0046E19DD464200A25135 /* Ext */,
+				A595DFAA199BB97400DEA300 /* GUAppDelegate.h */,
+				A595DFAB199BB97400DEA300 /* GUAppDelegate.m */,
+				A595DFB3199BB97400DEA300 /* GUViewController.h */,
+				A595DFB4199BB97400DEA300 /* GUViewController.m */,
+				A595DFB6199BB97400DEA300 /* Images.xcassets */,
+				A595DFA2199BB97400DEA300 /* Supporting Files */,
+				CE6FCDA919B9A6FA00D1A400 /* GUPerson.h */,
+				CE6FCDAA19B9A6FA00D1A400 /* GUPerson.m */,
+			);
+			name = demo;
+			path = layout;
+			sourceTree = "<group>";
+		};
+		A595DFA2199BB97400DEA300 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A595DFA3199BB97400DEA300 /* kingfisher-Info.plist */,
+				A595DFA4199BB97400DEA300 /* InfoPlist.strings */,
+				A595DFA7199BB97400DEA300 /* main.m */,
+				A595DFA9199BB97400DEA300 /* kingfisher-Prefix.pch */,
+				A595DFD3199BBA8000DEA300 /* Home.xml */,
+				A57CDA6819B8D0CD00D3B5C9 /* market.xml */,
+				CE6FCDA719B9A2EA00D1A400 /* Puti.xml */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A595DFC3199BB97400DEA300 /* demoTests */ = {
+			isa = PBXGroup;
+			children = (
+				A595DFC9199BB97400DEA300 /* layoutTests.m */,
+				A595DFC4199BB97400DEA300 /* Supporting Files */,
+			);
+			name = demoTests;
+			path = layoutTests;
+			sourceTree = "<group>";
+		};
+		A595DFC4199BB97400DEA300 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A595DFC5199BB97400DEA300 /* kingfisherTests-Info.plist */,
+				A595DFC6199BB97400DEA300 /* InfoPlist.strings */,
+				CEAD29D819B89EA70087B151 /* note.xsd */,
+				CEAD29DA19B89EC20087B151 /* note.xml */,
+				CEAD29DC19B89F220087B151 /* note.dtd */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE6390C819DE498900E93915 /* library */ = {
+			isa = PBXGroup;
+			children = (
+				A5B7494F19BABCCE00CE5661 /* NSURL+Parameters.h */,
+				A5B7495019BABCCE00CE5661 /* NSURL+Parameters.m */,
+				A595DFE3199BC83B00DEA300 /* GUView.h */,
+				A595DFE4199BC83B00DEA300 /* GUView.m */,
+				CE50C99619B474F8000B7258 /* ViewInfalter.h */,
+				CE50C99719B474F8000B7258 /* ViewInfalter.m */,
+				CE46777319B5EA0F004D1B04 /* UIView+MathLayout.h */,
+				CE46777419B5EA0F004D1B04 /* UIView+MathLayout.m */,
+				CEAD29CD19B8190B0087B151 /* GUButton.h */,
+				CEAD29CE19B8190B0087B151 /* GUButton.m */,
+				CEAD29D019B833260087B151 /* GUTextView.h */,
+				CEAD29D119B833260087B151 /* GUTextView.m */,
+				CEAD29D319B83BF40087B151 /* GUImageView.h */,
+				CEAD29D419B83BF40087B151 /* GUImageView.m */,
+				CEA8701C19B8B4130051C704 /* GUViewFactory.h */,
+				CEA8701D19B8B4130051C704 /* GUViewFactory.m */,
+				CE6FCDA419B9928300D1A400 /* UIFont+Puti.h */,
+				CE6FCDA519B9928300D1A400 /* UIFont+Puti.m */,
+				A5B7494C19BA9D5F00CE5661 /* GUExpression.h */,
+				A5B7494D19BA9D5F00CE5661 /* GUExpression.m */,
+				CE526F9219C0730800FA685A /* GUTemplate.h */,
+				CE526F9319C0730800FA685A /* GUTemplate.m */,
+				A5CEE73519BAC70F004E24C1 /* GUImageFetcher.h */,
+				A5CEE73619BAC70F004E24C1 /* GUImageFetcher.m */,
+				CEF7632F19C1C69C004714C6 /* DataBinder.h */,
+				CEF7633019C1C69C004714C6 /* DataBinder.m */,
+				CEF7633219C1C6EA004714C6 /* BinderCallback.h */,
+				CEF7633319C1C6EA004714C6 /* BinderCallback.m */,
+				CEAD29C919B80EC80087B151 /* UIColor+HexString.h */,
+				CEAD29CA19B80EC80087B151 /* UIColor+HexString.m */,
+				CE6390CB19DE498900E93915 /* library-Prefix.pch */,
+				CE6390CD19DE498900E93915 /* library-Info.plist */,
+				CE6390C919DE498900E93915 /* Supporting Files */,
+			);
+			name = library;
+			path = love;
+			sourceTree = "<group>";
+		};
+		CE6390C919DE498900E93915 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE6390CA19DE498900E93915 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CED0046E19DD464200A25135 /* Ext */ = {
+			isa = PBXGroup;
+			children = (
+				CED0046F19DD466B00A25135 /* GUXmlViewController.h */,
+				CED0047019DD466B00A25135 /* GUXmlViewController.m */,
+			);
+			name = Ext;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CE6390C119DE498900E93915 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE6390CC19DE498900E93915 /* library-Prefix.pch in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A595DF97199BB97400DEA300 /* kingfisher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A595DFCD199BB97400DEA300 /* Build configuration list for PBXNativeTarget "kingfisher" */;
+			buildPhases = (
+				A595DF94199BB97400DEA300 /* Sources */,
+				A595DF95199BB97400DEA300 /* Frameworks */,
+				A595DF96199BB97400DEA300 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = kingfisher;
+			productName = layout;
+			productReference = A595DF98199BB97400DEA300 /* kingfisher.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A595DFBB199BB97400DEA300 /* kingfisherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A595DFD0199BB97400DEA300 /* Build configuration list for PBXNativeTarget "kingfisherTests" */;
+			buildPhases = (
+				A595DFB8199BB97400DEA300 /* Sources */,
+				A595DFB9199BB97400DEA300 /* Frameworks */,
+				A595DFBA199BB97400DEA300 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A595DFC2199BB97400DEA300 /* PBXTargetDependency */,
+			);
+			name = kingfisherTests;
+			productName = layoutTests;
+			productReference = A595DFBC199BB97400DEA300 /* kingfisherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CE6390C519DE498900E93915 /* love */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE6390CF19DE498900E93915 /* Build configuration list for PBXNativeTarget "love" */;
+			buildPhases = (
+				CE6390BE19DE498900E93915 /* ShellScript */,
+				CE6390BF19DE498900E93915 /* Sources */,
+				CE6390C019DE498900E93915 /* Frameworks */,
+				CE6390C119DE498900E93915 /* Headers */,
+				CE6390C219DE498900E93915 /* Resources */,
+				CE6390C319DE498900E93915 /* ShellScript */,
+				CE6390C419DE498900E93915 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = love;
+			productName = love;
+			productReference = CE6390C619DE498900E93915 /* love.framework */;
+			productType = "com.apple.product-type.framework.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A595DF90199BB97400DEA300 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GU;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = baobao;
+				TargetAttributes = {
+					A595DFBB199BB97400DEA300 = {
+						TestTargetID = A595DF97199BB97400DEA300;
+					};
+					CE6390C519DE498900E93915 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+				};
+			};
+			buildConfigurationList = A595DF93199BB97400DEA300 /* Build configuration list for PBXProject "kingfisher" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A595DF8F199BB97400DEA300;
+			productRefGroup = A595DF99199BB97400DEA300 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A595DF97199BB97400DEA300 /* kingfisher */,
+				A595DFBB199BB97400DEA300 /* kingfisherTests */,
+				CE6390C519DE498900E93915 /* love */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A595DF96199BB97400DEA300 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE6FCDA819B9A2EA00D1A400 /* Puti.xml in Resources */,
+				A595DFB7199BB97400DEA300 /* Images.xcassets in Resources */,
+				A595DFD4199BBA8000DEA300 /* Home.xml in Resources */,
+				A57CDA6919B8D0CD00D3B5C9 /* market.xml in Resources */,
+				A595DFA6199BB97400DEA300 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A595DFBA199BB97400DEA300 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A595DFC8199BB97400DEA300 /* InfoPlist.strings in Resources */,
+				CEAD29DB19B89EC20087B151 /* note.xml in Resources */,
+				CEAD29DD19B89F220087B151 /* note.dtd in Resources */,
+				CEAD29D919B89EA70087B151 /* note.xsd in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE6390C219DE498900E93915 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE6390CE19DE498900E93915 /* library-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CE6390BE19DE498900E93915 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n\tUFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version  from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\nONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM:-$ONLY_ACTIVE_ARCH}\n\n# Short-circuit if all binaries are up to date\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n  ([[ \"${ONLY_ACTIVE_PLATFORM}\" == \"YES\" ]] || \\\n    ([[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n     [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n     [[ ! \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\n    )\n  )\nthen\n    exit 0\nfi\n\n\n# Clean other platform if needed\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]]\nthen\n\techo \"Platform \\\"$UFW_SDK_PLATFORM\\\" was cleaned recently. Cleaning \\\"$UFW_OTHER_PLATFORM\\\" as well\"\n\techo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\n\txcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\nfi\n\n\n# Make sure we are building from fresh binaries\n\nrm -rf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\n\nif [[ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]]\nthen\n    rm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n    rm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CE6390C319DE498900E93915 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "HEADERS_ROOT=$SRCROOT/$PRODUCT_NAME\nFRAMEWORK_HEADERS_DIR=\"$BUILT_PRODUCTS_DIR/$WRAPPER_NAME/Versions/$FRAMEWORK_VERSION/Headers\"\n\n## only header files expected at this point\nPUBLIC_HEADERS=$(find $FRAMEWORK_HEADERS_DIR/. -not -type d 2> /dev/null | sed -e \"s@.*/@@g\")\n\nFIND_OPTS=\"\"\nfor PUBLIC_HEADER in $PUBLIC_HEADERS; do\n  if [ -n \"$FIND_OPTS\" ]; then\n    FIND_OPTS=\"$FIND_OPTS -o\"\n  fi\n  FIND_OPTS=\"$FIND_OPTS -name '$PUBLIC_HEADER'\"\ndone\n\nif [ -n \"$FIND_OPTS\" ]; then\n  for ORIG_HEADER in $(eval \"find $HEADERS_ROOT/. $FIND_OPTS\" 2> /dev/null | sed -e \"s@^$HEADERS_ROOT/./@@g\"); do\n    PUBLIC_HEADER=$(basename $ORIG_HEADER)\n    RELATIVE_PATH=$(dirname $ORIG_HEADER)\n    if [ -e $FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER ]; then\n      mkdir -p \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH\"\n      mv \"$FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER\" \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH/$PUBLIC_HEADER\"\n    fi\n  done\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CE6390C419DE498900E93915 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\nexport UFW_MASTER_SCRIPT_RUNNING=1\n\n\n# Functions\n\n## List files in the specified directory, storing to the specified array.\n#\n# @param $1 The path to list\n# @param $2 The name of the array to fill\n#\n##\nlist_files ()\n{\n    filelist=$(ls \"$1\")\n    while read line\n    do\n        eval \"$2[\\${#$2[*]}]=\\\"\\$line\\\"\"\n    done <<< \"$filelist\"\n}\n\n\n# Sanity check\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n    echo \"Framework target \\\"${TARGET_NAME}\\\" had no source files to build from. Make sure your source files have the correct target membership\"\n    exit 1\nfi\n\n\n# Gather information\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n    UFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\nONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM:-$ONLY_ACTIVE_ARCH}\n\n# Short-circuit if all binaries are up to date.\n# We already checked the other platform in the prerun script.\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\nif [ \"${ONLY_ACTIVE_PLATFORM}\" == \"YES\" ]\nthen\n    echo \"ONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM}: Skipping other platform build\"\nelse\n    # Make sure the other platform gets built\n    \n    echo \"Build other platform\"\n    \n    echo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n    xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n    \n    \n    # Build the fat static library binary\n    \n    echo \"Create universal static library\"\n    \nif [[ \"$XCODE_VERSION_MAJOR\" = \"0500\" ]]\nthen\n    echo \"$DT_TOOLCHAIN_DIR/usr/bin/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \"$DT_TOOLCHAIN_DIR/usr/bin/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\nelse\n    echo \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\nfi \n    echo mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n    mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nfi\n\n# Build embedded framework structure\n\necho \"Build Embedded Framework\"\n\necho rm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\necho mkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\necho cp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\ncp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\n\ndeclare -a UFW_FILE_LIST\nlist_files \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\" UFW_FILE_LIST\nfor filename in \"${UFW_FILE_LIST[@]}\"\ndo\n    if [[ \"${filename}\" != \"Info.plist\" ]] && [[ ! \"${filename}\" =~ .*\\.lproj$ ]]\n    then\n        echo ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n        ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n    fi\ndone\n\n\nif [ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]\nthen\n    # Replace other platform's framework with a copy of this one (so that both have the same universal binary)\n    \n    echo \"Copy from $UFW_SDK_PLATFORM to $UFW_OTHER_PLATFORM\"\n    \n    echo rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    echo cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A595DF94199BB97400DEA300 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEAD29CB19B80EC80087B151 /* UIColor+HexString.m in Sources */,
+				CE526F9419C0730800FA685A /* GUTemplate.m in Sources */,
+				CEA8701E19B8B4130051C704 /* GUViewFactory.m in Sources */,
+				CEF7633419C1C6EA004714C6 /* BinderCallback.m in Sources */,
+				CEAD29CF19B8190B0087B151 /* GUButton.m in Sources */,
+				A595DFAC199BB97400DEA300 /* GUAppDelegate.m in Sources */,
+				A5CEE73719BAC70F004E24C1 /* GUImageFetcher.m in Sources */,
+				CE6FCDA619B9928300D1A400 /* UIFont+Puti.m in Sources */,
+				CE46777519B5EA0F004D1B04 /* UIView+MathLayout.m in Sources */,
+				A595DFB5199BB97400DEA300 /* GUViewController.m in Sources */,
+				CED0047119DD466B00A25135 /* GUXmlViewController.m in Sources */,
+				A5B7494E19BA9D5F00CE5661 /* GUExpression.m in Sources */,
+				A595DFE5199BC83B00DEA300 /* GUView.m in Sources */,
+				CE6FCDAB19B9A6FA00D1A400 /* GUPerson.m in Sources */,
+				A5B7495119BABCCE00CE5661 /* NSURL+Parameters.m in Sources */,
+				CEAD29D219B833260087B151 /* GUTextView.m in Sources */,
+				A595DFA8199BB97400DEA300 /* main.m in Sources */,
+				CEAD29D519B83BF40087B151 /* GUImageView.m in Sources */,
+				CEF7633119C1C69C004714C6 /* DataBinder.m in Sources */,
+				CE50C99819B474F8000B7258 /* ViewInfalter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A595DFB8199BB97400DEA300 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A595DFCA199BB97400DEA300 /* layoutTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE6390BF19DE498900E93915 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A595DFC2199BB97400DEA300 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A595DF97199BB97400DEA300 /* kingfisher */;
+			targetProxy = A595DFC1199BB97400DEA300 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A595DFA4199BB97400DEA300 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A595DFA5199BB97400DEA300 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A595DFC6199BB97400DEA300 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A595DFC7199BB97400DEA300 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A595DFCB199BB97400DEA300 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A595DFCC199BB97400DEA300 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A595DFCE199BB97400DEA300 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "layout/kingfisher-Prefix.pch";
+				INFOPLIST_FILE = "layout/kingfisher-Info.plist";
+				PRODUCT_NAME = kingfisher;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A595DFCF199BB97400DEA300 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "layout/kingfisher-Prefix.pch";
+				INFOPLIST_FILE = "layout/kingfisher-Info.plist";
+				PRODUCT_NAME = kingfisher;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A595DFD1199BB97400DEA300 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/layout.app/layout";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "layout/layout-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "layoutTests/kingfisherTests-Info.plist";
+				PRODUCT_NAME = kingfisherTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A595DFD2199BB97400DEA300 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/layout.app/layout";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "layout/layout-Prefix.pch";
+				INFOPLIST_FILE = "layoutTests/kingfisherTests-Info.plist";
+				PRODUCT_NAME = kingfisherTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		CE6390D019DE498900E93915 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = love/Info.plist;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		CE6390D119DE498900E93915 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = love/Info.plist;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A595DF93199BB97400DEA300 /* Build configuration list for PBXProject "kingfisher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A595DFCB199BB97400DEA300 /* Debug */,
+				A595DFCC199BB97400DEA300 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A595DFCD199BB97400DEA300 /* Build configuration list for PBXNativeTarget "kingfisher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A595DFCE199BB97400DEA300 /* Debug */,
+				A595DFCF199BB97400DEA300 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A595DFD0199BB97400DEA300 /* Build configuration list for PBXNativeTarget "kingfisherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A595DFD1199BB97400DEA300 /* Debug */,
+				A595DFD2199BB97400DEA300 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE6390CF19DE498900E93915 /* Build configuration list for PBXNativeTarget "love" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE6390D019DE498900E93915 /* Debug */,
+				CE6390D119DE498900E93915 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A595DF90199BB97400DEA300 /* Project object */;
+}
