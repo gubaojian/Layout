@@ -15,7 +15,7 @@
     <TextView width="96"
         height="18"
         fontSize="16"
-        text="导购"
+        text="demo"
         y="7"
         x = "112"
         background="#f0f0f0"

@@ -15,7 +15,7 @@
 #import "GUExpression.h"
 #import "GUImageFetcher.h"
 #import "GUXmlViewController.h"
-#import "DataBinder.h"
+#import "ViewDataBinder.h"
 
 @interface GUViewController()
 
@@ -54,7 +54,7 @@
     [self.view addSubview:marketView];
     
     BinderCallback* binderCallback = [[BinderCallback alloc] init];
-    [DataBinder doBindData:[NSDictionary dictionaryWithObjectsAndKeys:@"动态数据",@"name", nil] toView:marketView withCallback:binderCallback];
+    [ViewDataBinder doBindData:[NSDictionary dictionaryWithObjectsAndKeys:@"动态数据",@"name", nil] toView:marketView withCallback:binderCallback];
     
     
      NSLog(@"Inflate view used %f", ( [[NSDate date] timeIntervalSinceReferenceDate] - start));

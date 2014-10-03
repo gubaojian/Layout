@@ -44,7 +44,7 @@
 		CEAD29DB19B89EC20087B151 /* note.xml in Resources */ = {isa = PBXBuildFile; fileRef = CEAD29DA19B89EC20087B151 /* note.xml */; };
 		CEAD29DD19B89F220087B151 /* note.dtd in Resources */ = {isa = PBXBuildFile; fileRef = CEAD29DC19B89F220087B151 /* note.dtd */; };
 		CED0047119DD466B00A25135 /* GUXmlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED0047019DD466B00A25135 /* GUXmlViewController.m */; };
-		CEF7633119C1C69C004714C6 /* DataBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF7633019C1C69C004714C6 /* DataBinder.m */; };
+		CEF7633119C1C69C004714C6 /* ViewDataBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF7633019C1C69C004714C6 /* ViewDataBinder.m */; };
 		CEF7633419C1C6EA004714C6 /* BinderCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF7633319C1C6EA004714C6 /* BinderCallback.m */; };
 /* End PBXBuildFile section */
 
@@ -117,8 +117,8 @@
 		CEAD29DC19B89F220087B151 /* note.dtd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = note.dtd; sourceTree = "<group>"; };
 		CED0046F19DD466B00A25135 /* GUXmlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUXmlViewController.h; sourceTree = "<group>"; };
 		CED0047019DD466B00A25135 /* GUXmlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUXmlViewController.m; sourceTree = "<group>"; };
-		CEF7632F19C1C69C004714C6 /* DataBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataBinder.h; path = ../layout/DataBinder.h; sourceTree = "<group>"; };
-		CEF7633019C1C69C004714C6 /* DataBinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataBinder.m; path = ../layout/DataBinder.m; sourceTree = "<group>"; };
+		CEF7632F19C1C69C004714C6 /* ViewDataBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewDataBinder.h; path = ../layout/ViewDataBinder.h; sourceTree = "<group>"; };
+		CEF7633019C1C69C004714C6 /* ViewDataBinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewDataBinder.m; path = ../layout/ViewDataBinder.m; sourceTree = "<group>"; };
 		CEF7633219C1C6EA004714C6 /* BinderCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BinderCallback.h; path = ../layout/BinderCallback.h; sourceTree = "<group>"; };
 		CEF7633319C1C6EA004714C6 /* BinderCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BinderCallback.m; path = ../layout/BinderCallback.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -267,8 +267,8 @@
 				CE526F9319C0730800FA685A /* GUTemplate.m */,
 				A5CEE73519BAC70F004E24C1 /* GUImageFetcher.h */,
 				A5CEE73619BAC70F004E24C1 /* GUImageFetcher.m */,
-				CEF7632F19C1C69C004714C6 /* DataBinder.h */,
-				CEF7633019C1C69C004714C6 /* DataBinder.m */,
+				CEF7632F19C1C69C004714C6 /* ViewDataBinder.h */,
+				CEF7633019C1C69C004714C6 /* ViewDataBinder.m */,
 				CEF7633219C1C6EA004714C6 /* BinderCallback.h */,
 				CEF7633319C1C6EA004714C6 /* BinderCallback.m */,
 				CEAD29C919B80EC80087B151 /* UIColor+HexString.h */,
@@ -508,7 +508,7 @@
 				CEAD29D219B833260087B151 /* GUTextView.m in Sources */,
 				A595DFA8199BB97400DEA300 /* main.m in Sources */,
 				CEAD29D519B83BF40087B151 /* GUImageView.m in Sources */,
-				CEF7633119C1C69C004714C6 /* DataBinder.m in Sources */,
+				CEF7633119C1C69C004714C6 /* ViewDataBinder.m in Sources */,
 				CE50C99819B474F8000B7258 /* ViewInfalter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -779,6 +779,7 @@
 				CE6390D119DE498900E93915 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

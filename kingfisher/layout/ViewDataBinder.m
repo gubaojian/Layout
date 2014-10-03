@@ -6,11 +6,11 @@
 //  Copyright (c) 2014年 baobao. All rights reserved.
 //
 
-#import "DataBinder.h"
+#import "ViewDataBinder.h"
 #import "UIView+MathLayout.h"
 #import "GUExpression.h"
 
-@implementation DataBinder
+@implementation ViewDataBinder
 
 +(void)doBindData:(id) data toView:(UIView*)view withCallback:(BinderCallback*)binderCallback{
     if([[view valueData] length] > 0){
@@ -30,7 +30,7 @@
         return;
     }
     for (UIView* subview in subviews) {
-        [DataBinder doBindData:data toView:subview withCallback:binderCallback];
+        [ViewDataBinder doBindData:data toView:subview withCallback:binderCallback];
     }
 }
 
