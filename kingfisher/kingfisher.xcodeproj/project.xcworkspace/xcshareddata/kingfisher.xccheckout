@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8AF6D3EB-B960-4E95-B89F-607D01CB00AD</string>
+	<key>IDESourceControlProjectName</key>
+	<string>kingfisher</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4C85B602-F06D-4FDF-98AE-A1226A498F28</key>
+		<string>https://github.com/gubaojian/Layout.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>kingfisher/kingfisher.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4C85B602-F06D-4FDF-98AE-A1226A498F28</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/gubaojian/Layout.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>4C85B602-F06D-4FDF-98AE-A1226A498F28</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4C85B602-F06D-4FDF-98AE-A1226A498F28</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Layout</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -40,29 +40,4 @@ static GUImageFetcher *shareFetcher = nil;
 }
 
 
-
--(UIImage*) imageFromBundleUrl:(NSString*) url{
-    if (![url hasPrefix:@"bundle://"]) {
-        return nil;
-    }
-    NSString* fileName = [url substringFromIndex:9];
-    if (fileName.length < 4) {
-        return nil;
-    }
-    NSString* extension = [fileName pathExtension];
-    NSString* bundleName = fileName;
-    if (extension.length > 0) {
-        bundleName = [fileName substringToIndex:[fileName length] - [extension length] - 1];
-    }
-    if ([bundleName hasSuffix:@"@2x"]) {
-        bundleName = [bundleName substringToIndex:[bundleName length] - 3];
-    }
-    NSLog(@"Bundle Name%@", bundleName);
-    return [UIImage imageNamed:bundleName];
-}
-
-
-
-
-
 @end
