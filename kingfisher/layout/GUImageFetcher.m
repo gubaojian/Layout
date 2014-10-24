@@ -31,7 +31,7 @@ static GUImageFetcher *shareFetcher = nil;
         NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url];
         request.cachePolicy = NSURLRequestReturnCacheDataElseLoad;
         NSData * imageData= [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:nil];
-        if (imageData) {
+        if (imageData && [imageData length] > 0) {
             return [UIImage imageWithData:imageData];;
         }
         return nil;
