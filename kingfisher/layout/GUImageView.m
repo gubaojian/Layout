@@ -23,14 +23,15 @@
     [super updateViewFromAttributes:attrs];
     NSString* imageUrl = [attrs objectForKey:@"imageUrl"];
     if (imageUrl != nil) {
-        GUImageView* __weak weakSelf = self;
+        __weak  GUImageView* weakSelf = self;
        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-           if (weakSelf) {
+            __strong GUImageView* strongSelf = weakSelf;
+           if (strongSelf) {
                 __block UIImage *image = [[GUImageFetcher shareFetcher] imageFromUrl:imageUrl];
-               if (weakSelf) {
+               if (strongSelf) {
                    dispatch_async(dispatch_get_main_queue(), ^{
-                       if(weakSelf){
-                           [weakSelf setImage:image];
+                       if(strongSelf){
+                           [strongSelf setImage:image];
                        }
                    });
                }
@@ -42,12 +43,13 @@
     if (highlightedImageUrl != nil) {
         GUImageView* __weak weakSelf = self;
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            if (weakSelf) {
+             __strong GUImageView* strongSelf = weakSelf;
+            if (strongSelf) {
                 __block UIImage *image = [[GUImageFetcher shareFetcher] imageFromUrl:highlightedImageUrl];
-                if (weakSelf) {
+                if (strongSelf) {
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        if (weakSelf) {
-                            [weakSelf setHighlightedImage:image];
+                        if (strongSelf) {
+                            [strongSelf setHighlightedImage:image];
                         }
                     });
                 }
@@ -84,6 +86,8 @@
         } else if ([scaleType isEqualToString:@"bottomRight"]) {
             self.contentMode = UIViewContentModeBottomRight;
         }
+    }else{
+        self.contentMode = UIViewContentModeScaleToFill;
     }
 }
 

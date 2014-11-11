@@ -28,9 +28,12 @@ static GUImageFetcher *shareFetcher = nil;
         ||[imageUrl hasPrefix:@"https://"]){
         NSURL *url = [NSURL URLWithString:imageUrl];
         NSURLResponse* response = nil;
+        NSError* error;
         NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url];
-        request.cachePolicy = NSURLRequestReturnCacheDataElseLoad;
-        NSData * imageData= [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:nil];
+        NSData * imageData= [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+        if (error != nil) {
+            NSLog(@"Image For Url Error %@ %@", imageUrl, error);
+        }
         if (imageData && [imageData length] > 0) {
             return [UIImage imageWithData:imageData];;
         }

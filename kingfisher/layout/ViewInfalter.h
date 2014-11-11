@@ -14,7 +14,8 @@
 #define TEMPLATE_DOWNLOAD_FAILED_NOTIFICATION   @"PUTI_TEMPLATE_DOWNLOAD_FAILED_NOTIFICATION"
 
 @interface ViewInfalter : NSObject<NSXMLParserDelegate>{
-    UIView*  xmlView;
+    UIView*  viewNode;
+    UIView*  rootView;
     NSMutableDictionary* _localTemplates;
 }
 

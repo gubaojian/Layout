@@ -18,7 +18,7 @@
     alpha="dd"
     borderWidth="3"
     borderColor="#ff2222"
-    cornerRadius="dd">
+    cornerRadius="3">
     
     <ImageView
         x ="10"
@@ -39,8 +39,6 @@
         imageUrl="ff"
         scaleType="cc"
         highlightedImageUrl="33">
-        
-        
     </ImageView>
     
     
@@ -68,8 +66,6 @@
         fontStyle="dd"
         font="dd"
         textSize="32">
-        
-        
     </TextView>
     
 </View>

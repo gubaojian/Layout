@@ -126,7 +126,7 @@
 
 
 -(id) viewFromLocalFilePath:(NSString*)filePath{
-    if (xmlView != nil) {
+    if (viewNode != nil) {
         [NSException raise:@"Mutl Concurrent Infalter Exception" format:nil];
     }
     if (![[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
@@ -156,8 +156,9 @@
     if (inputstream != nil) {
         [inputstream close];
     }
-    UIView* view = xmlView;
-    xmlView = nil;
+    UIView* view = rootView;
+    rootView = nil;
+    viewNode = nil;
     return view;
 }
 
@@ -165,15 +166,18 @@
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict{
     UIView* elementView = [[GUViewFactory shareFactory] createViewWithElement:elementName attributes:attributeDict];
-    if (xmlView != nil) {
-        [xmlView addSubview:elementView];
+    if (viewNode != nil) {
+        [viewNode addSubview:elementView];
     }
-    xmlView = elementView;
+    if (rootView == nil) {
+        rootView = elementView;
+    }
+    viewNode = elementView;
 }
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName{
-    if (xmlView.superview != nil) {
-        xmlView = xmlView.superview;
+    if (viewNode.superview != nil) {
+        viewNode = viewNode.superview;
     }
 }
 

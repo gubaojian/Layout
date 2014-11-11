@@ -51,6 +51,7 @@
     //used for product, suggest way, will download template automically
     [[ViewInfalter shareInflater] registerTemplate:[[GUTemplate alloc] initWithName:@"market" version:0]];
     UIView* marketView = [[ViewInfalter shareInflater] viewFromTemplate:[[GUTemplate alloc] initWithName:@"market" version:0 downloadUrl:@"http://127.0.0.1:8080/market.xml"]];
+    marketView.autoresizingMask = UIViewAutoresizingNone;
     [self.view addSubview:marketView];
     
     BinderCallback* binderCallback = [[BinderCallback alloc] init];

@@ -11,6 +11,7 @@
 #import "UIColor+HexString.h"
 #import "UIFont+Puti.h"
 #import "GUImageFetcher.h"
+#import "ScreenUnit.h"
 
 @implementation GUButton
 
@@ -58,14 +59,15 @@
     NSString* imageUrl = [attrs objectForKey:@"imageUrl"];
    
     if (imageUrl != nil) {
-         GUButton* __weak weakSelf = self;
+        __weak  GUButton* weakSelf = self;
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            if(weakSelf){
+             __strong GUButton* strongSelf = weakSelf;
+            if(strongSelf){
                 UIImage *image =  [[GUImageFetcher shareFetcher] imageFromUrl:imageUrl];
-                if (weakSelf) {
+                if (strongSelf) {
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        if(weakSelf){
-                            [weakSelf setImage:image forState:UIControlStateNormal];
+                        if(strongSelf){
+                            [strongSelf setImage:image forState:UIControlStateNormal];
                         }
                     });
                 }
@@ -75,15 +77,16 @@
     
     NSString* selectedImageUrl = [attrs objectForKey:@"selectedImageUrl"];
     if (selectedImageUrl != nil) {
-        GUButton* __weak weakSelf = self;
+        __weak GUButton*weakSelf = self;
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            if(weakSelf){
+            __strong GUButton* strongSelf = weakSelf;
+            if(strongSelf){
                 UIImage *image =  [[GUImageFetcher shareFetcher] imageFromUrl:selectedImageUrl];
-                if (weakSelf) {
+                if (strongSelf) {
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        if(weakSelf){
-                            [weakSelf setImage: image forState:UIControlStateSelected];
-                            [weakSelf setImage:image forState:UIControlStateHighlighted];
+                        if(strongSelf){
+                            [strongSelf setImage: image forState:UIControlStateSelected];
+                            [strongSelf setImage:image forState:UIControlStateHighlighted];
                         }
                     });
                 }
@@ -110,7 +113,7 @@
         ||  fontName != nil
         || fontStyle != nil) {
          CGFloat size = self.titleLabel.font.pointSize;
-         if (textSize != nil) size = [textSize floatValue];
+        if (textSize != nil) size = [ScreenUnit toTextSize:textSize];
         self.titleLabel.font = [UIFont fontWithStyle:fontStyle name: fontName size:size];
     }
     

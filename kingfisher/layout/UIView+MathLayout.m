@@ -9,6 +9,8 @@
 #import "UIView+MathLayout.h"
 #include <objc/runtime.h>
 #import "UIColor+HexString.h"
+#import "ScreenUnit.h"
+
 @implementation UIView (MathLayout)
 
 static char expressionXKey;
@@ -81,22 +83,22 @@ static char tapGestureRecognizerKey;
     CGRect frame = [self frame];
     NSString* x = [attrs objectForKey:@"x"];
     if (x != nil) {
-        frame.origin.x = [x floatValue];
+        frame.origin.x = [ScreenUnit toUnit:x];
     }
     
     NSString* y = [attrs objectForKey:@"y"];
     if (y != nil) {
-        frame.origin.y = [y floatValue];
+        frame.origin.y = [ScreenUnit toUnit:y];
     }
     
     NSString*  width = [attrs objectForKey:@"width"];
     if (width != nil) {
-        frame.size.width =  [width floatValue];
+        frame.size.width =  [ScreenUnit toUnit:width];
     }
     
     NSString* height = [attrs objectForKey:@"height"];
     if (height != nil) {
-        frame.size.height = [height floatValue];
+        frame.size.height = [ScreenUnit toUnit:height];
     }
     if (!CGRectEqualToRect(frame, self.frame)) {
         self.frame = frame;
@@ -136,7 +138,7 @@ static char tapGestureRecognizerKey;
     if (expressionObject == nil) {
         CGRect bounds = [UIScreen mainScreen].bounds;
         expressionObject = [[NSMutableDictionary alloc] init];
-        [expressionObject setObject:[NSNumber numberWithFloat:bounds.size.width] forKey:@"screen_height"];
+        [expressionObject setObject:[NSNumber numberWithFloat:bounds.size.width] forKey:@"screen_width"];
         [expressionObject setObject:[NSNumber numberWithFloat:bounds.size.height] forKey:@"screen_height"];
         [self setExpressionContext:expressionObject];
     }

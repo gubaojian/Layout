@@ -32,6 +32,7 @@
 		CE6390C719DE498900E93915 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A595DF9B199BB97400DEA300 /* Foundation.framework */; };
 		CE6390CC19DE498900E93915 /* library-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = CE6390CB19DE498900E93915 /* library-Prefix.pch */; };
 		CE6390CE19DE498900E93915 /* library-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE6390CD19DE498900E93915 /* library-Info.plist */; };
+		CE652A7F1A1112A300934A4C /* ScreenUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = CE652A7E1A1112A300934A4C /* ScreenUnit.m */; };
 		CE6FCDA619B9928300D1A400 /* UIFont+Puti.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6FCDA519B9928300D1A400 /* UIFont+Puti.m */; };
 		CE6FCDA819B9A2EA00D1A400 /* Puti.xml in Resources */ = {isa = PBXBuildFile; fileRef = CE6FCDA719B9A2EA00D1A400 /* Puti.xml */; };
 		CE6FCDAB19B9A6FA00D1A400 /* GUPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6FCDAA19B9A6FA00D1A400 /* GUPerson.m */; };
@@ -97,6 +98,8 @@
 		CE6390CA19DE498900E93915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE6390CB19DE498900E93915 /* library-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "library-Prefix.pch"; sourceTree = "<group>"; };
 		CE6390CD19DE498900E93915 /* library-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "library-Info.plist"; sourceTree = "<group>"; };
+		CE652A7D1A1112A300934A4C /* ScreenUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScreenUnit.h; path = layout/ScreenUnit.h; sourceTree = SOURCE_ROOT; };
+		CE652A7E1A1112A300934A4C /* ScreenUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScreenUnit.m; path = layout/ScreenUnit.m; sourceTree = SOURCE_ROOT; };
 		CE6FCDA419B9928300D1A400 /* UIFont+Puti.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+Puti.h"; path = "../layout/UIFont+Puti.h"; sourceTree = "<group>"; };
 		CE6FCDA519B9928300D1A400 /* UIFont+Puti.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+Puti.m"; path = "../layout/UIFont+Puti.m"; sourceTree = "<group>"; };
 		CE6FCDA719B9A2EA00D1A400 /* Puti.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Puti.xml; sourceTree = "<group>"; };
@@ -243,6 +246,8 @@
 		CE6390C819DE498900E93915 /* library */ = {
 			isa = PBXGroup;
 			children = (
+				CE652A7D1A1112A300934A4C /* ScreenUnit.h */,
+				CE652A7E1A1112A300934A4C /* ScreenUnit.m */,
 				A5B7494F19BABCCE00CE5661 /* NSURL+Parameters.h */,
 				A5B7495019BABCCE00CE5661 /* NSURL+Parameters.m */,
 				A595DFE3199BC83B00DEA300 /* GUView.h */,
@@ -490,6 +495,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE652A7F1A1112A300934A4C /* ScreenUnit.m in Sources */,
 				CEAD29CB19B80EC80087B151 /* UIColor+HexString.m in Sources */,
 				CE526F9419C0730800FA685A /* GUTemplate.m in Sources */,
 				CEA8701E19B8B4130051C704 /* GUViewFactory.m in Sources */,

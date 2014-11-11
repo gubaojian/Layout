@@ -9,6 +9,7 @@
 #import "GUTextView.h"
 #import "UIColor+HexString.h"
 #import "UIFont+Puti.h"
+#import "ScreenUnit.h"
 
 @implementation GUTextView
 
@@ -77,7 +78,7 @@
         ||  fontName != nil
         || fontStyle != nil) {
         CGFloat size = self.font.pointSize;
-        if (textSize != nil) size = [textSize floatValue];
+        if (textSize != nil) size = [ScreenUnit toTextSize:textSize];
         self.font = [UIFont fontWithStyle:fontStyle name: fontName size:size];
     }
 
