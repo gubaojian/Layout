@@ -39,6 +39,7 @@
        });
     }
     
+    
     NSString* highlightedImageUrl = [attrs objectForKey:@"highlightedImageUrl"];
     if (highlightedImageUrl != nil) {
         GUImageView* __weak weakSelf = self;

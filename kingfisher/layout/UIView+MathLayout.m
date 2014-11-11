@@ -79,6 +79,7 @@ static char tapGestureRecognizerKey;
     NSString *cornerRadius = [attrs objectForKey:@"cornerRadius"];
     if (cornerRadius != nil) {
         self.layer.cornerRadius = [cornerRadius floatValue];
+        self.layer.masksToBounds = YES;
     }
     CGRect frame = [self frame];
     NSString* x = [attrs objectForKey:@"x"];
@@ -140,6 +141,7 @@ static char tapGestureRecognizerKey;
         expressionObject = [[NSMutableDictionary alloc] init];
         [expressionObject setObject:[NSNumber numberWithFloat:bounds.size.width] forKey:@"screen_width"];
         [expressionObject setObject:[NSNumber numberWithFloat:bounds.size.height] forKey:@"screen_height"];
+        [expressionObject setObject:[NSNumber numberWithFloat:[UIScreen mainScreen].scale] forKey:@"scale"];
         [self setExpressionContext:expressionObject];
     }
     CGRect frame = [self frame];
@@ -268,6 +270,12 @@ static char tapGestureRecognizerKey;
     for (UIView* subview in subviews) {
         [subview removeFromSuperview];
     }
+}
+
+-(NSString*) toStandard:(NSString*)expression{
+    expression = [expression stringByReplacingOccurrencesOfString:@"up" withString:@""];
+    expression = [expression stringByReplacingOccurrencesOfString:@"px" withString:@"/scale"];
+    return expression;
 }
 
 @end

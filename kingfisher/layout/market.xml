@@ -26,7 +26,7 @@
     x="12"
     y="32"
     imageUrl="http://gtms01.alicdn.com/tps/i1/T18c4KFzBvXXXA41.t-292-144.jpg"
-    cornerRadius="4"
+    cornerRadius="40"
     background="#3322A1"/>
     
     <ImageView width="144"
@@ -47,52 +47,10 @@
     height="72"
     x="168"
     y="118"
+    background="#ff7722"
     imageUrl="http://gtms04.alicdn.com/tps/i4/T1w32kFf0dXXcc6K.t-292-144.png"
-    cornerRadius="4"/>
+    cornerRadius="30"/>
     
-    
-    <TextView width="72"
-    height="30"
-    fontSize="18"
-    text="导购"
-    y="202"
-    x = "12"
-    cornerRadius="2"
-    borderWidth="0.5"
-    borderColor="#ff6644"
-    textAlignment="center"/>
-    <TextView width="72"
-    height="30"
-    fontSize="18"
-    text="导购"
-    y="202"
-    x = "90"
-    cornerRadius="2"
-    borderWidth="0.5"
-    borderColor="#ff6644"
-    textAlignment="center"/>
-    
-    <TextView width="72"
-    height="30"
-    fontSize="18"
-    text="导购"
-    y="202"
-    x = "168"
-    cornerRadius="2"
-    borderWidth="0.5"
-    borderColor="#ff6644"
-    textAlignment="center"/>
-    
-    <TextView width="72"
-    height="30"
-    fontSize="18"
-    text="导购"
-    y="202"
-    x = "246"
-    cornerRadius="2"
-    borderWidth="0.5"
-    borderColor="#ff6644"
-    textAlignment="center"/>
 
 
 </View>

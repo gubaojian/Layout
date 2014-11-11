@@ -14,4 +14,6 @@
 
 -(BOOL)doBindEvent:(id)data toView:(UIView*) view;
 
+-(BOOL)doBindChildView:(UIView*) view;
+
 @end

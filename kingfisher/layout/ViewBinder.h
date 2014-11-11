@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "BinderCallback.h"
 
-@interface ViewDataBinder : NSObject
+@interface ViewBinder : NSObject
 
-+(void)doBindData:(id) data toView:(UIView*)view withCallback:(BinderCallback*)binderCallback;
++(void)doBind:(id) data toView:(UIView*)view withCallback:(BinderCallback*)binderCallback;
 
 @end

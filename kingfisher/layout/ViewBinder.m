@@ -6,13 +6,13 @@
 //  Copyright (c) 2014年 baobao. All rights reserved.
 //
 
-#import "ViewDataBinder.h"
+#import "ViewBinder.h"
 #import "UIView+MathLayout.h"
 #import "GUExpression.h"
 
-@implementation ViewDataBinder
+@implementation ViewBinder
 
-+(void)doBindData:(id) data toView:(UIView*)view withCallback:(BinderCallback*)binderCallback{
++(void)doBind:(id) data toView:(UIView*)view withCallback:(BinderCallback*)binderCallback{
     if([[view valueData] length] > 0){
         if ([[view valueData] hasPrefix:@"$"]) {
            id valueData =  [GUExpression valueForExpression:[view valueData] context:data];
@@ -30,7 +30,7 @@
         return;
     }
     for (UIView* subview in subviews) {
-        [ViewDataBinder doBindData:data toView:subview withCallback:binderCallback];
+        [ViewBinder doBind:data toView:subview withCallback:binderCallback];
     }
 }
 

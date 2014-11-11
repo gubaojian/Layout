@@ -18,11 +18,12 @@
     }
     if ([unit hasSuffix:@"up"]) {
         unit = [unit stringByReplacingOccurrencesOfString:@"up" withString:@""];
+        return [unit floatValue]*[[UIScreen mainScreen] bounds].size.width;
     }
     return [unit floatValue]*[[UIScreen mainScreen] bounds].size.width/320.0f;
 }
 + (float) toTextSize:(NSString*)textSize{
-    return [textSize floatValue]*[[UIScreen mainScreen] bounds].size.width/320.0f;
+    return  [ScreenUnit toUnit:textSize];
 }
 
 

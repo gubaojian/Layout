@@ -22,4 +22,8 @@
     return NO;
 }
 
+-(BOOL)doBindChildView:(UIView*) view{
+    return YES;
+}
+
 @end

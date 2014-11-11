@@ -75,7 +75,7 @@
         });
     }
     
-    NSString* selectedImageUrl = [attrs objectForKey:@"selectedImageUrl"];
+    NSString* selectedImageUrl = [attrs objectForKey:@"highlightedImageUrl"];
     if (selectedImageUrl != nil) {
         __weak GUButton*weakSelf = self;
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -106,6 +106,14 @@
          [self setTitleColor:[UIColor colorWithHexString:textColor] forState:UIControlStateNormal];
     }
     
+    NSString* highlightedTextColor = [attrs objectForKey:@"highlightedTextColor"];
+    if (highlightedTextColor != nil) {
+        UIColor* color = [UIColor colorWithHexString:textColor];
+        [self setTitleColor:color forState:UIControlStateHighlighted];
+        [self setTitleColor:color forState:UIControlStateHighlighted];
+    }
+    
+    
     NSString* fontStyle = [attrs objectForKey:@"fontStyle"];
     NSString *fontName = [attrs objectForKey:@"font"];
     NSString *textSize = [attrs objectForKey:@"textSize"];
@@ -117,6 +125,47 @@
         self.titleLabel.font = [UIFont fontWithStyle:fontStyle name: fontName size:size];
     }
     
+    UILabel* titleLabel = [self titleLabel];
+    if (titleLabel == nil) {
+        return;
+    }
+    NSString* alignment = [attrs objectForKey:@"textAlignment"];
+    if (alignment != nil) {
+        NSTextAlignment textAlignment = NSTextAlignmentLeft;
+        if ([alignment isEqualToString:@"left"]) {
+            textAlignment = NSTextAlignmentLeft;
+        }else if ([alignment isEqualToString:@"center"]){
+            textAlignment = NSTextAlignmentCenter;
+        }else if ([alignment isEqualToString:@"right"]){
+            textAlignment = NSTextAlignmentRight;
+        }
+        titleLabel.textAlignment = textAlignment;
+    }
+    
+    
+    NSString *numberOfLines= [attrs objectForKey:@"numberOfLines"];
+    if (numberOfLines != nil) {
+        titleLabel.numberOfLines = [numberOfLines integerValue];
+    }
+    
+    NSString*  lineBreakModeString = [attrs objectForKey:@"lineBreakMode"];
+    if (lineBreakModeString != nil) {
+        NSLineBreakMode lineBreakMode = NSLineBreakByWordWrapping;
+        if ([lineBreakModeString isEqualToString:@"wordWrap"]) {
+            lineBreakMode = NSLineBreakByWordWrapping;
+        }else if ([lineBreakModeString isEqualToString:@"charWrap"]) {
+            lineBreakMode = NSLineBreakByCharWrapping;
+        }else if ([lineBreakModeString isEqualToString:@"clip"]) {
+            lineBreakMode = NSLineBreakByClipping;
+        }else if ([lineBreakModeString isEqualToString:@"head"]) {
+            lineBreakMode = NSLineBreakByTruncatingHead;
+        }else if ([lineBreakModeString isEqualToString:@"tail"]) {
+            lineBreakMode = NSLineBreakByTruncatingTail;
+        }else if ([lineBreakModeString isEqualToString:@"middle"]) {
+            lineBreakMode = NSLineBreakByTruncatingMiddle;
+        }
+        titleLabel.lineBreakMode = lineBreakMode;
+    }
 }
 
 

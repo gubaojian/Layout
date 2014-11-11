@@ -44,69 +44,48 @@
 }
 
 
--(id) viewFromTemplate:(GUTemplate*) viewTemplate{
-    if (viewTemplate == nil) {
+-(id) viewFrom:(NSString*) name version:(int)version downloadUrl:(NSString*)downloadUrl{
+    if (name == nil) {
         return nil;
     }
-    GUTemplate* localTemplate = [[self localTemplates] objectForKey:[viewTemplate name]];
     UIView* view = nil;
-    if (localTemplate != nil && localTemplate.version >= viewTemplate.version) {
-        view = [self toViewBundleName:localTemplate.name];
+    NSString* filePath = [self documentPathFor:name version:version];
+    view = [self viewFromLocalFilePath:filePath];
+    if (view == nil && downloadUrl.length > 0) {
+        [self download:downloadUrl toFile:filePath name:name version:version];
     }
     if (view == nil) {
-        NSString* filePath = [self documentPathForTemplate:viewTemplate];
-        view = [self viewFromLocalFilePath:filePath];
-        if (view == nil) {
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                NSURL *url = [NSURL URLWithString:viewTemplate.downloadUrl];
-                NSData *templateData = [NSData dataWithContentsOfURL:url];
-                BOOL success = NO;
-                if (templateData) {
-                    [[NSFileManager defaultManager] removeItemAtPath:filePath error:nil];
-                    success = [templateData writeToFile:filePath atomically:YES];
-                }
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    if (success) {
-                        [[NSNotificationCenter defaultCenter] postNotificationName:TEMPLATE_DOWNLOAD_SUCCESS_NOTIFICATION object:viewTemplate];
-                    }else{
-                         [[NSNotificationCenter defaultCenter] postNotificationName:TEMPLATE_DOWNLOAD_FAILED_NOTIFICATION object:viewTemplate];
-                    }
-                });
-            });
-        }
-    }
-    if (view == nil) {
-        if (localTemplate != nil) {
-            view = [self toViewBundleName:localTemplate.name];
-        }
+        view = [self toViewBundleName:name];
     }
     return view;
 }
 
 
--(void)registerTemplate:(GUTemplate*) localTemplate{
-    if (localTemplate == nil || localTemplate.name.length == 0) {
+-(void)download:(NSString*)downloadUrl toFile:(NSString*)filePath name:(NSString*)name version:(int) version{
+    if (downloadUrl == nil || downloadUrl.length <= 0) {
         return;
     }
-    NSString* path = [[NSBundle mainBundle] pathForResource:[localTemplate name] ofType:@"xml"];
-    
-    if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
-        [NSException raise:@"registerTemplate Illegal Local Template" format:@"Template %@.xml Not Exist In Main Bundle",[localTemplate name], nil];
-    }
-    
-    [[self localTemplates] setObject:localTemplate forKey:[localTemplate name]];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSURL *url = [NSURL URLWithString:downloadUrl];
+        NSData *templateData = [NSData dataWithContentsOfURL:url];
+        BOOL success = NO;
+        if (templateData) {
+            [[NSFileManager defaultManager] removeItemAtPath:filePath error:nil];
+            success = [templateData writeToFile:filePath atomically:YES];
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (success) {
+                [[NSNotificationCenter defaultCenter] postNotificationName:TEMPLATE_DOWNLOAD_SUCCESS_NOTIFICATION object:name userInfo:[NSDictionary dictionaryWithObjectsAndKeys:name, @"name", [NSNumber numberWithInt:version], @"version", nil]];
+            }else{
+                [[NSNotificationCenter defaultCenter] postNotificationName:TEMPLATE_DOWNLOAD_FAILED_NOTIFICATION object:name];
+            }
+        });
+    });
 }
 
 
--(NSMutableDictionary*)localTemplates{
-    if (_localTemplates == nil) {
-        _localTemplates = [[NSMutableDictionary alloc] initWithCapacity:8];
-    }
-    return _localTemplates;
-}
-
--(NSString*) documentPathForTemplate:(GUTemplate*)viewTemplate{
-    NSString* fileName =[NSString stringWithFormat:@"%@_%d.xml", viewTemplate.name, viewTemplate.version];
+-(NSString*) documentPathFor:(NSString*) name version:(int)version{
+    NSString* fileName =[NSString stringWithFormat:@"%@_%d.xml", name, version];
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,   NSUserDomainMask, YES);
     NSString *directory = [paths objectAtIndex:0];
     NSString *filePath = [directory stringByAppendingPathComponent:fileName];

@@ -15,7 +15,7 @@
 #import "GUExpression.h"
 #import "GUImageFetcher.h"
 #import "GUXmlViewController.h"
-#import "ViewDataBinder.h"
+#import "ViewBinder.h"
 
 @interface GUViewController()
 
@@ -49,13 +49,12 @@
      [self.view addSubview:xmlView];
     
     //used for product, suggest way, will download template automically
-    [[ViewInfalter shareInflater] registerTemplate:[[GUTemplate alloc] initWithName:@"market" version:0]];
-    UIView* marketView = [[ViewInfalter shareInflater] viewFromTemplate:[[GUTemplate alloc] initWithName:@"market" version:0 downloadUrl:@"http://127.0.0.1:8080/market.xml"]];
+    UIView* marketView = [[ViewInfalter shareInflater] viewFrom:@"market" version:0 downloadUrl:@"http://127.0.0.1:8080/market.xml"];
     marketView.autoresizingMask = UIViewAutoresizingNone;
     [self.view addSubview:marketView];
     
     BinderCallback* binderCallback = [[BinderCallback alloc] init];
-    [ViewDataBinder doBindData:[NSDictionary dictionaryWithObjectsAndKeys:@"动态数据",@"name", nil] toView:marketView withCallback:binderCallback];
+    [ViewBinder doBind:[NSDictionary dictionaryWithObjectsAndKeys:@"动态数据",@"name", nil] toView:marketView withCallback:binderCallback];
     
     
      NSLog(@"Inflate view used %f", ( [[NSDate date] timeIntervalSinceReferenceDate] - start));

@@ -30,6 +30,7 @@ static GUImageFetcher *shareFetcher = nil;
         NSURLResponse* response = nil;
         NSError* error;
         NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url];
+        request.cachePolicy = NSURLRequestReturnCacheDataElseLoad;
         NSData * imageData= [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
         if (error != nil) {
             NSLog(@"Image For Url Error %@ %@", imageUrl, error);
@@ -39,7 +40,15 @@ static GUImageFetcher *shareFetcher = nil;
         }
         return nil;
     }
-    return [UIImage imageNamed:imageUrl];
+    UIImage* image =[UIImage imageNamed:imageUrl];
+    if (image) {
+        if ([imageUrl hasSuffix:@"?resizable=true"]) {
+            CGFloat horizontalInset  = (image.size.width/2 - 1);
+            CGFloat verticalInset  = (image.size.height/2 - 1);
+            image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(verticalInset, horizontalInset, verticalInset, horizontalInset)];
+        }
+    }
+    return image;
 }
 
 

@@ -23,43 +23,6 @@
       [super updateViewFromAttributes:attrs];
     self.text = [attrs objectForKey:@"text"];
     
-    NSString* alignment = [attrs objectForKey:@"textAlignment"];
-    if (alignment != nil) {
-        NSTextAlignment textAlignment = NSTextAlignmentLeft;
-        if ([alignment isEqualToString:@"left"]) {
-            textAlignment = NSTextAlignmentLeft;
-        }else if ([alignment isEqualToString:@"center"]){
-            textAlignment = NSTextAlignmentCenter;
-        }else if ([alignment isEqualToString:@"right"]){
-            textAlignment = NSTextAlignmentRight;
-        }
-        self.textAlignment = textAlignment;
-    }
-    
-    NSString*  lineBreakModeString = [attrs objectForKey:@"lineBreakMode"];
-    if (lineBreakModeString != nil) {
-        NSLineBreakMode lineBreakMode = NSLineBreakByWordWrapping;
-        if ([lineBreakModeString isEqualToString:@"wordWrap"]) {
-            lineBreakMode = NSLineBreakByWordWrapping;
-        }else if ([lineBreakModeString isEqualToString:@"charWrap"]) {
-            lineBreakMode = NSLineBreakByCharWrapping;
-        }else if ([lineBreakModeString isEqualToString:@"clip"]) {
-            lineBreakMode = NSLineBreakByClipping;
-        }else if ([lineBreakModeString isEqualToString:@"head"]) {
-            lineBreakMode = NSLineBreakByTruncatingHead;
-        }else if ([lineBreakModeString isEqualToString:@"tail"]) {
-            lineBreakMode = NSLineBreakByTruncatingTail;
-        }else if ([lineBreakModeString isEqualToString:@"middle"]) {
-            lineBreakMode = NSLineBreakByTruncatingMiddle;
-        }
-        self.lineBreakMode = lineBreakMode;
-    }
-    
-    NSString *numberOfLines= [attrs objectForKey:@"numberOfLines"];
-    if (numberOfLines != nil) {
-        self.numberOfLines = [numberOfLines integerValue];
-    }
-    
     NSString* textColor = [attrs objectForKey:@"textColor"];
     if (textColor != nil) {
         self.textColor = [UIColor colorWithHexString:@"textColor"];
@@ -82,6 +45,46 @@
         self.font = [UIFont fontWithStyle:fontStyle name: fontName size:size];
     }
 
+    
+    NSString* alignment = [attrs objectForKey:@"textAlignment"];
+    if (alignment != nil) {
+        NSTextAlignment textAlignment = NSTextAlignmentLeft;
+        if ([alignment isEqualToString:@"left"]) {
+            textAlignment = NSTextAlignmentLeft;
+        }else if ([alignment isEqualToString:@"center"]){
+            textAlignment = NSTextAlignmentCenter;
+        }else if ([alignment isEqualToString:@"right"]){
+            textAlignment = NSTextAlignmentRight;
+        }
+        self.textAlignment = textAlignment;
+    }
+    
+    
+    NSString *numberOfLines= [attrs objectForKey:@"numberOfLines"];
+    if (numberOfLines != nil) {
+        self.numberOfLines = [numberOfLines integerValue];
+    }
+
+    
+    NSString*  lineBreakModeString = [attrs objectForKey:@"lineBreakMode"];
+    if (lineBreakModeString != nil) {
+        NSLineBreakMode lineBreakMode = NSLineBreakByWordWrapping;
+        if ([lineBreakModeString isEqualToString:@"wordWrap"]) {
+            lineBreakMode = NSLineBreakByWordWrapping;
+        }else if ([lineBreakModeString isEqualToString:@"charWrap"]) {
+            lineBreakMode = NSLineBreakByCharWrapping;
+        }else if ([lineBreakModeString isEqualToString:@"clip"]) {
+            lineBreakMode = NSLineBreakByClipping;
+        }else if ([lineBreakModeString isEqualToString:@"head"]) {
+            lineBreakMode = NSLineBreakByTruncatingHead;
+        }else if ([lineBreakModeString isEqualToString:@"tail"]) {
+            lineBreakMode = NSLineBreakByTruncatingTail;
+        }else if ([lineBreakModeString isEqualToString:@"middle"]) {
+            lineBreakMode = NSLineBreakByTruncatingMiddle;
+        }
+        self.lineBreakMode = lineBreakMode;
+    }
+   
     
 }
 /*
