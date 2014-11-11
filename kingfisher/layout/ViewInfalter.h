@@ -21,6 +21,9 @@
 
 -(id) viewFrom:(NSString*) name version:(int)version downloadUrl:(NSString*)downloadUrl;
 
+/**
+ * fileName bundleName or HttpUrl
+ */
 -(id) viewFromFile:(NSString*) fileName;
 
 

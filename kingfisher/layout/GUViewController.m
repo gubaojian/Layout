@@ -32,7 +32,7 @@
     GUViewController* __weak weakSelf = self;
     [self.view setClickBlock:^(UIView *view) {
        GUXmlViewController* xmlViewContainner =  [[GUXmlViewController alloc] init];
-       xmlViewContainner.xmlUrl = @"http://127.0.0.1:8080/market.xml";
+       xmlViewContainner.xmlUrl = @"https://raw.githubusercontent.com/gubaojian/Layout/master/server/market.xml";
        [weakSelf presentViewController:xmlViewContainner animated:YES completion:nil];
     }];
     
