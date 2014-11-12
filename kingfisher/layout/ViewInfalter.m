@@ -8,6 +8,8 @@
 
 #import "ViewInfalter.h"
 
+#define VIEW_INFLATER_HAS_MARK  @"mark"
+
 @implementation ViewInfalter
 
 
@@ -23,9 +25,21 @@
 - (id)init {
     self = [super init];
     if (self) {
-       
     }
     return self;
+}
+
+-(NSMutableDictionary*)downloadIngMap{
+    if (_downloadIngMap == nil) {
+         _downloadIngMap = [[NSMutableDictionary alloc] initWithCapacity:4];
+    }
+    return _downloadIngMap;
+}
+-(NSMutableDictionary*)downloadSuccessMap{
+    if (_downloadSuccessMap  == nil) {
+        _downloadSuccessMap = [[NSMutableDictionary alloc] initWithCapacity:4];
+    }
+    return _downloadSuccessMap;
 }
 
 -(id) viewFromFile:(NSString*) fileName{
@@ -65,21 +79,36 @@
     if (downloadUrl == nil || downloadUrl.length <= 0) {
         return;
     }
+    if ([VIEW_INFLATER_HAS_MARK isEqual:[[self downloadIngMap] objectForKey:filePath]]) {
+        return;
+    }
+    if ([VIEW_INFLATER_HAS_MARK isEqual:[[self downloadSuccessMap] objectForKey:filePath]]) {
+        return;
+    }
+    [[self downloadIngMap] setObject:VIEW_INFLATER_HAS_MARK forKey:filePath];
+    __weak ViewInfalter* weakSelf = self;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSURL *url = [NSURL URLWithString:downloadUrl];
-        NSData *templateData = [NSData dataWithContentsOfURL:url];
-        BOOL success = NO;
-        if (templateData) {
-            [[NSFileManager defaultManager] removeItemAtPath:filePath error:nil];
-            success = [templateData writeToFile:filePath atomically:YES];
-        }
-        dispatch_async(dispatch_get_main_queue(), ^{
-            if (success) {
-                [[NSNotificationCenter defaultCenter] postNotificationName:TEMPLATE_DOWNLOAD_SUCCESS_NOTIFICATION object:name userInfo:[NSDictionary dictionaryWithObjectsAndKeys:name, @"name", [NSNumber numberWithInt:version], @"version", nil]];
-            }else{
-                [[NSNotificationCenter defaultCenter] postNotificationName:TEMPLATE_DOWNLOAD_FAILED_NOTIFICATION object:name];
+        __strong ViewInfalter* strongSelf = weakSelf;
+        if (strongSelf) {
+            NSURL *url = [NSURL URLWithString:downloadUrl];
+            NSData *templateData = [NSData dataWithContentsOfURL:url];
+            BOOL success = NO;
+            if (templateData) {
+                [[NSFileManager defaultManager] removeItemAtPath:filePath error:nil];
+                success = [templateData writeToFile:filePath atomically:YES];
             }
-        });
+            [[strongSelf downloadIngMap] removeObjectForKey:filePath];
+            if (strongSelf) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (success) {
+                        [[NSNotificationCenter defaultCenter] postNotificationName:TEMPLATE_DOWNLOAD_SUCCESS_NOTIFICATION object:name userInfo:[NSDictionary dictionaryWithObjectsAndKeys:name, @"name", [NSNumber numberWithInt:version], @"version", nil]];
+                        [[strongSelf downloadSuccessMap] setObject:@"mark" forKey:filePath];
+                    }else{
+                        [[NSNotificationCenter defaultCenter] postNotificationName:TEMPLATE_DOWNLOAD_FAILED_NOTIFICATION object:name];
+                    }
+                });
+            }
+        }
     });
 }
 

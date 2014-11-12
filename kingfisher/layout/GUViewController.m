@@ -68,10 +68,6 @@
         [GUExpression valueForExpression:@"skills[10]" context:person];
     }
     NSLog(@"%d expression used %f", count, ( [[NSDate date] timeIntervalSinceReferenceDate] - start));
-    
-    
-    
-    
 }
 
 - (void)didReceiveMemoryWarning

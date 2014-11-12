@@ -15,6 +15,8 @@
 @interface ViewInfalter : NSObject<NSXMLParserDelegate>{
     UIView*  viewNode;
     UIView*  rootView;
+    NSMutableDictionary* _downloadIngMap;
+    NSMutableDictionary* _downloadSuccessMap;
 }
 
 + (id)shareInflater;
