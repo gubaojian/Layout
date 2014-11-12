@@ -26,6 +26,9 @@
 		A5B7494E19BA9D5F00CE5661 /* GUExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B7494D19BA9D5F00CE5661 /* GUExpression.m */; };
 		A5B7495119BABCCE00CE5661 /* NSURL+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B7495019BABCCE00CE5661 /* NSURL+Parameters.m */; };
 		A5CEE73719BAC70F004E24C1 /* GUImageFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CEE73619BAC70F004E24C1 /* GUImageFetcher.m */; };
+		A5E9AC001A13AAC30022C694 /* GUTask.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E9ABFF1A13AAC30022C694 /* GUTask.m */; };
+		A5E9AC031A13AFB90022C694 /* GUImageTask.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E9AC021A13AFB90022C694 /* GUImageTask.m */; };
+		A5E9AC061A13B3F50022C694 /* UIView+ImageTask.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E9AC051A13B3F50022C694 /* UIView+ImageTask.m */; };
 		CE46777519B5EA0F004D1B04 /* UIView+MathLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CE46777419B5EA0F004D1B04 /* UIView+MathLayout.m */; };
 		CE50C99819B474F8000B7258 /* ViewInfalter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE50C99719B474F8000B7258 /* ViewInfalter.m */; };
 		CE6390C719DE498900E93915 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A595DF9B199BB97400DEA300 /* Foundation.framework */; };
@@ -87,6 +90,12 @@
 		A5B7495019BABCCE00CE5661 /* NSURL+Parameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+Parameters.m"; path = "../layout/NSURL+Parameters.m"; sourceTree = "<group>"; };
 		A5CEE73519BAC70F004E24C1 /* GUImageFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUImageFetcher.h; path = ../layout/GUImageFetcher.h; sourceTree = "<group>"; };
 		A5CEE73619BAC70F004E24C1 /* GUImageFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GUImageFetcher.m; path = ../layout/GUImageFetcher.m; sourceTree = "<group>"; };
+		A5E9ABFE1A13AAC30022C694 /* GUTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUTask.h; path = layout/GUTask.h; sourceTree = SOURCE_ROOT; };
+		A5E9ABFF1A13AAC30022C694 /* GUTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GUTask.m; path = layout/GUTask.m; sourceTree = SOURCE_ROOT; };
+		A5E9AC011A13AFB90022C694 /* GUImageTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUImageTask.h; sourceTree = "<group>"; };
+		A5E9AC021A13AFB90022C694 /* GUImageTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUImageTask.m; sourceTree = "<group>"; };
+		A5E9AC041A13B3F50022C694 /* UIView+ImageTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ImageTask.h"; sourceTree = "<group>"; };
+		A5E9AC051A13B3F50022C694 /* UIView+ImageTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ImageTask.m"; sourceTree = "<group>"; };
 		CE46777319B5EA0F004D1B04 /* UIView+MathLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+MathLayout.h"; path = "../layout/UIView+MathLayout.h"; sourceTree = "<group>"; };
 		CE46777419B5EA0F004D1B04 /* UIView+MathLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+MathLayout.m"; path = "../layout/UIView+MathLayout.m"; sourceTree = "<group>"; };
 		CE50C99619B474F8000B7258 /* ViewInfalter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewInfalter.h; path = ../layout/ViewInfalter.h; sourceTree = "<group>"; };
@@ -276,6 +285,12 @@
 				CE6390CB19DE498900E93915 /* library-Prefix.pch */,
 				CE6390CD19DE498900E93915 /* library-Info.plist */,
 				CE6390C919DE498900E93915 /* Supporting Files */,
+				A5E9ABFE1A13AAC30022C694 /* GUTask.h */,
+				A5E9ABFF1A13AAC30022C694 /* GUTask.m */,
+				A5E9AC011A13AFB90022C694 /* GUImageTask.h */,
+				A5E9AC021A13AFB90022C694 /* GUImageTask.m */,
+				A5E9AC041A13B3F50022C694 /* UIView+ImageTask.h */,
+				A5E9AC051A13B3F50022C694 /* UIView+ImageTask.m */,
 			);
 			name = library;
 			path = love;
@@ -378,6 +393,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = baobao;
 				TargetAttributes = {
+					A595DF97199BB97400DEA300 = {
+						DevelopmentTeam = 7944PVFHSB;
+					};
 					A595DFBB199BB97400DEA300 = {
 						TestTargetID = A595DF97199BB97400DEA300;
 					};
@@ -490,6 +508,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5E9AC061A13B3F50022C694 /* UIView+ImageTask.m in Sources */,
 				CE652A7F1A1112A300934A4C /* ScreenUnit.m in Sources */,
 				CEAD29CB19B80EC80087B151 /* UIColor+HexString.m in Sources */,
 				CEA8701E19B8B4130051C704 /* GUViewFactory.m in Sources */,
@@ -500,6 +519,8 @@
 				CE6FCDA619B9928300D1A400 /* UIFont+Puti.m in Sources */,
 				CE46777519B5EA0F004D1B04 /* UIView+MathLayout.m in Sources */,
 				A595DFB5199BB97400DEA300 /* GUViewController.m in Sources */,
+				A5E9AC031A13AFB90022C694 /* GUImageTask.m in Sources */,
+				A5E9AC001A13AAC30022C694 /* GUTask.m in Sources */,
 				CED0047119DD466B00A25135 /* GUXmlViewController.m in Sources */,
 				A5B7494E19BA9D5F00CE5661 /* GUExpression.m in Sources */,
 				A595DFE5199BC83B00DEA300 /* GUView.m in Sources */,
@@ -635,10 +656,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "layout/kingfisher-Prefix.pch";
 				INFOPLIST_FILE = "layout/kingfisher-Info.plist";
 				PRODUCT_NAME = kingfisher;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -648,10 +671,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "layout/kingfisher-Prefix.pch";
 				INFOPLIST_FILE = "layout/kingfisher-Info.plist";
 				PRODUCT_NAME = kingfisher;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -51,5 +51,22 @@ static GUImageFetcher *shareFetcher = nil;
     return image;
 }
 
+-(void)loadImage:(NSString*)imageUrl view:(UIView*)view{
+    [[self taskMap] objectForKey:[NSNumber numberWithInteger:view.hash]];
+
+}
+-(void)loadHighlightedImageUrl:(NSString*)imageUrl view:(UIView*)view;
+
+
+-(NSMutableDictionary*)taskMap{
+    if (_taskMap == nil) {
+        _taskMap = [[NSMutableDictionary alloc] initWithCapacity:4];
+    }
+    return _taskMap;
+}
+
+
+
+
 
 @end

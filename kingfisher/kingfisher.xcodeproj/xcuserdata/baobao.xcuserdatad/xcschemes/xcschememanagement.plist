@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>love.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>A595DFBB199BB97400DEA300</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CE6390C519DE498900E93915</key>
 		<dict>
 			<key>primary</key>
 			<true/>

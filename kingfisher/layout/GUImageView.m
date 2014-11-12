@@ -16,6 +16,8 @@
 -(void)layoutSubviews{
     [super layoutSubviews];
     [self layoutWithMathExpression];
+    
+    [self ha];
 }
 
 
@@ -31,7 +33,7 @@
                if (strongSelf) {
                    dispatch_async(dispatch_get_main_queue(), ^{
                        if(strongSelf){
-                           [strongSelf setImage:image];
+                           [strongSelf setViewImage:image];
                        }
                    });
                }
@@ -50,7 +52,7 @@
                 if (strongSelf) {
                     dispatch_async(dispatch_get_main_queue(), ^{
                         if (strongSelf) {
-                            [strongSelf setHighlightedImage:image];
+                            [strongSelf setViewHighlightedImage:image];
                         }
                     });
                 }

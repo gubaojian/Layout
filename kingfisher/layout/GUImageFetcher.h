@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface GUImageFetcher : NSObject
+@interface GUImageFetcher : NSObject{
+    NSMutableDictionary*  _taskMap;
+}
 
 
 +(GUImageFetcher*) shareFetcher;
@@ -16,6 +18,9 @@
 
 -(UIImage*) imageFromUrl:(NSString*) imageUrl;
 
+-(void)loadImage:(NSString*)imageUrl view:(UIView*)view;
+-(void)loadHighlightedImageUrl:(NSString*)imageUrl view:(UIView*)view;
 
+-(NSMutableDictionary*)taskMap;
 
 @end

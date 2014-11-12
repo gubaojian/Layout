@@ -12,6 +12,10 @@
 	<dict>
 		<key>82C11912614BFCB193FA6F39FA1BD0065765BE1F</key>
 		<string>https://github.com/gubaojian/Layout.git</string>
+		<key>905651a4-7aba-41a2-ac0a-aea3298a445e++3865</key>
+		<string>https://svn.java.net/svn/snsbuy~snsbuy/mobile/layoutGit</string>
+		<key>905651a4-7aba-41a2-ac0a-aea3298a445e++542</key>
+		<string>https://svn.java.net/svn/snsbuy~snsbuy/mobile</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>kingfisher/kingfisher.xcodeproj</string>
@@ -19,6 +23,17 @@
 	<dict>
 		<key>82C11912614BFCB193FA6F39FA1BD0065765BE1F</key>
 		<string>../../..</string>
+		<key>905651a4-7aba-41a2-ac0a-aea3298a445e++3865</key>
+		<string>../../../../layoutGit</string>
+		<key>905651a4-7aba-41a2-ac0a-aea3298a445e++542</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>905651a4-7aba-41a2-ac0a-aea3298a445e++3865</key>
+		<string>https://svn.java.net/svn/snsbuy~snsbuy</string>
+		<key>905651a4-7aba-41a2-ac0a-aea3298a445e++542</key>
+		<string>https://svn.java.net/svn/snsbuy~snsbuy</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/gubaojian/Layout.git</string>
@@ -30,11 +45,27 @@
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>905651a4-7aba-41a2-ac0a-aea3298a445e++542</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>82C11912614BFCB193FA6F39FA1BD0065765BE1F</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Layout</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>905651a4-7aba-41a2-ac0a-aea3298a445e++3865</string>
+			<key>IDESourceControlWCCName</key>
+			<string>layoutGit</string>
 		</dict>
 	</array>
 </dict>

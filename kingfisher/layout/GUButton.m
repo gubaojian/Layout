@@ -18,7 +18,6 @@
 -(void)layoutSubviews{
     [super layoutSubviews];
     [self layoutWithMathExpression];
-    
 }
 
 
@@ -110,7 +109,7 @@
     if (highlightedTextColor != nil) {
         UIColor* color = [UIColor colorWithHexString:textColor];
         [self setTitleColor:color forState:UIControlStateHighlighted];
-        [self setTitleColor:color forState:UIControlStateHighlighted];
+        [self setTitleColor:color forState:UIControlStateSelected];
     }
     
     
