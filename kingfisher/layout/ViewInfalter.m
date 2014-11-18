@@ -114,7 +114,7 @@
 
 
 -(NSString*) documentPathFor:(NSString*) name version:(int)version{
-    NSString* fileName =[NSString stringWithFormat:@"%@_%d.xml", name, version];
+    NSString* fileName =[NSString stringWithFormat:@"view/%d/%@.xml", version, name];
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,   NSUserDomainMask, YES);
     NSString *directory = [paths objectAtIndex:0];
     NSString *filePath = [directory stringByAppendingPathComponent:fileName];

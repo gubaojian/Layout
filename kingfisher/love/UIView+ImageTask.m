@@ -28,13 +28,28 @@ static char highlightedImageTaskKey;
         [imageTask cancel];
         imageTask = nil;
     }
-    imageTask = [[GUImageTask alloc] init];
+    imageTask = [[GUImageTask alloc] initWithView:self imageUrl:imageUrl placeHolder:placeHolder];
+    [self setImageTask:imageTask];
     [imageTask execute];
 }
 
--(void)loadHighlightedImageUrl:(NSString*)imageUrl;
-if ([self isKindOfClass:[UIImageView class]]) {
-    [((UIImageView*)self) setViewImage:nil];
+-(void)loadHighlightedImageUrl:(NSString*)imageUrl{
+    [self loadHighlightedImageUrl:imageUrl placeHolder:nil];
+}
+
+-(void)loadHighlightedImageUrl:(NSString*)imageUrl placeHolder:(NSString*)placeHolder{
+    if (imageUrl == nil || imageUrl.length == 0) {
+        [self setViewHighlightedImage:nil];
+        return;
+    }
+    GUImageTask* highlightedImageTask = [self highlightedImageTask];
+    if (highlightedImageTask != nil) {
+        [highlightedImageTask cancel];
+        highlightedImageTask = nil;
+    }
+    highlightedImageTask = [[GUImageTask alloc] initWithView:self imageUrl:imageUrl placeHolder:placeHolder];
+    [self setHighlightedImageTask:highlightedImageTask];
+    [highlightedImageTask execute];
 }
 
 
@@ -45,6 +60,7 @@ if ([self isKindOfClass:[UIImageView class]]) {
     }
     if ([self isKindOfClass:[UIButton class]]) {
         [((UIButton*)self)setImage:image forState:UIControlStateNormal];
+        return;
     }
 }
 
@@ -56,8 +72,10 @@ if ([self isKindOfClass:[UIImageView class]]) {
     if ([self isKindOfClass:[UIButton class]]) {
         [((UIButton*)self)setImage:image forState:UIControlStateSelected];
         [((UIButton*)self)setImage:image forState:UIControlStateNormal];
+        return;
     }
 }
+
 
 -(void)setImageTask:(GUImageTask *)imageTask{
     objc_setAssociatedObject(self, &imageTaskKey, imageTask,  OBJC_ASSOCIATION_RETAIN_NONATOMIC);

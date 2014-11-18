@@ -56,46 +56,15 @@
      self.imageEdgeInsets = padding;
     
     NSString* imageUrl = [attrs objectForKey:@"imageUrl"];
-   
     if (imageUrl != nil) {
-        __weak  GUButton* weakSelf = self;
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-             __strong GUButton* strongSelf = weakSelf;
-            if(strongSelf){
-                UIImage *image =  [[GUImageFetcher shareFetcher] imageFromUrl:imageUrl];
-                if (strongSelf) {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        if(strongSelf){
-                            [strongSelf setImage:image forState:UIControlStateNormal];
-                        }
-                    });
-                }
-            }
-        });
+        [[GUImageFetcher shareFetcher] loadImage:imageUrl view:self];
     }
     
     NSString* selectedImageUrl = [attrs objectForKey:@"highlightedImageUrl"];
     if (selectedImageUrl != nil) {
-        __weak GUButton*weakSelf = self;
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            __strong GUButton* strongSelf = weakSelf;
-            if(strongSelf){
-                UIImage *image =  [[GUImageFetcher shareFetcher] imageFromUrl:selectedImageUrl];
-                if (strongSelf) {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        if(strongSelf){
-                            [strongSelf setImage: image forState:UIControlStateSelected];
-                            [strongSelf setImage:image forState:UIControlStateHighlighted];
-                        }
-                    });
-                }
-            }
-        });
+        [[GUImageFetcher shareFetcher] loadImage:selectedImageUrl view:self];
     }
     
-
-    
-
     NSString *text = [attrs objectForKey:@"text"];
     if (text != nil){
         [self setTitle:text forState:UIControlStateNormal];
@@ -104,7 +73,6 @@
     if (textColor != nil) {
          [self setTitleColor:[UIColor colorWithHexString:textColor] forState:UIControlStateNormal];
     }
-    
     NSString* highlightedTextColor = [attrs objectForKey:@"highlightedTextColor"];
     if (highlightedTextColor != nil) {
         UIColor* color = [UIColor colorWithHexString:textColor];

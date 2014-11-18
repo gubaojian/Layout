@@ -16,8 +16,6 @@
 -(void)layoutSubviews{
     [super layoutSubviews];
     [self layoutWithMathExpression];
-    
-    [self ha];
 }
 
 
@@ -25,39 +23,13 @@
     [super updateViewFromAttributes:attrs];
     NSString* imageUrl = [attrs objectForKey:@"imageUrl"];
     if (imageUrl != nil) {
-        __weak  GUImageView* weakSelf = self;
-       dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            __strong GUImageView* strongSelf = weakSelf;
-           if (strongSelf) {
-                __block UIImage *image = [[GUImageFetcher shareFetcher] imageFromUrl:imageUrl];
-               if (strongSelf) {
-                   dispatch_async(dispatch_get_main_queue(), ^{
-                       if(strongSelf){
-                           [strongSelf setViewImage:image];
-                       }
-                   });
-               }
-           }
-       });
+        [[GUImageFetcher shareFetcher] loadImage:imageUrl view:self];
     }
     
     
     NSString* highlightedImageUrl = [attrs objectForKey:@"highlightedImageUrl"];
     if (highlightedImageUrl != nil) {
-        GUImageView* __weak weakSelf = self;
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-             __strong GUImageView* strongSelf = weakSelf;
-            if (strongSelf) {
-                __block UIImage *image = [[GUImageFetcher shareFetcher] imageFromUrl:highlightedImageUrl];
-                if (strongSelf) {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        if (strongSelf) {
-                            [strongSelf setViewHighlightedImage:image];
-                        }
-                    });
-                }
-            }
-        });
+        [[GUImageFetcher shareFetcher] loadHighlightedImageUrl:highlightedImageUrl view:self];
     }
 
     

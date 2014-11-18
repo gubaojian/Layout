@@ -49,7 +49,9 @@
     });
 }
 
--(void)result;
+-(void)result{
+
+}
 
 
 

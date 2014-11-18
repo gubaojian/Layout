@@ -16,6 +16,7 @@
 #import "GUImageFetcher.h"
 #import "GUXmlViewController.h"
 #import "ViewBinder.h"
+#import "GUHash.h"
 
 @interface GUViewController()
 
@@ -68,6 +69,14 @@
         [GUExpression valueForExpression:@"skills[10]" context:person];
     }
     NSLog(@"%d expression used %f", count, ( [[NSDate date] timeIntervalSinceReferenceDate] - start));
+    
+    
+    
+    for (int i=0; i<10; i++) {
+        NSInteger hashCode = [GUHash hashCode:[NSString stringWithFormat:@"%da", i]];
+        NSLog(@"hash %d  %d ", hashCode, ([GUHash hashMapCode:hashCode] & 7));
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning

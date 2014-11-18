@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FileStore.h"
 
 @interface GUImageFetcher : NSObject{
-    NSMutableDictionary*  _taskMap;
+     @private NSCache* _imageCache;
+   @private FileStore* _imageStore;
 }
 
 
@@ -19,8 +21,7 @@
 -(UIImage*) imageFromUrl:(NSString*) imageUrl;
 
 -(void)loadImage:(NSString*)imageUrl view:(UIView*)view;
--(void)loadHighlightedImageUrl:(NSString*)imageUrl view:(UIView*)view;
 
--(NSMutableDictionary*)taskMap;
+-(void)loadHighlightedImageUrl:(NSString*)imageUrl view:(UIView*)view;
 
 @end
