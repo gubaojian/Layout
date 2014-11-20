@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GUViewFactory.h"
+#import "GViewFactory.h"
 
 #define TEMPLATE_DOWNLOAD_SUCCESS_NOTIFICATION  @"PUTI_TEMPLATE_DOWNLOAD_SUCCESS_NOTIFICATION"
 #define TEMPLATE_DOWNLOAD_FAILED_NOTIFICATION   @"PUTI_TEMPLATE_DOWNLOAD_FAILED_NOTIFICATION"
@@ -27,6 +27,8 @@
  * fileName bundleName or HttpUrl
  */
 -(id) viewFromFile:(NSString*) fileName;
+
+-(id) viewFromInputStream:(NSInputStream*) inputStream;
 
 
 @end

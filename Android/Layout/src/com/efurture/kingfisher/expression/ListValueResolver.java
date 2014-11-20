@@ -5,7 +5,7 @@ package com.efurture.kingfisher.expression;
 
 import java.util.List;
 
-import com.efurture.kingfisher.internal.GLog;
+import com.efurture.kingfisher.GLog;
 
 
 class ListValueResolver implements ValueResolver{

@@ -22,12 +22,10 @@
 		A595DFC8199BB97400DEA300 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A595DFC6199BB97400DEA300 /* InfoPlist.strings */; };
 		A595DFCA199BB97400DEA300 /* layoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A595DFC9199BB97400DEA300 /* layoutTests.m */; };
 		A595DFD4199BBA8000DEA300 /* Home.xml in Resources */ = {isa = PBXBuildFile; fileRef = A595DFD3199BBA8000DEA300 /* Home.xml */; };
-		A595DFE5199BC83B00DEA300 /* GUView.m in Sources */ = {isa = PBXBuildFile; fileRef = A595DFE4199BC83B00DEA300 /* GUView.m */; };
-		A5B7494E19BA9D5F00CE5661 /* GUExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B7494D19BA9D5F00CE5661 /* GUExpression.m */; };
-		A5B7495119BABCCE00CE5661 /* NSURL+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B7495019BABCCE00CE5661 /* NSURL+Parameters.m */; };
-		A5CEE73719BAC70F004E24C1 /* GUImageFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CEE73619BAC70F004E24C1 /* GUImageFetcher.m */; };
-		A5E9AC001A13AAC30022C694 /* GUTask.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E9ABFF1A13AAC30022C694 /* GUTask.m */; };
-		A5E9AC031A13AFB90022C694 /* GUImageTask.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E9AC021A13AFB90022C694 /* GUImageTask.m */; };
+		A595DFE5199BC83B00DEA300 /* GView.m in Sources */ = {isa = PBXBuildFile; fileRef = A595DFE4199BC83B00DEA300 /* GView.m */; };
+		A5B7494E19BA9D5F00CE5661 /* GExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B7494D19BA9D5F00CE5661 /* GExpression.m */; };
+		A5CEE73719BAC70F004E24C1 /* GImageFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CEE73619BAC70F004E24C1 /* GImageFetcher.m */; };
+		A5E9AC031A13AFB90022C694 /* GImageTask.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E9AC021A13AFB90022C694 /* GImageTask.m */; };
 		A5E9AC061A13B3F50022C694 /* UIView+ImageTask.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E9AC051A13B3F50022C694 /* UIView+ImageTask.m */; };
 		CE34BAA01A15986C00C8C164 /* FileStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CE34BA9F1A15986C00C8C164 /* FileStore.m */; };
 		CE46777519B5EA0F004D1B04 /* UIView+MathLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CE46777419B5EA0F004D1B04 /* UIView+MathLayout.m */; };
@@ -37,20 +35,20 @@
 		CE6390CC19DE498900E93915 /* library-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = CE6390CB19DE498900E93915 /* library-Prefix.pch */; };
 		CE6390CE19DE498900E93915 /* library-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE6390CD19DE498900E93915 /* library-Info.plist */; };
 		CE652A7F1A1112A300934A4C /* ScreenUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = CE652A7E1A1112A300934A4C /* ScreenUnit.m */; };
-		CE6FCDA619B9928300D1A400 /* UIFont+Puti.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6FCDA519B9928300D1A400 /* UIFont+Puti.m */; };
+		CE6FCDA619B9928300D1A400 /* UIFont+Unit.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6FCDA519B9928300D1A400 /* UIFont+Unit.m */; };
 		CE6FCDA819B9A2EA00D1A400 /* Puti.xml in Resources */ = {isa = PBXBuildFile; fileRef = CE6FCDA719B9A2EA00D1A400 /* Puti.xml */; };
 		CE6FCDAB19B9A6FA00D1A400 /* GUPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6FCDAA19B9A6FA00D1A400 /* GUPerson.m */; };
-		CE81C5241A14E2EB00B8439E /* MapCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CE81C5231A14E2EB00B8439E /* MapCache.m */; };
-		CEA8701E19B8B4130051C704 /* GUViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA8701D19B8B4130051C704 /* GUViewFactory.m */; };
+		CE81C5241A14E2EB00B8439E /* GCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CE81C5231A14E2EB00B8439E /* GCache.m */; };
+		CEA8701E19B8B4130051C704 /* GViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA8701D19B8B4130051C704 /* GViewFactory.m */; };
 		CEAD29CB19B80EC80087B151 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAD29CA19B80EC80087B151 /* UIColor+HexString.m */; };
-		CEAD29CF19B8190B0087B151 /* GUButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAD29CE19B8190B0087B151 /* GUButton.m */; };
-		CEAD29D219B833260087B151 /* GUTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAD29D119B833260087B151 /* GUTextView.m */; };
-		CEAD29D519B83BF40087B151 /* GUImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAD29D419B83BF40087B151 /* GUImageView.m */; };
+		CEAD29CF19B8190B0087B151 /* GButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAD29CE19B8190B0087B151 /* GButton.m */; };
+		CEAD29D219B833260087B151 /* GTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAD29D119B833260087B151 /* GTextView.m */; };
+		CEAD29D519B83BF40087B151 /* GImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAD29D419B83BF40087B151 /* GImageView.m */; };
 		CEAD29D919B89EA70087B151 /* note.xsd in Resources */ = {isa = PBXBuildFile; fileRef = CEAD29D819B89EA70087B151 /* note.xsd */; };
 		CEAD29DB19B89EC20087B151 /* note.xml in Resources */ = {isa = PBXBuildFile; fileRef = CEAD29DA19B89EC20087B151 /* note.xml */; };
 		CEAD29DD19B89F220087B151 /* note.dtd in Resources */ = {isa = PBXBuildFile; fileRef = CEAD29DC19B89F220087B151 /* note.dtd */; };
 		CED0047119DD466B00A25135 /* GUXmlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED0047019DD466B00A25135 /* GUXmlViewController.m */; };
-		CED36D9F1A147B9500D0EC9A /* GUHash.m in Sources */ = {isa = PBXBuildFile; fileRef = CED36D9E1A147B9500D0EC9A /* GUHash.m */; };
+		CED36D9F1A147B9500D0EC9A /* GHash.m in Sources */ = {isa = PBXBuildFile; fileRef = CED36D9E1A147B9500D0EC9A /* GHash.m */; };
 		CEF7633119C1C69C004714C6 /* ViewBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF7633019C1C69C004714C6 /* ViewBinder.m */; };
 		CEF7633419C1C6EA004714C6 /* BinderCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF7633319C1C6EA004714C6 /* BinderCallback.m */; };
 /* End PBXBuildFile section */
@@ -86,18 +84,14 @@
 		A595DFC7199BB97400DEA300 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A595DFC9199BB97400DEA300 /* layoutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = layoutTests.m; sourceTree = "<group>"; };
 		A595DFD3199BBA8000DEA300 /* Home.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Home.xml; sourceTree = "<group>"; };
-		A595DFE3199BC83B00DEA300 /* GUView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUView.h; path = ../layout/GUView.h; sourceTree = "<group>"; };
-		A595DFE4199BC83B00DEA300 /* GUView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GUView.m; path = ../layout/GUView.m; sourceTree = "<group>"; };
-		A5B7494C19BA9D5F00CE5661 /* GUExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUExpression.h; path = ../layout/GUExpression.h; sourceTree = "<group>"; };
-		A5B7494D19BA9D5F00CE5661 /* GUExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GUExpression.m; path = ../layout/GUExpression.m; sourceTree = "<group>"; };
-		A5B7494F19BABCCE00CE5661 /* NSURL+Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURL+Parameters.h"; path = "../layout/NSURL+Parameters.h"; sourceTree = "<group>"; };
-		A5B7495019BABCCE00CE5661 /* NSURL+Parameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+Parameters.m"; path = "../layout/NSURL+Parameters.m"; sourceTree = "<group>"; };
-		A5CEE73519BAC70F004E24C1 /* GUImageFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUImageFetcher.h; path = ../layout/GUImageFetcher.h; sourceTree = "<group>"; };
-		A5CEE73619BAC70F004E24C1 /* GUImageFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GUImageFetcher.m; path = ../layout/GUImageFetcher.m; sourceTree = "<group>"; };
-		A5E9ABFE1A13AAC30022C694 /* GUTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUTask.h; path = layout/GUTask.h; sourceTree = SOURCE_ROOT; };
-		A5E9ABFF1A13AAC30022C694 /* GUTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GUTask.m; path = layout/GUTask.m; sourceTree = SOURCE_ROOT; };
-		A5E9AC011A13AFB90022C694 /* GUImageTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUImageTask.h; sourceTree = "<group>"; };
-		A5E9AC021A13AFB90022C694 /* GUImageTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUImageTask.m; sourceTree = "<group>"; };
+		A595DFE3199BC83B00DEA300 /* GView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GView.h; path = ../layout/GView.h; sourceTree = "<group>"; };
+		A595DFE4199BC83B00DEA300 /* GView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GView.m; path = ../layout/GView.m; sourceTree = "<group>"; };
+		A5B7494C19BA9D5F00CE5661 /* GExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GExpression.h; path = ../layout/GExpression.h; sourceTree = "<group>"; };
+		A5B7494D19BA9D5F00CE5661 /* GExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GExpression.m; path = ../layout/GExpression.m; sourceTree = "<group>"; };
+		A5CEE73519BAC70F004E24C1 /* GImageFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GImageFetcher.h; path = ../layout/GImageFetcher.h; sourceTree = "<group>"; };
+		A5CEE73619BAC70F004E24C1 /* GImageFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GImageFetcher.m; path = ../layout/GImageFetcher.m; sourceTree = "<group>"; };
+		A5E9AC011A13AFB90022C694 /* GImageTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GImageTask.h; sourceTree = "<group>"; };
+		A5E9AC021A13AFB90022C694 /* GImageTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GImageTask.m; sourceTree = "<group>"; };
 		A5E9AC041A13B3F50022C694 /* UIView+ImageTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ImageTask.h"; sourceTree = "<group>"; };
 		A5E9AC051A13B3F50022C694 /* UIView+ImageTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ImageTask.m"; sourceTree = "<group>"; };
 		CE34BA9E1A15986C00C8C164 /* FileStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileStore.h; sourceTree = "<group>"; };
@@ -114,30 +108,30 @@
 		CE6390CD19DE498900E93915 /* library-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "library-Info.plist"; sourceTree = "<group>"; };
 		CE652A7D1A1112A300934A4C /* ScreenUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScreenUnit.h; path = layout/ScreenUnit.h; sourceTree = SOURCE_ROOT; };
 		CE652A7E1A1112A300934A4C /* ScreenUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScreenUnit.m; path = layout/ScreenUnit.m; sourceTree = SOURCE_ROOT; };
-		CE6FCDA419B9928300D1A400 /* UIFont+Puti.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+Puti.h"; path = "../layout/UIFont+Puti.h"; sourceTree = "<group>"; };
-		CE6FCDA519B9928300D1A400 /* UIFont+Puti.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+Puti.m"; path = "../layout/UIFont+Puti.m"; sourceTree = "<group>"; };
+		CE6FCDA419B9928300D1A400 /* UIFont+Unit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+Unit.h"; path = "../layout/UIFont+Unit.h"; sourceTree = "<group>"; };
+		CE6FCDA519B9928300D1A400 /* UIFont+Unit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+Unit.m"; path = "../layout/UIFont+Unit.m"; sourceTree = "<group>"; };
 		CE6FCDA719B9A2EA00D1A400 /* Puti.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Puti.xml; sourceTree = "<group>"; };
 		CE6FCDA919B9A6FA00D1A400 /* GUPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUPerson.h; sourceTree = "<group>"; };
 		CE6FCDAA19B9A6FA00D1A400 /* GUPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUPerson.m; sourceTree = "<group>"; };
-		CE81C5221A14E2EB00B8439E /* MapCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapCache.h; sourceTree = "<group>"; };
-		CE81C5231A14E2EB00B8439E /* MapCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapCache.m; sourceTree = "<group>"; };
-		CEA8701C19B8B4130051C704 /* GUViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUViewFactory.h; path = ../layout/GUViewFactory.h; sourceTree = "<group>"; };
-		CEA8701D19B8B4130051C704 /* GUViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GUViewFactory.m; path = ../layout/GUViewFactory.m; sourceTree = "<group>"; };
+		CE81C5221A14E2EB00B8439E /* GCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCache.h; sourceTree = "<group>"; };
+		CE81C5231A14E2EB00B8439E /* GCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCache.m; sourceTree = "<group>"; };
+		CEA8701C19B8B4130051C704 /* GViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GViewFactory.h; path = ../layout/GViewFactory.h; sourceTree = "<group>"; };
+		CEA8701D19B8B4130051C704 /* GViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GViewFactory.m; path = ../layout/GViewFactory.m; sourceTree = "<group>"; };
 		CEAD29C919B80EC80087B151 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+HexString.h"; path = "../layout/UIColor+HexString.h"; sourceTree = "<group>"; };
 		CEAD29CA19B80EC80087B151 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+HexString.m"; path = "../layout/UIColor+HexString.m"; sourceTree = "<group>"; };
-		CEAD29CD19B8190B0087B151 /* GUButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUButton.h; path = ../layout/GUButton.h; sourceTree = "<group>"; };
-		CEAD29CE19B8190B0087B151 /* GUButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GUButton.m; path = ../layout/GUButton.m; sourceTree = "<group>"; };
-		CEAD29D019B833260087B151 /* GUTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUTextView.h; path = ../layout/GUTextView.h; sourceTree = "<group>"; };
-		CEAD29D119B833260087B151 /* GUTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GUTextView.m; path = ../layout/GUTextView.m; sourceTree = "<group>"; };
-		CEAD29D319B83BF40087B151 /* GUImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUImageView.h; path = ../layout/GUImageView.h; sourceTree = "<group>"; };
-		CEAD29D419B83BF40087B151 /* GUImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GUImageView.m; path = ../layout/GUImageView.m; sourceTree = "<group>"; };
+		CEAD29CD19B8190B0087B151 /* GButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GButton.h; path = ../layout/GButton.h; sourceTree = "<group>"; };
+		CEAD29CE19B8190B0087B151 /* GButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GButton.m; path = ../layout/GButton.m; sourceTree = "<group>"; };
+		CEAD29D019B833260087B151 /* GTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTextView.h; path = ../layout/GTextView.h; sourceTree = "<group>"; };
+		CEAD29D119B833260087B151 /* GTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTextView.m; path = ../layout/GTextView.m; sourceTree = "<group>"; };
+		CEAD29D319B83BF40087B151 /* GImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GImageView.h; path = ../layout/GImageView.h; sourceTree = "<group>"; };
+		CEAD29D419B83BF40087B151 /* GImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GImageView.m; path = ../layout/GImageView.m; sourceTree = "<group>"; };
 		CEAD29D819B89EA70087B151 /* note.xsd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = note.xsd; sourceTree = "<group>"; };
 		CEAD29DA19B89EC20087B151 /* note.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = note.xml; sourceTree = "<group>"; };
 		CEAD29DC19B89F220087B151 /* note.dtd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = note.dtd; sourceTree = "<group>"; };
 		CED0046F19DD466B00A25135 /* GUXmlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUXmlViewController.h; sourceTree = "<group>"; };
 		CED0047019DD466B00A25135 /* GUXmlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUXmlViewController.m; sourceTree = "<group>"; };
-		CED36D9D1A147B9500D0EC9A /* GUHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUHash.h; path = layout/GUHash.h; sourceTree = SOURCE_ROOT; };
-		CED36D9E1A147B9500D0EC9A /* GUHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GUHash.m; path = layout/GUHash.m; sourceTree = SOURCE_ROOT; };
+		CED36D9D1A147B9500D0EC9A /* GHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GHash.h; path = layout/GHash.h; sourceTree = SOURCE_ROOT; };
+		CED36D9E1A147B9500D0EC9A /* GHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHash.m; path = layout/GHash.m; sourceTree = SOURCE_ROOT; };
 		CEF7632F19C1C69C004714C6 /* ViewBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewBinder.h; path = ../layout/ViewBinder.h; sourceTree = "<group>"; };
 		CEF7633019C1C69C004714C6 /* ViewBinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewBinder.m; path = ../layout/ViewBinder.m; sourceTree = "<group>"; };
 		CEF7633219C1C6EA004714C6 /* BinderCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BinderCallback.h; path = ../layout/BinderCallback.h; sourceTree = "<group>"; };
@@ -266,28 +260,26 @@
 			children = (
 				CE652A7D1A1112A300934A4C /* ScreenUnit.h */,
 				CE652A7E1A1112A300934A4C /* ScreenUnit.m */,
-				A5B7494F19BABCCE00CE5661 /* NSURL+Parameters.h */,
-				A5B7495019BABCCE00CE5661 /* NSURL+Parameters.m */,
-				A595DFE3199BC83B00DEA300 /* GUView.h */,
-				A595DFE4199BC83B00DEA300 /* GUView.m */,
+				A595DFE3199BC83B00DEA300 /* GView.h */,
+				A595DFE4199BC83B00DEA300 /* GView.m */,
 				CE50C99619B474F8000B7258 /* ViewInfalter.h */,
 				CE50C99719B474F8000B7258 /* ViewInfalter.m */,
 				CE46777319B5EA0F004D1B04 /* UIView+MathLayout.h */,
 				CE46777419B5EA0F004D1B04 /* UIView+MathLayout.m */,
-				CEAD29CD19B8190B0087B151 /* GUButton.h */,
-				CEAD29CE19B8190B0087B151 /* GUButton.m */,
-				CEAD29D019B833260087B151 /* GUTextView.h */,
-				CEAD29D119B833260087B151 /* GUTextView.m */,
-				CEAD29D319B83BF40087B151 /* GUImageView.h */,
-				CEAD29D419B83BF40087B151 /* GUImageView.m */,
-				CEA8701C19B8B4130051C704 /* GUViewFactory.h */,
-				CEA8701D19B8B4130051C704 /* GUViewFactory.m */,
-				CE6FCDA419B9928300D1A400 /* UIFont+Puti.h */,
-				CE6FCDA519B9928300D1A400 /* UIFont+Puti.m */,
-				A5B7494C19BA9D5F00CE5661 /* GUExpression.h */,
-				A5B7494D19BA9D5F00CE5661 /* GUExpression.m */,
-				A5CEE73519BAC70F004E24C1 /* GUImageFetcher.h */,
-				A5CEE73619BAC70F004E24C1 /* GUImageFetcher.m */,
+				CEAD29CD19B8190B0087B151 /* GButton.h */,
+				CEAD29CE19B8190B0087B151 /* GButton.m */,
+				CEAD29D019B833260087B151 /* GTextView.h */,
+				CEAD29D119B833260087B151 /* GTextView.m */,
+				CEAD29D319B83BF40087B151 /* GImageView.h */,
+				CEAD29D419B83BF40087B151 /* GImageView.m */,
+				CEA8701C19B8B4130051C704 /* GViewFactory.h */,
+				CEA8701D19B8B4130051C704 /* GViewFactory.m */,
+				CE6FCDA419B9928300D1A400 /* UIFont+Unit.h */,
+				CE6FCDA519B9928300D1A400 /* UIFont+Unit.m */,
+				A5B7494C19BA9D5F00CE5661 /* GExpression.h */,
+				A5B7494D19BA9D5F00CE5661 /* GExpression.m */,
+				A5CEE73519BAC70F004E24C1 /* GImageFetcher.h */,
+				A5CEE73619BAC70F004E24C1 /* GImageFetcher.m */,
 				CEF7632F19C1C69C004714C6 /* ViewBinder.h */,
 				CEF7633019C1C69C004714C6 /* ViewBinder.m */,
 				CEF7633219C1C6EA004714C6 /* BinderCallback.h */,
@@ -297,16 +289,14 @@
 				CE6390CB19DE498900E93915 /* library-Prefix.pch */,
 				CE6390CD19DE498900E93915 /* library-Info.plist */,
 				CE6390C919DE498900E93915 /* Supporting Files */,
-				A5E9ABFE1A13AAC30022C694 /* GUTask.h */,
-				A5E9ABFF1A13AAC30022C694 /* GUTask.m */,
-				A5E9AC011A13AFB90022C694 /* GUImageTask.h */,
-				A5E9AC021A13AFB90022C694 /* GUImageTask.m */,
+				A5E9AC011A13AFB90022C694 /* GImageTask.h */,
+				A5E9AC021A13AFB90022C694 /* GImageTask.m */,
 				A5E9AC041A13B3F50022C694 /* UIView+ImageTask.h */,
 				A5E9AC051A13B3F50022C694 /* UIView+ImageTask.m */,
-				CED36D9D1A147B9500D0EC9A /* GUHash.h */,
-				CED36D9E1A147B9500D0EC9A /* GUHash.m */,
-				CE81C5221A14E2EB00B8439E /* MapCache.h */,
-				CE81C5231A14E2EB00B8439E /* MapCache.m */,
+				CED36D9D1A147B9500D0EC9A /* GHash.h */,
+				CED36D9E1A147B9500D0EC9A /* GHash.m */,
+				CE81C5221A14E2EB00B8439E /* GCache.h */,
+				CE81C5231A14E2EB00B8439E /* GCache.m */,
 				CE34BA9E1A15986C00C8C164 /* FileStore.h */,
 				CE34BA9F1A15986C00C8C164 /* FileStore.m */,
 				CE4DCC9A1A1AE4A7007B62BA /* LimitFileStore.h */,
@@ -531,28 +521,26 @@
 				A5E9AC061A13B3F50022C694 /* UIView+ImageTask.m in Sources */,
 				CE652A7F1A1112A300934A4C /* ScreenUnit.m in Sources */,
 				CEAD29CB19B80EC80087B151 /* UIColor+HexString.m in Sources */,
-				CEA8701E19B8B4130051C704 /* GUViewFactory.m in Sources */,
+				CEA8701E19B8B4130051C704 /* GViewFactory.m in Sources */,
 				CEF7633419C1C6EA004714C6 /* BinderCallback.m in Sources */,
-				CEAD29CF19B8190B0087B151 /* GUButton.m in Sources */,
+				CEAD29CF19B8190B0087B151 /* GButton.m in Sources */,
 				A595DFAC199BB97400DEA300 /* GUAppDelegate.m in Sources */,
 				CE34BAA01A15986C00C8C164 /* FileStore.m in Sources */,
-				A5CEE73719BAC70F004E24C1 /* GUImageFetcher.m in Sources */,
-				CE6FCDA619B9928300D1A400 /* UIFont+Puti.m in Sources */,
+				A5CEE73719BAC70F004E24C1 /* GImageFetcher.m in Sources */,
+				CE6FCDA619B9928300D1A400 /* UIFont+Unit.m in Sources */,
 				CE46777519B5EA0F004D1B04 /* UIView+MathLayout.m in Sources */,
 				A595DFB5199BB97400DEA300 /* GUViewController.m in Sources */,
-				A5E9AC031A13AFB90022C694 /* GUImageTask.m in Sources */,
-				A5E9AC001A13AAC30022C694 /* GUTask.m in Sources */,
+				A5E9AC031A13AFB90022C694 /* GImageTask.m in Sources */,
 				CED0047119DD466B00A25135 /* GUXmlViewController.m in Sources */,
-				A5B7494E19BA9D5F00CE5661 /* GUExpression.m in Sources */,
-				A595DFE5199BC83B00DEA300 /* GUView.m in Sources */,
+				A5B7494E19BA9D5F00CE5661 /* GExpression.m in Sources */,
+				A595DFE5199BC83B00DEA300 /* GView.m in Sources */,
 				CE6FCDAB19B9A6FA00D1A400 /* GUPerson.m in Sources */,
 				CE4DCC9C1A1AE4A7007B62BA /* LimitFileStore.m in Sources */,
-				A5B7495119BABCCE00CE5661 /* NSURL+Parameters.m in Sources */,
-				CE81C5241A14E2EB00B8439E /* MapCache.m in Sources */,
-				CEAD29D219B833260087B151 /* GUTextView.m in Sources */,
-				CED36D9F1A147B9500D0EC9A /* GUHash.m in Sources */,
+				CE81C5241A14E2EB00B8439E /* GCache.m in Sources */,
+				CEAD29D219B833260087B151 /* GTextView.m in Sources */,
+				CED36D9F1A147B9500D0EC9A /* GHash.m in Sources */,
 				A595DFA8199BB97400DEA300 /* main.m in Sources */,
-				CEAD29D519B83BF40087B151 /* GUImageView.m in Sources */,
+				CEAD29D519B83BF40087B151 /* GImageView.m in Sources */,
 				CEF7633119C1C69C004714C6 /* ViewBinder.m in Sources */,
 				CE50C99819B474F8000B7258 /* ViewInfalter.m in Sources */,
 			);
@@ -685,7 +673,7 @@
 				GCC_PREFIX_HEADER = "layout/kingfisher-Prefix.pch";
 				INFOPLIST_FILE = "layout/kingfisher-Info.plist";
 				PRODUCT_NAME = kingfisher;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -700,7 +688,7 @@
 				GCC_PREFIX_HEADER = "layout/kingfisher-Prefix.pch";
 				INFOPLIST_FILE = "layout/kingfisher-Info.plist";
 				PRODUCT_NAME = kingfisher;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

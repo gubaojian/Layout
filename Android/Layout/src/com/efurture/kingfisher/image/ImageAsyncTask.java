@@ -1,143 +1,103 @@
 package com.efurture.kingfisher.image;
 
-import java.io.InputStream;
 import java.lang.ref.WeakReference;
-import java.net.URL;
-import java.net.URLConnection;
-import java.util.ArrayList;
-import java.util.List;
 
+import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.StateListDrawable;
 import android.os.AsyncTask;
-import android.util.Log;
-import android.util.LruCache;
+import android.text.TextUtils;
 import android.util.StateSet;
 import android.view.View;
-import android.widget.ImageView;
 
-public class ImageAsyncTask<T extends View> extends AsyncTask<String, Void, List<Drawable>> {
+public class ImageAsyncTask<T extends View> extends AsyncTask<Void, Void, Void> {
+
 
 	 private  WeakReference<T> imageViewReference;
-	 private static LruCache<String, WeakReference<Drawable>> imgCache = new LruCache<String,  WeakReference<Drawable>>(24);
-	
-	 public ImageAsyncTask(T imageView){
+	 private  String imageUrl;
+	 private  String hightedImageUrl;
+	 private  Bitmap normalBitmap;
+	 private  Bitmap hightedBitmap;
+	 
+	 public ImageAsyncTask(T imageView, String imageUrl, String hightedImageUrl){
 		 imageViewReference = new WeakReference<T>(imageView);
+		 this.imageUrl = imageUrl;
+		 this.hightedImageUrl = hightedImageUrl;
 	 }
 	
+	 public boolean isTaskValid(){
+		 boolean isCancel = isCancelled();
+		 if (isCancel) {
+			return false;
+		 }
+		 return imageViewReference.get() != null;
+	 }
+	 
+	 
 	@Override
-	protected List<Drawable> doInBackground(String... params) {
-		if (params == null || params.length == 0) {
+	protected Void doInBackground(Void... params) {
+		if (!isTaskValid()) {
 			return null;
 		}
-		List<Drawable> imageList = new ArrayList<Drawable>(2);
-		imageList.add(getDrawableFromUrl(params[0]));
-		if (isCancelled()) {
+		if (!TextUtils.isEmpty(imageUrl)) {
+			View  view =  imageViewReference.get();
+			if (view != null) {
+				normalBitmap = GImageFetcher.shareFetcher().loadBitmap(view, imageUrl);
+			}
+		}
+		if (!isTaskValid()) {
 			return null;
 		}
-		if (params.length > 1) {
-			imageList.add(getDrawableFromUrl(params[1]));
+		if (!TextUtils.isEmpty(hightedImageUrl)) {
+			View  view =  imageViewReference.get();
+			if (view != null) {
+				hightedBitmap = GImageFetcher.shareFetcher().loadBitmap(view, hightedImageUrl);
+			}
 		}
-		return imageList;
+		return null;
 	}
 
-	@SuppressWarnings("deprecation")
 	@Override
-	protected void onPostExecute(List<Drawable> imageList) {
-		if (imageList == null || imageList.size() == 0) {
+	protected void onPostExecute(Void result) {
+		if (!isTaskValid()) {
 			return;
 		}
-		if (imageViewReference == null) {
-			return;
-		}
-		T view = imageViewReference.get();
+		View  view =  imageViewReference.get();
 		if (view == null) {
-			return;
-		}
-		if (view instanceof ImageView) {
-			ImageView imageView = (ImageView)view;
-			if (imageList.size() == 1 || imageList.get(1) == null) {
-				imageView.setImageDrawable(imageList.get(0));
-			}else {
-				StateListDrawable stateListDrawable = new StateListDrawable();
-				stateListDrawable.addState(new int[]{android.R.attr.state_pressed, android.R.attr.state_focused}, imageList.get(1));
-				stateListDrawable.addState(StateSet.WILD_CARD, imageList.get(0));
-				imageView.setImageDrawable(stateListDrawable);
-			}
-			return;
-		}
-		
-		if (imageList.size() == 1 || imageList.get(1) == null) {
-			view.setBackgroundDrawable(imageList.get(0));
-		}else {
-			StateListDrawable stateListDrawable = new StateListDrawable();
-			stateListDrawable.addState(new int[]{android.R.attr.state_pressed, android.R.attr.state_focused}, imageList.get(1));
-			stateListDrawable.addState(StateSet.WILD_CARD, imageList.get(0));
-			view.setBackgroundDrawable(stateListDrawable);
-		}
-		
-	}
-	
-	
-	private Drawable getDrawableFromUrl(String imageUrl){
-		if (imageUrl == null) {
-			return null;
-		}
-		WeakReference<Drawable> drawableCache = imgCache.get(imageUrl);
-		if (drawableCache != null) {
-			Drawable drawable = drawableCache.get();
-			if (drawable != null) {
-				return drawable;
-			}
-		}
-		View view = imageViewReference.get();
-		if (view == null) {
-			 return null;
+			
 		}
 		Drawable drawable = null;
-		InputStream inputStream = null;
-		try {
-			if (imageUrl.startsWith("http://") 
-					|| imageUrl.startsWith("https://")) {
-				URL url = new URL(imageUrl);
-				URLConnection connection = url.openConnection();
-				connection.setUseCaches(true);
-				connection.setDefaultUseCaches(true);
-				connection.setConnectTimeout(1000*10);
-				connection.setReadTimeout(5000);
-				connection.connect();
-				inputStream = connection.getInputStream();
-				drawable = new BitmapDrawable(view.getResources(), inputStream);
-			}else {
-				int id = view.getResources().getIdentifier(imageUrl, "drawable", view.getContext().getPackageName());
-				if (id > 0) {
-					drawable = view.getResources().getDrawable(id);
-				}else {
-					if (imageUrl.endsWith("?resizable=true")) {
-						imageUrl.substring(0, imageUrl.length() - 15 + 1);
-						id = view.getResources().getIdentifier(imageUrl, "drawable", view.getContext().getPackageName());
-						if (id > 0) {
-							drawable = view.getResources().getDrawable(id);
-						}
-					}
-				}
-			}
-		} catch (Exception e) {
-			 Log.e("ImageAsyncTask", "ImageAsyncTask Download Error, ImageUrl " + imageUrl, e);
-		}finally{
-			if (inputStream != null) {
-				try {
-					inputStream.close();
-				} catch (Exception e) {
-					 Log.e("ImageAsyncTask", "ImageAsyncTask Close InputStream Error" + imageUrl, e);
-				}
-			}
+		if (normalBitmap != null && hightedBitmap != null) {
+			StateListDrawable stateListDrawable = new StateListDrawable();
+			stateListDrawable.addState(new int[]{android.R.attr.state_pressed, android.R.attr.state_focused}, new BitmapDrawable(view.getContext().getResources(), hightedBitmap));
+			stateListDrawable.addState(StateSet.WILD_CARD, new BitmapDrawable(view.getContext().getResources(), normalBitmap));
+			drawable = stateListDrawable;
+		}else if (normalBitmap != null) {
+			drawable = new BitmapDrawable(view.getContext().getResources(), normalBitmap);
+		}else if (hightedBitmap != null) {
+			StateListDrawable stateListDrawable = new StateListDrawable();
+			stateListDrawable.addState(new int[]{android.R.attr.state_pressed, android.R.attr.state_focused}, new BitmapDrawable(view.getContext().getResources(), hightedBitmap));
+			stateListDrawable.addState(StateSet.WILD_CARD, new BitmapDrawable(view.getContext().getResources(), hightedBitmap));
+			drawable = stateListDrawable;
 		}
-		imgCache.put(imageUrl, new WeakReference<Drawable>(drawable));
-		return drawable;
+		if (drawable != null) {
+			GImageFetcher.shareFetcher().setDrawable(view, drawable);
+		}
+		GImageFetcher.shareFetcher().getImageTasks().remove(view);
+		normalBitmap = null;
+		hightedBitmap = null;
+	}
+
+	@Override
+	protected void onCancelled() {
+		View  view =  imageViewReference.get();
+		if (view == null) {
+			GImageFetcher.shareFetcher().getImageTasks().remove(view);
+		}
 	}
 	
-	
+	  
 
+	
 }

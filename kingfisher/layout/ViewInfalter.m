@@ -57,7 +57,6 @@
     return [self toViewBundleName:fileName];
 }
 
-
 -(id) viewFrom:(NSString*) name version:(int)version downloadUrl:(NSString*)downloadUrl{
     if (name == nil) {
         return nil;
@@ -173,7 +172,7 @@
 
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict{
-    UIView* elementView = [[GUViewFactory shareFactory] createViewWithElement:elementName attributes:attributeDict];
+    UIView* elementView = [[GViewFactory shareFactory] createViewWithElement:elementName attributes:attributeDict];
     if (viewNode != nil) {
         [viewNode addSubview:elementView];
     }

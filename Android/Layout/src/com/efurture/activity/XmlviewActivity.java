@@ -55,7 +55,7 @@ public class XmlviewActivity extends Activity {
 	
 	private void loadXmlView(){
 		if (downloadUrl != null) {
-			View view = ViewInflater.from(this).inflate("xmlview", 0, downloadUrl);
+			View view = ViewInflater.from(this).inflate("xmlview", downloadUrl);
 			if (view != null) {
 				FrameLayout frameLayout = (FrameLayout) findViewById(R.id.container);
 				frameLayout.removeAllViews();

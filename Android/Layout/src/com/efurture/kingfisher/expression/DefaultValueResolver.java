@@ -6,7 +6,7 @@ package com.efurture.kingfisher.expression;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-import com.efurture.kingfisher.internal.GLog;
+import com.efurture.kingfisher.GLog;
 
 import android.support.v4.util.LruCache;
 

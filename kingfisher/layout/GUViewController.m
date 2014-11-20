@@ -7,20 +7,20 @@
 //
 
 #import "GUViewController.h"
-#import "GUView.h"
-#import "GUButton.h"
-#import "GUImageView.h"
+#import "GView.h"
+#import "GButton.h"
+#import "GImageView.h"
 #import "ViewInfalter.h"
 #import "GUPerson.h"
-#import "GUExpression.h"
-#import "GUImageFetcher.h"
+#import "GExpression.h"
+#import "GImageFetcher.h"
 #import "GUXmlViewController.h"
 #import "ViewBinder.h"
-#import "GUHash.h"
+#import "GHash.h"
 
 @interface GUViewController()
 
-@property GUView*  node;
+@property GView*  node;
 
 @end
 
@@ -37,7 +37,7 @@
        [weakSelf presentViewController:xmlViewContainner animated:YES completion:nil];
     }];
     
-    GUImageView* button = [[GUImageView alloc] initWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:@"20", @"x", @"100", @"y",
+    GImageView* button = [[GImageView alloc] initWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:@"20", @"x", @"100", @"y",
                                                              @"100", @"width", @"44", @"height", @"height * 4 ", @"expressionWidth", @"http://www.baidu.com/img/bd_logo.png", @"imageUrl", [self class], @"OK", nil]];
     
      [button setBackgroundColor:[UIColor redColor]];
@@ -66,15 +66,15 @@
     start = [[NSDate date] timeIntervalSinceReferenceDate];
     int count = 1000;
     for (int i=0; i<count; i++) {
-        [GUExpression valueForExpression:@"skills[10]" context:person];
+        [GExpression valueForExpression:@"skills[10]" context:person];
     }
     NSLog(@"%d expression used %f", count, ( [[NSDate date] timeIntervalSinceReferenceDate] - start));
     
     
     
     for (int i=0; i<10; i++) {
-        NSInteger hashCode = [GUHash hashCode:[NSString stringWithFormat:@"%da", i]];
-        NSLog(@"hash %d  %d ", hashCode, ([GUHash hashMapCode:hashCode] & 7));
+        NSInteger hashCode = [GHash hashCode:[NSString stringWithFormat:@"%da", i]];
+        NSLog(@"hash %d  %d ", hashCode, ([GHash hashMapCode:hashCode] & 7));
     }
     
 }

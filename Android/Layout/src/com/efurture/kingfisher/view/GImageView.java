@@ -35,7 +35,7 @@ public class GImageView extends GLayout<ImageView>{
 		 String highlightedImageUrl = attrs.getValue("highlightedImageUrl");
 		 if (imageUrl != null 
 				 || highlightedImageUrl != null) {
-			GImageFetcher.shareImageFetcher().load(view, imageUrl, highlightedImageUrl);
+			GImageFetcher.shareFetcher().load(view, imageUrl, highlightedImageUrl);
 		}
 		 
 		 String scaleType = attrs.getValue("scaleType");

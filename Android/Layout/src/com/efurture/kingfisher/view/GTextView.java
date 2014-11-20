@@ -2,8 +2,6 @@ package com.efurture.kingfisher.view;
 
 import org.xml.sax.Attributes;
 
-import com.efurture.kingfisher.image.GImageFetcher;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
@@ -12,6 +10,8 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.widget.TextView;
+
+import com.efurture.kingfisher.image.GImageFetcher;
 
 public class GTextView  extends GLayout<TextView>{
 
@@ -109,7 +109,7 @@ public class GTextView  extends GLayout<TextView>{
 		 String highlightedImageUrl = attrs.getValue("highlightedImageUrl");
 		 if (imageUrl != null 
 				 || highlightedImageUrl != null) {
-			GImageFetcher.shareImageFetcher().load(view, imageUrl, highlightedImageUrl);
+			GImageFetcher.shareFetcher().load(view, imageUrl, highlightedImageUrl);
 		}
 		
 	}

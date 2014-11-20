@@ -25,10 +25,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.efurture.activity.XmlviewActivity"
-            android:label="@string/title_activity_xmlview" >
-        </activity>
     </application>
 
 </manifest>

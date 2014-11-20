@@ -7,7 +7,7 @@
 //
 
 #import "LimitFileStore.h"
-#import "GUHash.h"
+#import "GHash.h"
 
 @implementation LimitFileStore
 
@@ -33,7 +33,7 @@
 
 
 -(NSString*)toFullPath:(NSString*)fileName{
-    NSUInteger code = [GUHash hashMapCode:[GUHash hashCode:fileName]] &(self.size - 1);
+    NSUInteger code = [GHash hashMapCode:[GHash hashCode:fileName]] &(self.size - 1);
     NSString* md5 = fileName;
     return [[super getFullPath] stringByAppendingPathComponent:[NSString stringWithFormat:@"/%d/%@", code, md5]];
 }

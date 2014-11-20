@@ -15,9 +15,7 @@ import de.congrace.exp4j.ExpressionBuilder;
  *  */
 public class Exp4jEvaluator extends Evaluator{
 
-	/* (non-Javadoc)
-	 * @see com.efurture.kite.expression.ExpressionProvider#evalInt(java.lang.String, java.util.Map)
-	 */
+
 	@Override
 	public double evalute(String expression, Map<String, Object> paramsMap){
 		try {

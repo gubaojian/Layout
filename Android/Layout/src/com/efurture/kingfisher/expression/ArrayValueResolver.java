@@ -5,7 +5,7 @@ package com.efurture.kingfisher.expression;
 
 import java.lang.reflect.Array;
 
-import com.efurture.kingfisher.internal.GLog;
+import com.efurture.kingfisher.GLog;
 
 
 class ArrayValueResolver implements ValueResolver{

@@ -1,7 +1,10 @@
 package com.efurture.kingfisher;
 
+import com.efurture.kingfisher.image.GImageFetcher;
+
 import android.support.v4.view.ViewPager;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class BinderCallback {
@@ -14,6 +17,9 @@ public class BinderCallback {
 				((TextView) view).setText(value.toString());
 			}
 			return true;
+		}else if (view instanceof ImageView) {
+			String imageUrl = (value == null ? null : value.toString());
+			GImageFetcher.shareFetcher().load(view, imageUrl);
 		}
 		return false;
 	}
