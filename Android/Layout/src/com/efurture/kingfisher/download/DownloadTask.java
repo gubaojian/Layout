@@ -2,6 +2,7 @@ package com.efurture.kingfisher.download;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
@@ -53,22 +54,10 @@ public class DownloadTask extends AsyncTask<Void, Void, Boolean> {
 		}
 		InputStream inputStream = null;
 		try {
-			URL url  = new URL(downloadUrl);
-			URLConnection connection = url.openConnection();
-			connection.setUseCaches(false);
-			connection.setDefaultUseCaches(false);
-			connection.connect();
-			if (connection instanceof HttpURLConnection) {
-				HttpURLConnection httpURLConnection = (HttpURLConnection) connection;
-				httpURLConnection.setConnectTimeout(1000*16);
-				httpURLConnection.setReadTimeout(1000*8);
-				if (httpURLConnection.getResponseCode() != HttpURLConnection.HTTP_OK) {
-					 Log.w("DownloadTask", url + "Server returned HTTP " + httpURLConnection.getResponseCode() + " " + httpURLConnection.getResponseMessage());
-					return false;
-	            }
+			inputStream = toInputStream(downloadUrl);
+			if (inputStream == null) {
+				return false;
 			}
-			inputStream = connection.getInputStream();
-			
 			boolean writeSuccess = false;
 			FileOutputStream fileOutputStream = null;
 			File tmp = null;
@@ -125,6 +114,25 @@ public class DownloadTask extends AsyncTask<Void, Void, Boolean> {
 				}
 			}
 		}
+	}
+	
+	
+	protected InputStream toInputStream(String downloadUrl) throws IOException{
+		URL url  = new URL(downloadUrl);
+		URLConnection connection = url.openConnection();
+		connection.setUseCaches(false);
+		connection.setDefaultUseCaches(false);
+		connection.connect();
+		if (connection instanceof HttpURLConnection) {
+			HttpURLConnection httpURLConnection = (HttpURLConnection) connection;
+			httpURLConnection.setConnectTimeout(1000*16);
+			httpURLConnection.setReadTimeout(1000*8);
+			if (httpURLConnection.getResponseCode() != HttpURLConnection.HTTP_OK) {
+				 Log.w("DownloadTask", url + "Server returned HTTP " + httpURLConnection.getResponseCode() + " " + httpURLConnection.getResponseMessage());
+				return null;
+            }
+		}
+		return connection.getInputStream();
 	}
 	
 	

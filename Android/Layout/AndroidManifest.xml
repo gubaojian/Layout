@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="20" />
+        android:targetSdkVersion="18" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -24,6 +24,14 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+         <activity
+            android:name="com.efurture.activity.XmlviewActivity"
+            android:label="@string/title_activity_page_app" >
+        </activity>
+        <activity
+            android:name="com.efurture.activity.PageAppActivity"
+            android:label="@string/title_activity_page_app" >
         </activity>
     </application>
 

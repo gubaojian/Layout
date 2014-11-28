@@ -34,7 +34,7 @@ public abstract class DynamicAdapter extends BaseAdapter{
 		}
 	}
 	
-	
+
 
 	public abstract String getItemType(int position);
 	

@@ -92,7 +92,16 @@ public class GImageFetcher  {
 			imageAsyncTask = null;
 		}
 		imageAsyncTask = new ImageAsyncTask<View>(view, imageUrl, hightedImageUrl);
-		imageAsyncTask.execute();
+	    final ImageAsyncTask<View>  imageAsyncTaskRef = imageAsyncTask;
+		view.post(new Runnable() {
+			
+			@Override
+			public void run() {
+				if(!imageAsyncTaskRef.isCancelled()){
+				     imageAsyncTaskRef.execute();
+				}
+			}
+		});
 		getImageTasks().put(view, imageAsyncTask);
 	}
 	

@@ -13,7 +13,6 @@ import android.view.View.OnClickListener;
 import android.widget.FrameLayout;
 
 import com.efurture.kingfisher.infalter.DefaultViewInflater;
-import com.efurture.kingfisher.view.ScreenUnit;
 import com.google.furture.R;
 
 public class MainActivity extends Activity {
@@ -40,6 +39,15 @@ public class MainActivity extends Activity {
 				}
 				Intent intent = new Intent(getBaseContext(), XmlviewActivity.class);
 				intent.putExtra("url", "https://raw.githubusercontent.com/gubaojian/Layout/master/server/market.xml");
+				startActivity(intent);
+			}
+		});
+		
+		findViewById(R.id.button1).setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getBaseContext(), PageAppActivity.class);
 				startActivity(intent);
 			}
 		});

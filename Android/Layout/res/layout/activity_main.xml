@@ -8,15 +8,18 @@
         android:layout_height="match_parent"
         android:id="@+id/container" 
         >
-
         
-
     </FrameLayout>
+    <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PageApp" />
     <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button" 
+            android:text="XMLView" 
             android:layout_gravity="center_horizontal|bottom"/>
 
 </FrameLayout>
