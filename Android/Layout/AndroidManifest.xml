@@ -30,7 +30,7 @@
             android:label="@string/title_activity_page_app" >
         </activity>
         <activity
-            android:name="com.efurture.activity.PageAppActivity"
+            android:name="com.efurture.activity.HybridActivity"
             android:label="@string/title_activity_page_app" >
         </activity>
     </application>

@@ -4,6 +4,7 @@ import java.io.InputStream;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -47,7 +48,8 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(getBaseContext(), PageAppActivity.class);
+				Intent intent = new Intent(getBaseContext(), HybridActivity.class);
+				intent.setData(Uri.parse("app"));
 				startActivity(intent);
 			}
 		});

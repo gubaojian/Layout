@@ -33,7 +33,7 @@ import com.efurture.kingfisher.download.DownloadTask;
 import com.efurture.kingfisher.filestore.FileStore;
 import com.google.furture.R;
 
-public class PageApp implements  Callback{
+public class HybridPage implements  Callback{
 
 	private static FileStore pageStore;
 	protected  Handler handler;
@@ -50,9 +50,9 @@ public class PageApp implements  Callback{
 	protected  boolean useCache = true;
 	protected float mVelocityScale = 1.5f;
 
-	public  PageApp (Activity context, String baseUrl) {
+	public  HybridPage (Activity context, String baseUrl) {
 		if (pageStore == null) {
-			pageStore = FileStore.from(context, "pages_app", 128, 1000*60*60);
+			pageStore = FileStore.from(context, "hybrid_pages", 128, 1000*60*60);
 		}
 		activityRef = new WeakReference<Activity>(context);
 		handler = new Handler(this);
@@ -83,7 +83,7 @@ public class PageApp implements  Callback{
 							String pageContent = pageStore.readString(fileName);
 							if (pageContent != null) {
 								pageData = new JSONObject(pageContent);
-								long  validTime = pageData.optLong(ItemKeys.KEY_VALID_TIME, ItemKeys.DEFAULT_VALID_TIME)*1000;
+								long  validTime = pageData.optLong(ItemKeys.VALID_TIME, ItemKeys.DEFAULT_VALID_TIME)*1000;
 								boolean isValid = ((System.currentTimeMillis() - validTime) <= file.lastModified());
 								if (isValid) {
 									Message msg = Message.obtain();
@@ -108,7 +108,7 @@ public class PageApp implements  Callback{
 					pageData = new JSONObject(outputStream.toString(ItemKeys.CHARSET));
 					boolean isValid = false;
 					if (pageData != null) {
-                        long validTime = pageData.optLong(ItemKeys.KEY_VALID_TIME, ItemKeys.DEFAULT_VALID_TIME)*1000;
+                        long validTime = pageData.optLong(ItemKeys.VALID_TIME, ItemKeys.DEFAULT_VALID_TIME)*1000;
                         if (validTime > 0) {
 							isValid = true;
 						}
@@ -161,13 +161,13 @@ public class PageApp implements  Callback{
 		if (activity == null) {
 			return;
 		}
-		handleMetas(pageData.optJSONArray(ItemKeys.KEY_METAS), pageNum);
+		handleMetas(pageData.optJSONArray(ItemKeys.METAS), pageNum);
 		if (pageNum == PAGE_FIRST) {
 			mListview = null;
-			items = pageData.optJSONArray(ItemKeys.KEY_ITEMS);
-			viewTypeCount = pageData.optInt(ItemKeys.KEY_VIEW_TYPE_COUNT, MAX_VIEW_TYPE_COUNT);
+			items = pageData.optJSONArray(ItemKeys.ITEMS);
+			viewTypeCount = pageData.optInt(ItemKeys.VIEW_TYPE_COUNT, MAX_VIEW_TYPE_COUNT);
 		}else {
-			JSONArray pageItems = pageData.optJSONArray(ItemKeys.KEY_ITEMS);
+			JSONArray pageItems = pageData.optJSONArray(ItemKeys.ITEMS);
 			if (pageItems != null) {
 				for(int i=0; i<pageItems.length(); i++){
 					Object value = pageItems.opt(i);
@@ -216,7 +216,7 @@ public class PageApp implements  Callback{
 				@Override
 				public String getItemType(int position) {
 					JSONObject item =  items.optJSONObject(position);
-					return item.optString(ItemKeys.KEY_NAME, "");
+					return item.optString(ItemKeys.NAME, "");
 				}
 
 				@Override
@@ -289,18 +289,18 @@ public class PageApp implements  Callback{
 		}
 	}
 	
-	private View createViewByStyle(String style, Activity activity){
+	protected View createViewByStyle(String style, Activity activity){
 		if (ItemKeys.STYLE_GRID.equals(style)) {
 			return LayoutInflater.from(activity).inflate(R.layout.style_grid,  null);
 		}else {
 			return LayoutInflater.from(activity).inflate(R.layout.style_list, null);
 		}
 	}
-
+	
 	protected void handleMeta(String name, String value, int pageNum){
-		if (ItemKeys.KEY_HAS_MORE.equals(name)) {
+		if (ItemKeys.HAS_MORE.equals(name)) {
 			hasMore =  toBoolean(value);
-		}else if (ItemKeys.KEY_TITLE.equals(name)) {
+		}else if (ItemKeys.TITLE.equals(name)) {
 			Activity activity = activityRef.get();
 			if (activity == null) {
 				return;
@@ -343,9 +343,6 @@ public class PageApp implements  Callback{
 		return false;
 	}
 	
-	
-	
-	
 	public LoadMoreState getLoadMore() {
 		if (mLoadMore == null) {
 			mLoadMore = new LoadMoreState();
@@ -376,7 +373,7 @@ public class PageApp implements  Callback{
 			Set<String> paramNameSet = uri.getQueryParameterNames();
 			if (paramNameSet != null && paramNameSet.size() >0) {
 				for (String paramName : paramNameSet) {
-					if (ItemKeys.KEY_PAGE_NUM.equals(paramName)) {
+					if (ItemKeys.PAGE_NUM.equals(paramName)) {
 						continue;
 					}
 					List<String> values = uri.getQueryParameters(paramName);
@@ -388,7 +385,7 @@ public class PageApp implements  Callback{
 					}
 				}
 			}
-			builder.appendQueryParameter(ItemKeys.KEY_PAGE_NUM, String.valueOf(pageNum));
+			builder.appendQueryParameter(ItemKeys.PAGE_NUM, String.valueOf(pageNum));
 			return builder.build().toString();
 		}else {
 			return  url + pageNum;
@@ -417,8 +414,6 @@ public class PageApp implements  Callback{
 		return false;
 	}
 	
-	
-
 	public void setBinderCallback(BinderCallback binderCallback) {
 		this.mBinderCallback = binderCallback;
 	}

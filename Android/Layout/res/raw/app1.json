@@ -7,7 +7,7 @@
             "title": "我的App我做主"
         }, 
         {
-            "style": "grid"
+            "style": "list"
         }
     ], 
     "items": [
@@ -16,6 +16,18 @@
             "version": "", 
             "url": "", 
             "height": ""
+        }, 
+        {
+            "name": "search_item", 
+            "native": "true"
+        }, 
+        {
+            "name": "search_item", 
+            "native": "true"
+        }, 
+        {
+            "name": "search_item", 
+            "native": "true"
         }, 
         {
             "name": "home_market", 
