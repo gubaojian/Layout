@@ -37,6 +37,8 @@
 		CE4DCD981A1B3DAC007B62BA /* ViewInfalter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4DCD841A1B3DAC007B62BA /* ViewInfalter.m */; };
 		CE4DCD9B1A1B446C007B62BA /* GUXmlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4DCD9A1A1B446C007B62BA /* GUXmlViewController.m */; };
 		CE4DCD9E1A1B4491007B62BA /* GUPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4DCD9D1A1B4491007B62BA /* GUPerson.m */; };
+		CE727F891A2EEEF9004BC9A1 /* HybridView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE727F881A2EEEF9004BC9A1 /* HybridView.m */; };
+		CE727F8C1A2EF20D004BC9A1 /* LoadMore.m in Sources */ = {isa = PBXBuildFile; fileRef = CE727F8B1A2EF20D004BC9A1 /* LoadMore.m */; };
 		CEB4E8561A1DA71B006C0CA5 /* market.xml in Resources */ = {isa = PBXBuildFile; fileRef = CEB4E8531A1DA71B006C0CA5 /* market.xml */; };
 		CEB4E8571A1DA71B006C0CA5 /* Home.xml in Resources */ = {isa = PBXBuildFile; fileRef = CEB4E8541A1DA71B006C0CA5 /* Home.xml */; };
 		CEB4E8581A1DA71B006C0CA5 /* Puti.xml in Resources */ = {isa = PBXBuildFile; fileRef = CEB4E8551A1DA71B006C0CA5 /* Puti.xml */; };
@@ -111,6 +113,10 @@
 		CE4DCD9A1A1B446C007B62BA /* GUXmlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUXmlViewController.m; sourceTree = "<group>"; };
 		CE4DCD9C1A1B4491007B62BA /* GUPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUPerson.h; sourceTree = "<group>"; };
 		CE4DCD9D1A1B4491007B62BA /* GUPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUPerson.m; sourceTree = "<group>"; };
+		CE727F871A2EEEF9004BC9A1 /* HybridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HybridView.h; sourceTree = "<group>"; };
+		CE727F881A2EEEF9004BC9A1 /* HybridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HybridView.m; sourceTree = "<group>"; };
+		CE727F8A1A2EF20D004BC9A1 /* LoadMore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadMore.h; sourceTree = "<group>"; };
+		CE727F8B1A2EF20D004BC9A1 /* LoadMore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadMore.m; sourceTree = "<group>"; };
 		CEB4E8531A1DA71B006C0CA5 /* market.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = market.xml; sourceTree = "<group>"; };
 		CEB4E8541A1DA71B006C0CA5 /* Home.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Home.xml; sourceTree = "<group>"; };
 		CEB4E8551A1DA71B006C0CA5 /* Puti.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Puti.xml; sourceTree = "<group>"; };
@@ -172,6 +178,10 @@
 				CE4DCCB11A1B20E2007B62BA /* ViewController.m */,
 				CE4DCCB61A1B20E2007B62BA /* Images.xcassets */,
 				CE4DCCA91A1B20E2007B62BA /* Supporting Files */,
+				CE727F871A2EEEF9004BC9A1 /* HybridView.h */,
+				CE727F881A2EEEF9004BC9A1 /* HybridView.m */,
+				CE727F8A1A2EF20D004BC9A1 /* LoadMore.h */,
+				CE727F8B1A2EF20D004BC9A1 /* LoadMore.m */,
 			);
 			path = kingfisher;
 			sourceTree = "<group>";
@@ -403,12 +413,14 @@
 				CE4DCD921A1B3DAC007B62BA /* GView.m in Sources */,
 				CE4DCD8C1A1B3DAC007B62BA /* GCache.m in Sources */,
 				CE4DCCAC1A1B20E2007B62BA /* main.m in Sources */,
+				CE727F891A2EEEF9004BC9A1 /* HybridView.m in Sources */,
 				CE4DCD911A1B3DAC007B62BA /* GTextView.m in Sources */,
 				CE4DCD951A1B3DAC007B62BA /* UIFont+Unit.m in Sources */,
 				CE4DCD971A1B3DAC007B62BA /* ViewBinder.m in Sources */,
 				CE4DCD981A1B3DAC007B62BA /* ViewInfalter.m in Sources */,
 				CE4DCD941A1B3DAC007B62BA /* UIColor+HexString.m in Sources */,
 				CE4DCD8E1A1B3DAC007B62BA /* GHash.m in Sources */,
+				CE727F8C1A2EF20D004BC9A1 /* LoadMore.m in Sources */,
 				CE4DCD871A1B3DAC007B62BA /* LimitFileStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

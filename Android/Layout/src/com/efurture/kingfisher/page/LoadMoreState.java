@@ -5,9 +5,9 @@ public class LoadMoreState {
 
 	public static final int INIT = 0;
 	public static final int LOADING = 1;
-	public static final int COMPLETE = 0;
+	public static final int COMPLETE = 2;
 	public static final int ERROR = -1;
-	public static final int NONE_MORE = -2;
+	public static final int NONE_MORE = 3;
 	
 	private int currentPage = 1;
 	private int state = INIT;

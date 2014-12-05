@@ -28,4 +28,9 @@ public class ItemKeys {
 
 	
 	public static final int DEFAULT_VALID_TIME = 3600; //秒
+	
+	
+	public static final String HYBRID_VERSION_NAME = "hybirdVersion";
+	
+	public static final String HYBRID_VERSION = "1";
 }

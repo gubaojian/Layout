@@ -162,6 +162,7 @@ public class HybridPage implements  Callback{
 			return;
 		}
 		handleMetas(pageData.optJSONArray(ItemKeys.METAS), pageNum);
+		
 		if (pageNum == PAGE_FIRST) {
 			mListview = null;
 			items = pageData.optJSONArray(ItemKeys.ITEMS);
@@ -178,7 +179,12 @@ public class HybridPage implements  Callback{
 				}
 			}
 		}
-		if (mListview == null) {
+		
+		if (mListview != null) {
+			((BaseAdapter)mListview.getAdapter()).notifyDataSetChanged();
+			return;
+		}
+
 			mListview = (AbsListView) activity.findViewById(android.R.id.list);
 			mListview.setVelocityScale(mVelocityScale);
 			if (hasMore) {
@@ -204,14 +210,7 @@ public class HybridPage implements  Callback{
 					});
 				}
 			}
-		}
-		if (hasMore) {
-			mLoadMore.setState(LoadMoreState.INIT);
-		}else {
-			mLoadMore.setState(LoadMoreState.NONE_MORE);
-		}
-		if (mListview.getAdapter() == null) {
-			mListview.setAdapter(new DynamicAdapter() {
+            mListview.setAdapter(new DynamicAdapter() {
 				
 				@Override
 				public String getItemType(int position) {
@@ -243,9 +242,7 @@ public class HybridPage implements  Callback{
 				        return viewTypeCount;
 				 }
 			});
-		}else {
-			((BaseAdapter)mListview.getAdapter()).notifyDataSetChanged();
-		}
+		
 	}
 	
 	
@@ -277,6 +274,13 @@ public class HybridPage implements  Callback{
 				}
 			}
 		}
+		
+		if (hasMore) {
+			mLoadMore.setState(LoadMoreState.INIT);
+		}else {
+			mLoadMore.setState(LoadMoreState.NONE_MORE);
+		}
+		
 		if (pageNum == PAGE_FIRST) {
 			Activity activity = activityRef.get();
 			if (activity == null) {
@@ -371,9 +375,14 @@ public class HybridPage implements  Callback{
 			Uri.Builder builder = new Uri.Builder();
 			builder.scheme(uri.getScheme()).authority(uri.getAuthority()).path(uri.getPath());
 			Set<String> paramNameSet = uri.getQueryParameterNames();
+			boolean hasVersion = false;
 			if (paramNameSet != null && paramNameSet.size() >0) {
 				for (String paramName : paramNameSet) {
 					if (ItemKeys.PAGE_NUM.equals(paramName)) {
+						continue;
+					}
+					if (ItemKeys.HYBRID_VERSION_NAME.equals(paramName)) {
+						hasVersion = true;
 						continue;
 					}
 					List<String> values = uri.getQueryParameters(paramName);
@@ -386,6 +395,9 @@ public class HybridPage implements  Callback{
 				}
 			}
 			builder.appendQueryParameter(ItemKeys.PAGE_NUM, String.valueOf(pageNum));
+			if (!hasVersion) {
+				builder.appendQueryParameter(ItemKeys.HYBRID_VERSION_NAME, ItemKeys.HYBRID_VERSION);
+			}
 			return builder.build().toString();
 		}else {
 			return  url + pageNum;
