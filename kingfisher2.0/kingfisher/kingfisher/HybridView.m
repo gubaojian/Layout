@@ -43,11 +43,12 @@
         NSURL* pageUrl = [NSURL URLWithString:url];
         NSString* querys = pageUrl.query;
         if (querys.length <= 0) {
-            return [pageUrl H];
+
         }
     }else{
         return [url stringByAppendingFormat:@"%d", pageNum];
     }
+    return @"";
 }
 
 
