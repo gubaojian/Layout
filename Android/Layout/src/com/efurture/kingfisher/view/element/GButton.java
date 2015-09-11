@@ -1,4 +1,4 @@
-package com.efurture.kingfisher.view;
+package com.efurture.kingfisher.view.element;
 
 import org.xml.sax.Attributes;
 

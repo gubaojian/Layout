@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.efurture.kingfisher.math;
+package com.efurture.kingfisher.view.math;
 
 /**
  *  Kite Supported Variables

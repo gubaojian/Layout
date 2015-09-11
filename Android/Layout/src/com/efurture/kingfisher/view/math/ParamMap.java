@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.efurture.kingfisher.math;
+package com.efurture.kingfisher.view.math;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.efurture.kingfisher.view;
+package com.efurture.kingfisher.view.util;
 
 import android.content.Context;
 import android.util.DisplayMetrics;
@@ -8,11 +8,11 @@ public class ScreenUnit {
 
 	public static int toUnit(String unit){
 		if (unit.endsWith("px")) {
-			String px = unit.replace("px", "px");
+			String px = unit.replace("px", "");
 			return Integer.parseInt(px);
 		}
-		if (unit.endsWith("up")) {
-			String up = unit.replace("up", "up");
+		if (unit.endsWith("dp")) {
+			String up = unit.replace("up", "");
 			float upFloat = Float.parseFloat(up);
 			return (int)(upFloat*density);
 		}

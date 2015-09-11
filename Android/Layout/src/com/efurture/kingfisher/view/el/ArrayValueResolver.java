@@ -1,28 +1,27 @@
 /**
  * 
  */
-package com.efurture.kingfisher.expression;
+package com.efurture.kingfisher.view.el;
 
-import java.util.List;
+import java.lang.reflect.Array;
 
 import com.efurture.kingfisher.GLog;
 
 
-class ListValueResolver implements ValueResolver{
+class ArrayValueResolver implements ValueResolver{
 
-
+	
 	@Override
 	public boolean canResolve(Object target, Class<?> cls, String name) {
-		return target instanceof List<?>;
+		return cls.isArray();
 	}
 
-
+	
 	@Override
 	public Object resolve(Object target, Class<?> cls, String name) {
-		List<?> list = (List<?>)target;
 		try {
 			int index = Integer.parseInt(name);
-			return list.get(index);
+			return Array.get(target, index);
 		}
 		catch (Exception e) {
 			GLog.w(e.getMessage());

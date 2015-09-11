@@ -1,11 +1,11 @@
 /**
  * 
  */
-package com.efurture.kingfisher.math;
+package com.efurture.kingfisher.view.math;
 
 import java.util.Map;
 
-import com.efurture.kingfisher.view.ScreenUnit;
+import com.efurture.kingfisher.view.util.ScreenUnit;
 
 
 

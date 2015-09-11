@@ -1,8 +1,7 @@
-package com.efurture.kingfisher.view;
+package com.efurture.kingfisher.view.element;
 
 import org.xml.sax.Attributes;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -11,10 +10,15 @@ import android.util.AttributeSet;
 import android.view.Gravity;
 import android.widget.TextView;
 
-import com.efurture.kingfisher.image.GImageFetcher;
+import com.efurture.kingfisher.view.el.ElUtil;
+import com.efurture.kingfisher.view.util.ScreenUnit;
 
-public class GTextView  extends GLayout<TextView>{
-
+public class GTextView  extends GView<TextView>{
+	
+	private String textAttr;
+	
+	private String hintAttr;
+	
 	public GTextView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
 	}
@@ -35,13 +39,17 @@ public class GTextView  extends GLayout<TextView>{
 		return textView;
 	}
 
-	@SuppressLint("RtlHardcoded")
 	@Override
 	public void initViewAtts(Attributes attrs) {
 		super.initViewAtts(attrs);
-		String text = attrs.getValue("text");
-		if (text != null) {
-			view.setText(text);
+		textAttr = attrs.getValue("text");
+		if (textAttr != null && !ElUtil.isEl(textAttr)) {
+			view.setText(textAttr);
+		}
+		
+		hintAttr = attrs.getValue("hint");
+		if(hintAttr != null){
+			view.setHint(hintAttr);
 		}
 		
 		String textColor = attrs.getValue("textColor");
@@ -104,15 +112,22 @@ public class GTextView  extends GLayout<TextView>{
 			}
 			view.setEllipsize(where);
 		}
-		
-		 String imageUrl = attrs.getValue("imageUrl");
-		 String highlightedImageUrl = attrs.getValue("highlightedImageUrl");
-		 if (imageUrl != null 
-				 || highlightedImageUrl != null) {
-			GImageFetcher.shareFetcher().load(view, imageUrl, highlightedImageUrl);
-		}
-		
 	}
+
+	@Override
+	public void bindData(Object data) {
+		if (ElUtil.isEl(textAttr)) {
+			Object backgroundValue = ElUtil.getElValue(data, textAttr);
+			if(backgroundValue != null){
+				setBackgroundValue(backgroundValue.toString());
+			}else {
+				setBackgroundDrawable(null);
+			}
+		}
+		super.bindData(data);
+	}
+	
+	
 	
 	
 

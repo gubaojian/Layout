@@ -8,11 +8,10 @@ import org.xml.sax.Attributes;
 
 import android.content.Context;
 
-import com.efurture.kingfisher.view.GButton;
-import com.efurture.kingfisher.view.GImageView;
-import com.efurture.kingfisher.view.GLayout;
-import com.efurture.kingfisher.view.GTextView;
-import com.efurture.kingfisher.view.GView;
+import com.efurture.kingfisher.view.element.GButton;
+import com.efurture.kingfisher.view.element.GImageView;
+import com.efurture.kingfisher.view.element.GTextView;
+import com.efurture.kingfisher.view.element.GView;
 
 public class ViewFactory {
 
@@ -30,29 +29,32 @@ public class ViewFactory {
 	}
 	
     private static ViewFactory viewFactory;
-	private Map<String, String> classMap;
+	private Map<String, String> elementsMap;
 	
 	private ViewFactory(){
-		classMap = new HashMap<String, String>();
-		classMap.put("View", GView.class.getName());
-		classMap.put("Button", GButton.class.getName());
-		classMap.put("ImageView", GImageView.class.getName());
-		classMap.put("TextView", GTextView.class.getName());
+		elementsMap = new HashMap<String, String>();
+		elementsMap.put("View", GView.class.getName());
+		elementsMap.put("Button", GButton.class.getName());
+		elementsMap.put("ImageView", GImageView.class.getName());
+		elementsMap.put("TextView", GTextView.class.getName());
 	}
 	
-	public GLayout<?> createView(Context context, String element, Attributes attributes) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException{
-		String className = classMap.get(element);
+	public GView<?> createView(Context context, String element, Attributes attributes) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException{
+		String className = elementsMap.get(element);
 		if (className == null) {
 			className = element;
 		}
 		Class<?> viewClass = context.getClassLoader().loadClass(className);
-		GLayout<?> view = (GLayout<?>) viewClass.getConstructor(Context.class).newInstance(context);
+		GView<?> view = (GView<?>) viewClass.getConstructor(Context.class).newInstance(context);
 		view.initViewAtts(attributes);
 		return view;
 	}
 	
 	public void add(String element, String className){
-		classMap.put(element, className);
+		elementsMap.put(element, className);
 	}
 	
+	public void add(String element, Class<?> xmlViewClass){
+		elementsMap.put(element, xmlViewClass.getName());
+	}
 }

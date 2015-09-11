@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.FrameLayout;
 
-import com.efurture.kingfisher.infalter.DefaultViewInflater;
+import com.efurture.kingfisher.view.infalter.DefaultViewInflater;
 import com.google.furture.R;
 
 public class MainActivity extends Activity {

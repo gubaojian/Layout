@@ -1,11 +1,11 @@
 /**
  * 
  */
-package com.efurture.kingfisher.expression;
+package com.efurture.kingfisher.view.el;
 
 /**
  * @author ??????
- * @date 2014å¹?4???14???
+ * @date 2014ï¿½?4???14???
  *  */
 interface ValueResolver {
 	

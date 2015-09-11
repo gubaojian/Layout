@@ -1,20 +1,30 @@
 
-package com.efurture.kingfisher.expression;
+package com.efurture.kingfisher.view.el;
 
 import java.util.StringTokenizer;
 
 
-public class Expression {
+public class ElUtil {
 	
 	private static final String DELIMITER = " ${.[]}";
 	
-	public static Object getValue(final Object target, final String expression){
-		if (target == null || expression == null) {
+	
+	public static boolean isEl(final String el){
+		if(el == null) {
+			return false;
+		}
+		return el.trim().startsWith("$");
+	}
+	
+	
+	
+	public static Object getElValue(final Object data, final String el){
+		if (data == null || el == null) {
 			return null;
 		}
-		Object value = target;
+		Object value = data;
 		boolean start = false;
-		StringTokenizer tokenizer = new StringTokenizer(expression, DELIMITER, true);
+		StringTokenizer tokenizer = new StringTokenizer(el, DELIMITER, true);
 		while (tokenizer.hasMoreTokens()) {
 			String token = tokenizer.nextToken();
 			if (token.length() == 1) {
@@ -38,9 +48,12 @@ public class Expression {
 				value = ValueResolverFactory.getValue(value, token);
 			}
 		}
-		if (value == target) {
+		if (value == data) {
 			return null;
 		}
 		return value;
 	}
+	
+	
+	
 }

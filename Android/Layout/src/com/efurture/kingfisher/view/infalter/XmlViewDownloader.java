@@ -1,4 +1,4 @@
-package com.efurture.kingfisher.infalter;
+package com.efurture.kingfisher.view.infalter;
 
 import java.io.File;
 import java.lang.ref.WeakReference;

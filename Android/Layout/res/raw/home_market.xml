@@ -1,38 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <View
-    width="320"
+    background="#11f1f1"
     height="240"
-    background="#11f1f1">
+    width="320" >
+
     <View
-    height="0.5"
-    width="288"
-    x = "12"
-    y = "16"
-    background="#02F6AB"
-    />
-    <TextView width="96"
-    height="18"
-    fontSize="16"
-    text="导购"
-    y="7"
-    x = "112"
-    textAlignment="center"
-    valueData="${name}"/>
-    
+        background="#02F6AB"
+        height="0.5"
+        width="288"
+        x="12"
+        y="16" />
+
+    <TextView
+        fontSize="16"
+        height="18"
+        text="导购"
+        textAlignment="center"
+        valueData="${name}"
+        width="96"
+        x="112"
+        y="7" />
+
     <ImageView
-    width="144"
-    height="72"
-    x="12"
-    y="32"
-    imageUrl="http://gtms01.alicdn.com/tps/i1/T18c4KFzBvXXXA41.t-292-144.jpg"
-    cornerRadius="40"
-    background="#3322A1"/>
+        background="#3322A1"
+        cornerRadius="40"
+        height="72"
+        imageUrl="http://gtms01.alicdn.com/tps/i1/T18c4KFzBvXXXA41.t-292-144.jpg"
+        width="144"
+        x="12"
+        y="32" />
+    <ImageView
+        background="#3322A1"
+        cornerRadius="4"
+        height="72"
+        imageUrl="http://gtms01.alicdn.com/tps/i1/T18c4KFzBvXXXA41.t-292-144.jpg"
+        width="144"
+        x="168"
+        y="32" />
     
-    <ImageView width="144"
-    height="72"
-    x="168"
-    y="32"
-    imageUrl="http://gtms01.alicdn.com/tps/i1/T18c4KFzBvXXXA41.t-292-144.jpg"
-    cornerRadius="4"
-    background="#3322A1"/>
+    
+    
+    
+    
+    
+    
+    
 </View>

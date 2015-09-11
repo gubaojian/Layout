@@ -4,16 +4,16 @@ import java.io.InputStream;
 
 import android.content.Context;
 
-import com.efurture.kingfisher.infalter.DefaultViewInflater;
-import com.efurture.kingfisher.view.GLayout;
-import com.efurture.kingfisher.view.ScreenUnit;
+import com.efurture.kingfisher.view.element.GView;
+import com.efurture.kingfisher.view.infalter.DefaultViewInflater;
+import com.efurture.kingfisher.view.util.ScreenUnit;
 
 public abstract class ViewInflater {
 
 	
-	public abstract GLayout<?> inflate(String name, String downloadUrl);
-	public abstract GLayout<?> inflate(int rawId);
-	public abstract GLayout<?> inflate(InputStream inputStream);
+	public abstract GView<?> inflate(String name, String downloadUrl);
+	public abstract GView<?> inflate(int rawId);
+	public abstract GView<?> inflate(InputStream inputStream);
 	
 	
 	public static ViewInflater from(Context context){

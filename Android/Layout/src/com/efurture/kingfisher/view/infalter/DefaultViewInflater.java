@@ -1,4 +1,4 @@
-package com.efurture.kingfisher.infalter;
+package com.efurture.kingfisher.view.infalter;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -19,23 +19,23 @@ import android.text.TextUtils;
 import com.efurture.kingfisher.GLog;
 import com.efurture.kingfisher.ViewFactory;
 import com.efurture.kingfisher.ViewInflater;
-import com.efurture.kingfisher.view.GLayout;
+import com.efurture.kingfisher.view.element.GView;
 
 public class DefaultViewInflater extends ViewInflater {
 
 	
 	
 	private Context mContext;
-	private GLayout<?>  viewNode = null;
-	private GLayout<?>  rootView = null;
+	private GView<?>  viewNode = null;
+	private GView<?>  rootView = null;
 	
 	public DefaultViewInflater(Context context){
 		mContext = context;
 	}
 	
 	@Override
-	public GLayout<?> inflate(String name, String downloadUrl) {
-		GLayout<?>  view = null;
+	public GView<?> inflate(String name, String downloadUrl) {
+		GView<?>  view = null;
 		File file = toXmlFile(name);
 		if (file.exists()) {
 			try {
@@ -60,21 +60,22 @@ public class DefaultViewInflater extends ViewInflater {
 
 
 	@Override
-	public GLayout<?> inflate(int rawId) {
+	public GView<?> inflate(int rawId) {
 		InputStream inputStream = mContext.getResources().openRawResource(rawId);
 		return inflate(inputStream);
 	}
 	
-	public GLayout<?> inflate(InputStream inputStream){
+	public GView<?> inflate(InputStream inputStream){
 		try {
 			SAXParserFactory factory = SAXParserFactory.newInstance();
 	        SAXParser parser = factory.newSAXParser();
+	        
 	        parser.parse(inputStream, new DefaultHandler(){
 
 				@Override
 				public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
 					try {
-						GLayout<?> xmlView = ViewFactory.shareFactory().createView(mContext, qName, attributes);
+						GView<?> xmlView = ViewFactory.shareFactory().createView(mContext, qName, attributes);
 						if (viewNode != null) {
 							viewNode.addView(xmlView);
 						}
@@ -91,7 +92,7 @@ public class DefaultViewInflater extends ViewInflater {
 				@Override
 				public void endElement(String uri, String localName, String qName)throws SAXException {
 					if (viewNode.getParent() != null) {
-						viewNode = (GLayout<?>) viewNode.getParent();
+						viewNode = (GView<?>) viewNode.getParent();
 					}
 				}
 
@@ -106,7 +107,7 @@ public class DefaultViewInflater extends ViewInflater {
 				}
 	        	
 	        });
-	        GLayout<?> xmlView = rootView;
+	        GView<?> xmlView = rootView;
 	        viewNode = null;
 	        rootView = null;
 			return xmlView;
