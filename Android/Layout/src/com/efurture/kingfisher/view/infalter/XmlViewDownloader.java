@@ -5,8 +5,8 @@ import java.lang.ref.WeakReference;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.efurture.kingfisher.ViewInflater;
 import com.efurture.kingfisher.download.DownloadTask;
+import com.efurture.kingfisher.view.engine.ViewInflater;
 
 import android.content.Context;
 import android.content.Intent;

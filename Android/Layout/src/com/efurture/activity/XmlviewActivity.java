@@ -14,7 +14,7 @@ import android.view.View.OnClickListener;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
-import com.efurture.kingfisher.ViewInflater;
+import com.efurture.kingfisher.view.engine.ViewInflater;
 import com.google.furture.R;
 
 public class XmlviewActivity extends Activity {

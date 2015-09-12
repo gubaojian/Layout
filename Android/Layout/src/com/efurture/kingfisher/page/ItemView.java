@@ -2,9 +2,7 @@ package com.efurture.kingfisher.page;
 
 import org.json.JSONObject;
 
-import com.efurture.kingfisher.BinderCallback;
-import com.efurture.kingfisher.ViewBinder;
-import com.efurture.kingfisher.ViewInflater;
+import com.efurture.kingfisher.view.engine.ViewInflater;
 
 import android.content.Context;
 import android.text.TextUtils;
@@ -31,6 +29,7 @@ public class ItemView extends FrameLayout {
 		super(context);
 	}
 
+	/**
 	public void bindItem(JSONObject item, BinderCallback binderCallback){
 		if (mView == null) {
 			String name = item.optString(ItemKeys.NAME, "");
@@ -59,5 +58,5 @@ public class ItemView extends FrameLayout {
 		if (mView != null) {
 			ViewBinder.doBind(mView, item, binderCallback);
 		}
-	}
+	}*/
 }

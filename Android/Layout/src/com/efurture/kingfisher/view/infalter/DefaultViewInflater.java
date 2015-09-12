@@ -17,9 +17,9 @@ import android.os.Environment;
 import android.text.TextUtils;
 
 import com.efurture.kingfisher.GLog;
-import com.efurture.kingfisher.ViewFactory;
-import com.efurture.kingfisher.ViewInflater;
 import com.efurture.kingfisher.view.element.GView;
+import com.efurture.kingfisher.view.engine.ViewFactory;
+import com.efurture.kingfisher.view.engine.ViewInflater;
 
 public class DefaultViewInflater extends ViewInflater {
 
@@ -69,7 +69,6 @@ public class DefaultViewInflater extends ViewInflater {
 		try {
 			SAXParserFactory factory = SAXParserFactory.newInstance();
 	        SAXParser parser = factory.newSAXParser();
-	        
 	        parser.parse(inputStream, new DefaultHandler(){
 
 				@Override

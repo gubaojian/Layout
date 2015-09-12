@@ -28,7 +28,6 @@ import android.widget.BaseAdapter;
 import android.widget.FrameLayout;
 import android.widget.FrameLayout.LayoutParams;
 
-import com.efurture.kingfisher.BinderCallback;
 import com.efurture.kingfisher.download.DownloadTask;
 import com.efurture.kingfisher.filestore.FileStore;
 import com.google.furture.R;
@@ -233,7 +232,7 @@ public class HybridPage implements  Callback{
 					}
 					if (convertView instanceof ItemView) {
 						ItemView item = (ItemView)convertView;
-						item.bindItem(items.optJSONObject(position), getBinderCallback());
+						//item.bindItem(items.optJSONObject(position), getBinderCallback());
 					}
 					return convertView;
 				}
@@ -362,13 +361,7 @@ public class HybridPage implements  Callback{
 		this.mBaseUrl = baseUrl;
 	}
 
-	public BinderCallback getBinderCallback() {
-		if (mBinderCallback == null) {
-			mBinderCallback = new BinderCallback();
-		}
-		return mBinderCallback;
-	}
-	
+
 	protected String buildPageUrlForPageNum(String url, final int pageNum){
 		if (url.startsWith("http")) {
 			Uri uri = Uri.parse(url);
@@ -426,12 +419,6 @@ public class HybridPage implements  Callback{
 		return false;
 	}
 	
-	public void setBinderCallback(BinderCallback binderCallback) {
-		this.mBinderCallback = binderCallback;
-	}
-
-
-	private BinderCallback mBinderCallback;
 
 	private static final int PAGE_DATA_LOADED = 1;
 	public static final int PAGE_FIRST = 1;

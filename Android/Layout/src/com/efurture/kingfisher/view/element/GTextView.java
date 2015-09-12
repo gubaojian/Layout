@@ -1,7 +1,7 @@
 package com.efurture.kingfisher.view.element;
 
 import org.xml.sax.Attributes;
-
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -9,10 +9,10 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.widget.TextView;
-
 import com.efurture.kingfisher.view.el.ElUtil;
 import com.efurture.kingfisher.view.util.ScreenUnit;
 
+@SuppressLint("RtlHardcoded")
 public class GTextView  extends GView<TextView>{
 	
 	private String textAttr;

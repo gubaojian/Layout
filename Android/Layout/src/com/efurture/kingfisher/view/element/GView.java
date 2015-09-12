@@ -240,6 +240,7 @@ public class GView<T extends View> extends FrameLayout {
 						
 					}
 					
+					@SuppressWarnings("deprecation")
 					@Override
 					public void onBitmapLoaded(Bitmap bitmap, LoadedFrom from) {
                            setBackgroundDrawable(new BitmapDrawable(getResources(), bitmap));

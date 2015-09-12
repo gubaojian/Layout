@@ -1,4 +1,4 @@
-package com.efurture.kingfisher;
+package com.efurture.kingfisher.view.engine;
 
 import java.io.InputStream;
 
@@ -11,7 +11,6 @@ import com.efurture.kingfisher.view.util.ScreenUnit;
 public abstract class ViewInflater {
 
 	
-	public abstract GView<?> inflate(String name, String downloadUrl);
 	public abstract GView<?> inflate(int rawId);
 	public abstract GView<?> inflate(InputStream inputStream);
 	
