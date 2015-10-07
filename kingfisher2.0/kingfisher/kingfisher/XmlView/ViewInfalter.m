@@ -9,8 +9,6 @@
 #import "ViewInfalter.h"
 #import "GHash.h"
 
-#define VIEW_INFLATER_HAS_MARK  @"mark"
-
 @implementation ViewInfalter
 
 
@@ -30,128 +28,59 @@
     return self;
 }
 
--(NSMutableDictionary*)downloadIngMap{
-    if (_downloadIngMap == nil) {
-         _downloadIngMap = [[NSMutableDictionary alloc] initWithCapacity:4];
-    }
-    return _downloadIngMap;
-}
--(NSMutableDictionary*)downloadSuccessMap{
-    if (_downloadSuccessMap  == nil) {
-        _downloadSuccessMap = [[NSMutableDictionary alloc] initWithCapacity:4];
-    }
-    return _downloadSuccessMap;
-}
 
--(id) viewFromFile:(NSString*) fileName{
-    if ([fileName hasPrefix:@"http://"]
-        || [fileName hasPrefix:@"https://"]) {
-        NSURL* url = [NSURL URLWithString:fileName];
-        NSData* data = [NSData dataWithContentsOfURL:url];
-        if (data == nil) {
-            NSLog(@"viewFromFile Error %@ Not Exist", fileName);
-            return nil;
+
+
+-(void)viewFromUrl:(NSURL*)url callback:(void(^)(UIView*)) callbackBlock{
+    NSString* path = [url path];
+    NSString* extension = [path pathExtension];
+    NSString* bundleName = [path stringByDeletingPathExtension];
+    NSString* filePath = [[NSBundle mainBundle] pathForResource:bundleName ofType:extension];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+        NSInputStream* stream =[NSInputStream inputStreamWithFileAtPath:filePath];
+        UIView* view = [self viewFromInputStream:stream];
+        if (view != nil) {
+            callbackBlock(view);
+            return;
         }
-        NSInputStream* inputStream = [[NSInputStream alloc] initWithData:data];
-        return [self viewFromInputStream:inputStream];
     }
-    return [self toViewBundleName:fileName];
-}
-
--(id) viewFrom:(NSString*) name downloadUrl:(NSString*)downloadUrl{
-    if (name == nil) {
-        return nil;
+    NSString* localFilePath = [self documentPathFor:path];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:localFilePath]) {
+        NSInputStream* stream =[NSInputStream inputStreamWithFileAtPath:localFilePath];
+        UIView* view = [self viewFromInputStream:stream];
+        if (view != nil) {
+            callbackBlock(view);
+            return;
+        }
     }
-    UIView* view = nil;
-    NSString* filePath = [self documentPathFor:name];
-    view = [self viewFromLocalFilePath:filePath];
-    if (view == nil && downloadUrl.length > 0) {
-        [self download:downloadUrl toFile:filePath name:name];
-    }
-    if (view == nil) {
-        view = [self toViewBundleName:name];
-    }
-    return view;
-}
-
-
--(void)download:(NSString*)downloadUrl toFile:(NSString*)filePath name:(NSString*)name{
-    if (downloadUrl == nil || downloadUrl.length <= 0) {
-        return;
-    }
-    if ([VIEW_INFLATER_HAS_MARK isEqual:[[self downloadIngMap] objectForKey:filePath]]) {
-        return;
-    }
-    if ([VIEW_INFLATER_HAS_MARK isEqual:[[self downloadSuccessMap] objectForKey:filePath]]) {
-        return;
-    }
-    [[self downloadIngMap] setObject:VIEW_INFLATER_HAS_MARK forKey:filePath];
     __weak ViewInfalter* weakSelf = self;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        __strong ViewInfalter* strongSelf = weakSelf;
-        if (strongSelf) {
-            NSURL *url = [NSURL URLWithString:downloadUrl];
-            NSData *templateData = [NSData dataWithContentsOfURL:url];
-            BOOL success = NO;
-            if (templateData) {
-                if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
-                    [[NSFileManager defaultManager] removeItemAtPath:filePath error:nil];
-                }
-                success = [templateData writeToFile:filePath atomically:YES];
-            }
-            [[strongSelf downloadIngMap] removeObjectForKey:filePath];
-            if (strongSelf) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    NSString* notificationName = nil;
-                    if (success) {
-                        if ([VIEW_INFLATER_HAS_MARK isEqual:[[strongSelf downloadSuccessMap] objectForKey:filePath]]) {
-                            notificationName =  TEMPLATE_DOWNLOAD_SUCCESS_NOTIFICATION;
-                        }
-                        [[strongSelf downloadSuccessMap] setObject:VIEW_INFLATER_HAS_MARK forKey:filePath];
-                    }else{
-                        notificationName = TEMPLATE_DOWNLOAD_FAILED_NOTIFICATION;
-                    }
-                    if (notificationName != nil) {
-                          NSNumber* hasRemain = [NSNumber numberWithBool:[[strongSelf downloadIngMap] count] > 0];
-                         [[NSNotificationCenter defaultCenter] postNotificationName: notificationName object:name userInfo:[NSDictionary dictionaryWithObjectsAndKeys:name, @"name", hasRemain, @"hasRemain", nil]];
-                    }
-                });
-            }
-        }
+            __strong ViewInfalter* strongSelf = weakSelf;
+           if (strongSelf) {
+               NSData *data = [NSData dataWithContentsOfURL:url];
+               dispatch_async(dispatch_get_main_queue(), ^{
+                   if (data == nil) {
+                       callbackBlock(nil);
+                       return;
+                   }
+                   NSInputStream* inputStream = [NSInputStream inputStreamWithData:data];
+                   UIView* view = [self viewFromInputStream:inputStream];
+                   callbackBlock(view);
+                   
+               });
+           }
     });
 }
 
-
 -(NSString*) documentPathFor:(NSString*) name{
-    NSUInteger index = [GHash hashMapCode:[GHash hashCode:name]] & (16-1);
-    NSString* fileName =[NSString stringWithFormat:@"xml_views/%lu/%@.xml", (unsigned long)index, name];
+    NSString* fileName =[NSString stringWithFormat:@"/xml_view/%@", name];
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,   NSUserDomainMask, YES);
     NSString *directory = [paths objectAtIndex:0];
     NSString *filePath = [directory stringByAppendingPathComponent:fileName];
     return filePath;
 }
 
--(id) toViewBundleName:(NSString*)bundleName{
-    NSString* extension = [bundleName pathExtension];
-    if (extension.length == 0) {
-        extension = @"xml";
-    }else{
-        bundleName = [bundleName stringByDeletingPathExtension];
-    }
-    NSString* filePath = [[NSBundle mainBundle] pathForResource:bundleName ofType:@"xml"];
-    return [self viewFromLocalFilePath:filePath];
-}
 
-
--(id) viewFromLocalFilePath:(NSString*)filePath{
-    if (viewNode != nil) {
-        [NSException raise:@"Mutl Concurrent Infalter Exception" format:nil];
-    }
-    if (![[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
-        return nil;
-    }
-    return [self viewFromInputStream:[NSInputStream inputStreamWithFileAtPath:filePath]];
-}
 
 
 -(id) viewFromInputStream:(NSInputStream*) inputstream{

@@ -1,0 +1,34 @@
+Applications Memory Usage (kB):
+Uptime: 602839 Realtime: 602839
+
+** MEMINFO in pid 4692 [com.google.furture] **
+                   Pss  Private  Private  Swapped     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap     4146     4076        0        0    16384    14360     2023
+  Dalvik Heap     3761     3708        0        0     4904     3375     1529
+ Dalvik Other      168      156        0        0                           
+        Stack      152      152        0        0                           
+    Other dev        4        0        4        0                           
+     .so mmap     1358      120      200        0                           
+    .apk mmap      154        0       24        0                           
+    .ttf mmap       78        0       68        0                           
+    .dex mmap     1452        0     1448        0                           
+    .oat mmap     2227        0      840        0                           
+    .art mmap      999      640        4        0                           
+   Other mmap       36        4       12        0                           
+      Unknown       77       76        0        0                           
+        TOTAL    14612     8932     2600        0    21288    17735     3552
+ 
+ Objects
+               Views:       93         ViewRootImpl:        2
+         AppContexts:        4           Activities:        2
+              Assets:        2        AssetManagers:        2
+       Local Binders:       13        Proxy Binders:       17
+       Parcel memory:        3         Parcel count:       15
+    Death Recipients:        0      OpenSSL Sockets:        1
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 

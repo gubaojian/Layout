@@ -1,0 +1,107 @@
+TASK com.google.furture id=8
+  ACTIVITY com.google.furture/com.efurture.activity.XmlviewActivity 347b2732 pid=4692
+    Local Activity 24f3f14e State:
+      mResumed=true mStopped=false mFinished=false
+      mLoadersStarted=true
+      mChangingConfigurations=false
+      mCurrentConfig={1.0 310mcc260mnc en_US ldltr sw360dp w360dp h567dp 480dpi nrml port finger -keyb/v/h -nav/h s.6}
+    FragmentManager misc state:
+      mActivity=com.efurture.activity.XmlviewActivity@24f3f14e
+      mContainer=android.app.Activity$1@3fb7b26f
+      mCurState=5 mStateSaved=false mDestroyed=false
+    ViewRoot:
+      mAdded=true mRemoved=false
+      mConsumeBatchedInputScheduled=false
+      mConsumeBatchedInputImmediatelyScheduled=false
+      mPendingInputEventCount=0
+      mProcessInputEventsScheduled=false
+      mTraversalScheduled=false
+      android.view.ViewRootImpl$NativePreImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$ImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$NativePostImeInputStage: mQueueLength=0
+    Choreographer:
+      mFrameScheduled=false
+      mLastFrameTime=473649 (122092 ms ago)
+    View Hierarchy:
+      com.android.internal.policy.impl.PhoneWindow$DecorView{a6efb7c V.E..... R....... 0,0-1080,1776}
+        com.android.internal.widget.ActionBarOverlayLayout{3fc90c05 V.ED.... ........ 0,0-1080,1776 #1020378 android:id/decor_content_parent}
+          android.widget.FrameLayout{3b21d45a V.E..... ........ 0,219-1080,1776 #1020002 android:id/content}
+            android.widget.ScrollView{13b7068b VFED.V.. ........ 0,0-1080,1557}
+              com.efurture.kingfisher.ui.HybridView{36e5368 V.E..... ........ 0,0-1080,877 #7f090003 app:id/hybird_view}
+                com.efurture.kingfisher.view.element.GView{3dd36381 V.E..... ........ 0,67-1080,877}
+          com.android.internal.widget.ActionBarContainer{3218dc26 V.ED.... ........ 0,75-1080,219 #1020379 android:id/action_bar_container}
+            com.android.internal.widget.ActionBarView{130d8067 V.E..... ........ 0,0-1080,144 #102037a android:id/action_bar}
+              android.widget.LinearLayout{30893e14 V.....C. ........ 25,0-563,144}
+                com.android.internal.widget.ActionBarView$HomeView{12d1b6bd V.E..... ........ 0,0-120,144}
+                  android.widget.ImageView{3c2694b2 G.ED.... ......I. 0,0-0,0 #102003b android:id/up}
+                  android.widget.ImageView{1167bc03 V.ED.... ........ 12,24-108,120 #102002c android:id/home}
+                android.widget.LinearLayout{31c62780 V.E..... ........ 120,35-538,108}
+                  android.widget.TextView{1e6801b9 V.ED.... ........ 0,0-394,73 #10202b6 android:id/action_bar_title}
+                  android.widget.TextView{30e549fe G.ED.... ......I. 0,0-0,0 #10202b7 android:id/action_bar_subtitle}
+              android.widget.ActionMenuView{26a0155f V.ED.... ........ 912,0-1080,144}
+                android.widget.ActionMenuPresenter$OverflowMenuButton{1f263bac VFED..C. ........ 0,0-168,144}
+            com.android.internal.widget.ActionBarContextView{3c7e0075 G.E..... ......ID 0,0-0,0 #102037b android:id/action_context_bar}
+          com.android.internal.widget.ActionBarContainer{3548080a G.ED.... ......ID 0,0-0,0 #102037c android:id/split_action_bar}
+    Looper (main, tid 1) {23daa87b}
+      (Total messages: 0, idling=false, quitting=false)
+
+  ACTIVITY com.google.furture/com.efurture.activity.MainActivity 138b14b3 pid=4692
+    Local Activity 309940db State:
+      mResumed=false mStopped=true mFinished=false
+      mLoadersStarted=false
+      mChangingConfigurations=false
+      mCurrentConfig={1.0 310mcc260mnc en_US ldltr sw360dp w360dp h567dp 480dpi nrml port finger -keyb/v/h -nav/h s.6}
+    FragmentManager misc state:
+      mActivity=com.efurture.activity.MainActivity@309940db
+      mContainer=android.app.Activity$1@2d916698
+      mCurState=3 mStateSaved=true mDestroyed=false
+    ViewRoot:
+      mAdded=true mRemoved=false
+      mConsumeBatchedInputScheduled=false
+      mConsumeBatchedInputImmediatelyScheduled=false
+      mPendingInputEventCount=0
+      mProcessInputEventsScheduled=false
+      mTraversalScheduled=false
+      android.view.ViewRootImpl$NativePreImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$ImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$NativePostImeInputStage: mQueueLength=0
+    Choreographer:
+      mFrameScheduled=false
+      mLastFrameTime=473649 (122097 ms ago)
+    View Hierarchy:
+      com.android.internal.policy.impl.PhoneWindow$DecorView{25bb2ef1 I.E..... R.....ID 0,0-1080,1776}
+        com.android.internal.widget.ActionBarOverlayLayout{18669ad6 V.ED.... ......ID 0,0-1080,1776 #1020378 android:id/decor_content_parent}
+          android.widget.FrameLayout{3e615157 V.E..... ......ID 0,219-1080,1776 #1020002 android:id/content}
+            android.widget.FrameLayout{36825444 V.E..... ......ID 0,0-1080,1557}
+              android.widget.FrameLayout{1bc2c92d V.E..... ......ID 0,0-1080,1557 #7f090000 app:id/container}
+                com.efurture.kingfisher.view.element.GView{31098e62 V.E..... ......ID 0,675-1080,1485}
+                  android.view.View{c3fabf3 V.ED.... ........ 0,0-1080,810}
+                  com.efurture.kingfisher.view.element.GView{e7270b0 V.E..... ........ 40,54-1012,55}
+                    android.view.View{1d2fcb29 V.ED.... ........ 0,0-972,1}
+                  com.efurture.kingfisher.view.element.GTextView{7f62eae V.E..... ........ 378,23-702,83}
+                    android.widget.TextView{2e9f144f V.ED.... ........ 0,0-324,60}
+                  com.efurture.kingfisher.view.element.GImageView{1605e7dc V.E..... ......ID 40,108-526,351}
+                    android.widget.ImageView{2bfa7692 V.ED.... ......ID 0,0-486,243}
+                  com.efurture.kingfisher.view.element.GImageView{1d50f0e5 V.E..... ......ID 567,108-1053,351}
+                    android.widget.ImageView{10b12863 V.ED.... ......ID 0,0-486,243}
+                  com.efurture.kingfisher.view.element.GImageView{1afa87ba V.E..... ......ID 40,398-526,641}
+                    android.widget.ImageView{354e8c60 V.ED.... ......ID 0,0-486,243}
+                  com.efurture.kingfisher.view.element.GImageView{5e2a66b V.E..... ......ID 567,398-1053,641}
+                    android.widget.ImageView{13773519 V.ED.... ......ID 0,0-486,243}
+              android.widget.Button{31f7a5c8 VFED..C. ........ 0,0-289,144 #7f090001 app:id/button1}
+              android.widget.Button{3ba4b661 VFED..C. ........ 393,1413-687,1557 #7f090002 app:id/button}
+          com.android.internal.widget.ActionBarContainer{4b96586 V.ED.... ........ 0,75-1080,219 #1020379 android:id/action_bar_container}
+            com.android.internal.widget.ActionBarView{b833e47 V.E..... ........ 0,0-1080,144 #102037a android:id/action_bar}
+              android.widget.LinearLayout{15c55674 V.....C. ........ 25,0-332,144}
+                com.android.internal.widget.ActionBarView$HomeView{3715579d V.E..... ........ 0,0-120,144}
+                  android.widget.ImageView{15365412 G.ED.... ......I. 0,0-0,0 #102003b android:id/up}
+                  android.widget.ImageView{2dab77e3 V.ED.... ........ 12,24-108,120 #102002c android:id/home}
+                android.widget.LinearLayout{d1b65e0 V.E..... ........ 120,35-307,108}
+                  android.widget.TextView{18f4d099 V.ED.... ........ 0,0-163,73 #10202b6 android:id/action_bar_title}
+                  android.widget.TextView{27219f5e G.ED.... ......I. 0,0-0,0 #10202b7 android:id/action_bar_subtitle}
+              android.widget.ActionMenuView{893af3f V.ED.... ........ 912,0-1080,144}
+                android.widget.ActionMenuPresenter$OverflowMenuButton{3001000c VFED..C. ........ 0,0-168,144}
+            com.android.internal.widget.ActionBarContextView{13b8dd55 G.E..... ......ID 0,0-0,0 #102037b android:id/action_context_bar}
+          com.android.internal.widget.ActionBarContainer{3de4536a G.ED.... ......ID 0,0-0,0 #102037c android:id/split_action_bar}
+    Looper (main, tid 1) {23daa87b}
+      (Total messages: 0, idling=false, quitting=false)

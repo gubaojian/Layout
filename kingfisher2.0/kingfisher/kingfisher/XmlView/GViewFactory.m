@@ -7,11 +7,6 @@
 //
 
 #import "GViewFactory.h"
-#import "UIView+MathLayout.h"
-#import "GView.h"
-#import "GButton.h"
-#import "GImageView.h"
-#import "GTextView.h"
 
 @implementation GViewFactory
 
@@ -32,6 +27,12 @@
         [self registerClass:[GTextView class] forElement:@"TextView"];
         [self registerClass:[GImageView class] forElement:@"ImageView"];
         [self registerClass:[GView class] forElement:@"View"];
+        [self registerClass:[GView class] forElement:@"View"];
+        [self registerClass:[GTableView class] forElement:@"TableView"];
+        [self registerClass:[GScrollView class] forElement:@"ScrollView"];
+        [self registerClass:[GTextField class] forElement:@"EditText"];
+        [self registerClass:[GSwitch class] forElement:@"Switch"];
+
     }
     return self;
 }

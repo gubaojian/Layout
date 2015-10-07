@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIColor+HexString.h"
+#import "UIFont+Unit.h"
+#import "ScreenUnit.h"
 
 
 /**

@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "UIView+MathLayout.h"
+#import "GView.h"
+#import "GButton.h"
+#import "GImageView.h"
+#import "GTextView.h"
+#import "GTableView.h"
+#import "GScrollView.h"
+#import "GTextField.h"
+#import "GSwitch.h"
 
 @interface GViewFactory : NSObject{
      NSMutableDictionary* _classMap;

@@ -152,13 +152,13 @@ static char tapGestureRecognizerKey;
     
     CGRect superFrame = CGRectZero;
     if(self.superview  != nil) {
-        superFrame = [[self superview] frame];
+        superFrame = self.superview.frame;
     }
     
-    [expressionObject setObject:[NSNumber numberWithFloat:frame.origin.x] forKey:@"parent_x"];
-    [expressionObject setObject:[NSNumber numberWithFloat:frame.origin.y] forKey:@"parent_y"];
-    [expressionObject setObject:[NSNumber numberWithFloat:frame.size.width] forKey:@"parent_width"];
-    [expressionObject setObject:[NSNumber numberWithFloat:frame.size.height] forKey:@"parent_height"];
+    [expressionObject setObject:[NSNumber numberWithFloat:superFrame.origin.x] forKey:@"parent_x"];
+    [expressionObject setObject:[NSNumber numberWithFloat:superFrame.origin.y] forKey:@"parent_y"];
+    [expressionObject setObject:[NSNumber numberWithFloat:superFrame.size.width] forKey:@"parent_width"];
+    [expressionObject setObject:[NSNumber numberWithFloat:superFrame.size.height] forKey:@"parent_height"];
     if ([self expressionX] != nil) {
         frame.origin.x = [[[self expressionX] expressionValueWithObject:expressionObject context:nil] floatValue];
     }

@@ -8,7 +8,8 @@
 
 #import "GImageView.h"
 #import "UIColor+HexString.h"
-#import "GImageFetcher.h"
+#import <AFNetworking.h>
+#import <UIKit+AFNetworking.h>
 
 
 @implementation GImageView
@@ -22,16 +23,15 @@
 - (void)updateViewFromAttributes:(NSDictionary *)attrs {
     [super updateViewFromAttributes:attrs];
     NSString* imageUrl = [attrs objectForKey:@"imageUrl"];
+    NSString* plageholder = [attrs objectForKey:@"placeholder"];
     if (imageUrl != nil) {
-        [[GImageFetcher shareFetcher] loadImage:imageUrl view:self];
+        UIImage* placeholderImage = nil;
+        if (plageholder != nil) {
+            placeholderImage = [UIImage imageNamed:plageholder];
+        }
+        [self  setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:placeholderImage];
     }
     
-    
-    NSString* highlightedImageUrl = [attrs objectForKey:@"highlightedImageUrl"];
-    if (highlightedImageUrl != nil) {
-        [[GImageFetcher shareFetcher] loadHighlightedImageUrl:highlightedImageUrl view:self];
-    }
-
     
     NSString *scaleType = [attrs objectForKey:@"scaleType"];
     if (scaleType != nil) {

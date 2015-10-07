@@ -1,0 +1,94 @@
+Signature-Version: 1.0
+SHA1-Digest-Manifest: 2zeMzO85a6dgG4u+NDMHdS8FnuM=
+Created-By: 1.0 (Android)
+
+Name: AndroidManifest.xml
+SHA1-Digest: etzpCyMr8wGXpd7Dspnx0Oshm2o=
+
+Name: res/layout/style_grid.xml
+SHA1-Digest: 1meekCZDC3j2iLOclbA8CWoeLRY=
+
+Name: res/raw/puti.xml
+SHA1-Digest: aDZSDOaMnx6Ef+qaq2f1yKimQiM=
+
+Name: res/drawable-hdpi-v4/ic_launcher.png
+SHA1-Digest: nVLQ/wUjf9D4KSB2I7WqoHR14JY=
+
+Name: res/raw/app2.json
+SHA1-Digest: 9Cebr9MJACa9M6bOQHwR4qQXhwQ=
+
+Name: lib/x86/libDuktapeEngine.so
+SHA1-Digest: q+Nc1Tt2qt61W1SNd7LL0DHHxNo=
+
+Name: res/drawable-mdpi-v4/ic_launcher.png
+SHA1-Digest: NBFXy1maYHW4TAiVCw6R9+EBNqI=
+
+Name: res/menu/xmlview.xml
+SHA1-Digest: 76VvERLD3MvPmWC8tzdUlQyaDnQ=
+
+Name: res/menu/main.xml
+SHA1-Digest: z7w5qCxBvI2y6ubR9umsr98jBFk=
+
+Name: res/raw/explore_market.xml
+SHA1-Digest: C87jRn3AxqRE7EKpCo+rTUhU0tw=
+
+Name: lib/armeabi/libDuktapeEngine.so
+SHA1-Digest: hHnys1m3C032bcRLj9XLi2Qi9Ws=
+
+Name: res/raw/home_market.xml
+SHA1-Digest: tTnSkyxAzPRlGoC+P1FEFpv4j7A=
+
+Name: res/raw/app3.json
+SHA1-Digest: X5C9OX1d7v4nY0YkCFaYPDRYLWY=
+
+Name: assets/market.xml
+SHA1-Digest: 4eVE6TM83Imiq6+A5prpiavE/XE=
+
+Name: assets/market.js
+SHA1-Digest: LNgOS9bzWhdr3iHy+0TWzZKlPrU=
+
+Name: res/layout/activity_xmlview.xml
+SHA1-Digest: 93VuXLeyyHpwo9RvHz9uIZY0FKQ=
+
+Name: res/drawable-xxhdpi-v4/ic_launcher.png
+SHA1-Digest: W7nSszMeL1x0eIt3K2CoCIHU6Qg=
+
+Name: res/raw/app1.json
+SHA1-Digest: KFWBTx2rWJE9R1Mpy1VCfKJhiMw=
+
+Name: res/raw/app_demo.xml
+SHA1-Digest: Ne+iuwT0enZxArsuKvKbA0Gn40E=
+
+Name: lib/x86/liblocSDK6a.so
+SHA1-Digest: DBnLzQ/MS3BNMy7ztlNbZ45XVvE=
+
+Name: res/layout/activity_main.xml
+SHA1-Digest: X3vid7gfMdl0cUt3IBS2PmeBK74=
+
+Name: res/raw/market_one.xml
+SHA1-Digest: 3XNGIn0EGA84/yo8Rl/rnBx3D7I=
+
+Name: res/raw/doc.xml
+SHA1-Digest: dBMyU+tEMbmzUtYF8J11On1SWJY=
+
+Name: res/drawable-xhdpi-v4/ic_launcher.png
+SHA1-Digest: qLB+xSuTsdod1eS2aPJel/A5PvE=
+
+Name: res/raw/market.xml
+SHA1-Digest: ubsM4uJZuizJkfoi0PvJMevZBjs=
+
+Name: lib/armeabi/liblocSDK6a.so
+SHA1-Digest: Bfml/lNnjShmAnpmY13o6HvkGuE=
+
+Name: resources.arsc
+SHA1-Digest: r7xqK55ekaQ/F0ZQht2jTow+cv0=
+
+Name: res/layout/style_list.xml
+SHA1-Digest: hG2A8GyPK6uU2k62kLejnKgE75Q=
+
+Name: classes.dex
+SHA1-Digest: fJyK+D7tpcJgZIADCOB8aGMJXBA=
+
+Name: assets/test.xml
+SHA1-Digest: 79xLe6NQLkohhHUMjibZ6YCbjnI=
+

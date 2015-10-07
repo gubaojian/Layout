@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View
+    y ="20"
+    width="320"
+    height="240">
+
+
+    <ImageView width="144"
+        height="72"
+        x="12"
+        y="32"
+        imageUrl="http://gtms03.alicdn.com/tps/i3/T1d4z2FrxXXXa8j.Iq-288-144.png"
+        cornerRadius="4"
+        background="#3322A1"
+        borderWidth="1"
+        borderColor="#666666"/>
+
+
+    <EditText
+        width="300"
+        height="40"
+        y="120"
+        x="10"
+        borderWidth="2"
+        background="#FFFFFF"
+        borderColor="#666666"
+        cornerRadius="20"/>
+</View>

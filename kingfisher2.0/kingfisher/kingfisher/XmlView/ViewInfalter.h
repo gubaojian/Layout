@@ -7,30 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "GViewFactory.h"
-#import "ViewBinder.h"
-#import "BinderCallback.h"
-
-#define TEMPLATE_DOWNLOAD_SUCCESS_NOTIFICATION  @"PUTI_TEMPLATE_DOWNLOAD_SUCCESS_NOTIFICATION"
-#define TEMPLATE_DOWNLOAD_FAILED_NOTIFICATION   @"PUTI_TEMPLATE_DOWNLOAD_FAILED_NOTIFICATION"
+#import "UIView+MathLayout.h"
 
 @interface ViewInfalter : NSObject<NSXMLParserDelegate>{
     UIView*  viewNode;
     UIView*  rootView;
-    NSMutableDictionary* _downloadIngMap;
-    NSMutableDictionary* _downloadSuccessMap;
 }
 
 + (id)shareInflater;
 
--(id) viewFrom:(NSString*) name downloadUrl:(NSString*)downloadUrl;
-
-/**
- * fileName bundleName or HttpUrl
- */
--(id) viewFromFile:(NSString*) fileName;
 
 -(id) viewFromInputStream:(NSInputStream*) inputStream;
+
+-(void)viewFromUrl:(NSURL*)url callback:(void(^)(UIView*)) callbackBlock;
 
 
 @end

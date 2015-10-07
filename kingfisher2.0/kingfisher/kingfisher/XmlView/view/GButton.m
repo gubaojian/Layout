@@ -10,8 +10,8 @@
 #import "UIView+MathLayout.h"
 #import "UIColor+HexString.h"
 #import "UIFont+Unit.h"
-#import "GImageFetcher.h"
 #import "ScreenUnit.h"
+#import <UIKit+AFNetworking.h>
 
 @implementation GButton
 
@@ -56,14 +56,19 @@
      self.imageEdgeInsets = padding;
     
     NSString* imageUrl = [attrs objectForKey:@"imageUrl"];
+    NSString* plageholder = [attrs objectForKey:@"placeholder"];
     if (imageUrl != nil) {
-        [[GImageFetcher shareFetcher] loadImage:imageUrl view:self];
+        UIImage* placeholderImage = nil;
+        if (plageholder != nil) {
+            placeholderImage = [UIImage imageNamed:plageholder];
+        }
+        [self setBackgroundImageForState:UIControlStateNormal withURL:[NSURL URLWithString:imageUrl] placeholderImage:placeholderImage];
     }
     
     NSString* selectedImageUrl = [attrs objectForKey:@"highlightedImageUrl"];
     if (selectedImageUrl != nil) {
-        [[GImageFetcher shareFetcher] loadImage:selectedImageUrl view:self];
-    }
+       [self setBackgroundImageForState:UIControlStateHighlighted|UIControlStateSelected withURL:[NSURL URLWithString:selectedImageUrl]];
+     }
     
     NSString *text = [attrs objectForKey:@"text"];
     if (text != nil){
