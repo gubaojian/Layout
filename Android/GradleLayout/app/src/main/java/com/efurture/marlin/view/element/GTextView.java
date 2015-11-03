@@ -1,16 +1,19 @@
 package com.efurture.marlin.view.element;
 
-import org.xml.sax.Attributes;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.widget.TextView;
+
 import com.efurture.marlin.el.ElUtil;
 import com.efurture.marlin.view.util.ScreenUnit;
+
+import org.xml.sax.Attributes;
 
 @SuppressLint("RtlHardcoded")
 public class GTextView<T extends TextView>  extends XmlView<T>{
@@ -83,25 +86,35 @@ public class GTextView<T extends TextView>  extends XmlView<T>{
 
 		String textSize = attrs.getValue("textSize");
 		if (textSize != null) {
-			view.setTextSize(ScreenUnit.toTextSize(textSize));
+			view.setTextSize(TypedValue.COMPLEX_UNIT_PX, ScreenUnit.toTextSize(textSize));
 		}
 		
 		String numberOfLines = attrs.getValue("numberOfLines");
 		if (numberOfLines != null) {
+			view.setSingleLine(false);
 			view.setMaxLines(Integer.parseInt(numberOfLines));
 		}
 		
 		String alignment = attrs.getValue("textAlignment");
 		if (alignment != null) {
-			int gravity = Gravity.LEFT;
-			 if ("center".equals(alignment)) {
-				gravity = Gravity.CENTER_HORIZONTAL;
-			}else if ("right".equals(alignment)) {
-				gravity = Gravity.RIGHT;
+			String verticalAlignment =  attrs.getValue("verticalAlignment");
+			int verticalGravity =  Gravity.CENTER_VERTICAL;
+			if (verticalAlignment != null){
+				if("top".equals(verticalGravity)){
+					verticalGravity = Gravity.TOP;
+				}else if ("bottom".equals(alignment)) {
+					verticalGravity = Gravity.BOTTOM;
+				}
 			}
-			view.setGravity(Gravity.CENTER_VERTICAL|gravity);
+			int gravity = Gravity.LEFT |verticalGravity;
+			 if ("center".equals(alignment)) {
+				gravity = Gravity.CENTER_HORIZONTAL | verticalGravity;
+			}else if ("right".equals(alignment)) {
+				gravity = Gravity.RIGHT | verticalGravity;
+			}
+			view.setGravity(gravity);
 		}
-		
+
 		String lineBreakMode = attrs.getValue("lineBreakMode");
 		if (lineBreakMode != null) {
 			TextUtils.TruncateAt where = TextUtils.TruncateAt.END;
@@ -118,18 +131,7 @@ public class GTextView<T extends TextView>  extends XmlView<T>{
 
 	}
 
-	@Override
-	public void bindData(Object data) {
-		if (ElUtil.isEl(textAttr)) {
-			Object backgroundValue = ElUtil.getElValue(data, textAttr);
-			if(backgroundValue != null){
-				setBackgroundValue(backgroundValue.toString());
-			}else {
-				setBackgroundDrawable(null);
-			}
-		}
-		super.bindData(data);
-	}
+
 	
 	
 	

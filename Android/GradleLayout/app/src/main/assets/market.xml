@@ -15,7 +15,7 @@
     <TextView width="96"
         height="18"
         fontSize="16"
-        text="demo"
+        text="活动页面测试"
         y="7"
         x = "112"
         background="#f0f0f0"
@@ -25,7 +25,7 @@
         height="72"
         x="12"
         y="32"
-        imageUrl="http://gtms03.alicdn.com/tps/i3/T1d4z2FrxXXXa8j.Iq-288-144.png"
+        imageUrl="https://img.alicdn.com/tps/i2/TB1eUtnKpXXXXXpXXXXvKyzTVXX-520-280.jpg"
         cornerRadius="4"
         background="#3322A1"/>
 
@@ -33,29 +33,31 @@
         height="72"
         x="168"
         y="32"
-        imageUrl="http://gtms01.alicdn.com/tps/i1/T18c4KFzBvXXXA41.t-292-144.jpg"
+        imageUrl="https://img.alicdn.com/tps/i2/TB1eUtnKpXXXXXpXXXXvKyzTVXX-520-280.jpg"
         cornerRadius="4"
         background="#3322A1"/>
     <ImageView width="144"
         height="72"
         x="12"
         y="118"
-        imageUrl="http://gtms04.alicdn.com/tps/i4/T1n.uYFX4aXXcc6K.t-292-144.png"
-        cornerRadius="4"/>
+        imageUrl="https://os.alipayobjects.com/rmsportal/pdwpgEYLpYVUFLv.png"
+        cornerRadius="4"
+        background="#3322A1"/>
 
     <ImageView
         width="144"
         height="72"
         x="168"
         y="118"
-        imageUrl="http://gtms04.alicdn.com/tps/i4/T1w32kFf0dXXcc6K.t-292-144.png"
-        cornerRadius="4"/>
+        imageUrl="https://os.alipayobjects.com/rmsportal/pdwpgEYLpYVUFLv.png"
+        cornerRadius="4"
+        background="#3322A1"/>
 
 
     <TextView width="71"
         height="30"
         fontSize="18"
-        text="导购"
+        text="理财"
         y="202"
         x = "12"
         cornerRadius="2"
@@ -67,7 +69,7 @@
         width="71"
         height="30"
         fontSize="18"
-        text="导购"
+        text="理财"
         y="202"
         x = "87"
         cornerRadius="2"
@@ -79,7 +81,7 @@
     <TextView width="71"
         height="30"
         fontSize="18"
-        text="导购"
+        text="理财"
         y="202"
         x = "162"
         cornerRadius="2"
@@ -102,10 +104,33 @@
         textAlignment="center"/>
 
     <ImageView
-        width="320"
+        width="304"
         height="80"
-        x="0"
+        x="8"
         y="240"
-        imageUrl="http://gtms04.alicdn.com/tps/i4/TB1LaNeGpXXXXXKXFXXXK5zTVXX-520-280.png"
-        onClick="toast('clickme')"/>
+        imageUrl="https://img.alicdn.com/tps/i2/TB1eUtnKpXXXXXpXXXXvKyzTVXX-520-280.jpg"
+        background="#3322A1"/>
+
+
+
+    <ImageView
+        width="304"
+        height="80"
+        x="8"
+        y="330"
+        imageUrl="https://img.alicdn.com/tps/i2/TB1eUtnKpXXXXXpXXXXvKyzTVXX-520-280.jpg"
+        background="#3322A1"/>
+
+
+
+    <ImageView
+        width="304"
+        height="80"
+        x="8"
+        y="420"
+        imageUrl="https://img.alicdn.com/tps/i2/TB1eUtnKpXXXXXpXXXXvKyzTVXX-520-280.jpg"
+        background="#3322A1"/>
+
+
+
 </View>

@@ -1,7 +1,5 @@
 package com.efurture.marlin.view.element;
 
-import org.xml.sax.Attributes;
-
 import android.content.Context;
 import android.net.Uri;
 import android.text.TextUtils;
@@ -9,15 +7,16 @@ import android.util.AttributeSet;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 
-import com.efurture.marlin.el.ElUtil;
 import com.squareup.picasso.Picasso;
+
+import org.xml.sax.Attributes;
 
 public class GImageView extends XmlView<ImageView>{
 
 	
-	private String imageUrlAttr;
+	private String imageUrl;
 	
-	private String placeholderAttr;
+	private String placeHolder;
 	
 	
 	
@@ -41,17 +40,17 @@ public class GImageView extends XmlView<ImageView>{
 	@Override
 	public void initViewAtts(Attributes attrs) {
 		 super.initViewAtts(attrs);
-		 imageUrlAttr = attrs.getValue("imageUrl");
-		 placeholderAttr = attrs.getValue("highlightedImageUrl");
-		 if (imageUrlAttr != null && !ElUtil.isEl(imageUrlAttr)) {
-		    setImageUrl(imageUrlAttr);
+		 imageUrl = attrs.getValue("imageUrl");
+		 placeHolder = attrs.getValue("placeHolder");
+		 if (imageUrl != null) {
+		    setImageUrl(imageUrl);
 		 }
 		 
 		 String scaleType = attrs.getValue("scaleType");
 		 if (scaleType != null) {
 			 ScaleType type = ScaleType.FIT_XY;
 			 if ("center".equals(scaleType)) {
-				 type = ScaleType.CENTER;
+				 type = ScaleType.FIT_CENTER;
 			 }else if ("centerCrop".equals(scaleType)) {
 				 type = ScaleType.CENTER_CROP;
 			 }else if ("centerInside".equals(scaleType)) {
@@ -66,38 +65,22 @@ public class GImageView extends XmlView<ImageView>{
 		     view.setScaleType(ScaleType.FIT_XY);	
 		 }
 	}
-	
-	
-	public void setPlaceholder(String imageUrl){
-		this.placeholderAttr = imageUrl;
-	}
-	
-	public void setImageUrl(String imageUrl){
-		
-			 int resId = 0;
-			 if(!TextUtils.isEmpty(placeholderAttr)){
-				 resId = getContext().getResources().getIdentifier(placeholderAttr, "drawable", getContext().getPackageName());	
-			 }
-			 if(resId > 0){
-			     Picasso.with(getContext()).load(Uri.parse(imageUrl)).placeholder(resId).into(view);
-			 }else {
-				 Picasso.with(getContext()).load(Uri.parse(imageUrl)).into(view);
-			 }
-	}
 
-	
-	@Override
-	public void bindData(Object data) {
-		if (ElUtil.isEl(imageUrlAttr)) {
-			Object imageUrlValue = ElUtil.getElValue(data, imageUrlAttr);
-			if(imageUrlValue != null){
-				setImageUrl(imageUrlValue.toString());
-			}else {
-				view.setImageDrawable(null);
-			}
-		}
-		super.bindData(data);
+
+	public void setPlaceholder(String placeHolder){
+		this.placeHolder = placeHolder;
 	}
 	
+	public void setImageUrl(String imageUrl) {
+		int resId = 0;
+		if (!TextUtils.isEmpty(placeHolder)) {
+			resId = getContext().getResources().getIdentifier(placeHolder, "drawable", getContext().getPackageName());
+		}
+		if (resId > 0) {
+			Picasso.with(getContext()).load(Uri.parse(imageUrl)).placeholder(resId).into(view);
+		} else {
+			Picasso.with(getContext()).load(Uri.parse(imageUrl)).into(view);
+		}
+	}
 	
 }

@@ -4,19 +4,26 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Demo XmlView" />
 
     <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="XMLView Market" />
+            android:text="Demo2 XMLView" />
 
 
     <Button
-        android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="XmlView Test" />
+        android:text="Login Demo XMLView"
+        android:id="@+id/login_button" />
+
+
 
     <EditText
         android:layout_width="match_parent"
@@ -30,5 +37,11 @@
         android:layout_height="wrap_content"
         android:text="go"
         android:id="@+id/go" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/horizontalScrollView"
+        android:fillViewport="false" />
 
 </LinearLayout>

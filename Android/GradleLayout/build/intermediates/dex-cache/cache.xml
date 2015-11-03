@@ -2,67 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/baobao/code/Layout/Android/GradleLayout/app/libs/DuktapeEngine.jar"
+        jar="/Users/jianbai/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="bddc3068e9aec1f0686c87728b0059878d8fdfc5">
-        <dex dex="/Users/baobao/code/Layout/Android/GradleLayout/app/build/intermediates/pre-dexed/debug/DuktapeEngine-3dc03fcb36801fa27647cea43e3f150227e64b37.jar" />
-    </item>
-    <item
-        jar="/Users/baobao/code/Layout/Android/GradleLayout/app/libs/exp4j-0.3.11.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="150e7b4a77af47b03a1b65be7a01bd663ea64420">
-        <dex dex="/Users/baobao/code/Layout/Android/GradleLayout/app/build/intermediates/pre-dexed/debug/exp4j-0.3.11-28d005b25b81d3d8cbf6879523c5d848381c4270.jar" />
-    </item>
-    <item
-        jar="/Users/baobao/code/Layout/Android/GradleLayout/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.3/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="4b8945fc23a7461c6fdde15753456d64b0a9358b">
-        <dex dex="/Users/baobao/code/Layout/Android/GradleLayout/app/build/intermediates/pre-dexed/debug/classes-57b46f55bab272ed2156c64728f111e73caacc94.jar" />
-    </item>
-    <item
-        jar="/Users/baobao/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="/Users/baobao/code/Layout/Android/GradleLayout/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-5944973f67713b13d69a394e0df3a50828ec18b1.jar" />
-    </item>
-    <item
-        jar="/Users/baobao/code/Layout/Android/GradleLayout/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="/Users/baobao/code/Layout/Android/GradleLayout/app/build/intermediates/pre-dexed/debug/classes-be4c0b68334dfb1638b18555f584bb09f03645e2.jar" />
-    </item>
-    <item
-        jar="/Users/baobao/code/Layout/Android/GradleLayout/app/libs/okio-1.6.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="98476622f10715998eacf9240d6b479f12c66143">
-        <dex dex="/Users/baobao/code/Layout/Android/GradleLayout/app/build/intermediates/pre-dexed/debug/okio-1.6.0-0159b82d6cfa8dfa668ec76d81627343b7c2960f.jar" />
-    </item>
-    <item
-        jar="/Users/baobao/code/Layout/Android/GradleLayout/app/libs/picasso-2.5.2.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="/Users/baobao/code/Layout/Android/GradleLayout/app/build/intermediates/pre-dexed/debug/picasso-2.5.2-efff2b560f0327c532c78f3a3669064f5630e7d9.jar" />
-    </item>
-    <item
-        jar="/Users/baobao/code/Layout/Android/GradleLayout/app/libs/okhttp-2.5.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="4de2b4ed3445c37ec1720a7d214712e845a24636">
-        <dex dex="/Users/baobao/code/Layout/Android/GradleLayout/app/build/intermediates/pre-dexed/debug/okhttp-2.5.0-c3400c72306d3582a519182fa98d3596e95bb708.jar" />
-    </item>
-    <item
-        jar="/Users/baobao/code/Layout/Android/GradleLayout/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/libs/internal_impl-21.0.3.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="/Users/baobao/code/Layout/Android/GradleLayout/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-0e59b828f6170aa0975dde9455cb2fb083eb0243.jar" />
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="/Users/jianbai/code/layout/Android/GradleLayout/app/build/intermediates/pre-dexed/debug/support-v4-19.1.0-83e1c7552c15f52ede11b76cef88f64532c51b11.jar" />
     </item>
 
 </items>

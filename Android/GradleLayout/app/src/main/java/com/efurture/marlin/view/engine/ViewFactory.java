@@ -11,7 +11,6 @@ import android.content.Context;
 import com.efurture.marlin.view.element.GButton;
 import com.efurture.marlin.view.element.GEditText;
 import com.efurture.marlin.view.element.GImageView;
-import com.efurture.marlin.view.element.GScript;
 import com.efurture.marlin.view.element.GTextView;
 import com.efurture.marlin.view.element.GView;
 import com.efurture.marlin.view.element.XmlView;
@@ -41,7 +40,6 @@ public class ViewFactory {
 		elementsMap.put("ImageView", GImageView.class.getName());
 		elementsMap.put("TextView", GTextView.class.getName());
 		elementsMap.put("EditText", GEditText.class.getName());
-		elementsMap.put("Script", GScript.class.getName());
 	}
 	
 	public XmlView<?> createView(Context context, String element, Attributes attributes) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException{

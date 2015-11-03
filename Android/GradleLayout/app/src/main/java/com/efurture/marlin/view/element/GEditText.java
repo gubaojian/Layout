@@ -1,6 +1,7 @@
 package com.efurture.marlin.view.element;
 
 import android.content.Context;
+import android.text.InputType;
 import android.util.AttributeSet;
 import android.widget.EditText;
 
@@ -37,7 +38,16 @@ public class GEditText extends  GTextView<EditText> {
     public void initViewAtts(Attributes attrs) {
         super.initViewAtts(attrs);
 
-
+        String inputType = attrs.getValue("inputType");
+        if(inputType != null){
+            if("password".equals(inputType)){
+                view.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+            }else if("number".equals(inputType)){
+                view.setInputType(InputType.TYPE_CLASS_NUMBER);
+            }else if("numberPassword".equals(inputType)){
+                view.setInputType(InputType.TYPE_CLASS_NUMBER|InputType.TYPE_NUMBER_VARIATION_PASSWORD);
+            }
+        }
     }
 
 

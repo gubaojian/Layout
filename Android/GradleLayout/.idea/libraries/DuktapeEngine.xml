@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="DuktapeEngine">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/app/libs/DuktapeEngine.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

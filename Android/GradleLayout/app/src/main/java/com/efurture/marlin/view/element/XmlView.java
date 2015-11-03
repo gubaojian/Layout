@@ -1,7 +1,6 @@
 package com.efurture.marlin.view.element;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -10,22 +9,18 @@ import android.graphics.Path.FillType;
 import android.graphics.PorterDuff.Mode;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.StateListDrawable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewTreeObserver.OnPreDrawListener;
 import android.widget.FrameLayout;
 
-import com.efurture.marlin.el.ElUtil;
 import com.efurture.marlin.view.math.EvaluatorManager;
 import com.efurture.marlin.view.math.ParamMap;
 import com.efurture.marlin.view.math.Params;
 import com.efurture.marlin.view.util.ScreenUnit;
-import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Picasso.LoadedFrom;
-import com.squareup.picasso.Target;
 
 import org.xml.sax.Attributes;
 
@@ -44,9 +39,6 @@ public abstract  class XmlView<T extends View> extends FrameLayout {
 	private String expressionY;
 	private String expressionWidth;
 	private String expressionHeight;
-	private String onClickAttr;
-	private String backgroundAttr;
-
 	private Paint mPaint;
 	private float mRadius;
 	private RectF mRectF;
@@ -92,14 +84,17 @@ public abstract  class XmlView<T extends View> extends FrameLayout {
 		expressionWidth = attrs.getValue("expressionWidth");
 		expressionHeight = attrs.getValue("expressionHeight");
 		requestMathLayout();
-		backgroundAttr =  attrs.getValue("background");
-		if(backgroundAttr != null && !ElUtil.isEl(backgroundAttr)){
-			setBackgroundValue(backgroundAttr);
+		String backgroundAttr =  attrs.getValue("background");
+		if(backgroundAttr != null){
+			String selectBackground = attrs.getValue("selectBackground");
+			setBackgroundValue(backgroundAttr, selectBackground);
 		}
+
+
 		
 		String alpha = attrs.getValue("alpha");
 		if (!TextUtils.isEmpty(alpha)) {
-			view.setAlpha(Float.parseFloat(alpha));
+			setAlpha(Float.parseFloat(alpha));
 		}
 		
 		String borderWidth = attrs.getValue("borderWidth");
@@ -127,15 +122,24 @@ public abstract  class XmlView<T extends View> extends FrameLayout {
 			 mPath = new Path();
 		}
 
-		String onClick = attrs.getValue("onClick");
-		if (!TextUtils.isEmpty(onClick)){
-			onClickAttr = onClick;
+		String valueData = attrs.getValue("valueData");
+		if (!TextUtils.isEmpty(valueData)){
+			setContentDescription(valueData);
 		}
 
-		String tag = attrs.getValue("tag");
-		if (!TextUtils.isEmpty(tag)){
-			setTag(tag);
+		String eventData = attrs.getValue("eventData");
+		if (!TextUtils.isEmpty(eventData)){
+			 setTag(eventData);
 		}
+
+
+		String visible = attrs.getValue("visible");
+		if (visible != null) {
+			if("false".equals(visible)){
+				setVisibility(View.INVISIBLE);
+			}
+		}
+
 	}
 	
 
@@ -183,7 +187,7 @@ public abstract  class XmlView<T extends View> extends FrameLayout {
 
 		if(borderPaint != null && mRectF != null) {
 			borderRectF.set(mRectF);
-			borderRectF.inset(borderPaint.getStrokeWidth(), borderPaint.getStrokeWidth());
+			borderRectF.inset(borderPaint.getStrokeWidth()/2, borderPaint.getStrokeWidth()/2);
 			if (mRadius > 0) {
 				canvas.drawRoundRect(borderRectF, mRadius, mRadius, borderPaint);
 			}else {
@@ -245,96 +249,31 @@ public abstract  class XmlView<T extends View> extends FrameLayout {
 				}
 			});
 		}
-		//requestLayout();
-	}
-	
-	
-	
-
-	
-
-	public String getBackgroundAttr() {
-		return backgroundAttr;
 	}
 
-	public void setBackgroundAttr(String backgroundAttr) {
-		this.backgroundAttr = backgroundAttr;
-	}
+
 	
-	public void setBackgroundValue(String backgroundValue) {
+	public void setBackgroundValue(String backgroundValue, String selectBackground) {
 		if (!TextUtils.isEmpty(backgroundValue)) {
 			if (backgroundValue.startsWith("#")) {
-				setBackgroundColor(Color.parseColor(backgroundValue));
+				if(!TextUtils.isEmpty(selectBackground)){
+					StateListDrawable stateListDrawable = new StateListDrawable();
+					ColorDrawable selectColorDrawable = new ColorDrawable(Color.parseColor(selectBackground));
+					stateListDrawable.addState(new int[]{android.R.attr.state_pressed}, selectColorDrawable);
+					stateListDrawable.addState(new int[]{android.R.attr.state_selected}, selectColorDrawable);
+					stateListDrawable.addState(new int[]{}, new ColorDrawable(Color.parseColor(backgroundValue)));
+					setBackgroundDrawable(stateListDrawable);
+					setClickable(true);
+				}else {
+					setBackgroundColor(Color.parseColor(backgroundValue));
+				}
 			}else{
-				Picasso.with(getContext()).load(backgroundValue).into(new Target() {
-					
-					@Override
-					public void onPrepareLoad(Drawable drawable) {
-						
-					}
-					
-					@SuppressWarnings("deprecation")
-					@Override
-					public void onBitmapLoaded(Bitmap bitmap, LoadedFrom from) {
-                           setBackgroundDrawable(new BitmapDrawable(getResources(), bitmap));
-					}
-					
-					@Override
-					public void onBitmapFailed(Drawable drawable) {
-						
-					}
-				});
+				int resId = getContext().getResources().getIdentifier(backgroundValue, "drawable", getContext().getPackageName());
+				if(resId > 0){
+					setBackgroundResource(resId);
+				}
 			} 
 		}
 	}
-
-	public String getOnClickAttr() {
-		return onClickAttr;
-	}
-
-
-	/**
-	 * 通过
-	 * */
-	public T findElementByClass(Class  targetClass){
-        if (targetClass.isAssignableFrom(getClass())){
-			return  (T)this;
-		}
-		for (int index = 0; index < getChildCount(); index++) {
-			View child = getChildAt(index);
-			if (child instanceof XmlView) {
-				XmlView<?> element  = (XmlView<?>) child;
-				T  target = (T)element.findElementByClass(targetClass);
-				if(target != null){
-					return target;
-				}
-			}
-		}
-		return  null;
-	}
-
-
-	
-
-	public void bindData(Object data){
-		if (ElUtil.isEl(backgroundAttr)) {
-			Object backgroundValue = ElUtil.getElValue(data, backgroundAttr);
-			if(backgroundValue != null){
-				setBackgroundValue(backgroundValue.toString());
-			}else {
-				setBackgroundDrawable(null);
-			}
-		}
-		for (int index = 0; index < getChildCount(); index++) {
-			View child = getChildAt(index);
-			if (child instanceof XmlView) {
-				XmlView<?> element  = (XmlView<?>) child;
-				element.bindData(data);
-			}
-		}
-	}
-	
-	
-
 	
 }

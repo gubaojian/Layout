@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View
+    y ="20"
+    width="320"
+    height="480">
+
+
+    <View
+        width="304"
+        height="44"
+        x="8"
+        y="4"
+        background="#ffffff">
+        <TextView
+            width="64"
+            height="40"
+            y = "2"
+            x="8"
+            text="用户名："
+            textSize="18"/>
+
+        <EditText
+            width="240"
+            height="44"
+            x = "72"
+            hint="请输入用户名"
+            textSize="18"/>
+    </View>
+
+    <View
+        width="304"
+        height="44"
+        x="8"
+        y="56"
+        background="#ffffff">
+        <TextView
+            width="64"
+            height="40"
+            y = "2"
+            x="8"
+            text="密码："
+            textSize="18"/>
+
+        <EditText
+            width="240"
+            height="44"
+            x = "72"
+            hint="请输入密码"
+            textSize="18"
+            inputType="password"/>
+    </View>
+
+
+    <Button
+        width="304"
+        height="44"
+        x="8"
+        y="128"
+        background="#363636"
+        selectBackground="#8f8f8f"
+        text="登录"
+        textSize="18"
+        textColor="#ffffff"/>
+
+
+    <View
+        width="304"
+        height="44"
+        x="8"
+        y="188"
+        background="#ffffff">
+        <TextView
+            width="64"
+            height="40"
+            y = "2"
+            x="8"
+            text="手机号："
+            textSize="18"/>
+
+        <EditText
+            width="240"
+            height="44"
+            x = "98"
+            hint="数字键盘"
+            textSize="18"
+            inputType="number"/>
+    </View>
+
+    <View
+        width="304"
+        height="44"
+        x="8"
+        y="240"
+        background="#ffffff">
+        <TextView
+            width="80"
+            height="40"
+            y = "2"
+            x="8"
+            text="交易密码："
+            textSize="18"/>
+
+        <EditText
+            width="240"
+            height="44"
+            x = "98"
+            hint="数字密码键盘"
+            textSize="18"
+            inputType="numberPassword"/>
+    </View>
+
+
+    <View
+        width="304"
+        height="44"
+        x="8"
+        y="300"
+        background="#ffffff">
+        <TextView
+            width="80"
+            height="40"
+            y = "2"
+            x="8"
+            text="快速原型："
+            textSize="18"/>
+
+        <EditText
+            width="240"
+            height="44"
+            x = "98"
+            hint="快速搭建工具"
+            textSize="18"/>
+    </View>
+
+
+    <View
+        width="304"
+        height="44"
+        x="8"
+        y="356"
+        background="#ffffff">
+        <TextView
+            width="80"
+            height="40"
+            y = "2"
+            x="8"
+            text="测试："
+            textSize="18"
+            />
+
+        <EditText
+            width="240"
+            height="44"
+            x = "98"
+            hint="测试输入框"
+            textSize="18"/>
+    </View>
+
+</View>

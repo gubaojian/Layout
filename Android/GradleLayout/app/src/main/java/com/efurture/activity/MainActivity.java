@@ -23,22 +23,33 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(getBaseContext(), XmlviewActivity.class);
+				Intent intent = new Intent(getBaseContext(), XmlViewActivity.class);
 				intent.putExtra("url", "file:///android_asset/market.xml");
 				startActivity(intent);
 			}
 		});
 
+		findViewById(R.id.login_button).setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getBaseContext(), XmlViewActivity.class);
+				intent.putExtra("url", "file:///android_asset/login.xml");
+				startActivity(intent);
+			}
+		});
 
 		findViewById(R.id.button1).setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(getBaseContext(), XmlviewActivity.class);
-				intent.putExtra("url", "file:///android_asset/test.xml");
+				Intent intent = new Intent(getBaseContext(), XmlViewActivity.class);
+				intent.putExtra("url", "file:///android_asset/demo.xml");
 				startActivity(intent);
 			}
 		});
+
+
 
 		findViewById(R.id.go).setOnClickListener(new OnClickListener() {
 
@@ -50,7 +61,7 @@ public class MainActivity extends Activity {
 					return;
 				}
 				getSharedPreferences("url", MODE_PRIVATE).edit().putString("url", url).commit();
-				Intent intent = new Intent(getBaseContext(), XmlviewActivity.class);
+				Intent intent = new Intent(getBaseContext(), XmlViewActivity.class);
 				intent.putExtra("url", url);
 				startActivity(intent);
 			}

@@ -4,8 +4,6 @@
       <root url="jar://$PROJECT_DIR$/app/libs/okhttp-2.5.0.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="jar://$USER_HOME$/.ideaLibSources/okhttp-2.5.0-sources.jar!/" />
-    </SOURCES>
+    <SOURCES />
   </library>
 </component>

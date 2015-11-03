@@ -26,12 +26,10 @@ android {
 
 dependencies {
     compile 'com.android.support:support-v4:19.1.0'
-    compile 'com.android.support:recyclerview-v7:21.0.3'
     compile files('libs/exp4j-0.3.11.jar')
     compile files('libs/okhttp-2.5.0.jar')
     compile files('libs/okio-1.6.0.jar')
     compile files('libs/picasso-2.5.2.jar')
-    compile files('libs/DuktapeEngine.jar')
 
 
 }

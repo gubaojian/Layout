@@ -62,6 +62,7 @@ public class ResourceLoader {
 				inputStream = context.getAssets().open(fileName);
 				if (inputStream != null){
 					callback.onStream(inputStream);
+					return;
 				}
 			} catch (IOException e) {
 				throw  new RuntimeException(e);

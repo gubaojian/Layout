@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/baobao/code/Layout/Android/GradleLayout/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/Users/jianbai/code/layout/Android/GradleLayout/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/Users/baobao/code/Layout/Android/GradleLayout/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/jianbai/code/layout/Android/GradleLayout/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_reload">重新加载</string>
     <string name="action_settings">Settings</string>
@@ -12,7 +12,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="input_url_hint">xml文件的url地址</string>
     <string name="title_activity_xmlview">Xml视图</string>
-    <!-- From: file:/Users/baobao/code/Layout/Android/GradleLayout/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/Users/jianbai/code/layout/Android/GradleLayout/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--

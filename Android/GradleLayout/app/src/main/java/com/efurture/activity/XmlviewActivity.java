@@ -7,26 +7,37 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
+import com.efurture.XmlViewUtils;
+import com.efurture.marlin.ui.HybridListener;
 import com.efurture.marlin.ui.HybridView;
-import com.furture.react.DuktapeEngine;
 import com.google.furture.R;
 
-public class XmlviewActivity extends Activity {
+public class XmlViewActivity extends Activity {
 
 	public static final String ACTIVITY_LISTENER = "activityListener";
 
 	protected HybridView hybridView;
-	protected DuktapeEngine duktapeEngine;
-
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_xmlview);
 		hybridView = (HybridView) findViewById(R.id.hybird_view);
-		duktapeEngine = hybridView.getDuktapeEngine();
-		duktapeEngine.register("activity",this);
+		hybridView.setHybridListener(new HybridListener() {
+			@Override
+			public void onLoadFailed() {
+				Toast.makeText(getBaseContext(), "Load Failed", Toast.LENGTH_SHORT).show();
+			}
+
+			@Override
+			public void onLoadSuccess() {
+
+			}
+		});
+
+
 
 		Uri uri = getIntent().getData();
 		String url = getIntent().getExtras().getString("url");
@@ -34,23 +45,23 @@ public class XmlviewActivity extends Activity {
 			uri = Uri.parse(url);
 		}
 		hybridView.load(Uri.parse(getIntent().getExtras().getString("url")));
+		XmlViewUtils.devTool(hybridView, this);
+
+
+
+
+
 	}
 
 	@Override
 	protected void onResume() {
 		super.onResume();
-		if (duktapeEngine != null) {
-			duktapeEngine.call(ACTIVITY_LISTENER, "onResume");
-		}
 	}
 
 
 
 	@Override
 	protected void onPause() {
-		if (duktapeEngine != null) {
-			duktapeEngine.call(ACTIVITY_LISTENER, "onPause");
-		}
 		super.onPause();
 
 	}
@@ -64,7 +75,7 @@ public class XmlviewActivity extends Activity {
 		menu.findItem(R.id.action_reload).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
 			@Override
 			public boolean onMenuItemClick(MenuItem item) {
-				Intent intent = new Intent(getBaseContext(), XmlviewActivity.this.getClass());
+				Intent intent = new Intent(getBaseContext(), XmlViewActivity.this.getClass());
 				intent.setData(getIntent().getData());
 				intent.putExtras(getIntent().getExtras());
 				startActivity(intent);
@@ -87,10 +98,6 @@ public class XmlviewActivity extends Activity {
 
 	@Override
 	protected void onDestroy() {
-		if (duktapeEngine != null) {
-			duktapeEngine.destory();
-			duktapeEngine = null;
-		}
 		super.onDestroy();
 	}
 

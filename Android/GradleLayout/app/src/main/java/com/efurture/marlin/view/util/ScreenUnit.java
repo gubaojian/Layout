@@ -12,9 +12,7 @@ public class ScreenUnit {
 			return Integer.parseInt(px);
 		}
 		if (unit.endsWith("dp")) {
-			String up = unit.replace("up", "");
-			float upFloat = Float.parseFloat(up);
-			return (int)(upFloat*density);
+			unit = unit.replace("dp", "");
 		}
 		return (int)(screen_width*Float.parseFloat(unit)/320.0f);
 	}
@@ -26,9 +24,7 @@ public class ScreenUnit {
 			return Float.parseFloat(px);
 		}
 		if (unit.endsWith("dp")) {
-			String up = unit.replace("up", "");
-			float upFloat = Float.parseFloat(up);
-			return (upFloat*density);
+			unit = unit.replace("dp", "");
 		}
 		return (screen_width*Float.parseFloat(unit)/320.0f);
 	}
@@ -43,16 +39,16 @@ public class ScreenUnit {
 	
 	public static float density = 2;
 	
-	private static boolean inited = false;
+	private static boolean screen_config_init = false;
 	
 	public static void initWithContext(Context context){
-		if (inited) {
+		if (screen_config_init) {
 			return;
 		}
 		DisplayMetrics display = context.getResources().getDisplayMetrics();
 		screen_height = display.heightPixels;
 		screen_width = display.widthPixels;
 		density = display.density;
-		inited = true;
+		screen_config_init = true;
 	}
 }
