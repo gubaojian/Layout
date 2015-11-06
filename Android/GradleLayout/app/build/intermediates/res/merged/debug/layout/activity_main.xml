@@ -38,5 +38,11 @@
         android:text="go"
         android:id="@+id/go" />
 
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/horizontalScrollView"
+        android:fillViewport="false" />
+
 </LinearLayout>
 <!-- From: file:/Users/jianbai/code/layout/Android/GradleLayout/app/src/main/res/layout/activity_main.xml -->
