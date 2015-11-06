@@ -1,20 +1,20 @@
 package com.efurture.marlin.loader;
 
-import android.content.Context;
-import android.net.Uri;
-import android.os.Handler;
-import android.webkit.URLUtil;
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
 import com.efurture.marlin.http.Http;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import android.content.Context;
+import android.net.Uri;
+import android.os.Handler;
+import android.webkit.URLUtil;
 
 public class ResourceLoader {
 
@@ -75,13 +75,7 @@ public class ResourceLoader {
 		okHttpClient.newCall(request).enqueue(new com.squareup.okhttp.Callback() {
 			@Override
 			public void onFailure(Request request, IOException e) {
-				handler.post(new Runnable() {
-					@Override
-					public void run() {
-
-						callback.onStream(null);
-					}
-                });
+				callback.onStream(null);
 			}
 
 			@Override
