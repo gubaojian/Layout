@@ -22,22 +22,19 @@
         height="72"
         x="12"
         y="32"
-        imageUrl="https://img.alicdn.com/tps/i2/TB1eUtnKpXXXXXpXXXXvKyzTVXX-520-280.jpg"
-        cornerRadius="4"/>
+        imageUrl="https://img.alicdn.com/tps/i2/TB1eUtnKpXXXXXpXXXXvKyzTVXX-520-280.jpg" />
 
     <ImageView width="144"
         height="72"
         x="168"
         y="32"
         imageUrl="https://img.alicdn.com/tps/i2/TB1eUtnKpXXXXXpXXXXvKyzTVXX-520-280.jpg"
-        placeHolder="ic_launcher"
-        cornerRadius="4"/>
+        placeHolder="ic_launcher" />
     <ImageView width="144"
         height="72"
         x="12"
         y="118"
         imageUrl="http://images.apple.com/cn/itunespromos/itunes-this-week/images/2015/10/e5bb7c30-90cc-9363-d830-138583dd01b8/flowcase_680_260_1x.jpg"
-        cornerRadius="4"
         placeHolder="ic_launcher"/>
 
     <ImageView
@@ -46,7 +43,6 @@
         x="168"
         y="118"
         imageUrl="https://os.alipayobjects.com/rmsportal/pdwpgEYLpYVUFLv.png"
-        cornerRadius="4"
         placeHolder="ic_launcher"/>
 
 
@@ -59,8 +55,7 @@
         cornerRadius="2"
         borderWidth="0.8"
         borderColor="#ff6644"
-        textAlignment="center"
-        background="#f0f0f0"/>
+        textAlignment="center"/>
     <TextView
         width="71"
         height="30"
@@ -71,7 +66,6 @@
         cornerRadius="2"
         borderWidth="0.8"
         borderColor="#ff6644"
-        background="#f0f0f0"
         textAlignment="center"/>
 
     <TextView width="71"
@@ -83,7 +77,6 @@
         cornerRadius="2"
         borderWidth="0.8"
         borderColor="#ff6644"
-        background="#f0f0f0"
         textAlignment="center"/>
 
     <TextView
@@ -96,7 +89,6 @@
         cornerRadius="2"
         borderWidth="0.8"
         borderColor="#ff6644"
-        background="#f0f0f0"
         textAlignment="center"/>
 
     <ImageView

@@ -24,7 +24,6 @@
         android:id="@+id/login_button" />
 
 
-
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,10 +37,11 @@
         android:text="go"
         android:id="@+id/go" />
 
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/horizontalScrollView"
-        android:fillViewport="false" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Circle View"
+        android:id="@+id/circle" />
+
 
 </LinearLayout>

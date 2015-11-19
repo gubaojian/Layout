@@ -11,6 +11,7 @@ import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.efurture.XmlViewUtils;
 import com.google.furture.R;
 
 public class MainActivity extends Activity {
@@ -24,7 +25,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(getBaseContext(), XmlViewActivity.class);
-				intent.putExtra("url", "file:///android_asset/market.xml");
+				intent.putExtra("url", XmlViewUtils.xmlUri("market").toString());
 				startActivity(intent);
 			}
 		});
@@ -34,7 +35,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(getBaseContext(), XmlViewActivity.class);
-				intent.putExtra("url", "file:///android_asset/login.xml");
+				intent.putExtra("url", XmlViewUtils.xmlUri("login").toString());
 				startActivity(intent);
 			}
 		});
@@ -44,7 +45,16 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(getBaseContext(), XmlViewActivity.class);
-				intent.putExtra("url", "file:///android_asset/demo.xml");
+				intent.putExtra("url", XmlViewUtils.xmlUri("demo").toString());
+						startActivity(intent);
+			}
+		});
+
+		findViewById(R.id.circle).setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getBaseContext(), XmlViewActivity.class);
+				intent.putExtra("url", XmlViewUtils.xmlUri("circle").toString());
 				startActivity(intent);
 			}
 		});

@@ -39,13 +39,21 @@ public abstract  class XmlView<T extends View> extends FrameLayout {
 	private String expressionY;
 	private String expressionWidth;
 	private String expressionHeight;
-	private Paint mPaint;
-	private float mRadius;
-	private RectF mRectF;
-	private Path  mPath;
+
+
+
+	private RectF mViewRectF;
+
 
 	private Paint borderPaint;
-	private RectF borderRectF;
+	private RectF mBorderDrawRectF;
+
+
+	private Paint mRadiusPaint;
+	private Path  mRadiusPath;
+	private float mRadius;
+
+
 
 	public XmlView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
@@ -106,20 +114,24 @@ public abstract  class XmlView<T extends View> extends FrameLayout {
 			borderPaint.setColor(Color.parseColor(borderColor));
 			borderPaint.setStrokeWidth(ScreenUnit.toFloatUnit(borderWidth));
 			borderPaint.setDither(true);
-			mRectF = new RectF();
-			borderRectF = new RectF();
+			mViewRectF = new RectF();
+			mBorderDrawRectF = new RectF();
+			setWillNotDraw(false);
 		}
 		
 		String cornerRadius = attrs.getValue("cornerRadius");
 		if (!TextUtils.isEmpty(cornerRadius)) {
 			 mRadius = ScreenUnit.toFloatUnit(cornerRadius);
-			 mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-			 mPaint.setAntiAlias(true);
-			 mPaint.setColor(Color.TRANSPARENT);
-			 mPaint.setAlpha(0x00);
-			 mPaint.setXfermode(new PorterDuffXfermode(Mode.CLEAR));
-			 mRectF = new RectF();
-			 mPath = new Path();
+			 mRadiusPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+			 mRadiusPaint.setAntiAlias(true);
+			 mRadiusPaint.setColor(Color.TRANSPARENT);
+			 mRadiusPaint.setAlpha(0x00);
+			 mRadiusPaint.setXfermode(new PorterDuffXfermode(Mode.CLEAR));
+			if (mViewRectF == null) {
+				mViewRectF = new RectF();
+			}
+			 mRadiusPath = new Path();
+			setWillNotDraw(false);
 		}
 
 		String valueData = attrs.getValue("valueData");
@@ -173,25 +185,24 @@ public abstract  class XmlView<T extends View> extends FrameLayout {
 
 	@Override
 	public void draw(Canvas canvas) {
-		boolean draw = (mRectF != null && mPaint != null)
-				|| (borderPaint != null && mRectF != null);
+		boolean draw = (mRadiusPaint != null  ||  borderPaint != null);
 		if (draw) {
-			canvas.saveLayerAlpha(mRectF, 255, Canvas.HAS_ALPHA_LAYER_SAVE_FLAG);
+			canvas.saveLayerAlpha(mViewRectF, 255, Canvas.HAS_ALPHA_LAYER_SAVE_FLAG);
 		}
 
 		super.draw(canvas);
 
-		if (mPaint != null && mPath != null) {
-			canvas.drawPath(mPath, mPaint);
+		if (mRadiusPaint != null) {
+			canvas.drawPath(mRadiusPath, mRadiusPaint);
 		}
 
-		if(borderPaint != null && mRectF != null) {
-			borderRectF.set(mRectF);
-			borderRectF.inset(borderPaint.getStrokeWidth()/2, borderPaint.getStrokeWidth()/2);
+		if(borderPaint != null) {
+			mBorderDrawRectF.set(mViewRectF);
+			mBorderDrawRectF.inset(borderPaint.getStrokeWidth()/2, borderPaint.getStrokeWidth()/2);
 			if (mRadius > 0) {
-				canvas.drawRoundRect(borderRectF, mRadius, mRadius, borderPaint);
+				canvas.drawRoundRect(mBorderDrawRectF, mRadius, mRadius, borderPaint);
 			}else {
-				canvas.drawRect(borderRectF,  borderPaint);
+				canvas.drawRect(mBorderDrawRectF,  borderPaint);
 			}
 		}
 
@@ -203,13 +214,16 @@ public abstract  class XmlView<T extends View> extends FrameLayout {
 	
 	protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
 		super.onLayout(changed, left, top, right, bottom);
-		if (mPaint != null || borderPaint != null) {
-			mRectF.set(0, 0, getWidth(), getHeight());
-			if(mPath != null) {
-				mPath.reset();
-				mPath.addRoundRect(mRectF, mRadius, mRadius, Path.Direction.CCW);
-				mPath.setFillType(FillType.INVERSE_WINDING);
+		if (mRadiusPaint != null){
+			mViewRectF.set(0, 0, getWidth(), getHeight());
+			if(mRadiusPath != null) {
+				mRadiusPath.reset();
+				mRadiusPath.addRoundRect(mViewRectF, mRadius, mRadius, Path.Direction.CCW);
+				mRadiusPath.setFillType(FillType.INVERSE_WINDING);
 			}
+		}
+		if (borderPaint != null) {
+			mViewRectF.set(0, 0, getWidth(), getHeight());
 		}
     }
 

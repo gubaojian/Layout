@@ -1,0 +1,921 @@
+AGGREGATED OVER LAST 24 HOURS:
+  * system / 1000:
+           TOTAL: 100% (30MB-49MB-87MB/27MB-51MB-86MB over 144)
+      Persistent: 100% (30MB-49MB-87MB/27MB-51MB-86MB over 144)
+  * com.android.systemui / 1000:
+           TOTAL: 100% (37MB-65MB-89MB/52MB-69MB-87MB over 144)
+      Persistent: 100% (37MB-65MB-89MB/52MB-69MB-87MB over 144)
+          Imp Fg: 0.01%
+  * com.sohu.inputmethod.sogou / u0a67:
+           TOTAL: 100% (8.5MB-25MB-37MB/16MB-30MB-35MB over 148)
+          Imp Fg: 100% (8.5MB-25MB-37MB/16MB-30MB-35MB over 148)
+  * com.baidu.map.location / u0a16:
+           TOTAL: 100% (1.6MB-2.7MB-4.2MB/1.7MB-2.9MB-3.8MB over 147)
+          Imp Bg: 100% (1.6MB-2.7MB-4.2MB/1.7MB-2.9MB-3.8MB over 147)
+         Service: 0.00%
+  * com.android.phone / 1001:
+           TOTAL: 100% (9.3MB-12MB-15MB/10MB-11MB-14MB over 144)
+      Persistent: 100% (9.3MB-12MB-15MB/10MB-11MB-14MB over 144)
+  * com.lbe.security.meizu / u0a36:
+           TOTAL: 100% (1.5MB-2.6MB-4.2MB/1.6MB-2.7MB-3.5MB over 144)
+      Persistent: 100% (1.5MB-2.6MB-4.2MB/1.6MB-2.7MB-3.5MB over 144)
+  * com.mediatek.bluetooth / 1002:
+           TOTAL: 100% (0.93MB-2.1MB-2.6MB/1.9MB-2.0MB-2.1MB over 144)
+      Persistent: 100% (0.93MB-2.1MB-2.6MB/1.9MB-2.0MB-2.1MB over 144)
+  * com.android.dialer / u0a3:
+           TOTAL: 100% (4.0MB-5.6MB-8.1MB/2.9MB-5.6MB-7.3MB over 144)
+      Persistent: 100% (4.0MB-5.6MB-8.1MB/2.9MB-5.6MB-7.3MB over 144)
+  * com.meizu.flyme.service.find / u0a43:
+           TOTAL: 100% (2.6MB-4.5MB-7.2MB/2.3MB-4.8MB-6.4MB over 144)
+      Persistent: 100% (2.6MB-4.5MB-7.2MB/2.3MB-4.8MB-6.4MB over 144)
+  * com.meizu.mzsyncservice / u0a46:
+           TOTAL: 100% (3.1MB-4.6MB-6.4MB/2.6MB-4.4MB-5.6MB over 144)
+      Persistent: 100% (3.1MB-4.6MB-6.4MB/2.6MB-4.4MB-5.6MB over 144)
+  * com.meizu.cloud / u0a40:
+           TOTAL: 100% (6.2MB-16MB-21MB/5.5MB-16MB-20MB over 145)
+      Persistent: 100% (6.2MB-16MB-21MB/5.5MB-16MB-20MB over 145)
+  * com.qihoo.appstore / u0a122:
+           TOTAL: 100% (22MB-28MB-40MB/20MB-27MB-34MB over 147)
+          Imp Fg: 100% (22MB-28MB-40MB/20MB-27MB-34MB over 147)
+  * com.lbe.security.meizu:service / u0a36:
+           TOTAL: 100% (11MB-17MB-26MB/11MB-17MB-25MB over 147)
+          Imp Fg: 100% (11MB-17MB-26MB/11MB-17MB-25MB over 147)
+         Service: 0.00%
+  * com.qihoo.daemon / u0a122:
+           TOTAL: 100% (11MB-14MB-23MB/11MB-13MB-20MB over 147)
+          Imp Fg: 100% (11MB-14MB-23MB/11MB-13MB-20MB over 147)
+      Service Rs: 0.00%
+  * com.android.incallui / u0a3:
+           TOTAL: 100% (4.0MB-9.0MB-13MB/7.6MB-10MB-12MB over 147)
+          Imp Fg: 100% (4.0MB-9.0MB-13MB/7.6MB-10MB-12MB over 147)
+  * com.meizu.media.music / u0a13:
+           TOTAL: 100% (6.8MB-19MB-23MB/18MB-21MB-22MB over 134)
+          Imp Fg: 0.10% (23MB-23MB-23MB/22MB-22MB-22MB over 1)
+         Service: 100% (6.8MB-19MB-23MB/18MB-21MB-22MB over 133)
+        Receiver: 0.00%
+        (Cached): 0.00%
+  * com.meizu.flyme.weather / u0a60:
+           TOTAL: 100% (4.6MB-13MB-23MB/3.9MB-13MB-22MB over 134)
+          Imp Fg: 0.10% (10MB-10MB-10MB/9.6MB-9.6MB-9.6MB over 1)
+         Service: 100% (4.6MB-14MB-23MB/3.9MB-13MB-22MB over 133)
+        Receiver: 0.00%
+  * com.meizu.gamecenter.service / u0a15:
+           TOTAL: 100% (2.3MB-8.0MB-14MB/1.8MB-7.9MB-18MB over 134)
+         Service: 100% (2.3MB-8.0MB-14MB/1.8MB-7.9MB-18MB over 134)
+        Receiver: 0.00%
+  * com.meizu.safe / 1000:
+           TOTAL: 100% (4.2MB-15MB-38MB/3.4MB-14MB-25MB over 133)
+          Imp Fg: 0.87% (15MB-17MB-19MB/14MB-16MB-18MB over 2)
+         Service: 99% (4.2MB-15MB-38MB/3.4MB-14MB-25MB over 131)
+        Receiver: 0.00%
+  * com.android.packageinstaller / u0a51:
+           TOTAL: 100% (3.7MB-15MB-35MB/3.1MB-15MB-34MB over 137)
+             Top: 0.87% (23MB-33MB-35MB/22MB-32MB-34MB over 6)
+         Service: 99% (3.7MB-14MB-34MB/3.1MB-14MB-33MB over 131)
+        Receiver: 0.00%
+  * com.meizu.mzsnssyncservice / u0a3:
+           TOTAL: 100% (1.8MB-3.7MB-5.6MB/2.6MB-3.8MB-4.7MB over 132)
+          Imp Fg: 0.00%
+         Service: 100% (1.8MB-3.7MB-5.6MB/2.6MB-3.8MB-4.7MB over 132)
+  * com.meizu.mstore / u0a24:
+           TOTAL: 100% (8.7MB-12MB-31MB/7.9MB-12MB-27MB over 454)
+          Imp Fg: 53% (9.8MB-11MB-13MB/10MB-12MB-13MB over 367)
+         Service: 47% (8.7MB-13MB-31MB/7.9MB-12MB-27MB over 87)
+        Receiver: 0.00%
+  * com.android.calendar / u0a27:
+           TOTAL: 100% (5.8MB-9.3MB-17MB/5.2MB-8.8MB-16MB over 135)
+         Service: 100% (5.8MB-9.3MB-17MB/5.2MB-8.8MB-16MB over 135)
+        Receiver: 0.00%
+  * com.meizu.flyme.update / 1000:
+           TOTAL: 100% (1.3MB-3.3MB-5.7MB/2.4MB-3.5MB-5.0MB over 149)
+          Imp Fg: 100% (1.3MB-3.3MB-5.7MB/2.4MB-3.5MB-5.0MB over 149)
+         Service: 0.00%
+        Receiver: 0.00%
+  * com.meizu.customizecenter / u0a4:
+           TOTAL: 100% (2.1MB-6.1MB-9.1MB/5.2MB-6.7MB-8.1MB over 135)
+         Service: 100% (2.1MB-6.1MB-9.1MB/5.2MB-6.7MB-8.1MB over 135)
+        Receiver: 0.00%
+        (Cached): 0.00%
+  * com.meizu.media.gallery / u0a10:
+           TOTAL: 100% (2.5MB-4.4MB-7.0MB/2.8MB-4.6MB-6.1MB over 132)
+         Service: 100% (2.5MB-4.4MB-7.0MB/2.8MB-4.6MB-6.1MB over 132)
+        Receiver: 0.00%
+        (Cached): 0.03%
+  * com.android.settings / 1000:
+           TOTAL: 99% (6.6MB-19MB-32MB/5.7MB-19MB-30MB over 141)
+             Top: 0.54% (25MB-29MB-32MB/23MB-26MB-30MB over 9)
+          Imp Fg: 0.10% (28MB-28MB-28MB/26MB-26MB-26MB over 1)
+         Service: 98% (6.6MB-18MB-32MB/5.7MB-18MB-29MB over 131)
+        Receiver: 0.00%
+  * com.android.mms / u0a12:
+           TOTAL: 99% (2.5MB-9.5MB-18MB/5.0MB-9.2MB-16MB over 130)
+             Top: 0.00%
+         Service: 99% (2.5MB-9.5MB-18MB/5.0MB-9.2MB-16MB over 130)
+      Service Rs: 0.00%
+        Receiver: 0.00%
+        (Cached): 0.00%
+  * com.meizu.mpay / u0a42:
+           TOTAL: 99% (1.7MB-3.9MB-5.7MB/1.9MB-4.3MB-5.2MB over 130)
+             Top: 0.00%
+         Service: 99% (1.7MB-3.9MB-5.7MB/1.9MB-4.3MB-5.2MB over 130)
+        Receiver: 0.00%
+        (Cached): 0.96% (5.3MB-5.3MB-5.3MB/4.5MB-4.5MB-4.5MB over 3)
+  * com.android.providers.calendar / u0a2:
+           TOTAL: 97% (3.5MB-4.9MB-6.0MB/3.0MB-4.3MB-5.4MB over 126)
+         Service: 97% (3.5MB-4.9MB-6.0MB/3.0MB-4.3MB-5.4MB over 126)
+        Receiver: 0.00%
+        (Cached): 2.6% (4.1MB-5.2MB-5.7MB/3.7MB-4.6MB-5.2MB over 7)
+  * com.UCMobile:push / u0a304:
+           TOTAL: 86% (9.5MB-15MB-24MB/8.1MB-14MB-23MB over 104)
+         Service: 86% (9.5MB-15MB-24MB/8.1MB-14MB-23MB over 104)
+      Service Rs: 0.00%
+        (Cached): 0.00%
+  * com.iflytek.speechcloud / u0a35:
+           TOTAL: 68% (2.9MB-5.8MB-59MB/2.4MB-5.1MB-51MB over 134)
+             Top: 1.4% (2.9MB-3.2MB-4.7MB/2.4MB-2.7MB-4.1MB over 14)
+          Imp Fg: 59% (4.1MB-4.8MB-59MB/3.7MB-4.2MB-51MB over 105)
+         Service: 7.3% (14MB-15MB-29MB/13MB-14MB-21MB over 15)
+        (Cached): 9.4% (3.0MB-3.2MB-4.7MB/2.4MB-2.6MB-4.1MB over 17)
+  * com.UCMobile / u0a304:
+           TOTAL: 59% (67MB-99MB-108MB/66MB-97MB-105MB over 109)
+             Top: 0.22% (67MB-86MB-99MB/66MB-84MB-96MB over 3)
+          Imp Fg: 59% (86MB-99MB-108MB/83MB-97MB-105MB over 106)
+         Service: 0.00%
+  * com.UCMobile:DownloadService / u0a304:
+           TOTAL: 59% (7.9MB-8.4MB-8.9MB/7.0MB-7.1MB-7.2MB over 108)
+          Imp Fg: 59% (7.9MB-8.4MB-8.9MB/7.0MB-7.1MB-7.2MB over 108)
+         Service: 0.00%
+      Service Rs: 0.00%
+  * tuhu.sh.hml.superautoman:TcmsService / u0a63:
+           TOTAL: 59% (14MB-17MB-19MB/12MB-16MB-18MB over 56)
+         Service: 59% (14MB-17MB-19MB/12MB-16MB-18MB over 56)
+      Service Rs: 0.00%
+  * com.mybank.android.phone / u0a388:
+           TOTAL: 49% (71MB-76MB-85MB/69MB-74MB-82MB over 45)
+             Top: 1.2% (71MB-81MB-84MB/69MB-78MB-81MB over 9)
+         Service: 48% (72MB-74MB-85MB/71MB-73MB-82MB over 36)
+  * com.tencent.qqmusic / u0a191:
+           TOTAL: 47% (64MB-104MB-107MB/61MB-99MB-103MB over 237)
+             Top: 46% (64MB-104MB-107MB/61MB-99MB-103MB over 235)
+         Service: 0.20% (90MB-92MB-95MB/86MB-88MB-90MB over 2)
+  * com.tencent.qqmusic:QQPlayerService / u0a191:
+           TOTAL: 47% (24MB-26MB-27MB/21MB-23MB-25MB over 43)
+          Imp Fg: 47% (24MB-26MB-27MB/21MB-23MB-25MB over 43)
+         Service: 0.00%
+      Service Rs: 0.00%
+  * com.tencent.qqmusic:wns / u0a191:
+           TOTAL: 47% (9.5MB-12MB-13MB/8.0MB-10MB-12MB over 43)
+          Imp Fg: 47% (9.5MB-12MB-13MB/8.0MB-10MB-12MB over 43)
+         Service: 0.00%
+      Service Rs: 0.00%
+  * com.shangyi.postop.paitent.android / u0a330:
+           TOTAL: 46% (57MB-60MB-72MB/54MB-58MB-70MB over 34)
+             Top: 0.03% (68MB-68MB-68MB/65MB-65MB-65MB over 1)
+         Service: 46% (57MB-60MB-72MB/54MB-58MB-70MB over 33)
+  * android.process.media / u0a6:
+           TOTAL: 46% (22MB-35MB-46MB/21MB-34MB-44MB over 83)
+             Top: 0.02%
+          Imp Fg: 0.00%
+         Service: 46% (22MB-35MB-46MB/21MB-34MB-44MB over 83)
+        Receiver: 0.00%
+        (Cached): 54% (8.6MB-28MB-41MB/7.7MB-28MB-40MB over 45)
+  * com.UCMobile:ppappstore / u0a304:
+           TOTAL: 24% (11MB-17MB-24MB/9.9MB-15MB-22MB over 40)
+         Service: 24% (11MB-17MB-24MB/9.9MB-15MB-22MB over 40)
+      Service Rs: 0.00%
+        Receiver: 0.00%
+        (Cached): 0.15% (7.7MB-8.8MB-9.8MB/6.2MB-7.2MB-8.3MB over 2)
+  * com.UCMobile:ppappstore.ppservice / u0a304:
+           TOTAL: 24% (5.6MB-6.3MB-7.2MB/4.6MB-5.1MB-5.9MB over 41)
+         Service: 24% (5.6MB-6.3MB-7.2MB/4.6MB-5.1MB-5.9MB over 41)
+      Service Rs: 0.00%
+  * com.mybank.android.phone / u0a389:
+           TOTAL: 16% (55MB-96MB-139MB/52MB-93MB-136MB over 81)
+             Top: 9.9% (58MB-99MB-139MB/55MB-96MB-136MB over 68)
+          Imp Fg: 0.01%
+         Service: 5.9% (55MB-77MB-88MB/52MB-74MB-86MB over 13)
+      Service Rs: 0.00%
+  * com.google.furture / u0a65:
+           TOTAL: 13% (7.7MB-17MB-38MB/6.6MB-16MB-37MB over 103)
+             Top: 13% (7.7MB-17MB-38MB/6.6MB-16MB-37MB over 103)
+      (Last Act): 0.38% (19MB-19MB-19MB/18MB-18MB-18MB over 1)
+        (Cached): 0.08% (8.3MB-21MB-34MB/7.2MB-20MB-32MB over 2)
+  * com.android.launcher3 / u0a11:
+           TOTAL: 13% (44MB-61MB-68MB/47MB-60MB-66MB over 116)
+             Top: 13% (44MB-61MB-68MB/47MB-60MB-66MB over 116)
+        Receiver: 0.00%
+          (Home): 87% (44MB-60MB-69MB/53MB-62MB-67MB over 137)
+  * com.mybank.android.phone / u0a385:
+           TOTAL: 11% (67MB-78MB-82MB/64MB-75MB-80MB over 20)
+             Top: 0.51% (77MB-80MB-81MB/74MB-77MB-78MB over 3)
+         Service: 10% (67MB-78MB-82MB/64MB-75MB-80MB over 17)
+      Service Rs: 0.00%
+  * com.mybank.android.phone.app / u0a387:
+           TOTAL: 10% (7.7MB-52MB-80MB/6.9MB-49MB-73MB over 74)
+             Top: 10% (7.7MB-52MB-80MB/6.9MB-49MB-73MB over 74)
+         Service: 0.00%
+        Receiver: 0.02%
+      (Last Act): 1.7% (56MB-58MB-59MB/53MB-55MB-57MB over 5)
+        (Cached): 1.3% (55MB-59MB-63MB/52MB-57MB-60MB over 5)
+  * com.mybank.android.phone.app / u0a64:
+           TOTAL: 3.9% (54MB-77MB-97MB/52MB-74MB-94MB over 29)
+             Top: 3.9% (54MB-77MB-97MB/52MB-74MB-94MB over 29)
+         Service: 0.00%
+        Receiver: 0.00%
+      (Last Act): 5.2% (60MB-62MB-64MB/58MB-60MB-62MB over 11)
+        (Cached): 11% (26MB-61MB-67MB/25MB-59MB-65MB over 25)
+  * com.android.chrome:sandboxed_process0 / u0a118:
+           TOTAL: 3.5% (13MB-19MB-22MB/10MB-15MB-16MB over 5)
+             Top: 0.19% (13MB-18MB-22MB/10MB-13MB-16MB over 2)
+          Imp Fg: 0.00%
+         Service: 3.3% (20MB-20MB-20MB/16MB-16MB-16MB over 3)
+        Receiver: 0.00%
+      (Last Act): 43% (20MB-20MB-20MB/16MB-16MB-16MB over 22)
+        (Cached): 0.00%
+  * com.android.chrome:privileged_process0 / u0a118:
+           TOTAL: 3.5% (13MB-15MB-18MB/6.6MB-8.0MB-11MB over 5)
+             Top: 0.19% (17MB-17MB-18MB/8.7MB-10MB-11MB over 2)
+          Imp Fg: 0.00%
+         Service: 3.3% (13MB-13MB-13MB/6.6MB-6.6MB-6.6MB over 3)
+        Receiver: 0.00%
+      (Last Act): 43% (13MB-13MB-13MB/6.6MB-6.6MB-6.6MB over 22)
+        (Cached): 0.00%
+  * com.android.chrome / u0a118:
+           TOTAL: 3.3% (33MB-41MB-45MB/29MB-35MB-37MB over 5)
+             Top: 0.19% (33MB-39MB-45MB/29MB-33MB-37MB over 2)
+         Service: 3.1% (43MB-43MB-43MB/36MB-36MB-36MB over 3)
+        Receiver: 0.00%
+      (Last Act): 43% (43MB-43MB-44MB/36MB-36MB-37MB over 22)
+        (Cached): 0.00%
+  * com.android.defcontainer / u0a5:
+           TOTAL: 1.6% (2.2MB-3.1MB-4.5MB/1.7MB-2.6MB-3.9MB over 11)
+          Imp Fg: 1.5% (2.2MB-3.1MB-4.5MB/1.7MB-2.6MB-3.9MB over 11)
+         Service: 0.01%
+        (Cached): 45% (2.2MB-3.9MB-5.1MB/1.7MB-3.4MB-4.5MB over 84)
+  * com.alipay.android.app.settings / u0a223:
+           TOTAL: 0.39% (24MB-24MB-25MB/23MB-23MB-23MB over 2)
+             Top: 0.39% (24MB-24MB-25MB/23MB-23MB-23MB over 2)
+      (Last Act): 3.9% (8.9MB-10MB-13MB/7.6MB-8.8MB-11MB over 21)
+        (Cached): 15% (2.7MB-17MB-25MB/2.2MB-16MB-24MB over 29)
+  * com.mybank.android.setting / u0a176:
+           TOTAL: 0.25%
+             Top: 0.25%
+          Imp Fg: 0.00%
+         Service: 0.00%
+      (Last Act): 6.8% (12MB-25MB-27MB/11MB-24MB-26MB over 16)
+        (Cached): 38% (3.2MB-18MB-25MB/2.8MB-17MB-24MB over 88)
+  * tuhu.sh.hml.superautoman / u0a63:
+           TOTAL: 0.11% (38MB-42MB-45MB/35MB-38MB-41MB over 2)
+             Top: 0.10% (38MB-42MB-45MB/35MB-38MB-41MB over 2)
+         Service: 0.01%
+  * com.meizu.media.reader / u0a57:
+           TOTAL: 0.11% (20MB-20MB-20MB/19MB-19MB-19MB over 1)
+             Top: 0.10% (20MB-20MB-20MB/19MB-19MB-19MB over 1)
+          Imp Fg: 0.00%
+         Service: 0.00%
+        Receiver: 0.01%
+        (Cached): 63% (5.0MB-18MB-31MB/17MB-19MB-30MB over 104)
+  * com.android.soundrecorder / u0a20:
+           TOTAL: 0.10% (4.7MB-4.7MB-4.7MB/4.0MB-4.0MB-4.0MB over 1)
+             Top: 0.10% (4.7MB-4.7MB-4.7MB/4.0MB-4.0MB-4.0MB over 1)
+          Imp Fg: 0.00%
+         Service: 0.00%
+        (Cached): 2.7% (4.7MB-4.8MB-4.9MB/4.0MB-4.0MB-4.0MB over 5)
+  * com.meizu.voiceassistant / 1000:
+           TOTAL: 0.10% (18MB-18MB-18MB/17MB-17MB-17MB over 1)
+             Top: 0.10% (18MB-18MB-18MB/17MB-17MB-17MB over 1)
+        Receiver: 0.00%
+        (Cached): 2.8% (2.8MB-13MB-19MB/2.2MB-11MB-17MB over 8)
+  * com.qihoo.appstore:permmgr / u0a122:
+           TOTAL: 0.07% (12MB-12MB-12MB/11MB-11MB-11MB over 1)
+          Imp Fg: 0.07% (12MB-12MB-12MB/11MB-11MB-11MB over 1)
+         Service: 0.00%
+  * com.android.musicfx / u0a14:
+           TOTAL: 0.05%
+         Service: 0.03%
+        Receiver: 0.01%
+        (Cached): 89% (2.1MB-5.1MB-9.0MB/1.7MB-4.6MB-8.4MB over 129)
+  * com.mediatek.mtklogger / u0a39:
+           TOTAL: 0.04%
+        Receiver: 0.04%
+        (Cached): 2.3% (2.2MB-3.5MB-4.4MB/1.7MB-2.9MB-3.8MB over 8)
+  * com.meizu.flyme.calculator / u0a26:
+           TOTAL: 0.04%
+             Top: 0.01%
+         Service: 0.03%
+        (Cached): 9.9% (18MB-18MB-19MB/17MB-17MB-18MB over 7)
+  * android.process.acore / u0a3:
+           TOTAL: 0.04%
+             Top: 0.00%
+          Imp Fg: 0.01%
+         Service: 0.00%
+        Receiver: 0.03%
+        (Cached): 88% (11MB-47MB-51MB/9.9MB-43MB-49MB over 108)
+  * com.mybank.android.phone:push / u0a389:
+           TOTAL: 0.03%
+         Service: 0.03%
+      Service Rs: 0.00%
+        (Cached): 24% (5.5MB-9.4MB-18MB/4.5MB-8.4MB-18MB over 52)
+  * com.rhinocerosstory:push / u0a346:
+           TOTAL: 0.03%
+         Service: 0.03%
+        Receiver: 0.00%
+        (Cached): 52% (9.8MB-12MB-14MB/9.0MB-12MB-13MB over 36)
+  * com.mybank.android.phone:push / u0a385:
+           TOTAL: 0.02%
+         Service: 0.02%
+      Service Rs: 0.00%
+        (Cached): 9.8% (7.5MB-18MB-19MB/6.1MB-17MB-19MB over 16)
+  * com.android.keychain / 1000:
+           TOTAL: 0.02%
+         Service: 0.01%
+        Receiver: 0.00%
+        (Cached): 44% (2.2MB-3.3MB-4.8MB/1.7MB-2.8MB-4.2MB over 89)
+  * com.yangcong345.android.phone:push / u0a343:
+           TOTAL: 0.02%
+         Service: 0.02%
+        Receiver: 0.00%
+        (Cached): 49% (6.1MB-6.4MB-6.7MB/5.0MB-5.2MB-5.9MB over 29)
+  * com.android.email / u0a7:
+           TOTAL: 0.02% (6.3MB-6.3MB-6.3MB/5.6MB-5.6MB-5.6MB over 1)
+         Service: 0.01%
+        Receiver: 0.01% (6.3MB-6.3MB-6.3MB/5.6MB-5.6MB-5.6MB over 1)
+        (Cached): 75% (4.2MB-6.0MB-7.4MB/3.6MB-5.3MB-6.7MB over 71)
+  * com.android.printspooler / u0a55:
+           TOTAL: 0.02%
+          Imp Fg: 0.02%
+         Service: 0.00%
+        (Cached): 0.05%
+  * com.meizu.media.video / u0a21:
+           TOTAL: 0.02%
+         Service: 0.00%
+        Receiver: 0.02%
+        (Cached): 71% (10MB-12MB-14MB/9.3MB-12MB-13MB over 66)
+  * com.meizu.netcontactservice / u0a48:
+           TOTAL: 0.01%
+          Imp Fg: 0.00%
+         Service: 0.00%
+        Receiver: 0.01%
+        (Cached): 16% (2.8MB-3.7MB-5.6MB/2.4MB-3.1MB-4.9MB over 35)
+  * tuhu.sh.hml.superautoman:remote / u0a63:
+           TOTAL: 0.01%
+             Top: 0.01%
+          Imp Fg: 0.01%
+         Service: 0.00%
+        (Cached): 0.00%
+  * com.meizu.flyme.weather:remote / u0a60:
+           TOTAL: 0.01%
+         Service: 0.01%
+        (Cached): 0.00%
+  * com.meizu.notepaper / u0a49:
+           TOTAL: 0.01%
+        Receiver: 0.01%
+        (Cached): 100% (2.3MB-3.7MB-5.6MB/2.0MB-3.6MB-5.0MB over 121)
+  * com.android.exchange / u0a8:
+           TOTAL: 0.01%
+         Service: 0.01%
+        (Cached): 27% (2.5MB-3.9MB-4.9MB/2.1MB-3.4MB-4.4MB over 32)
+  * com.android.providers.usagestats / u0a59:
+           TOTAL: 0.01%
+             Top: 0.00%
+          Imp Fg: 0.00%
+        Receiver: 0.00%
+        (Cached): 8.5% (2.1MB-3.5MB-4.2MB/1.7MB-3.0MB-3.5MB over 17)
+  * com.mybank.android.phone:push / u0a388:
+           TOTAL: 0.01%
+         Service: 0.01%
+      Service Rs: 0.00%
+        (Cached): 2.6% (5.7MB-6.9MB-7.7MB/4.6MB-5.8MB-6.6MB over 7)
+  * com.android.bluetooth / 1002:
+           TOTAL: 0.00%
+          Imp Fg: 0.00%
+         Service: 0.00%
+        (Cached): 0.05%
+  * com.mybank.android.phone.app:push / u0a387:
+           TOTAL: 0.00%
+         Service: 0.00%
+      Service Rs: 0.00%
+        (Cached): 2.6% (4.5MB-4.6MB-4.7MB/3.5MB-3.5MB-3.5MB over 3)
+  * com.mediatek.omacp / u0a50:
+           TOTAL: 0.00%
+         Service: 0.00%
+        Receiver: 0.00%
+        (Cached): 2.7% (2.4MB-3.8MB-4.3MB/2.0MB-3.2MB-3.7MB over 8)
+  * com.yangcong345.android.phone / u0a343:
+           TOTAL: 0.00%
+         Service: 0.00%
+      Service Rs: 0.00%
+        Receiver: 0.00%
+        (Cached): 49% (4.9MB-12MB-14MB/3.9MB-11MB-13MB over 28)
+  * com.android.alarmclock / u0a23:
+           TOTAL: 0.00%
+        Receiver: 0.00%
+        (Cached): 5.5% (2.9MB-3.4MB-3.9MB/2.5MB-2.8MB-3.2MB over 12)
+  * com.svox.pico / u0a54:
+           TOTAL: 0.00%
+        Receiver: 0.00%
+        (Cached): 43% (1.9MB-2.8MB-4.1MB/1.4MB-2.3MB-3.5MB over 71)
+  * com.mediatek.ppl / 1000:
+           TOTAL: 0.00%
+         Service: 0.00%
+        Receiver: 0.00%
+        (Cached): 2.8% (2.1MB-2.2MB-2.3MB/1.6MB-1.7MB-1.7MB over 9)
+  * com.meizu.mzsimcontacts / u0a45:
+           TOTAL: 0.00%
+        Receiver: 0.00%
+        (Cached): 2.8% (2.0MB-3.5MB-4.0MB/1.6MB-2.9MB-3.4MB over 9)
+  * com.android.onetimeinitializer / u0a17:
+           TOTAL: 0.00%
+         Service: 0.00%
+        Receiver: 0.00%
+        (Cached): 0.07% (1.9MB-1.9MB-1.9MB/1.5MB-1.5MB-1.5MB over 2)
+  * com.android.documentsui / u0a31:
+           TOTAL: 0.00%
+        Receiver: 0.00%
+        (Cached): 5.1% (3.6MB-4.9MB-5.4MB/3.1MB-4.4MB-4.7MB over 5)
+  * com.meizu.filemanager / u0a32:
+           TOTAL: 0.00%
+        Receiver: 0.00%
+        (Cached): 1.2% (3.1MB-4.2MB-5.0MB/2.5MB-3.5MB-4.3MB over 5)
+  * com.android.chrome:sandboxed_process1 / u0a118:
+           TOTAL: 0.00%
+             Top: 0.00%
+          Imp Fg: 0.00%
+  * com.UCMobile:RemoteStatService / u0a304:
+           TOTAL: 0.00%
+         Service: 0.00%
+      Service Rs: 0.00%
+        (Cached): 0.00%
+  * com.mediatek.engineermode / 1001:
+           TOTAL: 0.00%
+        Receiver: 0.00%
+        (Cached): 0.05%
+  * com.mediatek.batterywarning / 1000:
+           TOTAL: 0.00%
+        Receiver: 0.00%
+        (Cached): 0.17% (1.8MB-2.5MB-3.8MB/1.4MB-2.0MB-3.2MB over 3)
+  * com.mediatek.thermalmanager / 1000:
+           TOTAL: 0.00%
+        Receiver: 0.00%
+        (Cached): 2.0% (1.7MB-3.0MB-3.7MB/1.3MB-2.5MB-3.1MB over 6)
+  * com.mybank.android.phone.app:push / u0a64:
+           TOTAL: 0.00%
+         Service: 0.00%
+      Service Rs: 0.00%
+        (Cached): 1.1% (2.8MB-2.8MB-2.8MB/1.7MB-1.7MB-1.7MB over 3)
+  * com.android.externalstorage / u0a9:
+        (Cached): 6.6% (3.7MB-3.8MB-3.9MB/3.3MB-3.3MB-3.3MB over 7)
+
+Run time Stats:
+  SOff/Norm: +7h25m5s612ms
+       Mod : +7h35m55s869ms
+  SOn /Norm: +3h52m9s873ms
+       Mod : +18m20s386ms
+      TOTAL: +19h11m31s740ms
+
+          Start time: 2015-11-18 17:03:00
+  Total elapsed time: +1d0h2m21s480ms (partial) libdvm.so chromeview
+
+AGGREGATED OVER LAST 3 HOURS:
+  * com.meizu.mzsnssyncservice / u0a3:
+           TOTAL: 100% (3.4MB-3.4MB-3.5MB/2.7MB-2.7MB-2.8MB over 24)
+         Service: 100% (3.4MB-3.4MB-3.5MB/2.7MB-2.7MB-2.8MB over 24)
+  * com.qihoo.appstore / u0a122:
+           TOTAL: 100% (22MB-23MB-24MB/21MB-22MB-22MB over 27)
+          Imp Fg: 100% (22MB-23MB-24MB/21MB-22MB-22MB over 27)
+  * com.baidu.map.location / u0a16:
+           TOTAL: 100% (2.2MB-2.2MB-2.3MB/1.7MB-1.7MB-1.8MB over 27)
+          Imp Bg: 100% (2.2MB-2.2MB-2.3MB/1.7MB-1.7MB-1.8MB over 27)
+  * com.sohu.inputmethod.sogou / u0a67:
+           TOTAL: 100% (29MB-31MB-32MB/28MB-29MB-31MB over 27)
+          Imp Fg: 100% (29MB-31MB-32MB/28MB-29MB-31MB over 27)
+  * com.lbe.security.meizu / u0a36:
+           TOTAL: 100% (2.1MB-2.1MB-2.2MB/1.6MB-1.6MB-1.7MB over 25)
+      Persistent: 100% (2.1MB-2.1MB-2.2MB/1.6MB-1.6MB-1.7MB over 25)
+  * com.meizu.mzsyncservice / u0a46:
+           TOTAL: 100% (3.7MB-3.8MB-3.9MB/3.0MB-3.2MB-3.3MB over 25)
+      Persistent: 100% (3.7MB-3.8MB-3.9MB/3.0MB-3.2MB-3.3MB over 25)
+  * com.meizu.flyme.service.find / u0a43:
+           TOTAL: 100% (4.2MB-4.3MB-4.4MB/3.6MB-3.7MB-3.7MB over 25)
+      Persistent: 100% (4.2MB-4.3MB-4.4MB/3.6MB-3.7MB-3.7MB over 25)
+  * com.android.phone / 1001:
+           TOTAL: 100% (11MB-12MB-14MB/10MB-12MB-14MB over 25)
+      Persistent: 100% (11MB-12MB-14MB/10MB-12MB-14MB over 25)
+  * com.meizu.customizecenter / u0a4:
+           TOTAL: 100% (6.3MB-6.4MB-6.8MB/5.4MB-5.5MB-6.2MB over 24)
+         Service: 100% (6.3MB-6.4MB-6.8MB/5.4MB-5.5MB-6.2MB over 24)
+  * com.android.systemui / 1000:
+           TOTAL: 100% (64MB-75MB-88MB/61MB-72MB-84MB over 25)
+      Persistent: 100% (64MB-75MB-88MB/61MB-72MB-84MB over 25)
+  * com.meizu.flyme.update / 1000:
+           TOTAL: 100% (3.0MB-3.0MB-3.1MB/2.4MB-2.4MB-2.5MB over 27)
+          Imp Fg: 100% (3.0MB-3.0MB-3.1MB/2.4MB-2.4MB-2.5MB over 27)
+  * system / 1000:
+           TOTAL: 100% (43MB-53MB-67MB/39MB-49MB-62MB over 25)
+      Persistent: 100% (43MB-53MB-67MB/39MB-49MB-62MB over 25)
+  * com.meizu.mstore / u0a24:
+           TOTAL: 100% (12MB-12MB-13MB/12MB-12MB-12MB over 24)
+         Service: 100% (12MB-12MB-13MB/12MB-12MB-12MB over 24)
+  * com.mediatek.bluetooth / 1002:
+           TOTAL: 100% (2.5MB-2.5MB-2.6MB/2.0MB-2.0MB-2.1MB over 25)
+      Persistent: 100% (2.5MB-2.5MB-2.6MB/2.0MB-2.0MB-2.1MB over 25)
+  * com.qihoo.daemon / u0a122:
+           TOTAL: 100% (14MB-15MB-15MB/12MB-13MB-14MB over 27)
+          Imp Fg: 100% (14MB-15MB-15MB/12MB-13MB-14MB over 27)
+  * com.meizu.flyme.weather / u0a60:
+           TOTAL: 100% (15MB-18MB-21MB/14MB-17MB-20MB over 24)
+         Service: 100% (15MB-18MB-21MB/14MB-17MB-20MB over 24)
+  * com.lbe.security.meizu:service / u0a36:
+           TOTAL: 100% (11MB-11MB-12MB/11MB-11MB-11MB over 27)
+          Imp Fg: 100% (11MB-11MB-12MB/11MB-11MB-11MB over 27)
+  * com.android.calendar / u0a27:
+           TOTAL: 100% (6.2MB-7.2MB-9.1MB/5.5MB-6.4MB-8.4MB over 24)
+         Service: 100% (6.2MB-7.2MB-9.1MB/5.5MB-6.4MB-8.4MB over 24)
+  * com.meizu.safe / 1000:
+           TOTAL: 100% (11MB-11MB-11MB/10MB-10MB-10MB over 24)
+         Service: 100% (11MB-11MB-11MB/10MB-10MB-10MB over 24)
+  * com.android.incallui / u0a3:
+           TOTAL: 100% (10.0MB-11MB-13MB/9.2MB-10MB-12MB over 27)
+          Imp Fg: 100% (10.0MB-11MB-13MB/9.2MB-10MB-12MB over 27)
+  * com.meizu.gamecenter.service / u0a15:
+           TOTAL: 100% (8.5MB-11MB-12MB/7.9MB-10MB-12MB over 24)
+         Service: 100% (8.5MB-11MB-12MB/7.9MB-10MB-12MB over 24)
+  * com.android.dialer / u0a3:
+           TOTAL: 100% (5.4MB-6.5MB-8.1MB/4.6MB-5.7MB-7.3MB over 25)
+      Persistent: 100% (5.4MB-6.5MB-8.1MB/4.6MB-5.7MB-7.3MB over 25)
+  * com.android.packageinstaller / u0a51:
+           TOTAL: 100% (4.2MB-4.6MB-4.9MB/3.7MB-4.0MB-4.4MB over 24)
+         Service: 100% (4.2MB-4.6MB-4.9MB/3.7MB-4.0MB-4.4MB over 24)
+  * com.meizu.media.music / u0a13:
+           TOTAL: 100% (22MB-22MB-22MB/21MB-21MB-21MB over 24)
+         Service: 100% (22MB-22MB-22MB/21MB-21MB-21MB over 24)
+  * com.meizu.media.gallery / u0a10:
+           TOTAL: 100% (3.7MB-3.7MB-3.8MB/3.1MB-3.1MB-3.3MB over 24)
+         Service: 100% (3.7MB-3.7MB-3.8MB/3.1MB-3.1MB-3.3MB over 24)
+  * com.meizu.cloud / u0a40:
+           TOTAL: 100% (15MB-17MB-17MB/15MB-16MB-17MB over 26)
+      Persistent: 100% (15MB-17MB-17MB/15MB-16MB-17MB over 26)
+  * com.UCMobile:push / u0a304:
+           TOTAL: 100% (9.5MB-12MB-16MB/8.1MB-11MB-15MB over 25)
+         Service: 100% (9.5MB-12MB-16MB/8.1MB-11MB-15MB over 25)
+      Service Rs: 0.00%
+  * android.process.media / u0a6:
+           TOTAL: 100% (29MB-37MB-40MB/28MB-36MB-39MB over 22)
+         Service: 100% (29MB-37MB-40MB/28MB-36MB-39MB over 22)
+        Receiver: 0.00%
+        (Cached): 0.39%
+  * com.android.settings / 1000:
+           TOTAL: 93% (6.6MB-17MB-30MB/5.7MB-15MB-28MB over 24)
+             Top: 0.29% (30MB-30MB-30MB/28MB-28MB-28MB over 1)
+         Service: 93% (6.6MB-16MB-30MB/5.7MB-15MB-28MB over 23)
+        Receiver: 0.00%
+  * com.android.mms / u0a12:
+           TOTAL: 93% (7.7MB-12MB-18MB/6.9MB-11MB-16MB over 22)
+         Service: 93% (7.7MB-12MB-18MB/6.9MB-11MB-16MB over 22)
+      Service Rs: 0.00%
+        Receiver: 0.00%
+        (Cached): 0.00%
+  * com.meizu.mpay / u0a42:
+           TOTAL: 93% (5.1MB-5.2MB-5.2MB/4.4MB-4.5MB-4.6MB over 22)
+         Service: 93% (5.1MB-5.2MB-5.2MB/4.4MB-4.5MB-4.6MB over 22)
+        Receiver: 0.00%
+        (Cached): 7.2% (5.3MB-5.3MB-5.3MB/4.5MB-4.5MB-4.5MB over 3)
+  * com.android.providers.calendar / u0a2:
+           TOTAL: 90% (4.1MB-4.2MB-4.4MB/3.7MB-3.8MB-3.9MB over 20)
+         Service: 90% (4.1MB-4.2MB-4.4MB/3.7MB-3.8MB-3.9MB over 20)
+        (Cached): 9.9% (4.1MB-4.2MB-4.3MB/3.7MB-3.7MB-3.8MB over 2)
+  * com.google.furture / u0a65:
+           TOTAL: 87% (8.0MB-17MB-38MB/6.6MB-16MB-37MB over 89)
+             Top: 87% (8.0MB-17MB-38MB/6.6MB-16MB-37MB over 89)
+      (Last Act): 0.21%
+        (Cached): 0.40% (34MB-34MB-34MB/32MB-32MB-32MB over 1)
+  * com.UCMobile:ppappstore / u0a304:
+           TOTAL: 76% (13MB-18MB-24MB/11MB-17MB-22MB over 16)
+         Service: 76% (13MB-18MB-24MB/11MB-17MB-22MB over 16)
+      Service Rs: 0.00%
+        Receiver: 0.00%
+        (Cached): 1.1% (7.7MB-8.8MB-9.8MB/6.2MB-7.2MB-8.3MB over 2)
+  * com.UCMobile:ppappstore.ppservice / u0a304:
+           TOTAL: 76% (6.0MB-6.6MB-7.2MB/4.6MB-5.3MB-5.9MB over 17)
+         Service: 76% (6.0MB-6.6MB-7.2MB/4.6MB-5.3MB-5.9MB over 17)
+      Service Rs: 0.00%
+  * com.android.launcher3 / u0a11:
+           TOTAL: 13% (63MB-64MB-64MB/61MB-61MB-61MB over 17)
+             Top: 13% (63MB-64MB-64MB/61MB-61MB-61MB over 17)
+        Receiver: 0.00%
+          (Home): 87% (62MB-63MB-64MB/61MB-61MB-61MB over 42)
+  * com.android.defcontainer / u0a5:
+           TOTAL: 4.7% (3.6MB-3.6MB-3.6MB/3.1MB-3.1MB-3.1MB over 1)
+          Imp Fg: 4.7% (3.6MB-3.6MB-3.6MB/3.1MB-3.1MB-3.1MB over 1)
+         Service: 0.01%
+        (Cached): 95% (3.0MB-4.0MB-5.1MB/2.6MB-3.5MB-4.5MB over 38)
+  * com.mybank.android.phone / u0a389:
+           TOTAL: 2.1%
+             Top: 0.11%
+         Service: 2.0%
+      Service Rs: 0.00%
+  * com.android.musicfx / u0a14:
+           TOTAL: 0.11%
+         Service: 0.09%
+        Receiver: 0.02%
+        (Cached): 100% (3.0MB-5.9MB-9.0MB/2.6MB-5.4MB-8.4MB over 46)
+  * com.mybank.android.setting / u0a176:
+           TOTAL: 0.08%
+             Top: 0.08%
+      (Last Act): 47% (27MB-27MB-27MB/25MB-26MB-26MB over 13)
+        (Cached): 6.0% (25MB-25MB-25MB/24MB-24MB-24MB over 1)
+  * android.process.acore / u0a3:
+           TOTAL: 0.07%
+         Service: 0.01%
+        Receiver: 0.06%
+        (Cached): 100% (46MB-48MB-48MB/41MB-44MB-45MB over 27)
+  * com.alipay.android.app.settings / u0a223:
+           TOTAL: 0.06%
+             Top: 0.06%
+      (Last Act): 25% (8.9MB-10MB-13MB/7.6MB-8.8MB-11MB over 20)
+        (Cached): 0.00%
+  * com.android.keychain / 1000:
+           TOTAL: 0.04%
+         Service: 0.03%
+        Receiver: 0.01%
+        (Cached): 100% (2.2MB-2.9MB-3.6MB/1.7MB-2.4MB-3.1MB over 45)
+  * com.meizu.netcontactservice / u0a48:
+           TOTAL: 0.03%
+         Service: 0.00%
+        Receiver: 0.02%
+        (Cached): 31% (4.1MB-4.1MB-4.2MB/3.5MB-3.5MB-3.5MB over 10)
+  * com.mybank.android.phone.app / u0a64:
+           TOTAL: 0.03%
+             Top: 0.00%
+         Service: 0.01%
+        Receiver: 0.02%
+      (Last Act): 2.0% (60MB-60MB-60MB/58MB-58MB-58MB over 2)
+        (Cached): 51% (61MB-62MB-62MB/59MB-60MB-60MB over 11)
+  * com.meizu.media.video / u0a21:
+           TOTAL: 0.02%
+         Service: 0.00%
+        Receiver: 0.02%
+        (Cached): 28% (12MB-12MB-12MB/11MB-11MB-12MB over 6)
+  * com.meizu.notepaper / u0a49:
+           TOTAL: 0.01%
+        Receiver: 0.01%
+        (Cached): 100% (3.3MB-3.5MB-3.7MB/2.6MB-2.8MB-3.1MB over 24)
+  * com.mediatek.mtklogger / u0a39:
+           TOTAL: 0.01%
+        Receiver: 0.01%
+        (Cached): 1.0% (2.2MB-2.2MB-2.2MB/1.7MB-1.7MB-1.7MB over 1)
+  * com.android.exchange / u0a8:
+           TOTAL: 0.01%
+         Service: 0.01%
+        (Cached): 44% (3.2MB-3.2MB-3.3MB/2.7MB-2.8MB-2.8MB over 7)
+  * com.android.email / u0a7:
+           TOTAL: 0.01%
+         Service: 0.00%
+        Receiver: 0.00%
+        (Cached): 50% (5.7MB-5.8MB-5.9MB/4.9MB-5.0MB-5.2MB over 8)
+  * com.svox.pico / u0a54:
+           TOTAL: 0.00%
+        Receiver: 0.00%
+        (Cached): 100% (2.0MB-2.1MB-2.3MB/1.5MB-1.7MB-1.9MB over 22)
+  * com.meizu.media.reader / u0a57:
+           TOTAL: 0.00%
+        Receiver: 0.00%
+        (Cached): 100% (19MB-20MB-20MB/19MB-19MB-19MB over 24)
+  * com.mybank.android.phone:push / u0a389:
+           TOTAL: 0.00%
+         Service: 0.00%
+        (Cached): 22% (7.8MB-7.9MB-7.9MB/7.3MB-7.3MB-7.3MB over 4)
+  * com.iflytek.speechcloud / u0a35:
+        (Cached): 2.7%
+
+Run time Stats:
+  SOff/Norm: +1h23m42s594ms
+       Mod : +8m49s647ms
+  SOn /Norm: +51m32s717ms
+       Mod : +9m44s99ms
+      TOTAL: +2h33m49s57ms
+
+          Start time: 2015-11-19 17:22:48
+  Total elapsed time: +2h33m49s57ms (partial) libdvm.so chromeview
+
+CURRENT STATS:
+  * system / 1000:
+           TOTAL: 100% (43MB-53MB-67MB/39MB-49MB-62MB over 25)
+      Persistent: 100% (43MB-53MB-67MB/39MB-49MB-62MB over 25)
+  * com.baidu.map.location / u0a16:
+           TOTAL: 100% (2.2MB-2.2MB-2.3MB/1.7MB-1.7MB-1.8MB over 27)
+          Imp Bg: 100% (2.2MB-2.2MB-2.3MB/1.7MB-1.7MB-1.8MB over 27)
+  * com.sohu.inputmethod.sogou / u0a67:
+           TOTAL: 100% (29MB-31MB-32MB/28MB-29MB-31MB over 27)
+          Imp Fg: 100% (29MB-31MB-32MB/28MB-29MB-31MB over 27)
+  * com.meizu.mstore / u0a24:
+           TOTAL: 100% (12MB-12MB-13MB/12MB-12MB-12MB over 24)
+         Service: 100% (12MB-12MB-13MB/12MB-12MB-12MB over 24)
+  * com.meizu.gamecenter.service / u0a15:
+           TOTAL: 100% (8.5MB-11MB-12MB/7.9MB-10MB-12MB over 24)
+         Service: 100% (8.5MB-11MB-12MB/7.9MB-10MB-12MB over 24)
+  * com.qihoo.daemon / u0a122:
+           TOTAL: 100% (14MB-15MB-15MB/12MB-13MB-14MB over 27)
+          Imp Fg: 100% (14MB-15MB-15MB/12MB-13MB-14MB over 27)
+  * com.meizu.safe / 1000:
+           TOTAL: 100% (11MB-11MB-11MB/10MB-10MB-10MB over 24)
+         Service: 100% (11MB-11MB-11MB/10MB-10MB-10MB over 24)
+  * com.lbe.security.meizu:service / u0a36:
+           TOTAL: 100% (11MB-11MB-12MB/11MB-11MB-11MB over 27)
+          Imp Fg: 100% (11MB-11MB-12MB/11MB-11MB-11MB over 27)
+  * com.android.incallui / u0a3:
+           TOTAL: 100% (10.0MB-11MB-13MB/9.2MB-10MB-12MB over 27)
+          Imp Fg: 100% (10.0MB-11MB-13MB/9.2MB-10MB-12MB over 27)
+  * com.meizu.flyme.weather / u0a60:
+           TOTAL: 100% (15MB-18MB-21MB/14MB-17MB-20MB over 24)
+         Service: 100% (15MB-18MB-21MB/14MB-17MB-20MB over 24)
+  * com.meizu.media.music / u0a13:
+           TOTAL: 100% (22MB-22MB-22MB/21MB-21MB-21MB over 24)
+         Service: 100% (22MB-22MB-22MB/21MB-21MB-21MB over 24)
+  * com.android.packageinstaller / u0a51:
+           TOTAL: 100% (4.2MB-4.6MB-4.9MB/3.7MB-4.0MB-4.4MB over 24)
+         Service: 100% (4.2MB-4.6MB-4.9MB/3.7MB-4.0MB-4.4MB over 24)
+  * com.meizu.customizecenter / u0a4:
+           TOTAL: 100% (6.3MB-6.4MB-6.8MB/5.4MB-5.5MB-6.2MB over 24)
+         Service: 100% (6.3MB-6.4MB-6.8MB/5.4MB-5.5MB-6.2MB over 24)
+  * com.meizu.media.gallery / u0a10:
+           TOTAL: 100% (3.7MB-3.7MB-3.8MB/3.1MB-3.1MB-3.3MB over 24)
+         Service: 100% (3.7MB-3.7MB-3.8MB/3.1MB-3.1MB-3.3MB over 24)
+  * com.meizu.mzsnssyncservice / u0a3:
+           TOTAL: 100% (3.4MB-3.4MB-3.5MB/2.7MB-2.7MB-2.8MB over 24)
+         Service: 100% (3.4MB-3.4MB-3.5MB/2.7MB-2.7MB-2.8MB over 24)
+  * com.meizu.flyme.update / 1000:
+           TOTAL: 100% (3.0MB-3.0MB-3.1MB/2.4MB-2.4MB-2.5MB over 27)
+          Imp Fg: 100% (3.0MB-3.0MB-3.1MB/2.4MB-2.4MB-2.5MB over 27)
+  * com.meizu.cloud / u0a40:
+           TOTAL: 100% (15MB-17MB-17MB/15MB-16MB-17MB over 26)
+      Persistent: 100% (15MB-17MB-17MB/15MB-16MB-17MB over 26)
+  * com.qihoo.appstore / u0a122:
+           TOTAL: 100% (22MB-23MB-24MB/21MB-22MB-22MB over 27)
+          Imp Fg: 100% (22MB-23MB-24MB/21MB-22MB-22MB over 27)
+  * com.android.systemui / 1000:
+           TOTAL: 100% (64MB-75MB-88MB/61MB-72MB-84MB over 25)
+      Persistent: 100% (64MB-75MB-88MB/61MB-72MB-84MB over 25)
+  * com.android.calendar / u0a27:
+           TOTAL: 100% (6.2MB-7.2MB-9.1MB/5.5MB-6.4MB-8.4MB over 24)
+         Service: 100% (6.2MB-7.2MB-9.1MB/5.5MB-6.4MB-8.4MB over 24)
+  * com.lbe.security.meizu / u0a36:
+           TOTAL: 100% (2.1MB-2.1MB-2.2MB/1.6MB-1.6MB-1.7MB over 25)
+      Persistent: 100% (2.1MB-2.1MB-2.2MB/1.6MB-1.6MB-1.7MB over 25)
+  * com.mediatek.bluetooth / 1002:
+           TOTAL: 100% (2.5MB-2.5MB-2.6MB/2.0MB-2.0MB-2.1MB over 25)
+      Persistent: 100% (2.5MB-2.5MB-2.6MB/2.0MB-2.0MB-2.1MB over 25)
+  * com.android.dialer / u0a3:
+           TOTAL: 100% (5.4MB-6.5MB-8.1MB/4.6MB-5.7MB-7.3MB over 25)
+      Persistent: 100% (5.4MB-6.5MB-8.1MB/4.6MB-5.7MB-7.3MB over 25)
+  * com.android.phone / 1001:
+           TOTAL: 100% (11MB-12MB-14MB/10MB-12MB-14MB over 25)
+      Persistent: 100% (11MB-12MB-14MB/10MB-12MB-14MB over 25)
+  * com.meizu.flyme.service.find / u0a43:
+           TOTAL: 100% (4.2MB-4.3MB-4.4MB/3.6MB-3.7MB-3.7MB over 25)
+      Persistent: 100% (4.2MB-4.3MB-4.4MB/3.6MB-3.7MB-3.7MB over 25)
+  * com.meizu.mzsyncservice / u0a46:
+           TOTAL: 100% (3.7MB-3.8MB-3.9MB/3.0MB-3.2MB-3.3MB over 25)
+      Persistent: 100% (3.7MB-3.8MB-3.9MB/3.0MB-3.2MB-3.3MB over 25)
+  * com.UCMobile:push / u0a304:
+           TOTAL: 100% (9.5MB-12MB-16MB/8.1MB-11MB-15MB over 25)
+         Service: 100% (9.5MB-12MB-16MB/8.1MB-11MB-15MB over 25)
+      Service Rs: 0.00%
+  * android.process.media / u0a6:
+           TOTAL: 100% (29MB-37MB-40MB/28MB-36MB-39MB over 22)
+         Service: 100% (29MB-37MB-40MB/28MB-36MB-39MB over 22)
+        Receiver: 0.00%
+        (Cached): 0.39%
+  * com.android.settings / 1000:
+           TOTAL: 93% (6.6MB-17MB-30MB/5.7MB-15MB-28MB over 24)
+             Top: 0.29% (30MB-30MB-30MB/28MB-28MB-28MB over 1)
+         Service: 93% (6.6MB-16MB-30MB/5.7MB-15MB-28MB over 23)
+        Receiver: 0.00%
+  * com.android.mms / u0a12:
+           TOTAL: 93% (7.7MB-12MB-18MB/6.9MB-11MB-16MB over 22)
+         Service: 93% (7.7MB-12MB-18MB/6.9MB-11MB-16MB over 22)
+      Service Rs: 0.00%
+        Receiver: 0.00%
+        (Cached): 0.00%
+  * com.meizu.mpay / u0a42:
+           TOTAL: 93% (5.1MB-5.2MB-5.2MB/4.4MB-4.5MB-4.6MB over 22)
+         Service: 93% (5.1MB-5.2MB-5.2MB/4.4MB-4.5MB-4.6MB over 22)
+        Receiver: 0.00%
+        (Cached): 7.2% (5.3MB-5.3MB-5.3MB/4.5MB-4.5MB-4.5MB over 3)
+  * com.android.providers.calendar / u0a2:
+           TOTAL: 90% (4.1MB-4.2MB-4.4MB/3.7MB-3.8MB-3.9MB over 20)
+         Service: 90% (4.1MB-4.2MB-4.4MB/3.7MB-3.8MB-3.9MB over 20)
+        (Cached): 9.9% (4.1MB-4.2MB-4.3MB/3.7MB-3.7MB-3.8MB over 2)
+  * com.google.furture / u0a65:
+           TOTAL: 87% (8.0MB-17MB-38MB/6.6MB-16MB-37MB over 89)
+             Top: 87% (8.0MB-17MB-38MB/6.6MB-16MB-37MB over 89)
+      (Last Act): 0.21%
+        (Cached): 0.40% (34MB-34MB-34MB/32MB-32MB-32MB over 1)
+  * com.UCMobile:ppappstore / u0a304:
+           TOTAL: 76% (13MB-18MB-24MB/11MB-17MB-22MB over 16)
+         Service: 76% (13MB-18MB-24MB/11MB-17MB-22MB over 16)
+      Service Rs: 0.00%
+        Receiver: 0.00%
+        (Cached): 1.1% (7.7MB-8.8MB-9.8MB/6.2MB-7.2MB-8.3MB over 2)
+  * com.UCMobile:ppappstore.ppservice / u0a304:
+           TOTAL: 76% (6.0MB-6.6MB-7.2MB/4.6MB-5.3MB-5.9MB over 17)
+         Service: 76% (6.0MB-6.6MB-7.2MB/4.6MB-5.3MB-5.9MB over 17)
+      Service Rs: 0.00%
+  * com.android.launcher3 / u0a11:
+           TOTAL: 13% (63MB-64MB-64MB/61MB-61MB-61MB over 17)
+             Top: 13% (63MB-64MB-64MB/61MB-61MB-61MB over 17)
+        Receiver: 0.00%
+          (Home): 87% (62MB-63MB-64MB/61MB-61MB-61MB over 42)
+  * com.android.defcontainer / u0a5:
+           TOTAL: 4.7% (3.6MB-3.6MB-3.6MB/3.1MB-3.1MB-3.1MB over 1)
+          Imp Fg: 4.7% (3.6MB-3.6MB-3.6MB/3.1MB-3.1MB-3.1MB over 1)
+         Service: 0.01%
+        (Cached): 95% (3.0MB-4.0MB-5.1MB/2.6MB-3.5MB-4.5MB over 38)
+  * com.mybank.android.phone / u0a389:
+           TOTAL: 2.1%
+             Top: 0.11%
+         Service: 2.0%
+      Service Rs: 0.00%
+  * com.android.musicfx / u0a14:
+           TOTAL: 0.11%
+         Service: 0.09%
+        Receiver: 0.02%
+        (Cached): 100% (3.0MB-5.9MB-9.0MB/2.6MB-5.4MB-8.4MB over 46)
+  * com.mybank.android.setting / u0a176:
+           TOTAL: 0.08%
+             Top: 0.08%
+      (Last Act): 47% (27MB-27MB-27MB/25MB-26MB-26MB over 13)
+        (Cached): 6.0% (25MB-25MB-25MB/24MB-24MB-24MB over 1)
+  * android.process.acore / u0a3:
+           TOTAL: 0.07%
+         Service: 0.01%
+        Receiver: 0.06%
+        (Cached): 100% (46MB-48MB-48MB/41MB-44MB-45MB over 27)
+  * com.alipay.android.app.settings / u0a223:
+           TOTAL: 0.06%
+             Top: 0.06%
+      (Last Act): 25% (8.9MB-10MB-13MB/7.6MB-8.8MB-11MB over 20)
+        (Cached): 0.00%
+  * com.android.keychain / 1000:
+           TOTAL: 0.04%
+         Service: 0.03%
+        Receiver: 0.01%
+        (Cached): 100% (2.2MB-2.9MB-3.6MB/1.7MB-2.4MB-3.1MB over 45)
+  * com.meizu.netcontactservice / u0a48:
+           TOTAL: 0.03%
+         Service: 0.00%
+        Receiver: 0.02%
+        (Cached): 31% (4.1MB-4.1MB-4.2MB/3.5MB-3.5MB-3.5MB over 10)
+  * com.mybank.android.phone.app / u0a64:
+           TOTAL: 0.03%
+             Top: 0.00%
+         Service: 0.01%
+        Receiver: 0.02%
+      (Last Act): 2.0% (60MB-60MB-60MB/58MB-58MB-58MB over 2)
+        (Cached): 51% (61MB-62MB-62MB/59MB-60MB-60MB over 11)
+  * com.meizu.media.video / u0a21:
+           TOTAL: 0.02%
+         Service: 0.00%
+        Receiver: 0.02%
+        (Cached): 28% (12MB-12MB-12MB/11MB-11MB-12MB over 6)
+  * com.meizu.notepaper / u0a49:
+           TOTAL: 0.01%
+        Receiver: 0.01%
+        (Cached): 100% (3.3MB-3.5MB-3.7MB/2.6MB-2.8MB-3.1MB over 24)
+  * com.mediatek.mtklogger / u0a39:
+           TOTAL: 0.01%
+        Receiver: 0.01%
+        (Cached): 1.0% (2.2MB-2.2MB-2.2MB/1.7MB-1.7MB-1.7MB over 1)
+  * com.android.exchange / u0a8:
+           TOTAL: 0.01%
+         Service: 0.01%
+        (Cached): 44% (3.2MB-3.2MB-3.3MB/2.7MB-2.8MB-2.8MB over 7)
+  * com.android.email / u0a7:
+           TOTAL: 0.01%
+         Service: 0.00%
+        Receiver: 0.00%
+        (Cached): 50% (5.7MB-5.8MB-5.9MB/4.9MB-5.0MB-5.2MB over 8)
+  * com.svox.pico / u0a54:
+           TOTAL: 0.00%
+        Receiver: 0.00%
+        (Cached): 100% (2.0MB-2.1MB-2.3MB/1.5MB-1.7MB-1.9MB over 22)
+  * com.meizu.media.reader / u0a57:
+           TOTAL: 0.00%
+        Receiver: 0.00%
+        (Cached): 100% (19MB-20MB-20MB/19MB-19MB-19MB over 24)
+  * com.mybank.android.phone:push / u0a389:
+           TOTAL: 0.00%
+         Service: 0.00%
+        (Cached): 22% (7.8MB-7.9MB-7.9MB/7.3MB-7.3MB-7.3MB over 4)
+  * com.iflytek.speechcloud / u0a35:
+        (Cached): 2.7%
+
+Run time Stats:
+  SOff/Norm: +1h23m42s594ms
+       Mod : +8m49s647ms
+  SOn /Norm: +51m32s286ms (running)
+       Mod : +9m44s99ms
+      TOTAL: +2h33m48s626ms
+
+          Start time: 2015-11-19 17:22:48
+  Total elapsed time: +2h33m49s232ms (partial) libdvm.so chromeview
