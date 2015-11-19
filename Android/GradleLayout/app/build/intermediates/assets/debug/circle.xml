@@ -16,7 +16,8 @@
         height="108"
         y="200"
         x="10"
-        text="圆角增加一层绘制，简单实用可以，大量实用影响FPS帧率"
+        text="圆角增加一层绘制，大量大图使用（10个以上）影响FPS帧率"
+        numberOfLines="2"
         cornerRadius="4"
         background="#778866"/>
 
