@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View
+    width="1010"
+    height="120">
+    <ImageView width="300"
+        height="108"
+        x="10"
+        imageUrl="http://img.alicdn.com/tps/TB1wXJwKFXXXXcwXXXXXXXXXXXX-520-280.jpg" />
+</View>

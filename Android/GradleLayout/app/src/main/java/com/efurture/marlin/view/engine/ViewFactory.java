@@ -3,6 +3,7 @@ package com.efurture.marlin.view.engine;
 import android.content.Context;
 
 import com.efurture.marlin.component.GHorizontalScrollView;
+import com.efurture.marlin.component.GViewPager;
 import com.efurture.marlin.view.element.GButton;
 import com.efurture.marlin.view.element.GEditText;
 import com.efurture.marlin.view.element.GImageView;
@@ -42,6 +43,7 @@ public class ViewFactory {
 		elementsMap.put("TextView", GTextView.class.getName());
 		elementsMap.put("EditText", GEditText.class.getName());
 		elementsMap.put("HScrollView", GHorizontalScrollView.class.getName());
+		elementsMap.put("ViewPager", GViewPager.class.getName());
 	}
 	
 	public XmlView<?> createView(Context context, String element, Attributes attributes) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException{

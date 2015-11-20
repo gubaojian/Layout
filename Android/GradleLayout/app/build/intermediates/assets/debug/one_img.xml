@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View
+    width="1010"
+    height="120">
+    <ImageView width="300"
+        height="108"
+        x="10"
+        imageUrl="http://images.apple.com/cn/itunespromos/itunes-this-week/images/2015/10/e5bb7c30-90cc-9363-d830-138583dd01b8/flowcase_680_260_1x.jpg" />
+</View>

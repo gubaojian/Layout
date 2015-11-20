@@ -2,11 +2,12 @@
 <View
     y ="20"
     width="320"
-    height="900">
+    height="500">
 
 
 
-    <ImageView width="300"
+    <ImageView
+        width="300"
         height="108"
         x="10"
         imageUrl="http://images.apple.com/cn/itunespromos/itunes-this-week/images/2015/10/e5bb7c30-90cc-9363-d830-138583dd01b8/flowcase_680_260_1x.jpg"
@@ -27,7 +28,7 @@
 
     <HScrollView
         width="320"
-        height="200"
+        height="130"
         y="280"
         xmlUrl="http://10.15.28.148:8090/horizontal_imgs.xml"/>
 
