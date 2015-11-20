@@ -1,19 +1,20 @@
 package com.efurture.marlin.view.engine;
 
-import java.lang.reflect.InvocationTargetException;
-import java.util.HashMap;
-import java.util.Map;
-
-import org.xml.sax.Attributes;
-
 import android.content.Context;
 
+import com.efurture.marlin.component.GHorizontalScrollView;
 import com.efurture.marlin.view.element.GButton;
 import com.efurture.marlin.view.element.GEditText;
 import com.efurture.marlin.view.element.GImageView;
 import com.efurture.marlin.view.element.GTextView;
 import com.efurture.marlin.view.element.GView;
 import com.efurture.marlin.view.element.XmlView;
+
+import org.xml.sax.Attributes;
+
+import java.lang.reflect.InvocationTargetException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ViewFactory {
 
@@ -40,6 +41,7 @@ public class ViewFactory {
 		elementsMap.put("ImageView", GImageView.class.getName());
 		elementsMap.put("TextView", GTextView.class.getName());
 		elementsMap.put("EditText", GEditText.class.getName());
+		elementsMap.put("HScrollView", GHorizontalScrollView.class.getName());
 	}
 	
 	public XmlView<?> createView(Context context, String element, Attributes attributes) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException{

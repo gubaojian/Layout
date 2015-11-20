@@ -1,23 +1,22 @@
 package com.efurture.marlin.view.infalter;
 
-import java.io.InputStream;
+import android.content.Context;
+import android.os.Looper;
 
-import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
+import com.efurture.marlin.GLog;
+import com.efurture.marlin.view.element.XmlView;
+import com.efurture.marlin.view.engine.ViewFactory;
+import com.efurture.marlin.view.engine.ViewInflater;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
 
-import android.content.Context;
-import android.os.Looper;
+import java.io.InputStream;
 
-import com.efurture.marlin.GLog;
-import com.efurture.marlin.view.element.GView;
-import com.efurture.marlin.view.element.XmlView;
-import com.efurture.marlin.view.engine.ViewFactory;
-import com.efurture.marlin.view.engine.ViewInflater;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
 
 public class DefaultViewInflater extends ViewInflater {
 
@@ -61,7 +60,7 @@ public class DefaultViewInflater extends ViewInflater {
 				@Override
 				public void endElement(String uri, String localName, String qName)throws SAXException {
 					if (viewNode.getParent() != null) {
-						viewNode = (GView<?>) viewNode.getParent();
+						viewNode = (XmlView<?>) viewNode.getParent();
 					}
 				}
 

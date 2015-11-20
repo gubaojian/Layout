@@ -39,6 +39,9 @@ public abstract  class XmlView<T extends View> extends FrameLayout {
 	private String expressionY;
 	private String expressionWidth;
 	private String expressionHeight;
+	private String eventData;
+	private String valueData;
+
 
 
 
@@ -136,19 +139,32 @@ public abstract  class XmlView<T extends View> extends FrameLayout {
 
 		String valueData = attrs.getValue("valueData");
 		if (!TextUtils.isEmpty(valueData)){
-			setContentDescription(valueData);
+			this.valueData = valueData;
 		}
 
 		String eventData = attrs.getValue("eventData");
 		if (!TextUtils.isEmpty(eventData)){
-			 setTag(eventData);
+			 this.eventData = eventData;
 		}
-
+		String tag = attrs.getValue("tag");
+		if (tag != null) {
+			setTag(tag);
+		}
 
 		String visible = attrs.getValue("visible");
 		if (visible != null) {
 			if("false".equals(visible)){
 				setVisibility(View.INVISIBLE);
+			}
+		}
+
+		String enabled = attrs.getValue("enabled");
+		if (enabled != null){
+			enabled = enabled.toLowerCase().trim();
+			if ("true".equals(enabled) || "yes".equals(enabled)){
+				setEnabled(true);
+			}else{
+				setEnabled(false);
 			}
 		}
 
@@ -289,5 +305,12 @@ public abstract  class XmlView<T extends View> extends FrameLayout {
 			} 
 		}
 	}
-	
+
+	public String getEventData() {
+		return eventData;
+	}
+
+	public String getValueData() {
+		return valueData;
+	}
 }
