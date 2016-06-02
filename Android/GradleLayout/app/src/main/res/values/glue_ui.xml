@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 属性列表 -->
+    <item type="id" name="glue_data" />
+    <item type="id" name="glue_wrap"/>
+
+
+
+</resources>
