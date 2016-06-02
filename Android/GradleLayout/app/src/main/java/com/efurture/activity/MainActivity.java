@@ -59,6 +59,15 @@ public class MainActivity extends Activity {
 			}
 		});
 
+		findViewById(R.id.calc_func).setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getBaseContext(), XmlViewActivity.class);
+				intent.putExtra("url", XmlViewUtils.xmlUri("calc").toString());
+				startActivity(intent);
+			}
+		});
+
 
 
 		findViewById(R.id.go).setOnClickListener(new OnClickListener() {

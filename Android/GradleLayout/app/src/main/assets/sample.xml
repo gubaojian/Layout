@@ -13,7 +13,8 @@
     tag="333"
     width="300"
     x="10"
-    y="200" >
+    y="200"
+    screenUnit="320">
 
     <View
         background="#442211"

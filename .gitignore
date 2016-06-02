@@ -19,10 +19,12 @@
 # generated files
 Android/Layout/bin/
 Android/Layout/gen/
+Android/GradleLayout/build
 Android/GradleLayout/build/
 Android/GradleLayout/app/build/
-Android/GradleLayout/.gradle/
 Android/GradleLayout/.gradle
+Android/GradleLayout/.gradle/
+
 
 
 # Local configuration file (sdk path, etc)

@@ -7,4 +7,7 @@
     <string name="title_activity_xmlview">Xml视图</string>
     <string name="action_reload">重新加载</string>
     <string name="input_url_hint">xml文件的url地址</string>
+
+
+
 </resources>

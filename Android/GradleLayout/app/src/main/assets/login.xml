@@ -2,7 +2,8 @@
 <View
     y ="20"
     width="320"
-    height="480">
+    height="480"
+    screenUnit="320">
 
 
     <View
@@ -51,16 +52,18 @@
     </View>
 
 
+
     <Button
         width="304"
         height="44"
         x="8"
         y="128"
-        background="#363636"
+        background="#886636"
         selectBackground="#8f8f8f"
         text="登录"
         textSize="18"
         textColor="#ffffff"/>
+    -->
 
 
     <View

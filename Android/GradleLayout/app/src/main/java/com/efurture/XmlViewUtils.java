@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.view.View;
 
-import com.efurture.marlin.ui.HybridView;
+import com.efurture.glue.ui.HybridView;
 
 /**
  * Created by jianbai.gbj on 15/11/2.
@@ -16,7 +16,6 @@ public class XmlViewUtils {
 
     public static Uri xmlUri(String name) {
         //return Uri.parse(String.format("file:///android_asset/%s.xml", name));
-
        return  Uri.parse(String.format("http://10.15.28.203:8090/%s.xml", name));
 
     }

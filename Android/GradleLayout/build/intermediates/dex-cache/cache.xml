@@ -2,53 +2,32 @@
 <items version="2" >
 
     <item
-        jar="/Users/furture/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-v4-19.1.0_2e494646a14925cafe5de9fbe3ca5ef84561767f/classes.dex" />
-    </item>
-    <item
-        jar="/Users/furture/code/Layout/Android/GradleLayout/app/libs/exp4j-0.3.11.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="150e7b4a77af47b03a1b65be7a01bd663ea64420">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/app/build/intermediates/transforms/dex/debug/folders/1000/2/exp4j-0.3.11_53dc8912a671d1b1615ecc806ccdbb9709f29f26/classes.dex" />
-    </item>
-    <item
         jar="/Users/furture/code/Layout/Android/GradleLayout/app/libs/okio-1.6.0.jar"
-        jumboMode="true"
-        revision="22.0.1"
+        jumboMode="false"
+        revision="23.0.2"
         sha1="98476622f10715998eacf9240d6b479f12c66143">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/app/build/intermediates/transforms/dex/debug/folders/1000/2/okio-1.6.0_0c9d1910d82da26ca46d2b2eb6eede8eb59ecd07/classes.dex" />
-    </item>
-    <item
-        jar="/Users/furture/code/Layout/Android/GradleLayout/app/libs/okhttp-2.5.0.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="4de2b4ed3445c37ec1720a7d214712e845a24636">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/app/build/intermediates/transforms/dex/debug/folders/1000/2/okhttp-2.5.0_5cd064371c679de44443e09d5f1c7f6d76c8bc57/classes.dex" />
+        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/app/build/intermediates/pre-dexed/debug/okio-1.6.0_0c9d1910d82da26ca46d2b2eb6eede8eb59ecd07.jar" />
     </item>
     <item
         jar="/Users/furture/code/Layout/Android/GradleLayout/app/libs/picasso-2.5.2.jar"
-        jumboMode="true"
-        revision="22.0.1"
+        jumboMode="false"
+        revision="23.0.2"
         sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/app/build/intermediates/transforms/dex/debug/folders/1000/2/picasso-2.5.2_f09b3c77dd6ffbc9e2731fb79aa92fceb23ee8b7/classes.dex" />
+        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/app/build/intermediates/pre-dexed/debug/picasso-2.5.2_f09b3c77dd6ffbc9e2731fb79aa92fceb23ee8b7.jar" />
     </item>
     <item
-        jar="/Users/furture/code/Layout/Android/GradleLayout/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="a7c36d42c4988925fcd3a9ba5e25e4ede3738f53">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_34a22f26bce12e9891f6d1c8070c8a972927100b/classes.dex" />
+        jar="/Users/furture/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/app/build/intermediates/pre-dexed/debug/support-v4-19.1.0_2e494646a14925cafe5de9fbe3ca5ef84561767f.jar" />
     </item>
     <item
-        jar="/Users/furture/code/Layout/Android/GradleLayout/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="353ded0d89e8b0a9b96735e6a51dc7e15da23ee3">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_4293051135fc1256e83f62c950b6c7a96c5d1677/classes.dex" />
+        jar="/Users/furture/code/Layout/Android/GradleLayout/app/libs/okhttp-2.5.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="4de2b4ed3445c37ec1720a7d214712e845a24636">
+        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/app/build/intermediates/pre-dexed/debug/okhttp-2.5.0_5cd064371c679de44443e09d5f1c7f6d76c8bc57.jar" />
     </item>
 
 </items>

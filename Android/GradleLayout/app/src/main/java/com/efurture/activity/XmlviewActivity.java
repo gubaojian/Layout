@@ -7,11 +7,12 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.efurture.XmlViewUtils;
-import com.efurture.marlin.ui.HybridListener;
-import com.efurture.marlin.ui.HybridView;
+import com.efurture.glue.ui.HybridListener;
+import com.efurture.glue.ui.HybridView;
 import com.google.furture.R;
 
 public class XmlViewActivity extends Activity {
@@ -23,7 +24,20 @@ public class XmlViewActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_xmlview);
+
+		Uri uri = getIntent().getData();
+		String url = getIntent().getExtras().getString("url");
+		if (!TextUtils.isEmpty(url)) {
+			uri = Uri.parse(url);
+		}
+
+		if("disable".equals(uri.getQueryParameter("scroll"))){
+			setContentView(R.layout.activity_glue_noscroll);
+		}else{
+			setContentView(R.layout.activity_glue_scroll);
+		}
+
+		final View contentView = findViewById(android.R.id.content);
 		hybridView = (HybridView) findViewById(R.id.hybird_view);
 		hybridView.setHybridListener(new HybridListener() {
 			@Override
@@ -36,19 +50,8 @@ public class XmlViewActivity extends Activity {
 
 			}
 		});
-
-
-
-		Uri uri = getIntent().getData();
-		String url = getIntent().getExtras().getString("url");
-		if (!TextUtils.isEmpty(url)) {
-			uri = Uri.parse(url);
-		}
-		hybridView.load(Uri.parse(getIntent().getExtras().getString("url")));
+		hybridView.load(uri);
 		XmlViewUtils.devTool(hybridView, this);
-
-
-
 
 
 	}
@@ -59,13 +62,11 @@ public class XmlViewActivity extends Activity {
 	}
 
 
-
 	@Override
 	protected void onPause() {
 		super.onPause();
 
 	}
-
 
 
 	@Override

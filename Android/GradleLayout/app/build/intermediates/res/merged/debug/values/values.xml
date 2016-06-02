@@ -2,6 +2,8 @@
 <resources>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <item name="glue_data" type="id"/>
+    <item name="glue_wrap" type="id"/>
     <string name="action_reload">重新加载</string>
     <string name="action_settings">Settings</string>
     <string name="app_name">Layout</string>

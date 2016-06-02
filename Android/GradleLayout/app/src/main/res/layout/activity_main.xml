@@ -23,6 +23,17 @@
         android:text="Login Demo XMLView"
         android:id="@+id/login_button" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Circle View"
+        android:id="@+id/circle" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calc Layout"
+        android:id="@+id/calc_func" />
 
     <EditText
         android:layout_width="match_parent"
@@ -36,12 +47,6 @@
         android:layout_height="wrap_content"
         android:text="go"
         android:id="@+id/go" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Circle View"
-        android:id="@+id/circle" />
 
 
 </LinearLayout>
