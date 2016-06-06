@@ -19,12 +19,16 @@
 # generated files
 Android/Layout/bin/
 Android/Layout/gen/
-Android/GradleLayout/build
 Android/GradleLayout/build/
 Android/GradleLayout/app/build/
-Android/GradleLayout/.gradle
+Android/GradleLayout/.cradle
+Android/GradleLayout/.gradle/
+Android/GradleLayout/glue-demo/build/
+Android/GradleLayout/glue-demo/.idea/
+Android/GradleLayout/.idea/
 Android/GradleLayout/.gradle/
 
+dev-server/node_modules/
 
 
 # Local configuration file (sdk path, etc)

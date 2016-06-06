@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="okio-1.6.0">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/app/libs/okio-1.6.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/glue/libs/okio-1.6.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

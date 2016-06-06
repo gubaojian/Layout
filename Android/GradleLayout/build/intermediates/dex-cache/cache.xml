@@ -2,32 +2,25 @@
 <items version="2" >
 
     <item
-        jar="/Users/furture/code/Layout/Android/GradleLayout/app/libs/okio-1.6.0.jar"
-        jumboMode="false"
+        jar="/Users/furture/code/Layout/Android/GradleLayout/glue-demo/build/intermediates/exploded-aar/GradleLayout/glue/unspecified/jars/libs/picasso-2.5.2.jar"
+        jumboMode="true"
         revision="23.0.2"
-        sha1="98476622f10715998eacf9240d6b479f12c66143">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/app/build/intermediates/pre-dexed/debug/okio-1.6.0_0c9d1910d82da26ca46d2b2eb6eede8eb59ecd07.jar" />
+        sha1="7a9cd27545294b84c53d5f668eeffda9b4f0cd99">
+        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/glue-demo/build/intermediates/transforms/dex/debug/folders/1000/8/picasso-2.5.2_c3cb72cfe292bbd09e841b1cd2cc0379abdf86a5/classes.dex" />
     </item>
     <item
-        jar="/Users/furture/code/Layout/Android/GradleLayout/app/libs/picasso-2.5.2.jar"
-        jumboMode="false"
+        jar="/Users/furture/code/Layout/Android/GradleLayout/glue-demo/build/intermediates/exploded-aar/GradleLayout/glue/unspecified/jars/libs/okhttp-2.5.0.jar"
+        jumboMode="true"
         revision="23.0.2"
-        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/app/build/intermediates/pre-dexed/debug/picasso-2.5.2_f09b3c77dd6ffbc9e2731fb79aa92fceb23ee8b7.jar" />
+        sha1="4569e72afb5c6d75eb0b4bdabd2ee80762c857c3">
+        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/glue-demo/build/intermediates/transforms/dex/debug/folders/1000/8/okhttp-2.5.0_bcece17de12877f11891e20a50113537c9963a23/classes.dex" />
     </item>
     <item
-        jar="/Users/furture/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
-        jumboMode="false"
+        jar="/Users/furture/code/Layout/Android/GradleLayout/glue-demo/build/intermediates/exploded-aar/GradleLayout/glue/unspecified/jars/libs/okio-1.6.0.jar"
+        jumboMode="true"
         revision="23.0.2"
-        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/app/build/intermediates/pre-dexed/debug/support-v4-19.1.0_2e494646a14925cafe5de9fbe3ca5ef84561767f.jar" />
-    </item>
-    <item
-        jar="/Users/furture/code/Layout/Android/GradleLayout/app/libs/okhttp-2.5.0.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="4de2b4ed3445c37ec1720a7d214712e845a24636">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/app/build/intermediates/pre-dexed/debug/okhttp-2.5.0_5cd064371c679de44443e09d5f1c7f6d76c8bc57.jar" />
+        sha1="0efebab7f1a8ae6d2c2a56df50b5e0e4f5e4abca">
+        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/glue-demo/build/intermediates/transforms/dex/debug/folders/1000/8/okio-1.6.0_7f5814fc319eee0517f576e5612ab932727e6175/classes.dex" />
     </item>
 
 </items>
