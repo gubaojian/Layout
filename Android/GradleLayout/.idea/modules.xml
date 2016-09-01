@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/DuktapeEngine-release/DuktapeEngine-release.iml" filepath="$PROJECT_DIR$/DuktapeEngine-release/DuktapeEngine-release.iml" />
       <module fileurl="file://$PROJECT_DIR$/GradleLayout.iml" filepath="$PROJECT_DIR$/GradleLayout.iml" />
-      <module fileurl="file://$PROJECT_DIR$/glue-demo/app.iml" filepath="$PROJECT_DIR$/glue-demo/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/glue/glue.iml" filepath="$PROJECT_DIR$/glue/glue.iml" />
       <module fileurl="file://$PROJECT_DIR$/glue-demo/glue-demo.iml" filepath="$PROJECT_DIR$/glue-demo/glue-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/glue-hybrid/glue-hybrid.iml" filepath="$PROJECT_DIR$/glue-hybrid/glue-hybrid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gule-hybrid-demo/gule-hybrid-demo.iml" filepath="$PROJECT_DIR$/gule-hybrid-demo/gule-hybrid-demo.iml" />
     </modules>
   </component>
 </project>

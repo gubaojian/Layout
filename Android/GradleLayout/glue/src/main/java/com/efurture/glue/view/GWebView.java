@@ -2,11 +2,11 @@ package com.efurture.glue.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import com.efurture.glue.engine.ViewInflater;
+import com.efurture.glue.ui.XmlView;
+import com.efurture.glue.utils.ViewUtils;
 
 import org.xml.sax.Attributes;
 
@@ -40,9 +40,19 @@ public class GWebView extends WebView{
                 return true;
             }
         });
-        String url = attrs.getValue("url");
+        final String url = attrs.getValue("url");
         if(url != null){
-            loadUrl(url);
+            post(new Runnable() {
+                @Override
+                public void run() {
+                    String absUrl = url;
+                    XmlView hybridView = ViewUtils.findParent(GWebView.this);
+                    if(hybridView != null && hybridView.getResourceLoader() != null){
+                        absUrl = hybridView.getResourceLoader().toAbsPageUrl(url).toString();
+                    }
+                    loadUrl(url);
+                }
+            });
         }
     }
 

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">HybridDemo</string>
+    <string name="title_activity_alipay_home">AlipayHomeActivity</string>
+</resources>

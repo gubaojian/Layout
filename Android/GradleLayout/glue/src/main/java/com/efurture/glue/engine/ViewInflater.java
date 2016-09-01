@@ -5,12 +5,9 @@ import java.io.InputStream;
 import java.util.regex.Pattern;
 
 import android.content.Context;
-import android.net.Uri;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.efurture.glue.utils.ScreenUnit;
 
 import org.xml.sax.SAXException;
 
@@ -29,23 +26,19 @@ public abstract class ViewInflater {
 	protected float screenUnit = 750.0f;
 
 
-	/**
-	 * 页面地址
-	 * */
-	private Uri uri;
-
-
 
 
 
 	public abstract View inflate(InputStream inputStream, final ViewGroup parent) throws ParserConfigurationException, SAXException, IOException;
 
 
+	public abstract View inflate(InputStream inputStream, final ViewGroup parent, final  boolean attach) throws ParserConfigurationException, SAXException, IOException;
+
+
 
 	public static ViewInflater from(Context context){
 		ViewInflater inflater = new DefaultViewInflater(context);;
 		inflater.displayMetrics = context.getResources().getDisplayMetrics();
-		ScreenUnit.initWithContext(context);
 		return inflater;
 	}
 
@@ -60,11 +53,15 @@ public abstract class ViewInflater {
 		if (unit.endsWith("px")) {
 			String px = unit.replace("px", "");
 			return Integer.parseInt(px);
-		}
-		if (unit.endsWith("dp")) {
+		}else if (unit.endsWith("dp")) {
 			unit = unit.replace("dp", "");
 			return  (int)(Float.parseFloat(unit)*displayMetrics.density);
+		}else if (unit.equals("match")) {
+			return ViewGroup.LayoutParams.MATCH_PARENT;
+		}else if (unit.equals("wrap")) {
+			return ViewGroup.LayoutParams.WRAP_CONTENT;
 		}
+
 		return (int)(displayMetrics.widthPixels*Float.parseFloat(unit)/screenUnit);
 	}
 
@@ -72,18 +69,22 @@ public abstract class ViewInflater {
 	/**
 	 * @param
 	 * unit 支持单位 px  dp 默认的ScreenUnit单位等比相当于css的rem单位, 并且支持%V
-	 * @param  px  父容器的高度, 如果单位为100% 则采用父容器的高度 乘以100%
+	 * @param   unit  父容器的高度, 如果单位为100% 则采用父容器的高度 乘以100%
+	 * unit 支持单位 px  dp 默认的ScreenUnit单位等比相当于css的rem单位
+	 *      支持calc单位  calc(100% - 10px)
 	 * */
 	public int  toUnit(String unit, View parent, boolean isW){
 		if(unit.endsWith("%")){
 			String percent = unit.replace("%", "");
-			int px;
+			float px;
 			if(isW){
 				px = parent.getLayoutParams().width;
 			}else{
 				px = parent.getLayoutParams().height;
 			}
-			System.out.println("dddd px" +  px);
+			if(px <= 0){
+				px = screenUnit;
+			}
 			return (int)(Float.parseFloat(percent)*px/100);
 		}
 		if(unit.startsWith("calc")){
@@ -108,22 +109,6 @@ public abstract class ViewInflater {
 	 * */
 	private static  final Pattern CALC_PATTERN = Pattern.compile("-");
 
-	/**
-	 * @param
-	 * unit 支持单位 px  dp 默认的ScreenUnit单位等比相当于css的rem单位
-	 *      支持calc单位  calc(100% - 10px)
-	 * */
-	public int  toHUnit(String unit, int pHeight){
-		if (unit.endsWith("px")) {
-			String px = unit.replace("px", "");
-			return Integer.parseInt(px);
-		}
-		if (unit.endsWith("dp")) {
-			unit = unit.replace("dp", "");
-			return  (int)(Float.parseFloat(unit)*displayMetrics.density);
-		}
-		return (int)(displayMetrics.widthPixels*Float.parseFloat(unit)/screenUnit);
-	}
 
 
 
@@ -140,12 +125,5 @@ public abstract class ViewInflater {
 		this.screenUnit = screenUnit;
 	}
 
-	public Uri getUri() {
-		return uri;
-	}
 
-	public ViewInflater setUri(Uri uri) {
-		this.uri = uri;
-		return  this;
-	}
 }

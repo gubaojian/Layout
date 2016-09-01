@@ -9,9 +9,8 @@ import android.util.TypedValue;
 import android.view.Gravity;
 import android.widget.TextView;
 
-import com.efurture.glue.el.ElUtil;
+import com.efurture.glue.bind.ElUtil;
 import com.efurture.glue.engine.ViewInflater;
-import com.efurture.glue.utils.ScreenUnit;
 
 import org.xml.sax.Attributes;
 
@@ -38,6 +37,7 @@ public class GTextView   extends TextView{
 
 
 	private void init(){
+		setIncludeFontPadding(false);
 		setGravity(Gravity.CENTER_VERTICAL);
 		setTextColor(Color.BLACK);
 		setSingleLine(true);
@@ -45,10 +45,12 @@ public class GTextView   extends TextView{
 	}
 
 
+
 	/**
 	 * 默认实现
 	 * */
 	public void initViewAtts(Attributes attrs, ViewInflater inflater) {
+
 		textAttr = attrs.getValue("text");
 		if (textAttr != null && !ElUtil.isEl(textAttr)) {
 			setText(textAttr);
@@ -58,13 +60,18 @@ public class GTextView   extends TextView{
 		if(hintAttr != null){
 			setHint(hintAttr);
 		}
+
+		String hintColor = attrs.getValue("hintColor");
+		if(hintColor != null){
+			 setHintTextColor(Color.parseColor(hintColor));
+		}
 		
 		String textColor = attrs.getValue("textColor");
 		if(textColor != null){
 			setTextColor(Color.parseColor(textColor));
 		}
 		
-		String highlightedTextColor = attrs.getValue("highlightedTextColor");
+		String highlightedTextColor = attrs.getValue("highlightColor");
 		if (highlightedTextColor != null) {
 			setHighlightColor(Color.parseColor(highlightedTextColor));
 		}
@@ -91,7 +98,7 @@ public class GTextView   extends TextView{
 			setTextSize(TypedValue.COMPLEX_UNIT_PX, inflater.toUnit(textSize));
 		}
 		
-		String numberOfLines = attrs.getValue("numberOfLines");
+		String numberOfLines = attrs.getValue("maxLines");
 		if (numberOfLines != null) {
 			setSingleLine(false);
 			setMaxLines(Integer.parseInt(numberOfLines));
@@ -117,7 +124,7 @@ public class GTextView   extends TextView{
 			setGravity(gravity);
 		}
 
-		String lineBreakMode = attrs.getValue("lineBreakMode");
+		String lineBreakMode = attrs.getValue("breakMode");
 		if (lineBreakMode != null) {
 			TextUtils.TruncateAt where = TextUtils.TruncateAt.END;
 			if ("head".equals(lineBreakMode)) {
@@ -129,10 +136,16 @@ public class GTextView   extends TextView{
 			}
 			setEllipsize(where);
 		}
+
 	}
 
 
-	
+
+
+
+	public String getTextAttr() {
+		return textAttr;
+	}
 	
 	
 	

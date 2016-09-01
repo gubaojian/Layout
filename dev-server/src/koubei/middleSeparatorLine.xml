@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View
+  screenUnit="720"
+  background="#F4F5F9">
+
+  <View
+     width="720"
+     height="1px"
+     background="#ECEDF0"/>
+    <View
+       y="18"
+       width="720"
+       height="1px"
+       background="#ECEDF0"/>
+</View>

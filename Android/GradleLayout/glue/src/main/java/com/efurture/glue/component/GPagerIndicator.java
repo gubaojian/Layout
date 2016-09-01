@@ -35,13 +35,17 @@ public class GPagerIndicator extends CircleIndicator{
                this.setGravity(Gravity.CENTER_VERTICAL|Gravity.RIGHT);
             }else if("left".equals(circleGravity)){
                 this.setGravity(Gravity.CENTER_VERTICAL|Gravity.LEFT);
+            }else if("center".equals(circleGravity)){
+                this.setGravity(Gravity.CENTER_VERTICAL|Gravity.CENTER);
             }
         }
 
 
         String size = attrs.getValue("circleSize");
         if (size != null){
-            this.setSize(inflater.toUnit(size));
+            int circleSize = inflater.toUnit(size);
+            this.setSize(circleSize);
+            this.setSelectSize(circleSize);
         }
         String selectSize = attrs.getValue("circleSelectSize");
         if (selectSize  != null){

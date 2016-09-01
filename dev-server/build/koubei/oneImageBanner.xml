@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View
+  screenUnit="720"
+  background="#FFFFFF"
+  width="720">
+
+ <View
+   height="380"
+   width="720">
+      <ImageView
+        width="660"
+        height="360"
+        x="30"
+        imageUrl="https://img.alicdn.com/tps/i4/TB1pm6QMXXXXXaNaXXX6EYqTVXX-490-740.jpg_760x760q100.jpg"/>
+   </View>
+</View>

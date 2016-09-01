@@ -10,9 +10,8 @@ import android.util.TypedValue;
 import android.view.Gravity;
 import android.widget.EditText;
 
-import com.efurture.glue.el.ElUtil;
+import com.efurture.glue.bind.ElUtil;
 import com.efurture.glue.engine.ViewInflater;
-import com.efurture.glue.utils.ScreenUnit;
 
 import org.xml.sax.Attributes;
 
@@ -66,7 +65,12 @@ public class GEditText extends  EditText {
             setTextColor(Color.parseColor(textColor));
         }
 
-        String highlightedTextColor = attrs.getValue("highlightedTextColor");
+        String hintColor = attrs.getValue("hintColor");
+        if(hintColor != null){
+            setHintTextColor(Color.parseColor(hintColor));
+        }
+
+        String highlightedTextColor = attrs.getValue("highlightColor");
         if (highlightedTextColor != null) {
             setHighlightColor(Color.parseColor(highlightedTextColor));
         }
@@ -93,7 +97,7 @@ public class GEditText extends  EditText {
             setTextSize(TypedValue.COMPLEX_UNIT_PX, inflater.toUnit(textSize));
         }
 
-        String numberOfLines = attrs.getValue("numberOfLines");
+        String numberOfLines = attrs.getValue("maxLines");
         if (numberOfLines != null) {
             setSingleLine(false);
             setMaxLines(Integer.parseInt(numberOfLines));
@@ -119,7 +123,7 @@ public class GEditText extends  EditText {
             setGravity(gravity);
         }
 
-        String lineBreakMode = attrs.getValue("lineBreakMode");
+        String lineBreakMode = attrs.getValue("breakMode");
         if (lineBreakMode != null) {
             TextUtils.TruncateAt where = TextUtils.TruncateAt.END;
             if ("head".equals(lineBreakMode)) {

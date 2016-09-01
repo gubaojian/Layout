@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View
+  width="720"
+  screenUnit="720"
+  background="#FFFFFF">
+  <ImageView
+    x="20"
+    y="20"
+    width="88"
+    height="88"
+    imageUrl="https://t.alipayobjects.com/images/rmsweb/T1TH4gXohcXXXXXXXX.png"/>
+  <TextView
+      x="128"
+      y="20"
+      width="300"
+      height="50"
+      textSize="32"
+      text="鸿荣"/>
+  <TextView
+      x="460"
+      y="20"
+      width="230"
+      height="50"
+      textSize="26"
+      textColor="#888888"
+      textAlign="right"
+      text="16/5/19"/>
+  <TextView
+        x="128"
+        y="68"
+        width="560"
+        height="40"
+        textSize="28"
+        textColor="#888888"
+        lineBreakMode="tail"
+        text="[转账]想你转账9.00元"/>
+
+  <View
+     y="128"
+     width="720"
+     height="1px"
+     background="#ECEDF0"/>
+</View>

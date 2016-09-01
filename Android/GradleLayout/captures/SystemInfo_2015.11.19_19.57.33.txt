@@ -81,7 +81,7 @@ Total memory usage:
 
 Profile data in ms:
 
-	com.google.furture/com.efurture.activity.MainActivity/android.view.ViewRootImpl@422eb940
+	com.google.furture/com.efurture.activity.MainActivity/android.com.hzb.view.ViewRootImpl@422eb940
 	Draw	Process	Execute
 	4.17	21.37	0.99
 	1.12	0.23	0.57
@@ -122,7 +122,7 @@ Profile data in ms:
 
 View hierarchy:
 
-  com.google.furture/com.efurture.activity.MainActivity/android.view.ViewRootImpl@422eb940
+  com.google.furture/com.efurture.activity.MainActivity/android.com.hzb.view.ViewRootImpl@422eb940
   24 views, 3.94 kB of display lists, 36 frames rendered
 
 
@@ -213,10 +213,10 @@ Total memory usage:
 
 Profile data in ms:
 
-	com.android.launcher3/com.android.launcher3.Launcher/android.view.ViewRootImpl@42c36d58
+	com.android.launcher3/com.android.launcher3.Launcher/android.com.hzb.view.ViewRootImpl@42c36d58
 	Draw	Process	Execute
 
-	com.android.launcher3/com.android.launcher3.Launcher/android.view.ViewRootImpl@42c60780
+	com.android.launcher3/com.android.launcher3.Launcher/android.com.hzb.view.ViewRootImpl@42c60780
 	Draw	Process	Execute
 	1.88	1.42	1.01
 	1.99	1.46	1.15
@@ -349,10 +349,10 @@ Profile data in ms:
 
 View hierarchy:
 
-  com.android.launcher3/com.android.launcher3.Launcher/android.view.ViewRootImpl@42c36d58
+  com.android.launcher3/com.android.launcher3.Launcher/android.com.hzb.view.ViewRootImpl@42c36d58
   8 views, 0.00 kB of display lists, 0 frames rendered
 
-  com.android.launcher3/com.android.launcher3.Launcher/android.view.ViewRootImpl@42c60780
+  com.android.launcher3/com.android.launcher3.Launcher/android.com.hzb.view.ViewRootImpl@42c60780
   292 views, 0.00 kB of display lists, 3647 frames rendered
 
 
@@ -442,7 +442,7 @@ Total memory usage:
 
 Profile data in ms:
 
-	com.alipay.android.app.settings/com.alipay.android.app.settings.MainActivity/android.view.ViewRootImpl@4218b240
+	com.alipay.android.app.settings/com.alipay.android.app.settings.MainActivity/android.com.hzb.view.ViewRootImpl@4218b240
 	Draw	Process	Execute
 	9.99	23.59	0.62
 	7.24	12.76	0.86
@@ -467,7 +467,7 @@ Profile data in ms:
 
 View hierarchy:
 
-  com.alipay.android.app.settings/com.alipay.android.app.settings.MainActivity/android.view.ViewRootImpl@4218b240
+  com.alipay.android.app.settings/com.alipay.android.app.settings.MainActivity/android.com.hzb.view.ViewRootImpl@4218b240
   61 views, 0.00 kB of display lists, 20 frames rendered
 
 
@@ -534,10 +534,10 @@ Total DisplayList:  0.00 kB
 ** Graphics info for pid 986 [com.sohu.inputmethod.sogou] **
 Profile data in ms:
 
-	InputMethod/android.view.ViewRootImpl@426660a0
+	InputMethod/android.com.hzb.view.ViewRootImpl@426660a0
 View hierarchy:
 
-  InputMethod/android.view.ViewRootImpl@426660a0
+  InputMethod/android.com.hzb.view.ViewRootImpl@426660a0
   15 views, 0.00 kB of display lists
 
 
@@ -1029,7 +1029,7 @@ Total memory usage:
 
 Profile data in ms:
 
-	recentPanel/android.view.ViewRootImpl@42735340
+	recentPanel/android.com.hzb.view.ViewRootImpl@42735340
 	Draw	Process	Execute
 	0.02	1.92	0.94
 	0.02	1.53	0.76
@@ -1160,8 +1160,8 @@ Profile data in ms:
 	1.31	1.26	0.86
 	0.02	1.18	0.77
 
-	NFcEffectView/android.view.ViewRootImpl@42750d30
-	StatusBar/android.view.ViewRootImpl@4284dd68
+	NFcEffectView/android.com.hzb.view.ViewRootImpl@42750d30
+	StatusBar/android.com.hzb.view.ViewRootImpl@4284dd68
 	Draw	Process	Execute
 	0.32	2.45	0.72
 	0.71	15.57	1.29
@@ -1292,7 +1292,7 @@ Profile data in ms:
 	0.92	5.16	3.19
 	3.69	3.82	2.66
 
-	NavigationBar/android.view.ViewRootImpl@42873ad8
+	NavigationBar/android.com.hzb.view.ViewRootImpl@42873ad8
 	Draw	Process	Execute
 	1.43	1.67	1.17
 	0.42	0.39	0.86
@@ -1423,8 +1423,8 @@ Profile data in ms:
 	0.52	0.39	0.44
 	0.02	0.71	11.75
 
-	GestureBar/android.view.ViewRootImpl@428767f8
-	Keyguard/android.view.ViewRootImpl@420d8dc0
+	GestureBar/android.com.hzb.view.ViewRootImpl@428767f8
+	Keyguard/android.com.hzb.view.ViewRootImpl@420d8dc0
 	Draw	Process	Execute
 	1.02	1.94	2.43
 	1.17	1.86	1.07
@@ -1557,22 +1557,22 @@ Profile data in ms:
 
 View hierarchy:
 
-  recentPanel/android.view.ViewRootImpl@42735340
+  recentPanel/android.com.hzb.view.ViewRootImpl@42735340
   28 views, 0.00 kB of display lists, 342 frames rendered
 
-  NFcEffectView/android.view.ViewRootImpl@42750d30
+  NFcEffectView/android.com.hzb.view.ViewRootImpl@42750d30
   1 views, 0.00 kB of display lists
 
-  StatusBar/android.view.ViewRootImpl@4284dd68
+  StatusBar/android.com.hzb.view.ViewRootImpl@4284dd68
   307 views, 18.14 kB of display lists, 11002 frames rendered
 
-  NavigationBar/android.view.ViewRootImpl@42873ad8
+  NavigationBar/android.com.hzb.view.ViewRootImpl@42873ad8
   37 views, 0.54 kB of display lists, 1741 frames rendered
 
-  GestureBar/android.view.ViewRootImpl@428767f8
+  GestureBar/android.com.hzb.view.ViewRootImpl@428767f8
   25 views, 0.00 kB of display lists
 
-  Keyguard/android.view.ViewRootImpl@420d8dc0
+  Keyguard/android.com.hzb.view.ViewRootImpl@420d8dc0
   1 views, 0.00 kB of display lists, 4916 frames rendered
 
 
@@ -1660,10 +1660,10 @@ Total memory usage:
 
 Profile data in ms:
 
-	KeyguardScrim/android.view.ViewRootImpl@42721d80
+	KeyguardScrim/android.com.hzb.view.ViewRootImpl@42721d80
 View hierarchy:
 
-  KeyguardScrim/android.view.ViewRootImpl@42721d80
+  KeyguardScrim/android.com.hzb.view.ViewRootImpl@42721d80
   1 views, 0.00 kB of display lists
 
 

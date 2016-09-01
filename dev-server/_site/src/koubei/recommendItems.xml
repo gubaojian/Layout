@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View
+  screenUnit="720"
+  background="#FFFFFF"
+  width="720">
+
+  <View x="30"
+       y="30"
+       height="40"
+       width="8"
+       background="#F96269"/>
+  <TextView
+         x="50"
+         y="30"
+         height="40"
+         text="为你推荐"
+         textSize="36"/>
+
+ <IconTextView
+            height="40"
+            width="40"
+            x="550"
+            y="30"
+            text="0f49a"
+            textSize="42"
+            textColor="#F96269"
+            textAlign="center"/>
+  <TextView
+                x="600"
+                y="30"
+                width="120"
+                height="40"
+                text="换一批"
+                textColor="#F96269"
+                textSize="30"/>
+
+  <View width="208"
+          height="340"
+          x="30"
+          y="94">
+     <ImageView
+       width="208"
+       height="208"
+       imageUrl="https://img.alicdn.com/tps/i4/TB1ZxttKpXXXXXkaXXXSutbFXXX.jpg"/>
+       <TextView
+                     y="230"
+                     width="208"
+                     height="40"
+                     text="牛魔王西安美食"
+                     textSize="30"/>
+       <TextView
+                     y="278"
+                     width="208"
+                     height="32"
+                     text="常去的店"
+                     textColor="#888888"
+                     textSize="28"/>
+
+  </View>
+
+  <View width="208"
+          height="340"
+          x="256"
+          y="94">
+     <ImageView
+       width="208"
+       height="208"
+       imageUrl="https://img.alicdn.com/tps/i4/TB1v8rcKpXXXXXmXVXXSutbFXXX.jpg_640x480q100.jpg"/>
+       <TextView
+                     y="230"
+                     width="208"
+                     height="40"
+                     text="牛魔王西安美食"
+                     textSize="30"/>
+       <TextView
+                     y="278"
+                     width="208"
+                     height="32"
+                     text="常去的店"
+                     textColor="#888888"
+                     textSize="28"/>
+
+  </View>
+
+  <View width="208"
+          height="340"
+          x="482"
+          y="94">
+     <ImageView
+       width="208"
+       height="208"
+       imageUrl="https://img.alicdn.com/tps/TB1RuAcKXXXXXXnXVXXXXXXXXXX-492-680.jpg"/>
+       <TextView
+                     y="230"
+                     width="208"
+                     height="40"
+                     text="牛魔王西安美食"
+                     textSize="30"/>
+       <TextView
+                     y="278"
+                     width="208"
+                     height="32"
+                     text="常去的店"
+                     textColor="#888888"
+                     textSize="28"/>
+
+  </View>
+</View>

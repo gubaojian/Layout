@@ -1,0 +1,77 @@
+---
+layout: post
+title:  "Glue布局"
+date:   2016-06-21 10:46:27 +0800
+categories: jekyll update
+---
+
+### 基本的布局
+
+Glue元素分为布局元素和视图元素，布局元素采用View作为布局容器，视图元素通过x、y、width、height四个基本布局元素控制自己的位置。在Android平台上布局示例及实现方式如下:
+
+
+  ![Glue 布局方式示例](/img/ViewLayout.png)
+
+
+
+### 布局元素支持的单位
+
+    默认单位1，screenUnit对应的矢量单位，根据屏幕进行适配。
+
+    px单位，屏幕物理像素单位，并且支持100%
+
+    百分比，  100%  50% 分别占用父容器的inflate时的高度或者宽度的百分比
+
+    calc表达式， 如calc(100% - 20)
+
+
+#### 多屏幕适配
+
+
+   Xml布局文件根源元素有一个screenUnit属性，表示开发时基于的视图标准宽度，如视觉稿为750，则screenUnit写为750。其它元素按750的标准进行布局，无需进行单位换算。 Glue框架会在Xml转换成View对象时，对screenUnit标准结合屏幕宽度，采用按宽度等比缩放的模式，对默认坐标单位进行转换，适配设备屏幕。 示意图如下:
+
+   ![Glue 布局屏幕适配](/img/ScreenMedia.png)
+
+#### 布局示例
+
+   下面以支付宝首页为示例进行布局示例，
+
+   首页分为四个元素，TitleBar，功能入口，RecylerView TabBar四个元素构成。 主布局结构如下：
+
+{% highlight xml %}
+<?xml version="1.0" encoding="utf-8"?>
+<View
+    width="720"
+    height="100%"
+    screenUnit="720">
+   <View
+     width="720"
+     height="40"
+     desc="TitleBar"
+     background="#393A3B"/>
+  <View
+       width="720"
+       y="200"
+       height="200"
+       desc="功能入口"
+       background="#393A3B"/>
+   <RecyclerView
+         width="720"
+         y="240"
+         height="calc(100% - 296)"
+         desc="RecyclerView"/>
+   <View
+         width="720"
+         height="56"
+         desc="TabBar"/>
+</View>     
+
+{% endhighlight %}
+
+显示效果如下:
+
+
+
+[jekyll-docs]: http://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/

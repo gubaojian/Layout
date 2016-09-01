@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View
+  background="#FFFFFF"
+  screenUnit="720"
+  width="720">
+  <View
+    x="30"
+    y="30"
+    width="320"
+    height="476">
+    <ImageView
+      width="320"
+      height="320"
+      imageUrl="https://img.alicdn.com/tps/i4/TB1Hd.bKpXXXXb4XVXXSutbFXXX.jpg_1080x1800q75s0.jpg"/>
+    <TextView
+      y="330"
+      width="320"
+      height="50"
+      textSize="32"
+      text="楼外楼(唐河店)"/>
+    <TextView
+        y="380"
+        width="320"
+        height="40"
+        textSize="28"
+        textColor="#888888"
+        text="熟食 619m 人均26元"/>
+  <TextView
+          y="420"
+          width="320"
+          height="48"
+          textSize="32"
+          textColor="#F2626C"
+          text="9.7折扣"/>
+  </View>
+
+  <View
+    x="370"
+    y="30"
+    width="320"
+    height="476">
+    <ImageView
+      width="320"
+      height="320"
+      imageUrl="https://img.alicdn.com/tps/i4/TB1t7L6KpXXXXcUaXXXSutbFXXX.jpg_1080x1800q75s0.jpg"/>
+    <TextView
+      y="330"
+      width="320"
+      height="50"
+      textSize="32"
+      text="楼外楼(唐河店)"/>
+    <TextView
+        y="380"
+        width="320"
+        height="40"
+        textSize="28"
+        textColor="#888888"
+        text="熟食 619m 人均26元"/>
+  <TextView
+          y="420"
+          width="320"
+          height="48"
+          textSize="32"
+          textColor="#F2626C"
+          text="9.7折扣"/>
+  </View>
+</View>

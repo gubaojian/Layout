@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View
+  screenUnit="720"
+  >
+  <View
+        width="720"
+        height="1px"
+        background="#ECEDF0"/>
+     <ViewPager
+       y="30"
+       width="720"
+       height="160"
+       tag="topViewPager"
+       imgUrls="https://aecpm.alicdn.com/simba/img/TB1Yob5KpXXXXX9aXXXSutbFXXX.jpg;https://aecpm.alicdn.com/simba/img/TB1FJf_KpXXXXbdXXXXSutbFXXX.jpg;https://img.alicdn.com/imgextra/i3/5/TB2DsBdqpXXXXXyXXXXXXXXXXXX_!!5-0-yamato.jpg_300x300.jpg;https://aecpm.alicdn.com/simba/img/TB1xDdrKpXXXXcrXXXXSutbFXXX.jpg"/>
+
+  <PagerIndicator
+               width="720"
+               height="40"
+               y="155"
+               circleColor="#E4E5E6"
+               circleSelectColor="#1DAEFC"
+               circleSize="16"
+               viewPagerTag="topViewPager"/>
+    <View
+       y="30"
+       width="720"
+       height="1px"
+       background="#ECEDF0"/>
+    <View
+          y="190"
+          width="720"
+          height="1px"
+          background="#ECEDF0"/>
+   <View
+          y="220"
+          width="720"
+          height="1px"
+          background="#ECEDF0"/>
+</View>

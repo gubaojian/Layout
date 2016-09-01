@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View
+  width="720"
+  screenUnit="720"
+  background="#FFFFFF">
+
+ <WrapLayout
+   height="118"
+   gravity="left|centerVertical">
+   <TextView
+        x="30"
+        height="118"
+        textSize="50"
+        text="1,500.00"/>
+    <IconTextView
+       x="10"
+       width="60"
+       height="60"
+       text="0f424"
+       textSize="50"
+       textColor="#888888"
+       textAlign="center"/>
+ </WrapLayout>
+ <TextView
+    x="360"
+    width="280"
+    height="118"
+    text="开启账户安全险享100完保障保障保障"
+    textSize="28"
+    textColor="#888888"
+    lineBreakMode="tail"
+    textAlign="center"/>
+
+  <IconTextView
+     x="640"
+     width="60"
+     height="118"
+     text="0f125"
+     textSize="34"
+     textColor="#888888"
+     textAlign="center"/>
+
+
+</View>

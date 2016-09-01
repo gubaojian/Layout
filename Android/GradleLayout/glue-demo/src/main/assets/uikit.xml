@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View
+    width="320"
+    height="1500"
+    screenUnit="320">
+
+
+
+    <TextView
+        width="320"
+        height="40"
+        y = "20"
+        x="30"
+        text="测试：40 size"
+        textSize="40"
+        background="#898989"
+    />
+
+
+    <TextView
+        width="320"
+        height="60"
+        y = "70"
+        x="30"
+        text="测试：60 size"
+        textSize="60"
+        background="#898989"
+    />
+
+
+    <CheckBox
+     y="150"
+     width="100"
+     height="100"
+     text="复选框"/>
+
+
+    <RadioButton
+        y="200"
+        width="100"
+        height="100"
+        text="复选框" />
+
+
+    <ProgressBar
+        y="300"
+       width="100"
+       height="100"/>
+
+    <Switch
+     y="400"
+     x="20"
+     height="50"
+     width="200"
+     textOn="关闭"
+     text="开关测试"
+     textOff="打开"/>
+
+
+    <DatePicker
+        y="500"
+        x="20"
+        height="200"
+        width="200"
+        year="2017"
+        month="10"
+        day="10"/>
+
+    <NumberPicker
+        y="700"
+        x="20"
+        height="200"
+        width="200"
+        maxValue="2017"
+        minValue="0"
+        value="10"/>
+
+
+    <SeekBar
+        y="930"
+        x="20"
+        width="200"/>
+
+
+    <TimePicker
+        y="1000"
+        x="20"
+        width="200"
+     />
+
+</View>

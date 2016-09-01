@@ -1,16 +1,18 @@
 package com.efurture.glue.component;
 
 import android.content.Context;
-import android.net.Uri;
 import android.support.v4.view.PagerAdapter;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.efurture.glue.component.viewpager.LoopViewPager;
-import com.efurture.glue.ui.HybridView;
+import com.efurture.glue.ui.XmlView;
 import com.efurture.glue.engine.ViewInflater;
 import com.efurture.glue.utils.UriUtils;
+import com.efurture.glue.utils.ViewUtils;
+import com.efurture.glue.view.GImageView;
 
 import org.xml.sax.Attributes;
 
@@ -33,7 +35,7 @@ public class GViewPager extends  LoopViewPager {
     public void initViewAtts(Attributes attrs, ViewInflater inflater) {
         String xmlUrls = attrs.getValue("xmlUrls");
         if (xmlUrls != null){
-            final List<Uri> pages = UriUtils.toUris(xmlUrls, inflater.getUri());
+            final List<String> pages = UriUtils.toList(xmlUrls);
             setAdapter(new PagerAdapter() {
                 @Override
                 public int getCount() {
@@ -42,16 +44,16 @@ public class GViewPager extends  LoopViewPager {
 
                 @Override
                 public Object instantiateItem(ViewGroup container, int position) {
-                    HybridView hybridView = new HybridView(getContext());
-                    hybridView.load(pages.get(position));
+                    XmlView hybridView = ViewUtils.newHybridView(GViewPager.this);
+                    hybridView.loadUrl(pages.get(position));
                     container.addView(hybridView);
                     return hybridView;
                 }
 
                 @Override
                 public void destroyItem(ViewGroup container, int position, Object object) {
-                    if (object instanceof  HybridView){
-                        container.removeView((HybridView)object);
+                    if (object instanceof XmlView){
+                        container.removeView((XmlView)object);
                     }
                 }
 
@@ -61,6 +63,38 @@ public class GViewPager extends  LoopViewPager {
                 }
             });
         }
+
+        String imgUrls = attrs.getValue("imgUrls");
+        if(imgUrls != null){
+            final List<String> pages = UriUtils.toList(imgUrls);
+            setAdapter(new PagerAdapter() {
+                @Override
+                public int getCount() {
+                    return pages.size();
+                }
+
+                @Override
+                public Object instantiateItem(ViewGroup container, int position) {
+                    GImageView imageView = new GImageView(getContext());
+                    imageView.setImageUrl(pages.get(position));
+                    container.addView(imageView);
+                    return imageView;
+                }
+
+                @Override
+                public void destroyItem(ViewGroup container, int position, Object object) {
+                    if (object instanceof XmlView){
+                        container.removeView((XmlView)object);
+                    }
+                }
+
+                @Override
+                public boolean isViewFromObject(View view, Object object) {
+                    return view == object;
+                }
+            });
+        }
+
     }
 
 }

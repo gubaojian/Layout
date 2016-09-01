@@ -11,16 +11,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.efurture.glue.engine.ViewInflater;
-import com.efurture.glue.utils.ScreenUnit;
-
 public class CircleIndicator extends LinearLayout implements ViewPager.OnPageChangeListener{
 
 
     private int color = 0x8FFFFFFF;
     private int selectColor = Color.WHITE;
 
-    private int size = 10;
+    private int size = 16;
     private int selectSize = 16;
     private int margin = size;
 
@@ -29,22 +26,20 @@ public class CircleIndicator extends LinearLayout implements ViewPager.OnPageCha
 
     public CircleIndicator(Context context) {
         super(context);
+        initDefault();
     }
 
     public CircleIndicator(Context context, AttributeSet attrs) {
         super(context, attrs);
+        initDefault();
     }
 
-    /**
-     * protocol 松散的耦合
-     * */
-    public void initViewAtts(AttributeSet attrs, ViewInflater inflater) {
+
+    private void initDefault(){
         setOrientation(LinearLayout.HORIZONTAL);
         setGravity(Gravity.CENTER);
-        size = inflater.toUnit("4");
-        selectSize = inflater.toUnit("6");
-        margin = selectSize/2;
     }
+
 
 
     public void setViewPager(ViewPager viewPager) {
@@ -78,11 +73,13 @@ public class CircleIndicator extends LinearLayout implements ViewPager.OnPageCha
             }else{
                 shapeDrawable.getPaint().setColor(color);
             }
+
             if (params.height != size){
                 params.height = size;
                 params.width = size;
                 view.setLayoutParams(params);
             }
+            view.postInvalidate();
         }
     }
 

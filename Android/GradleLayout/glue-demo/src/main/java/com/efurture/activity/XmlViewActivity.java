@@ -11,15 +11,15 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.efurture.XmlViewUtils;
-import com.efurture.glue.ui.HybridListener;
-import com.efurture.glue.ui.HybridView;
+import com.efurture.glue.ui.XmlViewLoadListener;
+import com.efurture.glue.ui.XmlView;
 import com.google.furture.R;
 
 public class XmlViewActivity extends Activity {
 
 	public static final String ACTIVITY_LISTENER = "activityListener";
 
-	protected HybridView hybridView;
+	protected XmlView hybridView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +38,8 @@ public class XmlViewActivity extends Activity {
 		}
 
 		final View contentView = findViewById(android.R.id.content);
-		hybridView = (HybridView) findViewById(R.id.hybird_view);
-		hybridView.setHybridListener(new HybridListener() {
+		hybridView = (XmlView) findViewById(R.id.hybird_view);
+		hybridView.setXmlViewLoadListener(new XmlViewLoadListener() {
 			@Override
 			public void onLoadFailed() {
 				Toast.makeText(getBaseContext(), "Load Failed", Toast.LENGTH_SHORT).show();
@@ -50,7 +50,7 @@ public class XmlViewActivity extends Activity {
 
 			}
 		});
-		hybridView.load(uri);
+		hybridView.loadUrl(uri.toString());
 		XmlViewUtils.devTool(hybridView, this);
 
 

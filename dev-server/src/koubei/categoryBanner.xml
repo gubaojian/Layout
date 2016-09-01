@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View screenUnit="720"
+  background="#FFFFFF">
+  <ViewPager
+       width="720"
+       height="352"
+       tag="topViewPager"
+       xmlUrls="./koubei/categoryBannerPagerItem.xml;./koubei/categoryBannerPagerItem.xml;./koubei/categoryBannerPagerItem.xml;./koubei/categoryBannerPagerItem.xml"/>
+
+  <PagerIndicator
+               width="720"
+               height="20"
+               y="314"
+               circleColor="#CDCECF"
+               circleSelectColor="#7D7E7F"
+               circleSize="12"
+               viewPagerTag="topViewPager"/>
+</View>

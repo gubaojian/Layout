@@ -59,6 +59,15 @@ public class MainActivity extends Activity {
 			}
 		});
 
+		findViewById(R.id.textview).setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getBaseContext(), XmlViewActivity.class);
+				intent.putExtra("url", XmlViewUtils.xmlUri("textView").toString());
+				startActivity(intent);
+			}
+		});
+
 		findViewById(R.id.calc_func).setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -73,6 +82,15 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				Intent intent = new Intent(getBaseContext(), XmlViewActivity.class);
 				intent.putExtra("url", XmlViewUtils.xmlUri("refresh").toString());
+				startActivity(intent);
+			}
+		});
+
+		findViewById(R.id.uikit).setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getBaseContext(), XmlViewActivity.class);
+				intent.putExtra("url", XmlViewUtils.xmlUri("uikit").toString());
 				startActivity(intent);
 			}
 		});

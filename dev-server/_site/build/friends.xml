@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View
+    width="720"
+    height="100%"
+    screenUnit="720">
+   <View
+     width="720"
+     height="80"
+     background="#393A3B">
+     <!-- 左侧图标 -->
+     <IconTextView
+        y="8"
+        x="30"
+        height="50"
+        width="50"
+        text="0f453"
+        textSize="48"
+        textColor="#FFFFFF">
+     </IconTextView>
+
+     <TextView
+        x="80"
+        y="8"
+        text="朋友"
+        height="50"
+        textSize="32"
+        textColor="#FFFFFF">
+     </TextView>
+
+     <!-- 右侧三个图标 -->
+
+     <IconTextView
+        x="500"
+        y="6"
+        height="50"
+        width="50"
+        text="0f213"
+        textSize="48"
+        textColor="#FFFFFF"
+        tag="top_person_logo">
+     </IconTextView>
+     <IconTextView
+        x="570"
+        y="6"
+        height="50"
+        width="50"
+        text="0f4a4"
+        textSize="48"
+        textColor="#FFFFFF"
+        tag="top_search_logo">
+     </IconTextView>
+     <IconTextView
+        x="640"
+        y="6"
+        height="50"
+        width="50"
+        text="0f218"
+        textSize="48"
+        textColor="#FFFFFF"
+        tag="top_add_friend_logo">
+     </IconTextView>
+    <!-- 下面四个入口 -->
+  </View>
+
+  <RecycleView
+    y="80"
+    width="720"
+    height="calc(100% - 176)"
+    layout="sticky"
+    tag="recycleView"/>
+
+  <View
+    y="calc(100% - 96)"
+    height="96"
+    width="720"
+    background="#FFFFFF">
+    <!-- 细线  -->
+    <View
+      width="720"
+      height="1px"
+      background="#E0E1E2"/>
+    <!-- 4个Tab  -->
+    <IconTextView
+       height="60"
+       width="180"
+       y="5"
+       text="0f447"
+       textSize="52"
+       textColor="#888888"
+       textAlign="center"
+       tag="homeTabTextIcon">
+    </IconTextView>
+    <TextView
+       y="60"
+       text="支付宝"
+       height="30"
+       width="180"
+       textSize="24"
+       textColor="#888888"
+       textAlign="center"
+       tag="homeTabText">
+    </TextView>
+
+
+    <IconTextView
+       height="60"
+       width="180"
+       y="5"
+       x="180"
+       text="0f3fb"
+       textSize="52"
+       textColor="#888888"
+       textAlign="center"
+       tag="koubeiTabTextIcon">
+    </IconTextView>
+
+    <TextView
+       y="60"
+       x="180"
+       text="口碑"
+       height="30"
+       width="180"
+       textSize="24"
+       textColor="#888888"
+       textAlign="center"
+       tag="koubeiTabText">
+    </TextView>
+
+    <IconTextView
+       height="60"
+       width="180"
+       y="5"
+       x="360"
+       text="0f47f"
+       textSize="52"
+       textColor="#1DABEF"
+       textAlign="center"
+       tag="friendsTabTextIcon">
+    </IconTextView>
+    <TextView
+       y="60"
+       x="360"
+       text="朋友"
+       height="30"
+       width="180"
+       textSize="24"
+       textColor="#1DABEF"
+       textAlign="center"
+       tag="friendsTabText">
+    </TextView>
+
+    <IconTextView
+       height="60"
+       width="180"
+       y="5"
+       x="540"
+       text="0f43c"
+       textSize="52"
+       textColor="#888888"
+       textAlign="center"
+       tag="wealthTabTextIcon">
+    </IconTextView>
+    <TextView
+       y="60"
+       x="540"
+       text="我的"
+       height="30"
+       width="180"
+       textSize="24"
+       textColor="#888888"
+       textAlign="center"
+       tag="wealthTabText">
+    </TextView>
+  </View>
+</View>

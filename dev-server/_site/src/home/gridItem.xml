@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View background="#FFFFFF">
+  <View
+    width="180"
+    height="180">
+    <ImageView
+      y="40"
+      x="60"
+      width="60"
+      height="60"
+      imageUrl="https://t.alipayobjects.com/images/rmsweb/T1TH4gXohcXXXXXXXX.png"/>
+    <TextView
+      y="100"
+      width="180"
+      textSize="32"
+      textAlign="center"
+      text="网商银行"/>
+  </View>
+</View>

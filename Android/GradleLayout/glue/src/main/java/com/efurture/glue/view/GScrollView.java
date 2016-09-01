@@ -5,8 +5,8 @@ import android.util.AttributeSet;
 import android.widget.ScrollView;
 
 import com.efurture.glue.engine.ViewInflater;
-import com.efurture.glue.ui.HybridView;
-import com.efurture.glue.utils.UriUtils;
+import com.efurture.glue.ui.XmlView;
+import com.efurture.glue.utils.ViewUtils;
 
 import org.xml.sax.Attributes;
 
@@ -34,17 +34,17 @@ public class GScrollView extends ScrollView {
             post(new Runnable() {
                 @Override
                 public void run() {
-                    getHybridView().load(UriUtils.toUri(xmlUrl, inflater.getUri()));
+                    getHybridView().loadUrl(xmlUrl);
                 }
             });
         }
     }
 
-    private HybridView hybridView;
+    private XmlView hybridView;
 
-    public HybridView getHybridView() {
+    public XmlView getHybridView() {
         if (hybridView == null){
-            hybridView = new HybridView(getContext());
+            hybridView = ViewUtils.newHybridView(this);
             addView(hybridView);
         }
         return hybridView;

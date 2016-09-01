@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.view.View;
 
-import com.efurture.glue.ui.HybridView;
+import com.efurture.glue.ui.XmlView;
 
 /**
  * Created by jianbai.gbj on 15/11/2.
@@ -16,12 +16,12 @@ public class XmlViewUtils {
 
     public static Uri xmlUri(String name) {
         //return Uri.parse(String.format("file:///android_asset/%s.xml", name));
-       return  Uri.parse(String.format("http://10.15.17.12:8090/%s.xml", name));
+       return  Uri.parse(String.format("http://10.15.16.166:8080/%s.xml", name));
 
     }
 
 
-    public static void  devTool(HybridView hybridView, final Activity activity) {
+    public static void  devTool(XmlView hybridView, final Activity activity) {
         hybridView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -6,7 +6,7 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-import com.efurture.glue.el.ElUtil;
+import com.efurture.glue.bind.ElUtil;
 import com.squareup.picasso.Picasso;
 
 import org.xml.sax.Attributes;
@@ -21,25 +21,32 @@ public class GImageView extends ImageView{
 	
 	public GImageView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
+		initDefault();
 	}
 
 	public GImageView(Context context, AttributeSet attrs) {
 		super(context, attrs);
+		initDefault();
 	}
 
 	public GImageView(Context context) {
 		super(context);
+		initDefault();
+	}
+
+	private void initDefault(){
+           setScaleType(ImageView.ScaleType.CENTER_CROP);
 	}
 
 
 	public void initViewAtts(Attributes attrs) {
 		 imageUrlAttr = attrs.getValue("imageUrl");
 		 placeHolder = attrs.getValue("placeHolder");
-		 if (imageUrlAttr != null) {
+		 if (imageUrlAttr != null && !ElUtil.isEl(imageUrlAttr)) {
 		    setImageUrl(imageUrlAttr);
 		 }
 		 String scaleType = attrs.getValue("scaleType");
-		 if (scaleType != null) {
+		 if (!TextUtils.isEmpty(scaleType)) {
 			 ScaleType type = ScaleType.FIT_XY;
 			 if ("center".equals(scaleType)) {
 				 type = ScaleType.FIT_CENTER;
@@ -53,8 +60,6 @@ public class GImageView extends ImageView{
 				 type = ScaleType.FIT_END;
 			 }
              setScaleType(type);
-		 }else {
-		     setScaleType(ScaleType.FIT_XY);
 		 }
 	}
 
@@ -75,5 +80,15 @@ public class GImageView extends ImageView{
 			Picasso.with(getContext()).load(Uri.parse(imageUrl)).into(this);
 		}
 	}
-	
+
+	public String getImageUrlAttr() {
+		return imageUrlAttr;
+	}
+
+	public String getPlaceHolder() {
+		return placeHolder;
+	}
+
+
+
 }

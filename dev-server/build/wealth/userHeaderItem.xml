@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View
+  width="720"
+  screenUnit="720"
+  background="#FFFFFF">
+
+  <ImageView
+    x="30"
+    y="30"
+    width="120"
+    height="120"
+    imageUrl="https://t.alipayobjects.com/images/rmsweb/T1TH4gXohcXXXXXXXX.png"/>
+ <TextView
+      x="170"
+      y="30"
+      width="500"
+      height="40"
+      textSize="34"
+      text="剑白"/>
+  <TextView
+     x="170"
+     y="70"
+     height="40"
+     textSize="26"
+     textColor="#888888"
+     text="jianbai.gbj@alibaba-inc.com"/>
+
+  <LinearLayout
+    x="170"
+    y="110"
+    height="40"
+    gravity="left|centerVertical">
+
+    <IconTextView
+      width="40"
+      height="40"
+      text="0f481"
+      textSize="36"
+       textColor="#2d78f4"
+       textAlign="center"/>
+     <TextView
+        x="5"
+        height="40"
+        textSize="26"
+        textColor="#888888"
+        text="相册"/>
+      <View
+           x="20"
+           width="2"
+           height="35"
+           background="#ECEDF0"/>
+
+     <IconTextView
+        x="20"
+        width="40"
+        height="40"
+        text="0f442"
+        textSize="36"
+        textColor="#2d78f4"
+        textAlign="center"/>
+      <TextView
+         x="5"
+         height="40"
+         textSize="26"
+         textColor="#888888"
+         text="收藏"/>
+       <View
+            x="20"
+            width="2"
+            height="35"
+            background="#ECEDF0"/>
+
+      <IconTextView
+         x="20"
+         width="40"
+         height="40"
+         text="0f3c6"
+         textSize="36"
+         textColor="#2d78f4"
+         textAlign="center"/>
+       <TextView
+          x="5"
+          height="40"
+          textSize="26"
+          textColor="#888888"
+          text="会员中心"/>
+
+ </LinearLayout>
+
+
+<View
+     y="180"
+     width="720"
+     height="1px"
+     background="#ECEDF0"/>
+</View>

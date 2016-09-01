@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View
+  width="720"
+  screenUnit="720"
+  background="#FFFFFF">
+
+  <ImageView
+    x="20"
+    y="20"
+    width="88"
+    height="88"
+    imageUrl="https://t.alipayobjects.com/images/rmsweb/T1TH4gXohcXXXXXXXX.png"/>
+ <TextView
+      x="128"
+      width="530"
+      height="128"
+      textSize="32"
+      text="生活圈"/>
+  <IconTextView
+     x="640"
+     width="60"
+     height="128"
+     text="0f125"
+     textSize="40"
+     textColor="#888888"
+     textAlign="center"/>
+
+<View
+     y="128"
+     width="720"
+     height="1px"
+     background="#ECEDF0"/>
+</View>

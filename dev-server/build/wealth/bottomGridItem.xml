@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View
+  background="#FFFFFF"
+  screenUnit="720"
+  width="720">
+  <View
+    width="360"
+    height="126">
+    <ImageView
+      y="25"
+      x="30"
+      width="48"
+      height="48"
+      imageUrl="https://t.alipayobjects.com/images/rmsweb/T1TH4gXohcXXXXXXXX.png"/>
+    <TextView
+      x="100"
+      y="25"
+      width="240"
+      height="40"
+      textSize="34"
+      text="余额宝"/>
+    <TextView
+      x="100"
+      y="65"
+      width="240"
+      height="40"
+      textSize="28"
+      textColor="#888888"
+      text="+0.80"/>
+  </View>
+
+  <View
+    x="360"
+    width="360"
+    height="126">
+    <ImageView
+      y="25"
+      x="30"
+      width="48"
+      height="48"
+      imageUrl="https://t.alipayobjects.com/images/rmsweb/T1TH4gXohcXXXXXXXX.png"/>
+    <TextView
+      x="100"
+      y="25"
+      width="240"
+      height="40"
+      textSize="34"
+      text="招财宝"/>
+    <TextView
+      x="100"
+      y="65"
+      width="240"
+      height="40"
+      textSize="28"
+      textColor="#888888"
+      text="定期理财"/>
+  </View>
+  <View x="360"
+        height="126"
+        width="1px"
+        background="#ECEDF0"/>
+  <View y="126"
+        height="1px"
+        width="720"
+        background="#ECEDF0"/>
+</View>

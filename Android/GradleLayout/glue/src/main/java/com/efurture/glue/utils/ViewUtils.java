@@ -1,21 +1,28 @@
 package com.efurture.glue.utils;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.StateListDrawable;
 import android.text.TextUtils;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 
 import com.efurture.glue.engine.ViewInflater;
 import com.efurture.glue.engine.XmlException;
+import com.efurture.glue.ui.XmlView;
 
 import org.xml.sax.Attributes;
 
+import java.io.ByteArrayInputStream;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 /**
  * Created by furture on 16/6/1.
@@ -23,46 +30,165 @@ import java.util.Map;
 public class ViewUtils {
 
 
-    private static Map<Class, ViewAttrable> attrableMap = new HashMap<Class, ViewAttrable>();
+
+    private static  final Pattern GRAVITY_PATTERN = Pattern.compile("\\|");
+
+    /**
+     * 快捷扩展的infaler方法
+     * */
+    public static int getGravity(String gravityStr){
+        int  gravity = 0;
+        String[] gravities = GRAVITY_PATTERN.split(gravityStr);
+        for(String gravityItem : gravities){
+             String item = gravityItem.trim();
+             if("top".equals(item)){
+                 gravity = gravity | Gravity.TOP;
+             }else if("centerVertical".equals(item)){
+                gravity = gravity | Gravity.CENTER_VERTICAL;
+             }else if("centerHorizontal".equals(item)){
+                gravity = gravity | Gravity.CENTER_HORIZONTAL;
+             }else if("left".equals(item)){
+                 gravity = gravity | Gravity.LEFT;
+             }else if("right".equals(item)){
+                gravity = gravity | Gravity.RIGHT;
+             }else if("start".equals(item)){
+                gravity = gravity | Gravity.START;
+             }else if("end".equals(item)){
+                 gravity = gravity | Gravity.END;
+             }else if("center".equals(item)){
+                gravity = gravity | Gravity.CENTER;
+             }
+        }
+        return  gravity;
+    }
+
+
+    /**
+     * 快捷扩展的infaler方法
+     * */
+    public static View inflate(Context context, String xml, final ViewGroup parent){
+        return  inflate(context, xml, parent, parent != null);
+    }
+
+    public static View inflate(Context context, String xml, final ViewGroup parent, boolean attachRoot){
+        ByteArrayInputStream stream = new ByteArrayInputStream(xml.getBytes());
+        try {
+            return  ViewInflater.from(context).inflate(stream, parent, attachRoot);
+        } catch (Exception e) {
+            throw  new XmlException(e);
+        }
+    }
 
 
 
 
+
+    public static boolean isDebugable(Context context) {
+        return  true;
+        /**
+        try {
+            ApplicationInfo info= context.getApplicationInfo();
+            return (info.flags& ApplicationInfo.FLAG_DEBUGGABLE)!=0;
+        } catch (Exception e) {
+            return  false;
+        }*/
+    }
+
+
+    /**
+     * 创建hybridview, 继承资源加载器
+     * */
+    public static XmlView newHybridView(View context){
+         XmlView hybridView = new XmlView(context.getContext());
+         XmlView parentHybrid = findParent(context);
+        if(parentHybrid != null){
+            hybridView.setResourceLoader(parentHybrid.getResourceLoader());
+        }
+        return  hybridView;
+    }
+
+
+
+    /**
+     * 查找 父容器中是否已经有XmlView
+     * */
+    public static XmlView findParent(View view){
+        XmlView hybridView = null;
+        while (view.getParent() != null){
+            if(view.getParent() instanceof  View){
+                view = (View) view.getParent();
+                if(view instanceof XmlView){
+                    hybridView = (XmlView) view;
+                }
+            }else{
+                break;
+            }
+        }
+        return hybridView;
+    }
 
     /**
      * @param  view
      * @param  attrs
      *
-     * 初始化View的非布局属性
+     * 初始化View的非布局属性, 及默认的公共属性
      * */
     public  static void initAttrs(View view, Attributes attrs, ViewInflater inflater){
 
         /**
          * 布局属性
          * */
-        View parent = (View) view.getParent();
-        if(parent != null){
+
+        ViewGroup.LayoutParams params = view.getLayoutParams();
+        if(params != null){
             String x = attrs.getValue("x");
             String y = attrs.getValue("y");
             String width = attrs.getValue("width");
             String height = attrs.getValue("height");
-            ViewGroup.LayoutParams params = view.getLayoutParams();
             if (params instanceof ViewGroup.MarginLayoutParams) {
                 ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) params;
-                if (!TextUtils.isEmpty(x)) {
-                    layoutParams.leftMargin =  inflater.toUnit(x, parent, true);
-                }
+                View parent = (View) view.getParent();
+                if(parent != null){
+                    if (!TextUtils.isEmpty(x)) {
+                        layoutParams.leftMargin =  inflater.toUnit(x, parent, true);
+                    }
 
-                if (!TextUtils.isEmpty(y)) {
-                    layoutParams.topMargin =  inflater.toUnit(y, parent, false);
-                }
+                    if (!TextUtils.isEmpty(y)) {
+                        layoutParams.topMargin =  inflater.toUnit(y, parent, false);
+                    }
 
-                if (!TextUtils.isEmpty(width)) {
-                    layoutParams.width =  inflater.toUnit(width, parent, true);
-                }
+                    if (!TextUtils.isEmpty(width)) {
+                        layoutParams.width =  inflater.toUnit(width, parent, true);
+                    }
 
-                if (!TextUtils.isEmpty(height)) {
-                    layoutParams.height =  inflater.toUnit(height, parent, false);
+                    if (!TextUtils.isEmpty(height)) {
+                        layoutParams.height =  inflater.toUnit(height, parent, false);
+                    }
+                }else {
+                    if (!TextUtils.isEmpty(x)) {
+                        layoutParams.leftMargin =  inflater.toUnit(x);
+                    }
+
+                    if (!TextUtils.isEmpty(y)) {
+                        layoutParams.topMargin =  inflater.toUnit(y);
+                    }
+
+                    if (!TextUtils.isEmpty(width)) {
+                        layoutParams.width =  inflater.toUnit(width);
+                    }
+
+                    if (!TextUtils.isEmpty(height)) {
+                        layoutParams.height =  inflater.toUnit(height);
+                    }
+                }
+            }
+
+            String gravity = attrs.getValue("gravity");
+            if(gravity != null){
+                if(params instanceof FrameLayout.LayoutParams){
+                    ((FrameLayout.LayoutParams) params).gravity = getGravity(gravity);
+                }else if(params instanceof LinearLayout.LayoutParams){
+                     ((LinearLayout.LayoutParams) params).gravity = getGravity(gravity);
                 }
             }
         }
@@ -160,9 +286,8 @@ public class ViewUtils {
                 throw  new XmlException(e.getTargetException());
             }
         }
-
-
     }
+    private static Map<Class, ViewAttrable> attrableMap = new HashMap<Class, ViewAttrable>();
 
 
 

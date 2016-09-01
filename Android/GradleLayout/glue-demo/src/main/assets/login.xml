@@ -159,4 +159,13 @@
             textSize="18"/>
     </View>
 
+    <TextView
+        width="80"
+        height="40"
+        y = "400"
+        x="8"
+        text="测试："
+        textSize="80"
+    />
+
 </View>
