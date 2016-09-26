@@ -53,7 +53,8 @@
 	importClass("com.efurture.gule.hybrid.adapter.MultiTypeAdapter");
 	importClass("android.widget.PopupWindow");
 	importClass("android.view.View.OnClickListener");
-	importClass("com.efurture.gule.hybrid.ui.HPopupWindow");
+	importClass("com.efurture.glue.ui.XmlPopupWindow");
+	importClass("com.efurture.glue.ui.XmlDialog");
 
 	var homeUrl = "./alipay.xml";
 	var gridItemXml = __webpack_require__(1);
@@ -201,9 +202,15 @@
 	        popupWindow.dismiss();
 	        popupWindow = null;
 	      }
-	      popupWindow = new HPopupWindow(activity, addPopupMenuXml);
+	      popupWindow = new XmlPopupWindow(activity, addPopupMenuXml);
 	      popupWindow.showAsDropDown(addFriendView);
 	    }));
+
+	    ui.onClick("top_search_logo", function (view) {
+	      var dialog = new XmlDialog(activity);
+	      dialog.setXml(addPopupMenuXml);
+	      dialog.show();
+	    });
 
 	    //tab 事件
 	    _self.bindTabEvent(tabName);

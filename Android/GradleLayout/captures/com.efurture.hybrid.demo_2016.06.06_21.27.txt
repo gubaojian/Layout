@@ -1,7 +1,7 @@
 Applications Graphics Acceleration Info:
 Uptime: 36622110 Realtime: 36622110
 
-** Graphics info for pid 21335 [com.efurture.hybrid.demo] **
+** Graphics info for pid 21335 [com.efurture.hybridManager.demo] **
 
 Stats since: 15164719695680ns
 Total frames rendered: 2854
@@ -36,7 +36,7 @@ Total memory usage:
 
 Profile data in ms:
 
-	com.efurture.hybrid.demo/com.efurture.gule.hybrid.HybridActivity/android.com.hzb.view.ViewRootImpl@57cfd17 (visibility=0)
+	com.efurture.hybridManager.demo/com.efurture.gule.hybridManager.HybridActivity/android.com.hzb.view.ViewRootImpl@57cfd17 (visibility=0)
 Stats since: 15164719695680ns
 Total frames rendered: 2854
 Janky frames: 2187 (76.63%)
@@ -51,7 +51,7 @@ Number Slow issue draw commands: 1699
 
 View hierarchy:
 
-  com.efurture.hybrid.demo/com.efurture.gule.hybrid.HybridActivity/android.com.hzb.view.ViewRootImpl@57cfd17
+  com.efurture.hybridManager.demo/com.efurture.gule.hybridManager.HybridActivity/android.com.hzb.view.ViewRootImpl@57cfd17
   10 views, 10.75 kB of display lists
 
 

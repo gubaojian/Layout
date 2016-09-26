@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 
 import com.efurture.glue.GLog;
-import com.efurture.gule.hybrid.Hybrid;
+import com.efurture.gule.hybrid.HybridManager;
 import com.efurture.gule.hybrid.HybridActivity;
 import com.efurture.gule.hybrid.HybridView;
 
@@ -32,8 +32,8 @@ public class NavApi {
 
     public void toUrl(String url, String className, boolean finish){
         if(activity instanceof HybridActivity){
-            Hybrid hybrid = ((HybridActivity) activity).getHybrid();
-            HybridView hybridView = hybrid.getHybridView();
+            HybridManager hybridManager = ((HybridActivity) activity).getHybridManager();
+            HybridView hybridView = hybridManager.getHybridView();
             url = hybridView.getResourceLoader().toAbsPageUrl(url).toString();
         }
         try {

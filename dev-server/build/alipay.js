@@ -21,7 +21,8 @@
   importClass("com.efurture.gule.hybrid.adapter.MultiTypeAdapter");
   importClass("android.widget.PopupWindow");
   importClass("android.view.View.OnClickListener");
-  importClass("com.efurture.gule.hybrid.ui.HPopupWindow");
+  importClass("com.efurture.glue.ui.XmlPopupWindow");
+  importClass("com.efurture.glue.ui.XmlDialog");
   var homeUrl = "./alipay.xml";
   var gridItemXml = __webpack_require__(1);
   var listViewGridItemXml = __webpack_require__(2);
@@ -149,9 +150,14 @@
     popupWindow.__c("dismiss");
     popupWindow = null;
   }
-  popupWindow = new HPopupWindow(activity, addPopupMenuXml);
+  popupWindow = new XmlPopupWindow(activity, addPopupMenuXml);
   popupWindow.__c("showAsDropDown", addFriendView);
 }));
+  ui.__c("onClick", "top_search_logo", function(view) {
+  var dialog = new XmlDialog(activity);
+  dialog.__c("setXml", addPopupMenuXml);
+  dialog.__c("show");
+});
   _self.__c("bindTabEvent", tabName);
 }};
   hybridView.__s("onLoad", function(result) {

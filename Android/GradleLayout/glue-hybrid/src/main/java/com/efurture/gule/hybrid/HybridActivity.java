@@ -12,7 +12,7 @@ import android.text.TextUtils;
 public class HybridActivity extends AppCompatActivity {
 
 
-    Hybrid hybrid;
+    HybridManager hybridManager;
 
 
     @Override
@@ -21,10 +21,10 @@ public class HybridActivity extends AppCompatActivity {
 
         HybridView hybridView = new HybridView(this);
         setContentView(hybridView);
-        hybrid = new Hybrid(this);
-        hybrid.setPageUrl(parsePageUrl());
-        hybrid.setHybridView(hybridView);
-        hybrid.init();
+        hybridManager = new HybridManager(this);
+        hybridManager.setPageUrl(parsePageUrl());
+        hybridManager.setHybridView(hybridView);
+        hybridManager.init();
     }
 
 
@@ -32,8 +32,8 @@ public class HybridActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        if(hybrid != null){
-            hybrid.onResume();
+        if(hybridManager != null){
+            hybridManager.onResume();
         }
     }
 
@@ -42,8 +42,8 @@ public class HybridActivity extends AppCompatActivity {
 
     @Override
     protected void onPause() {
-        if(hybrid != null){
-            hybrid.onPause();
+        if(hybridManager != null){
+            hybridManager.onPause();
         }
         super.onPause();
     }
@@ -60,8 +60,8 @@ public class HybridActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(hybrid != null){
-            hybrid.onActivityResult(requestCode, resultCode, data);
+        if(hybridManager != null){
+            hybridManager.onActivityResult(requestCode, resultCode, data);
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
@@ -69,8 +69,8 @@ public class HybridActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
-        if(hybrid != null){
-            hybrid.onDestroy();
+        if(hybridManager != null){
+            hybridManager.onDestroy();
         }
         super.onDestroy();
     }
@@ -78,13 +78,13 @@ public class HybridActivity extends AppCompatActivity {
 
 
     public final boolean importApi(String module){
-          return hybrid.importApi(module);
+          return hybridManager.importApi(module);
     }
 
 
 
-    public Hybrid getHybrid() {
-        return hybrid;
+    public HybridManager getHybridManager() {
+        return hybridManager;
     }
 
     protected String parsePageUrl() {

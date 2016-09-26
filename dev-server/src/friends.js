@@ -106,7 +106,7 @@ var page = {
             if(position == 29){
               return 'NormalCellBottom';
             }
-
+            
             return 'NormalCellMiddle';
         }
       };

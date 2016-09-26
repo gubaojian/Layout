@@ -7,15 +7,14 @@ import android.view.View;
 
 import com.efurture.glue.engine.ViewFactory;
 import com.efurture.glue.view.GIconTextView;
-import com.efurture.glue.view.GStickyRecycleView;
 import com.efurture.gule.hybrid.HybridActivity;
-import com.efurture.gule.hybrid.ui.HPopupWindow;
+import com.efurture.glue.ui.XmlPopupWindow;
 
 public class MainActivity extends AppCompatActivity {
 
 
 
-    String domain  = "http://10.15.17.26:8888/";
+    String domain  = "http://10.15.17.223:8888/";
 
 
     @Override
@@ -47,6 +46,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        HPopupWindow.class.getName();
+        XmlPopupWindow.class.getName();
     }
 }

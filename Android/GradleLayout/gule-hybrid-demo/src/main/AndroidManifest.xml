@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.efurture.gule.hybrid.HybridActivity"
+            android:name="com.efurture.gule.hybridManager.HybridActivity"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -29,7 +29,7 @@
                 <data
                     android:host="go"
                     android:path="/"
-                    android:scheme="hybrid" />
+                    android:scheme="hybridManager" />
             </intent-filter>
         </activity>
         <activity

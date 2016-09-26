@@ -24,7 +24,7 @@ import java.util.Set;
  *
  * api默认的lifecycle
  */
-public  class Hybrid extends ApiLifecycle {
+public  class HybridManager extends ApiLifecycle {
 
     private static final String ACTIVITY_LISTENER = "activityListener";
 
@@ -41,11 +41,11 @@ public  class Hybrid extends ApiLifecycle {
 
     private HashMap<String, Object> initedLocalApi;
 
-    private String globalScript;
+    private static String globalScript;
 
 
 
-    public Hybrid(Activity activity) {
+    public HybridManager(Activity activity) {
         this.activity = activity;
         this.initedLocalApi = new HashMap<>();
     }
@@ -74,11 +74,13 @@ public  class Hybrid extends ApiLifecycle {
         resourceLoader.setPageUrl(pageUrl);
         duktapeEngine = new DuktapeEngine();
         duktapeEngine.put("activity", activity);
-        duktapeEngine.put("hybrid",  this);
+        duktapeEngine.put("hybridManager",  this);
         hybridView.setResourceLoader(resourceLoader);
         duktapeEngine.put("hybridView",  hybridView);
         Context context = activity.getApplicationContext();
-        String globalScript = AssetUtils.read(context, "hybrid.js");
+        if(globalScript == null){
+            globalScript = AssetUtils.read(context, "hybrid.js");
+        }
         duktapeEngine.execute(globalScript);
         if(pageUrl != null){
             resourceLoader.loadUrl(pageUrl, new ResourceLoader.Callback() {
@@ -94,8 +96,6 @@ public  class Hybrid extends ApiLifecycle {
                 }
             });
         }
-
-
     }
 
 
