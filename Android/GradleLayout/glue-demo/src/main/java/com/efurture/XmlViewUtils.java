@@ -15,8 +15,8 @@ public class XmlViewUtils {
 
 
     public static Uri xmlUri(String name) {
-        //return Uri.parse(String.format("file:///android_asset/%s.xml", name));
-       return  Uri.parse(String.format("http://10.15.16.166:8080/%s.xml", name));
+        return Uri.parse(String.format("file:///android_asset/%s.xml", name));
+       //return  Uri.parse(String.format("http://10.15.17.223:8080/%s.xml", name));
 
     }
 

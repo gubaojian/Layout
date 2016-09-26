@@ -12,6 +12,7 @@ import android.widget.EditText;
 
 import com.efurture.glue.bind.ElUtil;
 import com.efurture.glue.engine.ViewInflater;
+import com.efurture.glue.utils.StateUtils;
 
 import org.xml.sax.Attributes;
 
@@ -62,18 +63,21 @@ public class GEditText extends  EditText {
 
         String textColor = attrs.getValue("textColor");
         if(textColor != null){
-            setTextColor(Color.parseColor(textColor));
+            String selectTextColor = attrs.getValue("selectTextColor");
+            if(selectTextColor == null){
+                setTextColor(Color.parseColor(textColor));
+            }else{
+                setTextColor(StateUtils.getColorStateList(textColor, selectTextColor));
+            }
         }
+
+
 
         String hintColor = attrs.getValue("hintColor");
         if(hintColor != null){
             setHintTextColor(Color.parseColor(hintColor));
         }
 
-        String highlightedTextColor = attrs.getValue("highlightColor");
-        if (highlightedTextColor != null) {
-            setHighlightColor(Color.parseColor(highlightedTextColor));
-        }
 
         String fontStyle = attrs.getValue("fontStyle");
         String fontName = attrs.getValue("font");
@@ -105,15 +109,8 @@ public class GEditText extends  EditText {
 
         String alignment = attrs.getValue("textAlign");
         if (alignment != null) {
-            String verticalAlignment =  attrs.getValue("verticalAlign");
             int verticalGravity =  Gravity.CENTER_VERTICAL;
-            if (verticalAlignment != null){
-                if("top".equals(verticalGravity)){
-                    verticalGravity = Gravity.TOP;
-                }else if ("bottom".equals(alignment)) {
-                    verticalGravity = Gravity.BOTTOM;
-                }
-            }
+
             int gravity = Gravity.LEFT |verticalGravity;
             if ("center".equals(alignment)) {
                 gravity = Gravity.CENTER_HORIZONTAL | verticalGravity;
@@ -146,6 +143,8 @@ public class GEditText extends  EditText {
                 setInputType(InputType.TYPE_CLASS_NUMBER|InputType.TYPE_NUMBER_VARIATION_PASSWORD);
             }
         }
+
+
     }
 
 

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    width="320"
+    height="match"
+    screenUnit="320">
+
+    <View
+        width="320"
+        bottom="10"
+        screenUnit="320">
+
+        <DatePicker
+            width="300"
+            y="10"
+            x = "10"
+            text="checkBox Text"
+            year="2016"
+            month="2"
+            day="10"
+            textSize="18"/>
+
+
+    </View>
+</ScrollView>
+

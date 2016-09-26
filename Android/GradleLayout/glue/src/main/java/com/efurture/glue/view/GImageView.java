@@ -47,16 +47,18 @@ public class GImageView extends ImageView{
 		 }
 		 String scaleType = attrs.getValue("scaleType");
 		 if (!TextUtils.isEmpty(scaleType)) {
-			 ScaleType type = ScaleType.FIT_XY;
+			 ScaleType type = ScaleType.CENTER_CROP;
 			 if ("center".equals(scaleType)) {
 				 type = ScaleType.FIT_CENTER;
 			 }else if ("centerCrop".equals(scaleType)) {
 				 type = ScaleType.CENTER_CROP;
+			 }else if ("fitXY".equals(scaleType)) {
+				 type = ScaleType.FIT_XY;
 			 }else if ("centerInside".equals(scaleType)) {
 				 type = ScaleType.CENTER_INSIDE;
-			 }else if ("left".equals(scaleType)) {
+			 }else if ("start".equals(scaleType)) {
 				 type = ScaleType.FIT_START;
-			 }else if ("right".equals(scaleType)) {
+			 }else if ("end".equals(scaleType)) {
 				 type = ScaleType.FIT_END;
 			 }
              setScaleType(type);

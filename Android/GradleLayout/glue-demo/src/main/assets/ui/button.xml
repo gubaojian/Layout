@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    width="320"
+    height="match"
+    screenUnit="320">
+
+    <View
+        width="320"
+        bottom="10"
+        screenUnit="320">
+
+        <Button
+            width="300"
+            height="40"
+            y = "10"
+            x="10"
+            text="button click pure color"
+            textSize="15"
+            background="#3CB371"
+            selectBackground="#898989"/>
+
+        <Button
+            width="300"
+            height="40"
+            y = "60"
+            x="10"
+            text="button local res resource"
+            textSize="15"
+            background="button_bg"/>
+
+        <Button
+            width="300"
+            height="40"
+            y = "110"
+            x="10"
+            text="button prue color"
+            textSize="15"
+            background="#483D8B"
+            textColor="#888888"
+            selectTextColor="#FFFFFF"
+            radius="4"
+            selectBackground="#6A5ACD"/>
+
+
+        <Button
+            width="300"
+            height="40"
+            y = "160"
+            x="10"
+            text="button prue color"
+            textSize="15"
+            background="#483D8B"
+            radius="4"/>
+
+    </View>
+</ScrollView>
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    width="320"
+    height="match"
+    screenUnit="320">
+
+    <View
+        width="320"
+        bottom="10"
+        screenUnit="320">
+
+        <ViewPager
+            width="300"
+            height="100"
+            y="10"
+            x = "10"
+            imgUrls="https://img.alicdn.com/tps/TB1Wv5INpXXXXXZapXXXXXXXXXX-520-280.jpg;https://aecpm.alicdn.com/tps/i2/TB10vPXKpXXXXacXXXXvKyzTVXX-520-280.jpg;https://img.alicdn.com/tps/i4/TB1OujmNpXXXXbqXXXXSutbFXXX.jpg_400x400q90.jpg;https://ossgw.alicdn.com/creatives-assets/8776e266-062d-4330-8634-93ec8edd7e10.jpg"
+            tag="bannerPager"/>
+        <PagerIndicator
+            width="300"
+            height="20"
+            y="90"
+            circleGravity="right"
+            viewPagerTag="bannerPager"/>
+
+
+    </View>
+</ScrollView>
+

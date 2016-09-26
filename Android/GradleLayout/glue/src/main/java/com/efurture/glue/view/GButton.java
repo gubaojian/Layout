@@ -12,22 +12,31 @@ public class GButton extends GTextView{
 
 	public GButton(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
+		init();
 	}
 
 	public GButton(Context context, AttributeSet attrs) {
 		super(context, attrs);
+		init();
 	}
 
 	public GButton(Context context) {
 		super(context);
+		init();
 	}
 
+
+	private void init(){
+		setClickable(true);
+	}
 
 
 	@Override
 	public void initViewAtts(Attributes attrs, ViewInflater inflater) {
 		super.initViewAtts(attrs, inflater);
 		setGravity(Gravity.CENTER);
+
+
 	}
 
 	

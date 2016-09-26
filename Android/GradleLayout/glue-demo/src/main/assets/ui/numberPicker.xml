@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    width="320"
+    height="match"
+    screenUnit="320">
+
+    <View
+        width="320"
+        bottom="10"
+        screenUnit="320">
+
+        <NumberPicker
+            width="300"
+            y="10"
+            x = "10"
+            maxValue="100"
+            minValue="1"
+            value="30"
+            textSize="18"/>
+
+
+    </View>
+</ScrollView>
+

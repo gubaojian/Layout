@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    width="320"
+    height="match"
+    screenUnit="320">
+
+    <View
+        width="320"
+        bottom="10"
+        screenUnit="320">
+
+        <Switch
+            textSize="18"
+            textOn="关闭"
+            textOff="打开"
+            checked="true"/>
+    </View>
+</ScrollView>
+

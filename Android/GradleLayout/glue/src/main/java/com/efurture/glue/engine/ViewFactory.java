@@ -18,12 +18,14 @@ import com.efurture.glue.view.GListView;
 import com.efurture.glue.view.GNumberPicker;
 import com.efurture.glue.view.GProgressBar;
 import com.efurture.glue.view.GRadioButton;
+import com.efurture.glue.view.GRadioGroup;
 import com.efurture.glue.view.GRecyclerView;
 import com.efurture.glue.view.GRefreshLayout;
 import com.efurture.glue.view.GScrollView;
 import com.efurture.glue.view.GSeekBar;
 import com.efurture.glue.view.GSwitch;
 import com.efurture.glue.view.GTextView;
+import com.efurture.glue.view.GTimePicker;
 import com.efurture.glue.view.GView;
 import com.efurture.glue.view.GWebView;
 
@@ -76,11 +78,12 @@ public class ViewFactory {
 		classMap.put("ProgressBar", GProgressBar.class);
 		classMap.put("CheckBox", GCheckBox.class);
 		classMap.put("RadioButton", GRadioButton.class);
+		classMap.put("RadioGroup", GRadioGroup.class);
 		classMap.put("Switch", GSwitch.class);
 		classMap.put("DatePicker", GDatePicker.class);
 		classMap.put("NumberPicker", GNumberPicker.class);
 		classMap.put("SeekBar", GSeekBar.class);
-		classMap.put("TimePicker", TimePicker.class);
+		classMap.put("TimePicker", GTimePicker.class);
 
 
 	}

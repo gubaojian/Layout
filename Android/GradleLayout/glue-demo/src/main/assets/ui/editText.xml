@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    width="320"
+    height="match"
+    screenUnit="320">
+
+    <View
+        width="320"
+        bottom="10"
+        screenUnit="320">
+
+        <EditText
+            width="300"
+            height="40"
+            y="10"
+            x = "10"
+            hint="请输入用户名"
+            hintColor="#FFFFFF"
+            textColor="#9b4400"
+            textSize="18"
+            background="#0eb83a"/>
+
+        <EditText
+            width="300"
+            height="40"
+            y="60"
+            x = "10"
+            hint="请输入密码"
+            hintColor="#FFFFFF"
+            textSize="18"
+            background="#0eb83a"
+            inputType="password"/>
+
+        <EditText
+            width="300"
+            height="40"
+            y="110"
+            x = "10"
+            hint="请输入数字"
+            hintColor="#FFFFFF"
+            textSize="18"
+            background="#0eb83a"
+            inputType="number"/>
+        <EditText
+            width="300"
+            height="40"
+            y="160"
+            x = "10"
+            hint="请输入数字密码"
+            hintColor="#FFFFFF"
+            textSize="18"
+            background="#0eb83a"
+            inputType="numberPassword"/>
+    </View>
+</ScrollView>
+

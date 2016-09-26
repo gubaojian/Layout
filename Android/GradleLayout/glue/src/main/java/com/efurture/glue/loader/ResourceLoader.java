@@ -7,6 +7,7 @@ import android.webkit.URLUtil;
 
 import com.efurture.glue.GLog;
 import com.efurture.glue.utils.IOUtils;
+import com.efurture.glue.utils.UriUtils;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
@@ -149,8 +150,15 @@ public class ResourceLoader {
 	public URL toAbsPageUrl(String url){
 		try {
 			URL absoluteUrl = null ;
-			if(pageUrl != null){
-				absoluteUrl = new URL(pageUrl, url);
+			if(pageUrl != null && !URLUtil.isValidUrl(url)){
+				String pageUrlStr = pageUrl.toString();
+				if(URLUtil.isFileUrl(pageUrlStr) || URLUtil.isAssetUrl(pageUrlStr)){
+					File parent = new File(pageUrlStr);
+					File  absoluteFile = new File(parent.getPath(), url);
+					absoluteFile.toURI().toURL();
+				}else{
+					absoluteUrl = new URL(pageUrl, url);
+				}
 			}else{
 				absoluteUrl = new URL(url);
 			}

@@ -43,6 +43,8 @@ public class ViewUtils {
              String item = gravityItem.trim();
              if("top".equals(item)){
                  gravity = gravity | Gravity.TOP;
+             }else if("bottom".equals(item)){
+                gravity = gravity | Gravity.BOTTOM;
              }else if("centerVertical".equals(item)){
                 gravity = gravity | Gravity.CENTER_VERTICAL;
              }else if("centerHorizontal".equals(item)){
@@ -58,6 +60,7 @@ public class ViewUtils {
              }else if("center".equals(item)){
                 gravity = gravity | Gravity.CENTER;
              }
+
         }
         return  gravity;
     }
@@ -145,6 +148,8 @@ public class ViewUtils {
             String y = attrs.getValue("y");
             String width = attrs.getValue("width");
             String height = attrs.getValue("height");
+            String right = attrs.getValue("right");
+            String bottom = attrs.getValue("bottom");
             if (params instanceof ViewGroup.MarginLayoutParams) {
                 ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) params;
                 View parent = (View) view.getParent();
@@ -164,6 +169,17 @@ public class ViewUtils {
                     if (!TextUtils.isEmpty(height)) {
                         layoutParams.height =  inflater.toUnit(height, parent, false);
                     }
+
+
+                    if(!TextUtils.isEmpty(right)){
+                        layoutParams.rightMargin = inflater.toUnit(right, parent, false);
+                    }
+
+                    if(!TextUtils.isEmpty(bottom)){
+                        layoutParams.bottomMargin = inflater.toUnit(bottom, parent, false);
+                    }
+
+
                 }else {
                     if (!TextUtils.isEmpty(x)) {
                         layoutParams.leftMargin =  inflater.toUnit(x);
@@ -180,15 +196,36 @@ public class ViewUtils {
                     if (!TextUtils.isEmpty(height)) {
                         layoutParams.height =  inflater.toUnit(height);
                     }
+
+                    if(!TextUtils.isEmpty(right)){
+                        layoutParams.rightMargin = inflater.toUnit(right);
+                    }
+
+                    if(!TextUtils.isEmpty(bottom)){
+                        layoutParams.bottomMargin = inflater.toUnit(bottom);
+                    }
                 }
             }
 
-            String gravity = attrs.getValue("gravity");
-            if(gravity != null){
-                if(params instanceof FrameLayout.LayoutParams){
+
+            if(params instanceof FrameLayout.LayoutParams){
+
+                String gravity = attrs.getValue("gravity");
+                if(!TextUtils.isEmpty(gravity)) {
                     ((FrameLayout.LayoutParams) params).gravity = getGravity(gravity);
-                }else if(params instanceof LinearLayout.LayoutParams){
-                     ((LinearLayout.LayoutParams) params).gravity = getGravity(gravity);
+
+
+                }
+            }else if(params instanceof LinearLayout.LayoutParams){
+                String gravity = attrs.getValue("gravity");
+                if(!TextUtils.isEmpty(gravity)) {
+                    ((LinearLayout.LayoutParams) params).gravity = getGravity(gravity);
+                }
+
+
+                String  weight = attrs.getValue("weight");
+                if(!TextUtils.isEmpty(weight)){
+                    ((LinearLayout.LayoutParams) params).weight = Integer.parseInt(weight);
                 }
             }
         }
@@ -199,19 +236,29 @@ public class ViewUtils {
          * */
         String backgroundAttr =  attrs.getValue("background");
         if(backgroundAttr != null){
-            String selectBackground = attrs.getValue("selectBackground");
             if (!TextUtils.isEmpty(backgroundAttr)) {
                 if (backgroundAttr.startsWith("#")) {
+                    String selectBackground = attrs.getValue("selectBackground");
                     if(!TextUtils.isEmpty(selectBackground)){
-                        StateListDrawable stateListDrawable = new StateListDrawable();
-                        ColorDrawable selectColorDrawable = new ColorDrawable(Color.parseColor(selectBackground));
-                        stateListDrawable.addState(new int[]{android.R.attr.state_pressed}, selectColorDrawable);
-                        stateListDrawable.addState(new int[]{android.R.attr.state_selected}, selectColorDrawable);
-                        stateListDrawable.addState(new int[]{}, new ColorDrawable(Color.parseColor(backgroundAttr)));
-                        view.setBackgroundDrawable(stateListDrawable);
+                        String radius = attrs.getValue("radius");
+                        if(!TextUtils.isEmpty(radius)){
+                             view.setBackgroundDrawable(StateUtils.getStateDrawable(backgroundAttr, selectBackground, inflater.toUnit(radius)));
+                        }else{
+                            StateListDrawable stateListDrawable = new StateListDrawable();
+                            ColorDrawable selectColorDrawable = new ColorDrawable(Color.parseColor(selectBackground));
+                            stateListDrawable.addState(new int[]{android.R.attr.state_pressed}, selectColorDrawable);
+                            stateListDrawable.addState(new int[]{android.R.attr.state_selected}, selectColorDrawable);
+                            stateListDrawable.addState(new int[]{}, new ColorDrawable(Color.parseColor(backgroundAttr)));
+                            view.setBackgroundDrawable(stateListDrawable);
+                        }
                         view.setClickable(true);
                     }else {
-                        view.setBackgroundColor(Color.parseColor(backgroundAttr));
+                        String radius = attrs.getValue("radius");
+                        if(!TextUtils.isEmpty(radius)){
+                            view.setBackgroundDrawable(StateUtils.getShapeDrawable(backgroundAttr, inflater.toUnit(radius)));
+                        }else{
+                            view.setBackgroundColor(Color.parseColor(backgroundAttr));
+                        }
                     }
                 }else{
                     int resId = view.getContext().getResources().getIdentifier(backgroundAttr, "drawable", view.getContext().getPackageName());
@@ -235,19 +282,18 @@ public class ViewUtils {
 
         String visible = attrs.getValue("visible");
         if (visible != null) {
-            if("false".equals(visible)){
-                view.setVisibility(View.INVISIBLE);
-            }
+            view.setEnabled(LangUtils.isTrue(visible));
         }
 
         String enabled = attrs.getValue("enabled");
         if (enabled != null){
-            enabled = enabled.toLowerCase().trim();
-            if ("true".equals(enabled) || "yes".equals(enabled)){
-                view.setEnabled(true);
-            }else{
-                view.setEnabled(false);
-            }
+            view.setEnabled(LangUtils.isTrue(enabled));
+        }
+
+
+        String clickable = attrs.getValue("clickable");
+        if (clickable != null){
+            view.setClickable(LangUtils.isTrue(clickable));
         }
 
 

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    width="320"
+    height="match"
+    screenUnit="320">
+
+    <View
+        width="320"
+        bottom="10"
+        screenUnit="320">
+
+        <View
+            width="290"
+            height="40"
+            y = "10"
+            x="15"
+            background="#00bc12" />
+
+        <View
+            width="290"
+            height="40"
+            y = "60"
+            x="15"
+            radius="3"
+            background="#00bc12" />
+
+
+        <View
+            width="145"
+            height="40"
+            y = "110"
+            x="15"
+            background="#00bc12" />
+
+        <View
+            width="145"
+            height="40"
+            y = "160"
+            background="#00bc12"
+            right="10"
+            gravity="right"/>
+
+        <View
+            width="145"
+            height="40"
+            y = "210"
+            x="15"
+            radius="3"
+            gravity="centerHorizontal"
+            background="#00bc12" />
+
+        <View
+            width="290"
+            height="40"
+            y = "260"
+            x="15"
+            background="#00bc12"
+            alpha="0.5"/>
+
+
+        <View
+            width="290"
+            height="40"
+            y = "310"
+            x="15"
+            background="#00bc12"
+            enabled="false"/>
+    </View>
+</ScrollView>
+

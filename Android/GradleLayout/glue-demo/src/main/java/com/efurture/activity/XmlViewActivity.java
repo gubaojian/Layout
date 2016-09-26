@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Toast;
 
 import com.efurture.XmlViewUtils;
@@ -24,6 +23,8 @@ public class XmlViewActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_xmlview);
+
 
 		Uri uri = getIntent().getData();
 		String url = getIntent().getExtras().getString("url");
@@ -31,13 +32,11 @@ public class XmlViewActivity extends Activity {
 			uri = Uri.parse(url);
 		}
 
-		if("disable".equals(uri.getQueryParameter("scroll"))){
-			setContentView(R.layout.activity_glue_noscroll);
-		}else{
-			setContentView(R.layout.activity_glue_scroll);
+		String title = getIntent().getExtras().getString("title");
+		if(title != null){
+			getActionBar().setTitle(title);
 		}
 
-		final View contentView = findViewById(android.R.id.content);
 		hybridView = (XmlView) findViewById(R.id.hybird_view);
 		hybridView.setXmlViewLoadListener(new XmlViewLoadListener() {
 			@Override
@@ -52,8 +51,6 @@ public class XmlViewActivity extends Activity {
 		});
 		hybridView.loadUrl(uri.toString());
 		XmlViewUtils.devTool(hybridView, this);
-
-
 	}
 
 	@Override

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    width="320"
+    height="match"
+    screenUnit="320">
+
+    <View
+        width="320"
+        height="match"
+        screenUnit="320">
+
+        <LinearLayout
+            width="320"
+            layoutGravity="left">
+            <View
+                width="120"
+                height="40"
+                background="#00bc12" />
+            <View
+                width="120"
+                height="40"
+                background="#9400D3"
+                layoutGravity="right"/>
+        </LinearLayout>
+
+        <LinearLayout
+            width="320"
+            y="50"
+            layoutGravity="center">
+            <View
+                width="120"
+                height="40"
+                background="#00bc12" />
+            <View
+                width="120"
+                height="40"
+                background="#9400D3"
+                layoutGravity="right"/>
+        </LinearLayout>
+
+        <LinearLayout
+            width="320"
+            y="100"
+            layoutGravity="right">
+            <View
+                width="120"
+                height="40"
+                background="#00bc12" />
+            <View
+                width="120"
+                height="40"
+                background="#9400D3"
+                layoutGravity="right"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            width="320"
+            y="150">
+            <View
+                width="120"
+                height="40"
+                background="#00bc12" />
+            <View
+                width="120"
+                height="40"
+                background="#9400D3"
+                gravity="right"
+                weight="1"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            width="320"
+            y="200"
+            background="#888888"
+            orientation="vertical">
+            <View
+                width="120"
+                height="40"
+                background="#00bc12"/>
+            <View
+                width="120"
+                height="40"
+                background="#9400D3"
+                gravity="right"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            width="320"
+            y="290"
+            background="#888888"
+            orientation="vertical">
+            <View
+                width="120"
+                height="40"
+                background="#00bc12"/>
+            <View
+                width="120"
+                height="40"
+                background="#9400D3"
+                gravity="center"/>
+        </LinearLayout>
+
+    </View>
+</ScrollView>
+

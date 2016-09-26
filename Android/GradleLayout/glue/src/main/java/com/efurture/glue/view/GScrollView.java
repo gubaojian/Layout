@@ -1,11 +1,13 @@
 package com.efurture.glue.view;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.widget.ScrollView;
 
 import com.efurture.glue.engine.ViewInflater;
 import com.efurture.glue.ui.XmlView;
+import com.efurture.glue.utils.LangUtils;
 import com.efurture.glue.utils.ViewUtils;
 
 import org.xml.sax.Attributes;
@@ -37,6 +39,11 @@ public class GScrollView extends ScrollView {
                     getHybridView().loadUrl(xmlUrl);
                 }
             });
+        }
+
+        String fillViewport = attrs.getValue("fillViewport");
+        if(!TextUtils.isEmpty(fillViewport)){
+            setFillViewport(LangUtils.isTrue(fillViewport));
         }
     }
 

@@ -13,18 +13,25 @@ import org.xml.sax.Attributes;
 /**
  * Created by furture on 16/6/21.
  */
-public class GTimerPicker extends TimePicker {
+public class GTimePicker extends TimePicker {
 
-    public GTimerPicker(Context context) {
+    public GTimePicker(Context context) {
         super(context);
+        init();
     }
 
-    public GTimerPicker(Context context, AttributeSet attrs) {
+    public GTimePicker(Context context, AttributeSet attrs) {
         super(context, attrs);
+        init();
     }
 
-    public GTimerPicker(Context context, AttributeSet attrs, int defStyleAttr) {
+    public GTimePicker(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        init();
+    }
+
+    private  void init(){
+        setIs24HourView(true);
     }
 
     public void initViewAtts(Attributes attrs, ViewInflater inflater) {

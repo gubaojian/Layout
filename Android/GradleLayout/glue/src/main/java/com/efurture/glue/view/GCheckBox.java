@@ -11,6 +11,7 @@ import android.widget.CheckBox;
 
 import com.efurture.glue.bind.ElUtil;
 import com.efurture.glue.engine.ViewInflater;
+import com.efurture.glue.utils.StateUtils;
 import com.efurture.glue.utils.LangUtils;
 
 import org.xml.sax.Attributes;
@@ -31,8 +32,6 @@ public class GCheckBox extends CheckBox {
     public GCheckBox(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
-
-
 
     public void initViewAtts(Attributes attrs, ViewInflater inflater) {
         String checked = attrs.getValue("checked");
@@ -58,13 +57,15 @@ public class GCheckBox extends CheckBox {
 
         String textColor = attrs.getValue("textColor");
         if(textColor != null){
-            setTextColor(Color.parseColor(textColor));
+            String selectTextColor = attrs.getValue("selectTextColor");
+            if(selectTextColor == null){
+                setTextColor(Color.parseColor(textColor));
+            }else{
+                setTextColor(StateUtils.getColorStateList(textColor, selectTextColor));
+            }
         }
 
-        String highlightedTextColor = attrs.getValue("highlightColor");
-        if (highlightedTextColor != null) {
-            setHighlightColor(Color.parseColor(highlightedTextColor));
-        }
+
 
         String fontStyle = attrs.getValue("fontStyle");
         String fontName = attrs.getValue("font");
@@ -96,15 +97,8 @@ public class GCheckBox extends CheckBox {
 
         String alignment = attrs.getValue("textAlign");
         if (alignment != null) {
-            String verticalAlignment =  attrs.getValue("verticalAlign");
             int verticalGravity =  Gravity.CENTER_VERTICAL;
-            if (verticalAlignment != null){
-                if("top".equals(verticalGravity)){
-                    verticalGravity = Gravity.TOP;
-                }else if ("bottom".equals(alignment)) {
-                    verticalGravity = Gravity.BOTTOM;
-                }
-            }
+
             int gravity = Gravity.LEFT |verticalGravity;
             if ("center".equals(alignment)) {
                 gravity = Gravity.CENTER_HORIZONTAL | verticalGravity;

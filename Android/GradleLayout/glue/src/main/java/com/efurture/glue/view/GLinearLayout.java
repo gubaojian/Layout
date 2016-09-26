@@ -35,7 +35,7 @@ public class GLinearLayout extends LinearLayout {
              setOrientation(LinearLayout.HORIZONTAL);
          }
 
-         String gravity = attrs.getValue("gravity");
+         String gravity = attrs.getValue("layoutGravity");
         if(gravity != null){
              setGravity(ViewUtils.getGravity(gravity));
         }

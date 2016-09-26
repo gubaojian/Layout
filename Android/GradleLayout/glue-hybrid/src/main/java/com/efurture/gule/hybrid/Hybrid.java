@@ -41,6 +41,8 @@ public  class Hybrid extends ApiLifecycle {
 
     private HashMap<String, Object> initedLocalApi;
 
+    private String globalScript;
+
 
 
     public Hybrid(Activity activity) {

@@ -1,26 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" >
-
-    <item
-        jar="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/exploded-aar/GradleLayout/glue/unspecified/jars/libs/okhttp-2.5.0.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="61a343a5df8d88f3c18873ccd457a7f199e3d674">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/transforms/dex/debug/folders/1000/8/okhttp-2.5.0_896fddbb728abd61cd5e77aa1d4e0ecb38237bf1/classes.dex" />
-    </item>
-    <item
-        jar="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/exploded-aar/GradleLayout/glue/unspecified/jars/libs/okio-1.6.0.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="4893e29b7b26c9c47b8ee56e97941b5202cb27cf">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/transforms/dex/debug/folders/1000/8/okio-1.6.0_f26106168037f67558d07499e759a0049a212389/classes.dex" />
-    </item>
-    <item
-        jar="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/exploded-aar/GradleLayout/glue/unspecified/jars/libs/picasso-2.5.2.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="0c5a75880b2c3167fab4b95a09c4a664b340a1e5">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/transforms/dex/debug/folders/1000/8/picasso-2.5.2_74d98c5088076b11fb921086c71c44c144f49228/classes.dex" />
-    </item>
-
-</items>
+<items version="2" />
