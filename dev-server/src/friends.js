@@ -6,7 +6,6 @@ importClass("com.efurture.gule.hybrid.adapter.StickyRecycleAdapter");
 importClass("com.efurture.gule.hybrid.adapter.RecycleAdapter");
 importClass("android.widget.PopupWindow");
 importClass("android.view.View.OnClickListener");
-importClass("com.efurture.gule.hybrid.ui.HPopupWindow");
 
 var homeUrl = "./friends.xml";
 var lifeCommunityItemXml = require('raw!./friends/lifeCommunityItem.xml');
@@ -106,7 +105,7 @@ var page = {
             if(position == 29){
               return 'NormalCellBottom';
             }
-            
+
             return 'NormalCellMiddle';
         }
       };

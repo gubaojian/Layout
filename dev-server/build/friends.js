@@ -22,7 +22,6 @@
   importClass("com.efurture.gule.hybrid.adapter.RecycleAdapter");
   importClass("android.widget.PopupWindow");
   importClass("android.view.View.OnClickListener");
-  importClass("com.efurture.gule.hybrid.ui.HPopupWindow");
   var homeUrl = "./friends.xml";
   var lifeCommunityItemXml = __webpack_require__(5);
   var normalCellTopXml = __webpack_require__(6);
