@@ -21,12 +21,12 @@
   importClass("android.view.View.OnClickListener");
   var homeUrl = "./koubei.xml";
   var gridItemXml = __webpack_require__(1);
-  var categoryBannerXml = __webpack_require__(10);
-  var middleSeparatorLineXml = __webpack_require__(11);
-  var recommendItemsXml = __webpack_require__(12);
-  var oneImageBannerXml = __webpack_require__(13);
-  var emptyStickyHeaderXml = __webpack_require__(14);
-  var koubeiShopItemXml = __webpack_require__(15);
+  var categoryBannerXml = __webpack_require__(11);
+  var middleSeparatorLineXml = __webpack_require__(12);
+  var recommendItemsXml = __webpack_require__(13);
+  var oneImageBannerXml = __webpack_require__(14);
+  var emptyStickyHeaderXml = __webpack_require__(15);
+  var koubeiShopItemXml = __webpack_require__(16);
   var recycleView;
   var page = {bindTabEvent: function bindTabEvent(tabName) {
   if (tabName != 'home') 
@@ -138,7 +138,7 @@
   hybridView.__c("loadUrl", homeUrl);
 }, function(module, exports) {
   module.__s("exports", "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<View background=\"#FFFFFF\">\n  <View\n    width=\"180\"\n    height=\"180\">\n    <ImageView\n      y=\"40\"\n      x=\"60\"\n      width=\"60\"\n      height=\"60\"\n      imageUrl=\"https://t.alipayobjects.com/images/rmsweb/T1TH4gXohcXXXXXXXX.png\"/>\n    <TextView\n      y=\"100\"\n      width=\"180\"\n      textSize=\"32\"\n      textAlign=\"center\"\n      text=\"\u7f51\u5546\u94f6\u884c\"/>\n  </View>\n</View>\n");
-}, , , , , , , , , function(module, exports) {
+}, , , , , , , , , , function(module, exports) {
   module.__s("exports", "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<View screenUnit=\"720\"\n  background=\"#FFFFFF\">\n  <ViewPager\n       width=\"720\"\n       height=\"352\"\n       tag=\"topViewPager\"\n       xmlUrls=\"./koubei/categoryBannerPagerItem.xml;./koubei/categoryBannerPagerItem.xml;./koubei/categoryBannerPagerItem.xml;./koubei/categoryBannerPagerItem.xml\"/>\n\n  <PagerIndicator\n               width=\"720\"\n               height=\"20\"\n               y=\"314\"\n               circleColor=\"#CDCECF\"\n               circleSelectColor=\"#7D7E7F\"\n               circleSize=\"12\"\n               viewPagerTag=\"topViewPager\"/>\n</View>\n");
 }, function(module, exports) {
   module.__s("exports", "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<View\n  screenUnit=\"720\"\n  background=\"#F4F5F9\">\n\n  <View\n     width=\"720\"\n     height=\"1px\"\n     background=\"#ECEDF0\"/>\n    <View\n       y=\"18\"\n       width=\"720\"\n       height=\"1px\"\n       background=\"#ECEDF0\"/>\n</View>\n");

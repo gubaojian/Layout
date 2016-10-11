@@ -2,9 +2,7 @@ var os = require('os');
 var gulp = require('gulp');
 var exec = require('sync-exec');
 
-
 gulp.task('default', ['showIp', 'copyXml', 'watch', 'convertJS']);
-
 
 gulp.task('showIp', function(){
 	var IPv4, hostName;
@@ -15,7 +13,6 @@ gulp.task('showIp', function(){
 	}
 	console.log('local IP: '+ IPv4);
 	console.log('server: http://' + IPv4 + ":8888/build/index.js");
-
 });
 
 gulp.task('convertJS', function () {

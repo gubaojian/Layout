@@ -5,7 +5,9 @@ module.exports = {
       alipay : './src/alipay.js',
       koubei : './src/koubei.js',
       friends : './src/friends.js',
-      wealth  : './src/wealth.js'
+      wealth  : './src/wealth.js',
+      hello  : './src/hello.js',
+      list  : './src/list.js'
     },
     output: {
         path: './dist',

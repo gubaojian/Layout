@@ -14,13 +14,26 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Alipay Home"
+        android:text="Hello World"
+        android:id="@+id/hello" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="列表Demo"
+        android:id="@+id/list" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="支付宝"
         android:id="@+id/alipay" />
 
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Demo"
+        android:text="测试"
         android:id="@+id/demo" />
 </LinearLayout>

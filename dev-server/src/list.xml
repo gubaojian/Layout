@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View
+    width="750"
+    height="100%"
+    screenUnit="750"
+    background="#889922">
+   <ImageView
+     width="750"
+     height="200"
+     imageUrl="https://zos.alipayobjects.com/rmsportal/VIZVslEXXguQJbi.jpg"/>
+  <ListView
+    width="750"
+    y="200"
+    height="calc(100%-200)"
+    tag="listView"/>
+</View>

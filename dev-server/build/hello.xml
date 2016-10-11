@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View
+    width="750"
+    height="100%"
+    screenUnit="750">
+   <ImageView
+     width="750"
+     height="300"
+     imageUrl="https://zos.alipayobjects.com/rmsportal/VIZVslEXXguQJbi.jpg"
+     scaleType="fitXY"
+     tag="imageView"/>
+  <TextView
+     y="300"
+     width="750"
+     textAlign="center"
+     height="100"
+     text="Hello World 网商银行"
+     tag="helloTextField"/>
+</LinearLayout>

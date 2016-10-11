@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    String domain  = "http://10.15.17.223:8888/";
+    String domain  = "http://10.15.16.113:8888/";
 
 
     @Override
@@ -22,10 +22,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         ViewFactory.shareFactory().add("IconTextView", GIconTextView.class);
        // ViewFactory.shareFactory().add("RecycleView", GStickyRecycleView.class);
 
+
+
+        findViewById(R.id.hello).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AlipayHomeActivity.class);
+                intent.putExtra("url", domain + "build/hello.js");
+                startActivity(intent);
+            }
+        });
+
+
+        findViewById(R.id.list).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, HybridActivity.class);
+                intent.putExtra("url", domain + "build/list.js");
+                startActivity(intent);
+            }
+        });
 
 
         findViewById(R.id.alipay).setOnClickListener(new View.OnClickListener() {

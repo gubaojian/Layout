@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 
+import com.efurture.glue.utils.DevUtils;
+
 /**
  * Created by furture on 16/6/6.
  */
@@ -25,6 +27,8 @@ public class HybridActivity extends AppCompatActivity {
         hybridManager.setPageUrl(parsePageUrl());
         hybridManager.setHybridView(hybridView);
         hybridManager.init();
+
+        DevUtils.devTool(hybridView, this);
     }
 
 

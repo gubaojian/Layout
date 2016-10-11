@@ -40,8 +40,9 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -53,11 +54,11 @@
 	importClass("android.view.View.OnClickListener");
 
 	var homeUrl = "./wealth.xml";
-	var userHeaderItemXml = __webpack_require__(16);
-	var middleLineXml = __webpack_require__(17);
-	var assetAmountItemXml = __webpack_require__(18);
-	var topGridItemXml = __webpack_require__(19);
-	var bottomGridItemXml = __webpack_require__(20);
+	var userHeaderItemXml = __webpack_require__(18);
+	var middleLineXml = __webpack_require__(19);
+	var assetAmountItemXml = __webpack_require__(20);
+	var topGridItemXml = __webpack_require__(21);
+	var bottomGridItemXml = __webpack_require__(22);
 
 	var recycleView; //
 
@@ -173,49 +174,40 @@
 	hybridView.loadUrl(homeUrl);
 
 /***/ },
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */,
-/* 14 */,
-/* 15 */,
-/* 16 */
+
+/***/ 18:
 /***/ function(module, exports) {
 
 	module.exports = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<View\n  width=\"720\"\n  screenUnit=\"720\"\n  background=\"#FFFFFF\">\n\n  <ImageView\n    x=\"30\"\n    y=\"30\"\n    width=\"120\"\n    height=\"120\"\n    imageUrl=\"https://t.alipayobjects.com/images/rmsweb/T1TH4gXohcXXXXXXXX.png\"/>\n <TextView\n      x=\"170\"\n      y=\"30\"\n      width=\"500\"\n      height=\"40\"\n      textSize=\"34\"\n      text=\"剑白\"/>\n  <TextView\n     x=\"170\"\n     y=\"70\"\n     height=\"40\"\n     textSize=\"26\"\n     textColor=\"#888888\"\n     text=\"jianbai.gbj@alibaba-inc.com\"/>\n\n  <LinearLayout\n    x=\"170\"\n    y=\"110\"\n    height=\"40\"\n    gravity=\"left|centerVertical\">\n\n    <IconTextView\n      width=\"40\"\n      height=\"40\"\n      text=\"0f481\"\n      textSize=\"36\"\n       textColor=\"#2d78f4\"\n       textAlign=\"center\"/>\n     <TextView\n        x=\"5\"\n        height=\"40\"\n        textSize=\"26\"\n        textColor=\"#888888\"\n        text=\"相册\"/>\n      <View\n           x=\"20\"\n           width=\"2\"\n           height=\"35\"\n           background=\"#ECEDF0\"/>\n\n     <IconTextView\n        x=\"20\"\n        width=\"40\"\n        height=\"40\"\n        text=\"0f442\"\n        textSize=\"36\"\n        textColor=\"#2d78f4\"\n        textAlign=\"center\"/>\n      <TextView\n         x=\"5\"\n         height=\"40\"\n         textSize=\"26\"\n         textColor=\"#888888\"\n         text=\"收藏\"/>\n       <View\n            x=\"20\"\n            width=\"2\"\n            height=\"35\"\n            background=\"#ECEDF0\"/>\n\n      <IconTextView\n         x=\"20\"\n         width=\"40\"\n         height=\"40\"\n         text=\"0f3c6\"\n         textSize=\"36\"\n         textColor=\"#2d78f4\"\n         textAlign=\"center\"/>\n       <TextView\n          x=\"5\"\n          height=\"40\"\n          textSize=\"26\"\n          textColor=\"#888888\"\n          text=\"会员中心\"/>\n\n </LinearLayout>\n\n\n<View\n     y=\"180\"\n     width=\"720\"\n     height=\"1px\"\n     background=\"#ECEDF0\"/>\n</View>\n"
 
 /***/ },
-/* 17 */
+
+/***/ 19:
 /***/ function(module, exports) {
 
 	module.exports = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<View\n  screenUnit=\"720\"\n  background=\"#F4F5F9\">\n  <View\n     height=\"30\"/>\n</View>\n"
 
 /***/ },
-/* 18 */
+
+/***/ 20:
 /***/ function(module, exports) {
 
 	module.exports = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<View\n  width=\"720\"\n  screenUnit=\"720\"\n  background=\"#FFFFFF\">\n\n <WrapLayout\n   height=\"118\"\n   gravity=\"left|centerVertical\">\n   <TextView\n        x=\"30\"\n        height=\"118\"\n        textSize=\"50\"\n        text=\"1,500.00\"/>\n    <IconTextView\n       x=\"10\"\n       width=\"60\"\n       height=\"60\"\n       text=\"0f424\"\n       textSize=\"50\"\n       textColor=\"#888888\"\n       textAlign=\"center\"/>\n </WrapLayout>\n <TextView\n    x=\"360\"\n    width=\"280\"\n    height=\"118\"\n    text=\"开启账户安全险享100完保障保障保障\"\n    textSize=\"28\"\n    textColor=\"#888888\"\n    lineBreakMode=\"tail\"\n    textAlign=\"center\"/>\n\n  <IconTextView\n     x=\"640\"\n     width=\"60\"\n     height=\"118\"\n     text=\"0f125\"\n     textSize=\"34\"\n     textColor=\"#888888\"\n     textAlign=\"center\"/>\n\n\n</View>\n"
 
 /***/ },
-/* 19 */
+
+/***/ 21:
 /***/ function(module, exports) {
 
 	module.exports = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<View\n  background=\"#FFFFFF\"\n  screenUnit=\"720\"\n  width=\"720\">\n  <View\n     height=\"1px\"\n     background=\"#ECEDF0\"/>\n  <View\n    width=\"360\"\n    height=\"126\">\n    <ImageView\n      y=\"25\"\n      x=\"30\"\n      width=\"48\"\n      height=\"48\"\n      imageUrl=\"https://t.alipayobjects.com/images/rmsweb/T1TH4gXohcXXXXXXXX.png\"/>\n    <TextView\n      x=\"100\"\n      y=\"25\"\n      width=\"240\"\n      height=\"40\"\n      textSize=\"34\"\n      text=\"余额\"/>\n    <TextView\n      x=\"100\"\n      y=\"65\"\n      width=\"240\"\n      height=\"40\"\n      textSize=\"28\"\n      textColor=\"#888888\"\n      text=\"0.30\"/>\n  </View>\n\n  <View\n    x=\"360\"\n    width=\"360\"\n    height=\"126\">\n    <ImageView\n      y=\"25\"\n      x=\"30\"\n      width=\"48\"\n      height=\"48\"\n      imageUrl=\"https://t.alipayobjects.com/images/rmsweb/T1TH4gXohcXXXXXXXX.png\"/>\n    <TextView\n      x=\"100\"\n      y=\"25\"\n      width=\"240\"\n      height=\"40\"\n      textSize=\"34\"\n      text=\"蚂蚁花呗\"/>\n    <TextView\n      x=\"100\"\n      y=\"65\"\n      width=\"240\"\n      height=\"40\"\n      textSize=\"28\"\n      textColor=\"#888888\"\n      text=\"普惠金融\"/>\n  </View>\n  <View x=\"360\"\n        height=\"126\"\n        width=\"1px\"\n        background=\"#ECEDF0\"/>\n  <View y=\"126\"\n        height=\"1px\"\n        width=\"720\"\n        background=\"#ECEDF0\"/>\n</View>\n"
 
 /***/ },
-/* 20 */
+
+/***/ 22:
 /***/ function(module, exports) {
 
 	module.exports = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<View\n  background=\"#FFFFFF\"\n  screenUnit=\"720\"\n  width=\"720\">\n  <View\n    width=\"360\"\n    height=\"126\">\n    <ImageView\n      y=\"25\"\n      x=\"30\"\n      width=\"48\"\n      height=\"48\"\n      imageUrl=\"https://t.alipayobjects.com/images/rmsweb/T1TH4gXohcXXXXXXXX.png\"/>\n    <TextView\n      x=\"100\"\n      y=\"25\"\n      width=\"240\"\n      height=\"40\"\n      textSize=\"34\"\n      text=\"余额宝\"/>\n    <TextView\n      x=\"100\"\n      y=\"65\"\n      width=\"240\"\n      height=\"40\"\n      textSize=\"28\"\n      textColor=\"#888888\"\n      text=\"+0.80\"/>\n  </View>\n\n  <View\n    x=\"360\"\n    width=\"360\"\n    height=\"126\">\n    <ImageView\n      y=\"25\"\n      x=\"30\"\n      width=\"48\"\n      height=\"48\"\n      imageUrl=\"https://t.alipayobjects.com/images/rmsweb/T1TH4gXohcXXXXXXXX.png\"/>\n    <TextView\n      x=\"100\"\n      y=\"25\"\n      width=\"240\"\n      height=\"40\"\n      textSize=\"34\"\n      text=\"招财宝\"/>\n    <TextView\n      x=\"100\"\n      y=\"65\"\n      width=\"240\"\n      height=\"40\"\n      textSize=\"28\"\n      textColor=\"#888888\"\n      text=\"定期理财\"/>\n  </View>\n  <View x=\"360\"\n        height=\"126\"\n        width=\"1px\"\n        background=\"#ECEDF0\"/>\n  <View y=\"126\"\n        height=\"1px\"\n        width=\"720\"\n        background=\"#ECEDF0\"/>\n</View>\n"
 
 /***/ }
-/******/ ]);
+
+/******/ });

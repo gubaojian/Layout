@@ -1,12 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" >
-
-    <item
-        jar="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="198005f320f5424cba67b7c4fd5af4650f323174">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_296d5ed4d91a6d373dc18e0699c2c749409a6ff5/classes.dex" />
-    </item>
-
-</items>
+<items version="2" />
