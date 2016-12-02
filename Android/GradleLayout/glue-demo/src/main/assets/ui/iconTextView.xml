@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    width="320"
+    height="match"
+    screenUnit="320">
+
+    <View
+        width="320"
+        bottom="10"
+        screenUnit="320">
+        <IconTextView
+            y="8"
+            x="30"
+            height="50"
+            width="50"
+            text="0f453"
+            textSize="48"
+            textColor="#883388">
+        </IconTextView>
+    </View>
+</ScrollView>
+

@@ -18,5 +18,7 @@ public class GProgressBar extends ProgressBar {
 
     public GProgressBar(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+
+
     }
 }

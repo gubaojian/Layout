@@ -20,7 +20,6 @@ public class HybridActivity extends AppCompatActivity {
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         HybridView hybridView = new HybridView(this);
         setContentView(hybridView);
         hybridManager = new HybridManager(this);
@@ -28,7 +27,6 @@ public class HybridActivity extends AppCompatActivity {
         hybridManager.setHybridView(hybridView);
         hybridManager.init();
 
-        DevUtils.devTool(hybridView, this);
     }
 
 

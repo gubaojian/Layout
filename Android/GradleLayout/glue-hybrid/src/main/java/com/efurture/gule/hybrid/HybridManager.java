@@ -3,11 +3,8 @@ package com.efurture.gule.hybrid;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
 
 import com.efurture.glue.loader.ResourceLoader;
-import com.efurture.glue.utils.ViewUtils;
 import com.efurture.gule.hybrid.api.ApiLifecycle;
 import com.efurture.gule.hybrid.api.ApiUtils;
 import com.efurture.gule.hybrid.api.HybridApi;
@@ -107,7 +104,7 @@ public  class HybridManager extends ApiLifecycle {
             return true;
         }
 
-        Class<?> apiClass = HybridApi.getGlobalClassMap().get(module);
+        Class<?> apiClass = HybridApi.getApplicationApiMap().get(module);
         if(apiClass != null){
             api = ApiUtils.newApi(apiClass, activity.getApplicationContext());
             if(api != null){
@@ -124,7 +121,7 @@ public  class HybridManager extends ApiLifecycle {
             }
         }
 
-        apiClass = HybridApi.getLocalClassMap().get(module);
+        apiClass = HybridApi.getActivityApiMap().get(module);
         if(apiClass != null){
             api  =  ApiUtils.newApi(apiClass, activity);
             initedLocalApi.put(module, api);

@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.efurture.glue.engine.ViewFactory;
-import com.efurture.glue.view.GIconTextView;
 import com.efurture.gule.hybrid.HybridActivity;
 import com.efurture.glue.ui.XmlPopupWindow;
 
@@ -22,8 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ViewFactory.shareFactory().add("IconTextView", GIconTextView.class);
-       // ViewFactory.shareFactory().add("RecycleView", GStickyRecycleView.class);
+        // ViewFactory.shareFactory().add("RecycleView", GStickyRecycleView.class);
 
 
 

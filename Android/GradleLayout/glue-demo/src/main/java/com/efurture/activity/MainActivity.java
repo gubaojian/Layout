@@ -49,11 +49,12 @@ public class MainActivity extends Activity {
 		items.add(new Item("CheckBox", "ui/checkBox"));
 		items.add(new Item("DatePicker", "ui/datePicker"));
 		items.add(new Item("NumberPicker", "ui/numberPicker"));
+		items.add(new Item("TimePicker", "ui/timePicker"));
 		items.add(new Item("ProgressBar", "ui/progressBar"));
 		items.add(new Item("SeekBar", "ui/seekBar"));
 		items.add(new Item("RadioButton", "ui/radioButton"));
 		items.add(new Item("Switch", "ui/switch"));
-		items.add(new Item("TimePicker", "ui/timePicker"));
+		items.add(new Item("IconTextView", "ui/iconTextView"));
 		items.add(new Item("WebView", "ui/webView"));
 		items.add(new Item("ViewPager", "ui/viewPager"));
 		items.add(new Item("Demo", "demo/demo"));

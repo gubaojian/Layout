@@ -22,13 +22,13 @@ public class HybridApi {
     /**
      * application全局api, 单利,无生命周期
      * */
-    private static Map<String, Class<?>> globalClassMap = new HashMap();
+    private static Map<String, Class<?>> applicationApiMap = new HashMap();
 
     /**
      * activity生命周期的api, 每个页面相互独立,不共享实例, 页面内实例
      * 可继承ApiLifecycle获取, 在activity被销毁时销毁
      * */
-    private static Map<String, Class<?>> localApiClassMap = new HashMap();
+    private static Map<String, Class<?>> activityApiMap = new HashMap();
 
 
     /**
@@ -37,43 +37,43 @@ public class HybridApi {
     static {
 
         //全局api
-        HybridApi.registerGlobalClass("http", HttpApi.class);
-        HybridApi.registerGlobalClass("network", NetworkApi.class);
-        HybridApi.registerGlobalClass("localStorage", LocalStorageApi.class);
-        HybridApi.registerGlobalClass("os", OSApi.class);
-        HybridApi.registerGlobalClass("console", ConsoleApi.class);
+        HybridApi.registerApplicationApi("http", HttpApi.class);
+        HybridApi.registerApplicationApi("network", NetworkApi.class);
+        HybridApi.registerApplicationApi("localStorage", LocalStorageApi.class);
+        HybridApi.registerApplicationApi("os", OSApi.class);
+        HybridApi.registerApplicationApi("console", ConsoleApi.class);
 
 
         //页面api
-        HybridApi.registerLocalClass("media", MediaApi.class);
-        HybridApi.registerLocalClass("ui", UIApi.class);
-        HybridApi.registerLocalClass("timer", TimerApi.class);
-        HybridApi.registerLocalClass("nav", NavApi.class);
+        HybridApi.registerActivityApi("media", MediaApi.class);
+        HybridApi.registerActivityApi("ui", UIApi.class);
+        HybridApi.registerActivityApi("timer", TimerApi.class);
+        HybridApi.registerActivityApi("nav", NavApi.class);
     }
 
 
     /**
      * 注册全局api
      * */
-    public static void registerGlobalClass(String module, Class<?> targetClass) {
-          globalClassMap.put(module, targetClass);
+    public static void registerApplicationApi(String module, Class<?> targetClass) {
+          applicationApiMap.put(module, targetClass);
     }
 
     /**
      * 注册activity生命周期的页面api
      * */
-    public static void registerLocalClass(String module, Class<?> targetClass) {
-        localApiClassMap.put(module, targetClass);
+    public static void registerActivityApi(String module, Class<?> targetClass) {
+        activityApiMap.put(module, targetClass);
     }
 
 
-    public static Map<String, Class<?>> getGlobalClassMap() {
-        return  globalClassMap;
+    public static Map<String, Class<?>> getApplicationApiMap() {
+        return applicationApiMap;
     }
 
 
-    public static Map<String, Class<?>> getLocalClassMap() {
-        return localApiClassMap;
+    public static Map<String, Class<?>> getActivityApiMap() {
+        return activityApiMap;
     }
 
 

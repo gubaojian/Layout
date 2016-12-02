@@ -12,6 +12,7 @@ import com.efurture.glue.view.GCheckBox;
 import com.efurture.glue.view.GDatePicker;
 import com.efurture.glue.view.GEditText;
 import com.efurture.glue.view.GGridView;
+import com.efurture.glue.view.GIconTextView;
 import com.efurture.glue.view.GImageView;
 import com.efurture.glue.view.GLinearLayout;
 import com.efurture.glue.view.GListView;
@@ -84,7 +85,7 @@ public class ViewFactory {
 		classMap.put("NumberPicker", GNumberPicker.class);
 		classMap.put("SeekBar", GSeekBar.class);
 		classMap.put("TimePicker", GTimePicker.class);
-
+		classMap.put("IconTextView", GIconTextView.class);
 
 	}
 	

@@ -2,10 +2,11 @@ package com.efurture.glue.view;
 
 import android.content.Context;
 import android.graphics.Typeface;
+import android.util.Log;
 
 /**
  * Created by furture on 16/6/7.
- *
+ *  图标字体
  *  http://ionicons.com/
  */
 public class GIconTextView extends GTextView {
@@ -24,7 +25,11 @@ public class GIconTextView extends GTextView {
             // read typeface only once!
             // yey performance :)
             if(iconfont == null){
-                iconfont = Typeface.createFromAsset(getContext().getAssets(), "ionicons.ttf");
+                try {
+                    iconfont = Typeface.createFromAsset(getContext().getAssets(), "ionicons.ttf");
+                }catch (Exception e){
+                    Log.e("GIconTextView", "GIconTextView cann't find ionicons.ttf in asset", e);
+                }
             }
             if(iconfont != null) {
                 this.setTypeface(iconfont);

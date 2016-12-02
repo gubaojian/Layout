@@ -11,7 +11,7 @@ import com.efurture.glue.ui.XmlView;
  */
 public class DevUtils {
 
-    public static void  devTool(XmlView hybridView, final Activity activity) {
+    public static void initDevTool(XmlView hybridView, final Activity activity) {
         hybridView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
