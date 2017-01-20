@@ -1,9 +1,8 @@
-package com.efurture.gule.hybrid.api.globals;
+package com.efurture.gule.hybrid.api.application;
 
 import android.os.Handler;
 import android.os.Looper;
 
-import com.furture.react.DLog;
 import com.furture.react.JSRef;
 import com.squareup.okhttp.Callback;
 import com.squareup.okhttp.MediaType;
@@ -12,14 +11,28 @@ import com.squareup.okhttp.Request;
 import com.squareup.okhttp.RequestBody;
 import com.squareup.okhttp.Response;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
 
+
+/**
+ * http模块的默认实现
+ * */
 public class HttpApi {
-	
-	private static final JSONObject emptyJson = new JSONObject();
-	private static final String CALL_BACK_METHOD_NAME = "response";
+
+
+	/**
+	 * 成功回调
+	 * */
+	public static final String ON_SUCCESS = "onSuccess";
+
+	/**
+	 * 错误回调
+	 * */
+	public static final String ON_ERROR = "onError";
+
  	
 	public void get(String url, JSRef callback){
 		Request request = new Request.Builder().get().url(url).build();
@@ -51,32 +64,30 @@ public class HttpApi {
 
 			@Override
 			public void onResponse(Response response) throws IOException {
-
 				try {
 					final String  body =  response.body().string();
 					handler.post(new Runnable() {
 						@Override
 						public void run() {
-							callback.getEngine().call(callback, CALL_BACK_METHOD_NAME, body);
+							callback.getEngine().call(callback, ON_SUCCESS, body);
 						}
 					});
-				} catch (Exception e) {
-					DLog.e("Http Client Parse JSON Error",  e.getMessage());
+				} catch (final Exception e) {
 					handler.post(new Runnable() {
 						@Override
 						public void run() {
-							callback.getEngine().call(callback, CALL_BACK_METHOD_NAME, emptyJson);
+							callback.getEngine().call(callback, ON_ERROR, e.getMessage());
 						}
 					});
 				}
 			}
 
 			@Override
-			public void onFailure(Request req, IOException exception) {
+			public void onFailure(Request req, final IOException exception) {
 				handler.post(new Runnable() {
 					@Override
 					public void run() {
-						callback.getEngine().call(callback, CALL_BACK_METHOD_NAME, emptyJson);
+						callback.getEngine().call(callback, ON_ERROR, exception.getMessage());
 					}
 				});
 			}
@@ -96,30 +107,39 @@ public class HttpApi {
 					handler.post(new Runnable() {
 						@Override
 						public void run() {
-							callback.getEngine().call(callback, CALL_BACK_METHOD_NAME, json);
+							callback.getEngine().call(callback, ON_SUCCESS, json);
 						}
 					});
-				} catch (Exception e) {
-					DLog.e("Http Client Parse JSON Error",  e.getMessage());
+				} catch (final Exception e) {
+
 					handler.post(new Runnable() {
 						@Override
 						public void run() {
-							callback.getEngine().call(callback, CALL_BACK_METHOD_NAME, emptyJson);
+							callback.getEngine().call(callback, ON_ERROR, toErrorJSON(e));
 						}
 					});
 				}
 			}
 			
 			@Override
-			public void onFailure(Request req, IOException exception) {
+			public void onFailure(Request req, final IOException exception) {
 				handler.post(new Runnable() {
 					@Override
 					public void run() {
-						callback.getEngine().call(callback, CALL_BACK_METHOD_NAME, emptyJson);
+						callback.getEngine().call(callback, ON_ERROR, toErrorJSON(exception));
 					}
 				});
 			}
 		});
+	}
+
+
+	private static final  JSONObject toErrorJSON(Exception e){
+		JSONObject json = new JSONObject();
+		try {
+			json.put("error", e.getMessage());
+		} catch (JSONException jsone) {}
+		return json;
 	}
 	
 	private static final OkHttpClient okHttpClient = new OkHttpClient();

@@ -9,7 +9,6 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/DuktapeEngine-release" />
             <option value="$PROJECT_DIR$/glue" />
             <option value="$PROJECT_DIR$/glue-demo" />
             <option value="$PROJECT_DIR$/glue-hybrid" />

@@ -1,4 +1,4 @@
-package com.efurture.gule.hybrid.api.local;
+package com.efurture.gule.hybrid.api.activity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -9,21 +9,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.efurture.glue.engine.ViewInflater;
-import com.efurture.glue.engine.XmlException;
 import com.efurture.glue.utils.ViewUtils;
-import com.efurture.gule.hybrid.api.globals.OSApi;
 import com.furture.react.JSRef;
 
-import org.xml.sax.SAXException;
-
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
 import java.util.regex.Pattern;
 
-import javax.xml.parsers.ParserConfigurationException;
 
+/**
+ * ui模块的实现
+ * */
 public class UIApi {
 	
 	private Activity activity;
@@ -149,12 +143,6 @@ public class UIApi {
 			}
 		}
 	}
-
-
-	/**
-	 * 设置titlebar的背景色
-	 * */
-
 
 
 

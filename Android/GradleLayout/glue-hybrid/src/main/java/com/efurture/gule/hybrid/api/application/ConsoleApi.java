@@ -1,4 +1,4 @@
-package com.efurture.gule.hybrid.api.globals;
+package com.efurture.gule.hybrid.api.application;
 
 import android.util.Log;
 

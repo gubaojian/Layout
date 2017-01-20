@@ -1,4 +1,4 @@
-package com.efurture.gule.hybrid.api.local;
+package com.efurture.gule.hybrid.api.activity;
 
 import android.app.Activity;
 import android.content.Intent;

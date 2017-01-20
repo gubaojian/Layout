@@ -1,1 +1,1 @@
-include ':glue-demo', ':glue', ':glue-hybrid', ':gule-hybrid-demo', ':DuktapeEngine-release'
+include ':glue-demo', ':glue', ':glue-hybrid', ':gule-hybrid-demo'

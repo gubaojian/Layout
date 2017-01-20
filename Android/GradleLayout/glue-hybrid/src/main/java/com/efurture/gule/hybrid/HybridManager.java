@@ -7,10 +7,10 @@ import android.content.Intent;
 import com.efurture.glue.loader.ResourceLoader;
 import com.efurture.gule.hybrid.api.ApiLifecycle;
 import com.efurture.gule.hybrid.api.ApiUtils;
-import com.efurture.gule.hybrid.api.HybridApi;
+import com.efurture.gule.hybrid.api.JSApi;
 import com.efurture.gule.hybrid.utils.AssetUtils;
 import com.furture.react.DuktapeEngine;
-import com.furture.react.JSApi;
+import com.furture.react.JSContext;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -95,20 +95,20 @@ public  class HybridManager extends ApiLifecycle {
         }
     }
 
-
-
-
+    /**
+     * module api的默认实现
+     * */
     public final boolean importApi(String module){
-        Object api = JSApi.getContext().get(module);
+        Object api = JSContext.getContext().get(module);
         if(api != null){
             return true;
         }
 
-        Class<?> apiClass = HybridApi.getApplicationApiMap().get(module);
+        Class<?> apiClass = JSApi.getApplicationApiMap().get(module);
         if(apiClass != null){
             api = ApiUtils.newApi(apiClass, activity.getApplicationContext());
             if(api != null){
-                JSApi.getContext().put(module, api);
+                JSContext.getContext().put(module, api);
                 duktapeEngine.put(module, api);
                 return true;
             }
@@ -121,7 +121,7 @@ public  class HybridManager extends ApiLifecycle {
             }
         }
 
-        apiClass = HybridApi.getActivityApiMap().get(module);
+        apiClass = JSApi.getActivityApiMap().get(module);
         if(apiClass != null){
             api  =  ApiUtils.newApi(apiClass, activity);
             initedLocalApi.put(module, api);
