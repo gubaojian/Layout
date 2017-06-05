@@ -6,13 +6,18 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.util.Log;
 
-import com.furture.react.DLog;
 import com.furture.react.JSRef;
 
 import java.io.File;
 import java.io.IOException;
 
+
+
+/**
+ * 媒体相关操作的API
+ * */
 public class MediaApi {
 
 
@@ -48,7 +53,7 @@ public class MediaApi {
 			activity.startActivityForResult(intent, CAMERA_REQUEST_CODE);
 			mediaCallback = callback;
         } catch (IOException e) {
-			DLog.e("MediaApi", "Create Temp File Exception " + e.getMessage());
+			Log.e("MediaApi", "Create Temp File Exception " + e.getMessage());
 			callback.getEngine().call(callback, "fail", "创建拍照文件失败");
 		}
 	}
@@ -84,7 +89,7 @@ public class MediaApi {
 			activity.startActivityForResult(intent, CAMERA_REQUEST_CODE);
 			mediaCallback = callback;
         } catch (IOException e) {
-			DLog.e("MediaApi", "Create Temp File Exception " + e.getMessage());
+			Log.e("MediaApi", "Create Temp File Exception " + e.getMessage());
 			callback.getEngine().call(callback, "fail", "创建拍照文件失败");
 		}
 	}

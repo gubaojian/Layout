@@ -16,36 +16,70 @@ import java.util.regex.Pattern;
 
 
 /**
- * ui模块的实现
+ * ui模块的实现， 封装通用的toast， alert，find 以及 click操作
  * */
 public class UIApi {
 	
 	private Activity activity;
+
+	/**
+	 * 创建UI模块
+	 * */
 	public UIApi(Activity activity) {
 		super();
 		this.activity = activity;
 	}
 
+	/**
+	 * @param message toast内容
+	 * */
 	public void toast(String message){
 		Toast.makeText(activity, message, Toast.LENGTH_SHORT).show();
 	}
 
 
+	/**
+	 * @param message alert的内容
+	 * */
 	public void alert(String message){
 		alert(null, message, null, null, null, null);
 	}
 
+	/**
+	 * @param message alert的内容
+	 * @param ok   确定按钮的位置
+	 * */
 	public void alert(String message, String ok){
 		alert(null, message, ok, null, null, null);
 	}
 
+	/**
+	 * @param message alert的内容
+	 * @param ok   确定按钮的位置
+	 * @param  okClickListener 按钮点击的回调
+	 * */
 	public void alert(String message, String ok,  final JSRef okClickListener){
 		alert(null, message, ok, okClickListener, null, null);
 	}
+
+	/**
+	 * @param title alert的标题
+	 * @param message alert的内容
+	 * @param ok   确定按钮的位置
+	 * @param  okClickListener 按钮点击的回调
+	 * */
 	public void alert(String title, String message, String ok,  final JSRef okClickListener){
 		alert(title, message, ok, okClickListener, null, null);
 	}
 
+	/**
+	 * @param title alert的标题
+	 * @param message alert的内容
+	 * @param ok   确定按钮的位置
+	 * @param  okClickListener 按钮点击的回调
+	 * @param   cancel 取消按钮的内容
+	 * @param   cancelClickListener 取消按钮的回调
+	 * */
 	public void alert(String title, String message, String ok, final JSRef okClickListener,
 					  String cancel, final JSRef cancelClickListener){
 		AlertDialog.Builder builder = new AlertDialog.Builder(activity);
@@ -82,6 +116,11 @@ public class UIApi {
 	}
 
 
+	/**
+	 * 通过xml创建UI
+	 * @param  xml 创建XML
+	 * @param  parent 父视图，可以传空
+	 * */
 	public View fromXml(String xml,  final ViewGroup parent){
 		Context context = activity;
 		if(parent != null){
@@ -90,6 +129,12 @@ public class UIApi {
 		return  ViewUtils.inflate(context, xml, parent);
 	}
 
+	/**
+	 * 通过xml创建UI
+	 * @param  xml 创建XML
+	 * @param  parent 父视图，可以传空
+	 * @param  attachRoot 是否attach到父视图
+	 * */
 	public View fromXml(String xml,  final ViewGroup parent, boolean attachRoot){
 		Context context = activity;
 		if(parent != null){
@@ -98,10 +143,18 @@ public class UIApi {
 		return  ViewUtils.inflate(context, xml, parent, attachRoot);
 	}
 
+	/**
+	 * 根据tag找到父视图的组件
+	 * @param  tag 标签
+	 * */
 	public View  find(String tag){
 		return  find(activity.findViewById(android.R.id.content), tag);
 	}
-
+	/**
+	 * 在容器中根据tag找到父视图的组件
+	 * @param  parent 容器
+	 * @param  tag 标签
+	 * */
 	public View  find(View parent, String tag){
 		return  parent.findViewWithTag(tag);
 	}
@@ -110,21 +163,38 @@ public class UIApi {
 
 	/**
 	 * 快捷的事件绑定方法, 通过tag选择器来绑定事件
+	 * @param  tags 标签
+	 * @param  click 点击
 	 * */
 	public  void click(String tags, JSRef click){
 		onClick(activity.findViewById(android.R.id.content), tags, click);
 	}
 
-
+	/**
+	 * 快捷的事件绑定方法, 通过tag选择器来绑定事件
+	 * @param  tags 标签
+	 * @param  click 点击
+	 * */
 	public  void onClick(String tags, JSRef click){
 		onClick(activity.findViewById(android.R.id.content), tags, click);
 	}
 
+	/**
+	 * 快捷的事件绑定方法, 通过tag选择器来绑定事件
+	 * @param  parent 标签所在的容器
+	 * @param  tags 标签
+	 * @param  click 点击
+	 * */
 	public  void click(View parent, String tags, JSRef click){
 		  onClick(parent, tags, click);
 	}
 
-
+	/**
+	 * 快捷的事件绑定方法, 通过tag选择器来绑定事件
+	 * @param  parent 标签所在的容器
+	 * @param  tags 标签
+	 * @param  click 点击
+	 * */
 	public  void onClick(View parent, String tags, final JSRef clickRef){
 		String [] viewTags =  TAGS_SPLIT_PATTERN.split(tags);
 		final View.OnClickListener clickListener = new View.OnClickListener() {
@@ -143,8 +213,6 @@ public class UIApi {
 			}
 		}
 	}
-
-
 
 	/**
 	 * 多个tag用 逗号分隔

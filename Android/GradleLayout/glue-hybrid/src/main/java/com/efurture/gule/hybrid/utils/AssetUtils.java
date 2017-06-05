@@ -1,7 +1,6 @@
 package com.efurture.gule.hybrid.utils;
 
 import android.content.Context;
-import android.util.Log;
 
 import java.io.BufferedInputStream;
 import java.io.ByteArrayOutputStream;

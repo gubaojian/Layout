@@ -33,12 +33,23 @@ public class HttpApi {
 	 * */
 	public static final String ON_ERROR = "onError";
 
- 	
+
+	/**
+	 * get请求
+	 * @param  url 请求的链接地址
+	 * @param  callback js回调函数
+	 * */
 	public void get(String url, JSRef callback){
 		Request request = new Request.Builder().get().url(url).build();
 		execute(request, callback);
-	} 
-	
+	}
+
+	/**
+	 * get请求
+	 * @param  url 请求的链接地址
+	 * @param  json body的json数据
+	 * @param  callback js回调函数
+	 * */
 	public void post(String url, String json, JSRef callback){
 		RequestBody requestBody = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), json);
 		Request request = new Request.Builder().post(requestBody).url(url).build();
@@ -46,11 +57,21 @@ public class HttpApi {
 	}
 
 
+	/**
+	 * get请求，返回自动转换成json
+	 * @param  url 请求的链接地址
+	 * @param  callback js回调函数
+	 * */
 	public void getJSON(String url, JSRef callback){
 		Request request = new Request.Builder().get().url(url).build();
 		executeJSON(request, callback);
 	}
 
+	/**
+	 * post请求，返回自动转换成json
+	 * @param  url 请求的链接地址
+	 * @param  callback js回调函数
+	 * */
 	public void postJSON(String url, String json, JSRef callback){
 		RequestBody requestBody = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), json);
 		Request request = new Request.Builder().post(requestBody).url(url).build();

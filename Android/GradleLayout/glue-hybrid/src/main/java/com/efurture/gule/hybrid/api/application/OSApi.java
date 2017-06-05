@@ -1,12 +1,14 @@
 package com.efurture.gule.hybrid.api.application;
 
 import android.content.Context;
+import android.os.Build;
 import android.provider.Settings;
 
 import java.util.TimeZone;
 
 /**
  * Created by furture on 16/6/6.
+ * 系统的API的封装
  */
 public class OSApi {
 
@@ -38,21 +40,33 @@ public class OSApi {
         return uuid;
     }
 
+    /**
+     * 获取手机型号
+     * */
     public String getModel() {
         String model = android.os.Build.MODEL;
         return model;
     }
 
+    /**
+     * 获取手机产品
+     * */
     public String getProductName() {
         String productname = android.os.Build.PRODUCT;
         return productname;
     }
 
+    /**
+     * 获取手机产品
+     * */
     public String getManufacturer() {
         String manufacturer = android.os.Build.MANUFACTURER;
         return manufacturer;
     }
 
+    /**
+     * 获取手机序列号
+     * */
     public String getSerialNumber() {
         String serial = android.os.Build.SERIAL;
         return serial;
@@ -60,7 +74,6 @@ public class OSApi {
 
     /**
      * Get the OS version.
-     *
      * @return
      */
     public String getOSVersion() {
@@ -68,12 +81,16 @@ public class OSApi {
         return osversion;
     }
 
+    /**
+     * 获取版本号
+     * */
     public String getSDKVersion() {
-        @SuppressWarnings("deprecation")
-        String sdkversion = android.os.Build.VERSION.SDK;
-        return sdkversion;
+        return String.valueOf(Build.VERSION.SDK_INT);
     }
 
+    /**
+     * 获取时区
+     * */
     public String getTimeZoneID() {
         TimeZone tz = TimeZone.getDefault();
         return (tz.getID());

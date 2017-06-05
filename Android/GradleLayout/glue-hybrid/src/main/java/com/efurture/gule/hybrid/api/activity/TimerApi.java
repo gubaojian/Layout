@@ -8,13 +8,8 @@ import com.efurture.gule.hybrid.api.ApiLifecycle;
 import com.furture.react.JSRef;
 
 /**
- *
- *
- *
  * Created by furture on 16/6/7.
- *
- * https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/clearInterval
- *
+ *  Timer 的API，用于处理定时任务
  */
 public class TimerApi extends ApiLifecycle {
 

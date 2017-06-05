@@ -49,5 +49,22 @@ public class NavApi {
     }
 
 
+    /**
+     * 打开第三方APP
+     * */
+    public void openApp(String url){
+
+    }
+
+
+    /**
+     * 打开系统默认的浏览器
+     * */
+    public void openBrowser(String url){
+
+    }
+
+
+
 
 }

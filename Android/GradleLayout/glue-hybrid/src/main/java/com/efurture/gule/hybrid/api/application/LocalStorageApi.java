@@ -5,8 +5,8 @@ import android.content.SharedPreferences;
 
 /**
  * Created by furture on 16/6/6.
- *
  * https://developer.mozilla.org/en-US/docs/Web/API/Storage/LocalStorage
+ * 通过SharePreference存储标记
  */
 public class LocalStorageApi {
 
