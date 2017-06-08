@@ -52,7 +52,7 @@
 	importClass("android.widget.BaseAdapter");
 
 	var listXml = __webpack_require__(17);
-	var listItemXml = __webpack_require__(23);
+	var listItemXml = __webpack_require__(18);
 
 	var page = {
 	    onLoad: function onLoad() {
@@ -90,7 +90,7 @@
 
 /***/ },
 
-/***/ 23:
+/***/ 18:
 /***/ function(module, exports) {
 
 	module.exports = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<View\n  background=\"#FFFFFF\">\n  <View\n    width=\"180\"\n    height=\"180\">\n    <ImageView\n      y=\"40\"\n      x=\"60\"\n      width=\"60\"\n      height=\"60\"\n      imageUrl=\"https://t.alipayobjects.com/images/rmsweb/T1TH4gXohcXXXXXXXX.png\"/>\n  </View>\n  <TextView\n    x=\"160\"\n    y=\"40\"\n    width=\"300\"\n    textSize=\"32\"\n    text=\"网商银行\"/>\n  <TextView\n      x=\"160\"\n      y=\"80\"\n      width=\"300\"\n      textSize=\"32\"\n      textColor=\"#888888\"\n      text=\"网商银行，无微不至\"/>\n</View>\n"

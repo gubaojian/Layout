@@ -16,4 +16,4 @@
      height="100"
      text="Hello World 网商银行"
      tag="helloTextField"/>
-</LinearLayout>
+</View>

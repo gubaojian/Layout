@@ -10,9 +10,9 @@
 		284EB4781D20DC6D006F7E3D /* JSRef.m in Sources */ = {isa = PBXBuildFile; fileRef = 284EB4771D20DC6D006F7E3D /* JSRef.m */; };
 		284F31D31D1B923800A4ACA8 /* JSEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 284F31D21D1B923800A4ACA8 /* JSEngine.m */; };
 		285C9F251D25160D007C3C69 /* TestTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 285C9F241D25160D007C3C69 /* TestTypes.m */; };
+		2889307D1EE571E900F01AC2 /* duktape.c in Sources */ = {isa = PBXBuildFile; fileRef = 2889307B1EE571E900F01AC2 /* duktape.c */; };
 		28B6778F1D23E49900B268D3 /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = 28B6778E1D23E49900B268D3 /* test.js */; };
 		28F867D41D1CFBCE006E2A11 /* refs.c in Sources */ = {isa = PBXBuildFile; fileRef = 28F867D21D1CFBCE006E2A11 /* refs.c */; };
-		28F867DC1D1CFC20006E2A11 /* duktape.c in Sources */ = {isa = PBXBuildFile; fileRef = 28F867DA1D1CFC20006E2A11 /* duktape.c */; };
 		2B8150F41826568D00A87F77 /* greet.js in Resources */ = {isa = PBXBuildFile; fileRef = 2BA0ECD2182653000080FBF5 /* greet.js */; };
 		2BA0EC9E18263ADC0080FBF5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA0EC9D18263ADC0080FBF5 /* Foundation.framework */; };
 		2BA0ECA018263ADC0080FBF5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA0EC9F18263ADC0080FBF5 /* CoreGraphics.framework */; };
@@ -48,12 +48,12 @@
 		284F31D21D1B923800A4ACA8 /* JSEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSEngine.m; sourceTree = "<group>"; };
 		285C9F231D25160D007C3C69 /* TestTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTypes.h; sourceTree = "<group>"; };
 		285C9F241D25160D007C3C69 /* TestTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTypes.m; sourceTree = "<group>"; };
+		2889307A1EE571E900F01AC2 /* duk_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = duk_config.h; sourceTree = "<group>"; };
+		2889307B1EE571E900F01AC2 /* duktape.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = duktape.c; sourceTree = "<group>"; };
+		2889307C1EE571E900F01AC2 /* duktape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = duktape.h; sourceTree = "<group>"; };
 		28B6778E1D23E49900B268D3 /* test.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = test.js; sourceTree = "<group>"; };
 		28F867D21D1CFBCE006E2A11 /* refs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = refs.c; sourceTree = "<group>"; };
 		28F867D31D1CFBCE006E2A11 /* refs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = refs.h; sourceTree = "<group>"; };
-		28F867D91D1CFC20006E2A11 /* duk_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = duk_config.h; path = "../../duktape-1.5.0/src/duk_config.h"; sourceTree = "<group>"; };
-		28F867DA1D1CFC20006E2A11 /* duktape.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = duktape.c; path = "../../duktape-1.5.0/src/duktape.c"; sourceTree = "<group>"; };
-		28F867DB1D1CFC20006E2A11 /* duktape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = duktape.h; path = "../../duktape-1.5.0/src/duktape.h"; sourceTree = "<group>"; };
 		2BA0EC9A18263ADC0080FBF5 /* JSCoreTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSCoreTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BA0EC9D18263ADC0080FBF5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2BA0EC9F18263ADC0080FBF5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -113,9 +113,9 @@
 		28B677901D23E7E400B268D3 /* engine */ = {
 			isa = PBXGroup;
 			children = (
-				28F867D91D1CFC20006E2A11 /* duk_config.h */,
-				28F867DA1D1CFC20006E2A11 /* duktape.c */,
-				28F867DB1D1CFC20006E2A11 /* duktape.h */,
+				2889307A1EE571E900F01AC2 /* duk_config.h */,
+				2889307B1EE571E900F01AC2 /* duktape.c */,
+				2889307C1EE571E900F01AC2 /* duktape.h */,
 				28F867D21D1CFBCE006E2A11 /* refs.c */,
 				28F867D31D1CFBCE006E2A11 /* refs.h */,
 				284F31D11D1B923800A4ACA8 /* JSEngine.h */,
@@ -301,7 +301,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28F867DC1D1CFC20006E2A11 /* duktape.c in Sources */,
 				2BA0ECB418263ADC0080FBF5 /* ViewController.m in Sources */,
 				28F867D41D1CFBCE006E2A11 /* refs.c in Sources */,
 				2BA0ECAE18263ADC0080FBF5 /* AppDelegate.m in Sources */,
@@ -309,6 +308,7 @@
 				285C9F251D25160D007C3C69 /* TestTypes.m in Sources */,
 				284F31D31D1B923800A4ACA8 /* JSEngine.m in Sources */,
 				2BA0ECD3182653000080FBF5 /* greet.js in Sources */,
+				2889307D1EE571E900F01AC2 /* duktape.c in Sources */,
 				2BA0ECAA18263ADC0080FBF5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -725,7 +725,6 @@ static void duk_push_return_value(duk_context *ctx, NSInvocation*  invocation){
             break;
         case _C_UNDEF:
             duk_push_null(ctx);
-            //value =  NULL;
             break;
         case _C_PTR:{
                 void* ptr;
