@@ -47,6 +47,9 @@ public class NetworkApi {
 		this.context = context.getApplicationContext();
 	}
 
+	/**
+	 * 获取网络的类型
+	 * */
 	public String getNetworkType() {
 		ConnectivityManager connectivityManager = (ConnectivityManager) context
 				.getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -76,11 +79,4 @@ public class NetworkApi {
 		}
 		return TYPE_UNKNOWN;
 	}
-
-
-	public   String getIp(){
-		//FIXME
-		return  "";
-	}
-
 }
