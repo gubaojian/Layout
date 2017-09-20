@@ -34,8 +34,6 @@ public class GStickyRecycleView extends RecyclerView {
 
 
     /**
-
-
         public void initViewAtts(Attributes attrs, final ViewInflater inflater) {
         // super.initViewAtts(attrs, inflater);
          String layout = attrs.getValue("layout");

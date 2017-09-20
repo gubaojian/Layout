@@ -102,7 +102,6 @@
                 background="#9400D3"
                 gravity="center"/>
         </LinearLayout>
-
     </View>
 </ScrollView>
 

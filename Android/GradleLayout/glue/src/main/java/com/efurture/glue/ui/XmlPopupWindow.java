@@ -26,7 +26,4 @@ public class XmlPopupWindow extends PopupWindow {
         setFocusable(true);
         setBackgroundDrawable(new BitmapDrawable());
     }
-
-
-
 }
