@@ -3,12 +3,12 @@
 
     <item
         is-multidex="false"
-        jar="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/exploded-aar/GradleLayout/glue-hybrid/unspecified/jars/classes.jar"
+        jar="/Users/furture/.android/build-cache/e6be82185e64ad574ad54c072a6a3e89d714a8b1/output/jars/libs/internal_impl-24.2.1.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.3"
-        sha1="025e8cb83f46cdefe920dcca8aa076ef4c77ef34">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/GradleLayout-glue-hybrid-unspecified_62a00b122596f0b84434509610fadd70e2c33ff1.jar" />
+        revision="25.0.0"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/glue-demo/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_cde92b542a8f76fa4f7e9a723cd903a93b034718.jar" />
     </item>
     <item
         is-multidex="false"
@@ -30,192 +30,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/furture/.android/build-cache/4d548f6240c7b1d246d660e00953c69fe4310d44/output/jars/classes.jar"
+        jar="/Users/furture/code/Layout/Android/GradleLayout/glue-hybrid/build/intermediates/bundles/default/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="fcc945a86ebcbf527429acb8216ec7dae2c06417">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/glue-demo/build/intermediates/pre-dexed/debug/classes_545e7566a0dd116c595f362a43729cd7094557e7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/furture/.android/build-cache/e6be82185e64ad574ad54c072a6a3e89d714a8b1/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/glue-demo/build/intermediates/pre-dexed/debug/classes_66337aa48e09778b97fe48805420c880c5aae688.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/exploded-aar/GradleLayout/glue/unspecified/jars/libs/okio-1.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="cc96a1b8821438d09a3fdbd22f7206d4dee358c3">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/okio-1.6.0_f26106168037f67558d07499e759a0049a212389.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="f3ee23ef25c9a8fe3d40246d0b7097267963a612">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.2.0_d517b592e219628f43620c0bb5f791c6de467e28.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="d8bd2268fdcbfd52c76ade65d9900cd8def93a44">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-24.2.0_e3a52ce40fe93c2152f284e341f395b23cf76c2d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/furture/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/support-annotations-24.2.1_403cf47e881b1ca1370bb022a6920dab0147c93e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.0/jars/libs/internal_impl-24.2.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="60d7b23621d31e6f42f4f76f16af467e57a20cda">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/internal_impl-24.2.0_99b31531657a131c3b3b50c878df92d2fce725fc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/furture/.android/build-cache/b7b9e4c1e516e74581ac4d92daab0c48746ed87e/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/glue-demo/build/intermediates/pre-dexed/debug/classes_1770878dc4b5b3c04b4c431b28469b9f0ccb1fee.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/furture/code/Layout/Android/GradleLayout/glue/build/intermediates/bundles/default/libs/picasso-2.5.2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="4be4b04501b974e1be142024285f925b7ad9ff88">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/glue-demo/build/intermediates/pre-dexed/debug/picasso-2.5.2_355d21ffbc97a8872d0655b750601aa3afc546e9.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/furture/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.1"
-        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/glue-demo/build/intermediates/pre-dexed/debug/support-annotations-24.2.1_403cf47e881b1ca1370bb022a6920dab0147c93e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/exploded-aar/com.tonicartos/superslim/0.4.13/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="8adfd82229a5f0a129469305587557199017219e">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/com.tonicartos-superslim-0.4.13_a1f9d074c01db7d8ccaf3b3e79a06df8e06150f5.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/furture/.android/build-cache/e12fa1e50f18b5a3bbdd2ea91b259c1e27c01f09/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="f3ee23ef25c9a8fe3d40246d0b7097267963a612">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/glue-demo/build/intermediates/pre-dexed/debug/classes_fd90fb0bf11fdaca2b9f1c24f23c13cf69cd5a13.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/exploded-aar/com.furture.react/DuktapeJava/1.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="1e4933b07a07d05291cc5a7a0c881e4300577cc0">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/com.furture.react-DuktapeJava-1.1.0_3a919fa52e782bb6d8add68ca0f97522ccf8e915.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/furture/.android/build-cache/5ab5ae2b0b47feb1899de671c992485e018eba0b/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/glue-demo/build/intermediates/pre-dexed/debug/classes_fadbd7288ff3104913a1dc799787db733055c1d3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/furture/.android/build-cache/b7b9e4c1e516e74581ac4d92daab0c48746ed87e/output/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/glue-demo/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_b690c37584bf50a2d56053b0c2e8e2c234fe2b77.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="6eb9107eb34d2fe2b020662b7fbbec991dcba846">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-24.2.0_a182642ff3143ff9181006e488abad7104f36f78.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_a70dded9f78493cc2ba961b008a2fb0b5265868b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.0/jars/libs/internal_impl-24.2.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="032a4b53def5e2ceedfc2e793b126c0163cfa1dd">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/internal_impl-24.2.0_f4398ee3743c88e81fd02ab844950caf0636eb5e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/furture/.android/build-cache/e6be82185e64ad574ad54c072a6a3e89d714a8b1/output/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/glue-demo/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_cde92b542a8f76fa4f7e9a723cd903a93b034718.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="beac40bcc8a320a896dd15f5109cfcaea5e1e0e3">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.2.0_48ed625aa4c3ff21ffbc58cf77f2c42980e42f92.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-24.2.1_78909d1ee8cb8fcaf6c8ecfd8167b4dc959869c3.jar" />
+        sha1="071619046e4953703171d7483c7bec29ab63752b">
+        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/classes_811f86cb2e690540eda41cef508f6ebc7399f312.jar" />
     </item>
     <item
         is-multidex="false"
@@ -246,21 +66,39 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
+        jar="/Users/furture/.android/build-cache/4d548f6240c7b1d246d660e00953c69fe4310d44/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.3"
-        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-24.2.1_f25308a572d2a36b8ccd38f91d8e6edafd8f991d.jar" />
+        revision="25.0.0"
+        sha1="fcc945a86ebcbf527429acb8216ec7dae2c06417">
+        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/glue-demo/build/intermediates/pre-dexed/debug/classes_545e7566a0dd116c595f362a43729cd7094557e7.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.0/jars/classes.jar"
+        jar="/Users/furture/.android/build-cache/e6be82185e64ad574ad54c072a6a3e89d714a8b1/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.3"
-        sha1="fcc945a86ebcbf527429acb8216ec7dae2c06417">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-24.2.0_5fde4381e25fe5e05862f99d7a391eb78facbe00.jar" />
+        revision="25.0.0"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/glue-demo/build/intermediates/pre-dexed/debug/classes_66337aa48e09778b97fe48805420c880c5aae688.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/furture/.android/build-cache/1b4c68b128443a04a088c0addc8ebc4001437e4f/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1e4933b07a07d05291cc5a7a0c881e4300577cc0">
+        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/classes_311cda2c7823644ec54f6595c64ade227aaa5d25.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/furture/.android/build-cache/7d94f80d4a6d4a80201fc23dbe3c4bbb10c7e35d/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/classes_ea8acf14c6434013f2bd43f88eac57384015ebcc.jar" />
     </item>
     <item
         is-multidex="false"
@@ -273,39 +111,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/exploded-aar/GradleLayout/glue/unspecified/jars/libs/picasso-2.5.2.jar"
+        jar="/Users/furture/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
-        sha1="4be4b04501b974e1be142024285f925b7ad9ff88">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/picasso-2.5.2_74d98c5088076b11fb921086c71c44c144f49228.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/exploded-aar/GradleLayout/glue/unspecified/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="37be05ab042d7b399cc1170a25e48d1af865cbdf">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/GradleLayout-glue-unspecified_619583d0675a9f5a9b5df31ffa89a68a1780f069.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_3eb95dc79574ba5c30c4cafb93abdb69663f6d8f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/exploded-aar/com.android.support/design/23.4.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/com.android.support-design-23.4.0_5a0e360e1078684fafec035cfab9cb7e143e04ab.jar" />
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/support-annotations-24.2.1_403cf47e881b1ca1370bb022a6920dab0147c93e.jar" />
     </item>
     <item
         is-multidex="false"
@@ -313,17 +124,44 @@
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="fca1a8a6212f72451c01424726d36aba1b30bce8">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/glue-demo/build/intermediates/pre-dexed/debug/classes_680df9f0ea83a3854af6a253c84639896768645e.jar" />
+        sha1="9dc4b565b172b5ef3724cdeda8d237c68b9112c8">
+        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/classes_680df9f0ea83a3854af6a253c84639896768645e.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jar="/Users/furture/.android/build-cache/b7b9e4c1e516e74581ac4d92daab0c48746ed87e/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.3"
+        revision="25.0.0"
         sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/com.android.support-support-compat-24.2.1_d85b7e529b3183a104e6bbe7e1c2b5ccafcfe740.jar" />
+        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/glue-demo/build/intermediates/pre-dexed/debug/classes_1770878dc4b5b3c04b4c431b28469b9f0ccb1fee.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/furture/code/Layout/Android/GradleLayout/glue/build/intermediates/bundles/default/libs/picasso-2.5.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4be4b04501b974e1be142024285f925b7ad9ff88">
+        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/glue-demo/build/intermediates/pre-dexed/debug/picasso-2.5.2_355d21ffbc97a8872d0655b750601aa3afc546e9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/furture/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/glue-demo/build/intermediates/pre-dexed/debug/support-annotations-24.2.1_403cf47e881b1ca1370bb022a6920dab0147c93e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/furture/.android/build-cache/e12fa1e50f18b5a3bbdd2ea91b259c1e27c01f09/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f3ee23ef25c9a8fe3d40246d0b7097267963a612">
+        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/glue-demo/build/intermediates/pre-dexed/debug/classes_fd90fb0bf11fdaca2b9f1c24f23c13cf69cd5a13.jar" />
     </item>
     <item
         is-multidex="false"
@@ -345,15 +183,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/exploded-aar/GradleLayout/glue/unspecified/jars/libs/okhttp-2.5.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="a03399783c50ce60ac7e35012a82d41e225ccb5d">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/okhttp-2.5.0_896fddbb728abd61cd5e77aa1d4e0ecb38237bf1.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/furture/.android/build-cache/4c088ba7077c5a0c044534540c1f05245c2a4bc3/output/jars/libs/internal_impl-24.2.0.jar"
         jumboMode="false"
         optimize="true"
@@ -363,21 +192,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jar="/Users/furture/.android/build-cache/5ab5ae2b0b47feb1899de671c992485e018eba0b/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.3"
-        sha1="045be695d968dd707691cc55d23746dbf8cf569a">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/internal_impl-24.2.0_1bdb9bda19be2fde243fb8a6de4beb6742a49828.jar" />
+        revision="25.0.0"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/glue-demo/build/intermediates/pre-dexed/debug/classes_fadbd7288ff3104913a1dc799787db733055c1d3.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.0/jars/classes.jar"
+        jar="/Users/furture/.android/build-cache/b7b9e4c1e516e74581ac4d92daab0c48746ed87e/output/jars/libs/internal_impl-24.2.1.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.3"
-        sha1="45f5eda279825ff470e3f51019d374d1ef61e000">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.2.0_f4e86579fe7a3658c8fc50cd6c70e29408345ad1.jar" />
+        revision="25.0.0"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/glue-demo/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_b690c37584bf50a2d56053b0c2e8e2c234fe2b77.jar" />
     </item>
     <item
         is-multidex="false"
@@ -390,21 +219,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="c3c638be6e650b165ab9ae144857b64e82787fad">
-        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.2.0_95e5b390146be5b9f38fffea97c84428fe6570e2.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/furture/code/Layout/Android/GradleLayout/glue/build/intermediates/bundles/default/libs/okhttp-2.5.0.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="a03399783c50ce60ac7e35012a82d41e225ccb5d">
         <dex dex="/Users/furture/code/Layout/Android/GradleLayout/glue-demo/build/intermediates/pre-dexed/debug/okhttp-2.5.0_ba18515dfed8ca211f28970be2b3e6d16ef07ad7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/furture/.android/build-cache/ffe25d6a960c11b5ce40107d9276ecdf0d759fa2/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8adfd82229a5f0a129469305587557199017219e">
+        <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/classes_c3fa560977430bb03528dc3cd6ca3ca8f7009d04.jar" />
     </item>
 
 </items>

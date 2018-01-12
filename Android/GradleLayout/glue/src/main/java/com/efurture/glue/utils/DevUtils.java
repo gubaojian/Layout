@@ -17,7 +17,9 @@ public class DevUtils {
             public void onClick(View v) {
                 Intent intent = new Intent(activity, activity.getClass());
                 intent.setData(activity.getIntent().getData());
-                intent.putExtras(activity.getIntent().getExtras());
+                if(activity.getIntent().getExtras() != null) {
+                    intent.putExtras(activity.getIntent().getExtras());
+                }
                 activity.startActivity(intent);
                 activity.finish();
             }

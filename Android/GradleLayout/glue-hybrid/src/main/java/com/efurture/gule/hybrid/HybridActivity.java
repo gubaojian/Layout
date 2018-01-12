@@ -26,7 +26,6 @@ public class HybridActivity extends AppCompatActivity {
         hybridManager.setPageUrl(parsePageUrl());
         hybridManager.setHybridView(hybridView);
         hybridManager.init();
-
     }
 
 
