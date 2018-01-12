@@ -34,7 +34,7 @@
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="071619046e4953703171d7483c7bec29ab63752b">
+        sha1="68af8be0956332297c4c9a49a26e12ae971b79cd">
         <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/classes_811f86cb2e690540eda41cef508f6ebc7399f312.jar" />
     </item>
     <item
@@ -124,7 +124,7 @@
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="9dc4b565b172b5ef3724cdeda8d237c68b9112c8">
+        sha1="8847968dd294b838676b5d2a19433480f759d38a">
         <dex dex="/Users/furture/code/Layout/Android/GradleLayout/gule-hybrid-demo/build/intermediates/pre-dexed/debug/classes_680df9f0ea83a3854af6a253c84639896768645e.jar" />
     </item>
     <item

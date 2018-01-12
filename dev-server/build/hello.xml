@@ -6,7 +6,7 @@
    <ImageView
      width="750"
      height="300"
-     imageUrl="https://zos.alipayobjects.com/rmsportal/VIZVslEXXguQJbi.jpg"
+     imageUrl="https://img.alicdn.com/tfs/TB1Pth5mcLJ8KJjy0FnXXcFDpXa-520-280.jpg"
      scaleType="fitXY"
      tag="imageView"/>
   <TextView
@@ -14,6 +14,6 @@
      width="750"
      textAlign="center"
      height="100"
-     text="Hello World 网商银行"
+     text="Hello World 手机淘宝"
      tag="helloTextField"/>
 </View>

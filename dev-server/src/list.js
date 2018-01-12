@@ -14,7 +14,7 @@ var page = {
 
       listView.setAdapter(new BaseAdapter({
         getCount : function() {
-          return 8;
+          return 80;
         },
         getView : function(position,  convertView, parent){
             if(convertView == null){

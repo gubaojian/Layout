@@ -57,7 +57,8 @@
 
 	        var imageView = hybridView.findViewWithTag("imageView");
 	        imageView.setOnClickListener(new OnClickListener(function () {
-	            Toast.makeText(activity, "原生API调用", Toast.LENGTH_SHORT).show();
+	            //Toast.makeText(activity, "原生API调用", Toast.LENGTH_SHORT).show();
+	            ui.alert('原生API调用对话框封装');
 	        }));
 
 	        /**
@@ -69,7 +70,6 @@
 	        });*/
 	    }
 	};
-	ui.alert(activity);
 	hybridView.onLoad = function () {
 	    page.onLoad();
 	};
@@ -80,7 +80,7 @@
 /***/ 9:
 /***/ function(module, exports) {
 
-	module.exports = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<View\n    width=\"750\"\n    height=\"100%\"\n    screenUnit=\"750\">\n   <ImageView\n     width=\"750\"\n     height=\"300\"\n     imageUrl=\"https://zos.alipayobjects.com/rmsportal/VIZVslEXXguQJbi.jpg\"\n     scaleType=\"fitXY\"\n     tag=\"imageView\"/>\n  <TextView\n     y=\"300\"\n     width=\"750\"\n     textAlign=\"center\"\n     height=\"100\"\n     text=\"Hello World 网商银行\"\n     tag=\"helloTextField\"/>\n</View>\n"
+	module.exports = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<View\n    width=\"750\"\n    height=\"100%\"\n    screenUnit=\"750\">\n   <ImageView\n     width=\"750\"\n     height=\"300\"\n     imageUrl=\"https://img.alicdn.com/tfs/TB1Pth5mcLJ8KJjy0FnXXcFDpXa-520-280.jpg\"\n     scaleType=\"fitXY\"\n     tag=\"imageView\"/>\n  <TextView\n     y=\"300\"\n     width=\"750\"\n     textAlign=\"center\"\n     height=\"100\"\n     text=\"Hello World 手机淘宝\"\n     tag=\"helloTextField\"/>\n</View>\n"
 
 /***/ }
 

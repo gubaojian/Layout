@@ -8,7 +8,8 @@ var page = {
 
         var imageView = hybridView.findViewWithTag("imageView");
         imageView.setOnClickListener(new OnClickListener(function(){
-            Toast.makeText(activity, "原生API调用", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(activity, "原生API调用", Toast.LENGTH_SHORT).show();
+            ui.alert('原生API调用对话框封装');
         }));
 
         /**
@@ -20,7 +21,6 @@ var page = {
         });*/
     }
 };
-ui.alert(activity);
 hybridView.onLoad = function () {
     page.onLoad();
 }

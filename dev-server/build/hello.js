@@ -21,14 +21,13 @@
   var page = {onLoad: function onLoad() {
   var imageView = hybridView.__c("findViewWithTag", "imageView");
   imageView.__c("setOnClickListener", new OnClickListener(function() {
-  Toast.__c("makeText", activity, "\u539f\u751fAPI\u8c03\u7528", Toast.__g("LENGTH_SHORT")).__c("show");
+  ui.__c("alert", '\u539f\u751fAPI\u8c03\u7528\u5bf9\u8bdd\u6846\u5c01\u88c5');
 }));
 }};
-  ui.__c("alert", activity);
   hybridView.__s("onLoad", function() {
   page.__c("onLoad");
 });
   hybridView.__c("loadXml", helloXml);
 }, 9: function(module, exports) {
-  module.__s("exports", "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<View\n    width=\"750\"\n    height=\"100%\"\n    screenUnit=\"750\">\n   <ImageView\n     width=\"750\"\n     height=\"300\"\n     imageUrl=\"https://zos.alipayobjects.com/rmsportal/VIZVslEXXguQJbi.jpg\"\n     scaleType=\"fitXY\"\n     tag=\"imageView\"/>\n  <TextView\n     y=\"300\"\n     width=\"750\"\n     textAlign=\"center\"\n     height=\"100\"\n     text=\"Hello World \u7f51\u5546\u94f6\u884c\"\n     tag=\"helloTextField\"/>\n</View>\n");
+  module.__s("exports", "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<View\n    width=\"750\"\n    height=\"100%\"\n    screenUnit=\"750\">\n   <ImageView\n     width=\"750\"\n     height=\"300\"\n     imageUrl=\"https://img.alicdn.com/tfs/TB1Pth5mcLJ8KJjy0FnXXcFDpXa-520-280.jpg\"\n     scaleType=\"fitXY\"\n     tag=\"imageView\"/>\n  <TextView\n     y=\"300\"\n     width=\"750\"\n     textAlign=\"center\"\n     height=\"100\"\n     text=\"Hello World \u624b\u673a\u6dd8\u5b9d\"\n     tag=\"helloTextField\"/>\n</View>\n");
 }});

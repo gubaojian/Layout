@@ -10,6 +10,6 @@ public class AlipayHomeActivity extends HybridActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        DevUtils.initDevTool(getHybridManager().getHybridView(), this);
+        //DevUtils.initDevTool(getHybridManager().getHybridView(), this);
     }
 }

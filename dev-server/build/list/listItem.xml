@@ -6,22 +6,22 @@
     height="180">
     <ImageView
       y="40"
-      x="60"
-      width="60"
-      height="60"
-      imageUrl="https://t.alipayobjects.com/images/rmsweb/T1TH4gXohcXXXXXXXX.png"/>
+      x="40"
+      width="100"
+      height="100"
+      imageUrl="https://img.alicdn.com/tps/i3/T1OjaVFl4dXXa.JOZB-114-114.png"/>
   </View>
   <TextView
     x="160"
     y="40"
     width="300"
     textSize="32"
-    text="网商银行"/>
+    text="手机淘宝"/>
   <TextView
       x="160"
       y="80"
       width="300"
       textSize="32"
       textColor="#888888"
-      text="网商银行，无微不至"/>
+      text="手机淘宝，想淘就淘"/>
 </View>

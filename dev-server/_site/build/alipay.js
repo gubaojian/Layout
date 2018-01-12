@@ -157,7 +157,7 @@
 });
   hybridView.__c("loadUrl", homeUrl);
 }, function(module, exports) {
-  module.__s("exports", "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<View background=\"#FFFFFF\">\n  <View\n    width=\"180\"\n    height=\"180\">\n    <ImageView\n      y=\"40\"\n      x=\"60\"\n      width=\"60\"\n      height=\"60\"\n      imageUrl=\"https://t.alipayobjects.com/images/rmsweb/T1TH4gXohcXXXXXXXX.png\"/>\n    <TextView\n      y=\"100\"\n      width=\"180\"\n      textSize=\"32\"\n      textAlign=\"center\"\n      text=\"\u7f51\u5546\u94f6\u884c\"/>\n  </View>\n</View>\n");
+  module.__s("exports", "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<View background=\"#FFFFFF\">\n  <View\n    width=\"180\"\n    height=\"180\">\n    <ImageView\n      y=\"40\"\n      x=\"60\"\n      width=\"60\"\n      height=\"60\"\n      imageUrl=\"https://img.alicdn.com/tps/i3/T1OjaVFl4dXXa.JOZB-114-114.png\"/>\n    <TextView\n      y=\"100\"\n      width=\"180\"\n      textSize=\"32\"\n      textAlign=\"center\"\n      text=\"\u7f51\u5546\u94f6\u884c\"/>\n  </View>\n</View>\n");
 }, function(module, exports) {
   module.__s("exports", "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<GridView\n  width=\"720\"\n  screenUnit=\"720\"\n  columns=\"4\"\n  hSpace=\"1px\"\n  vSpace=\"1px\"/>\n");
 }, function(module, exports) {

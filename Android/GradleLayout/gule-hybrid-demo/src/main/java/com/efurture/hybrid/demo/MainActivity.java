@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    String domain  = "http://30.8.56.156:8888/";
+    String domain  = "http://30.8.57.155:8888/";
 
 
     @Override
