@@ -1,4 +1,4 @@
-View Inflater Inspired By Android
+Android/iOS Native View Render Engine With JavaScript Support
 ======
 1、Write IOS APP With demo.xml 
     
